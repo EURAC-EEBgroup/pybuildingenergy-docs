@@ -1,0 +1,37 @@
+# https://taskfile.dev
+
+version: "3"
+
+env:
+  VENV_PATH: "{{.ROOT_DIR}}/.venv"
+
+tasks:
+  create-virtualenv:
+    desc: Provisions the virtual environment
+    cmds:
+      - rm -fr {{.VENV_PATH}}
+      - virtualenv {{.VENV_PATH}}
+      - "{{.VENV_PATH}}/bin/pip install --upgrade pip"
+      - "{{.VENV_PATH}}/bin/pip install -r {{.ROOT_DIR}}/requirements.txt"
+    status:
+      - test -f {{.VENV_PATH}}/bin/python
+
+  mkdocs-serve:
+    deps:
+      - create-virtualenv
+    desc: Start the MkDocs development server
+    cmds:
+      - "{{.VENV_PATH}}/bin/mkdocs serve"
+
+  docker-build-serve:
+    desc: Build the Docker image and run a container to serve the documentation website
+    vars:
+      WEBSITE_PORT: 9191
+      IMAGE_NAME: local-moderate-docs
+    cmds:
+      - docker build -t {{.IMAGE_NAME}} .
+      - cmd: open http://localhost:{{.WEBSITE_PORT}}
+        platforms: [darwin]
+      - cmd: xdg-open http://localhost:{{.WEBSITE_PORT}}
+        platforms: [linux]
+      - docker run -it --rm -p {{.WEBSITE_PORT}}:80 {{.IMAGE_NAME}}

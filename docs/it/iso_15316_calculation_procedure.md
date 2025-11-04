@@ -107,8 +107,68 @@ This is a **parameterized linear model** that allows flexible configuration with
 - **T_min**: minimum return temperature (lower bound of condensing operation)
 - **T_thr**: threshold temperature where condensation ceases
 
+The function linearly interpolates between these two operating points.
 
+**Meaning:**
 
+| Region |  Return Temp | Efficiency trend | 
+|--------|--------------|------------------|
+| Region 1 | θret <= T_thr | Linear decrease from η_max (at T_min) to η_nc (at T_thr) |
+| Region 2 | θret > T_thr | Constant η_nc (no more condensation)|
+
+This model offers a tunable middle ground between the simple heuristic and a full manufacturer curve — it’s ideal for parametric studies or sensitivity analyses.
+
+3) **'manufacturer'**: it is a 1D (return) or 2D (flow/return) map based on the manufacturer curve. 
+```python
+if model == 'manufacturer':
+    # (a) 1D curve eff = f(Tret)
+    # (b) 2D surface eff = f(Tflw, Tret)
+```
+
+This model uses **real efficiency maps** provided by the equipment manufacturer.
+
+**(a) 1D curve**
+
+- The efficiency is interpolated from a list of measured points: Tret = [20, 30, 40, 50, 60], eta = [109, 106, 101, 95, 93].
+- Uses linear interpolation to find the efficiency for the given θret.
+
+**(b) 2D surface**
+
+- For more detailed manufacturer data, efficiency is given as a grid (matrix) depending on both flow and return temperatures.
+- Bilinear interpolation is used between the four nearest points (Q11, Q12, Q21, Q22) to compute an accurate efficiency value.
+
+**Meaning:**
+
+| Type | Inputs | Accuracy | Typical Use |
+|------|--------|----------|-------------|
+| 1D | Return temperature only | Moderate | Simplified manufacturer data |
+| 2D | Flow + return temperatures | High | Detailed boiler performance maps |
+
+If the manufacturer data is missing or invalid, the function falls back to the simple heuristic.
+
+**Calculation Model:**
+
+```python
+    'calc_when_QH_positive_only': False,
+    'off_compute_mode': 'full'
+```
+
+It controls **what the program does when the heating demand (Q_H) is zero or negative** — i.e., when there is **no heating load** required in that timestep.
+
+Every timestep in the timeseries (typically 1 hour) has:
+
+- **qh** → heating demand in kWh
+- **θint** → indoor air temperature
+- **θext** → outdoor temperature
+
+The model decides how to behave based on the value of qh and the user-defined policy flags:
+
+- **calc_when_QH_positive_only**
+- **off_compute_mode**
+
+These two flags **control what happens when the heating load = 0.**
+
+Step by Step Logic 
 
 
 ---
