@@ -1,0 +1,49 @@
+site_name: pybuildingenergy
+site_url: https://EURAC-EEBgroup.github.io/pybuildingenergy-docs
+repo_url: https://github.com/EURAC-EEBgroup/pybuildingenergy-docs
+theme:
+  name: material
+  language: en
+  palette:
+    primary: blue
+    accent: indigo
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.action.edit
+nav:
+  - Home: index.md
+  - ISO 15316 - Introduction: iso_15316.md
+  - ISO 15316 - Heating Circuit: iso_15316_heating_circuit.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - API Reference: api.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append(".")
+          options:
+            docstring_style: google
+            show_signature_annotations: true
+            separate_signature: true
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
