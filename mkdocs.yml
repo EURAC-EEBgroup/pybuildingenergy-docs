@@ -1,5 +1,4 @@
 site_name: pybuildingenergy
-site_url: https://EURAC-EEBgroup.github.io/pybuildingenergy-docs
 repo_url: https://github.com/EURAC-EEBgroup/pybuildingenergy-docs
 theme:
   name: material
@@ -43,15 +42,15 @@ plugins:
           name: Italiano
           build: true
           # Traduzioni delle label di nav (opzionali)
-          nav_translations:
-            Home: Home
-            Usage: Utilizzo
-            "API Reference": "Riferimento API"
-            "ISO 52016 - Introduction": "ISO 52016 - Introduzione"
-            "ISO 15316 - Introduction": "ISO 15316 - Introduzione"
-            "ISO 15316 - Heating Circuit": "ISO 15316 - Circuito di riscaldamento"
-            "ISO 15316 - Calculation procedure": "ISO 15316 - Procedura di calcolo"
-            Installation: Installazione
+          # nav_translations:
+          #   Home: Home
+          #   Usage: Utilizzo
+          #   "API Reference": "Riferimento API"
+          #   "ISO 52016 - Introduction": "ISO 52016 - Introduzione"
+          #   "ISO 15316 - Introduction": "ISO 15316 - Introduzione"
+          #   "ISO 15316 - Heating Circuit": "ISO 15316 - Circuito di riscaldamento"
+          #   "ISO 15316 - Calculation procedure": "ISO 15316 - Procedura di calcolo"
+            # Installation: Installazione
         - locale: en
           name: English
           default: true
