@@ -14,15 +14,15 @@ theme:
     - content.action.edit
 nav:
   - Home: index.md
-  - Usage: en/usage.md
-  - API Reference: en/api.md
+  - Usage: usage.md
+  - API Reference: api.md
   - ISO 52016:
-    - ISO 52016 - Introduction: en/iso_52016.md
+    - ISO 52016 - Introduction: iso_52016.md
   - ISO 15316:
-    - ISO 15316 - Introduction: en/iso_15316.md
-    - ISO 15316 - Heating Circuit: en/iso_15316_heating_circuit.md
-    - ISO 15316 - Calculation procedure: en/iso_15316_calculation_procedure.md
-  - Installation: en/installation.md
+    - ISO 15316 - Introduction: iso_15316.md
+    - ISO 15316 - Heating Circuit: iso_15316_heating_circuit.md
+    - ISO 15316 - Calculation procedure: iso_15316_calculation_procedure.md
+  - Installation: installation.md
 
 plugins:
   - search
@@ -41,17 +41,21 @@ plugins:
       languages:
         - locale: it
           name: Italiano
-          default: false   # questa sarà servita su /
           build: true
-          # nav_translations opzionale, es:
-          # nav_translations:
-          #   Home: Home
+          # Traduzioni delle label di nav (opzionali)
+          nav_translations:
+            Home: Home
+            Usage: Utilizzo
+            "API Reference": "Riferimento API"
+            "ISO 52016 - Introduction": "ISO 52016 - Introduzione"
+            "ISO 15316 - Introduction": "ISO 15316 - Introduzione"
+            "ISO 15316 - Heating Circuit": "ISO 15316 - Circuito di riscaldamento"
+            "ISO 15316 - Calculation procedure": "ISO 15316 - Procedura di calcolo"
+            Installation: Installazione
         - locale: en
           name: English
           default: true
           build: true
-          # nav_translations:
-          #   Home: Home
 
 
 markdown_extensions:
