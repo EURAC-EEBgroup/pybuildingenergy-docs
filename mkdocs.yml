@@ -14,12 +14,15 @@ theme:
     - content.action.edit
 nav:
   - Home: index.md
-  - ISO 15316 - Introduction: en/iso_15316.md
-  - ISO 15316 - Heating Circuit: en/iso_15316_heating_circuit.md
-  - ISO 15316 - Calculation procedure: en/iso_15316_calculation_procedure.md
-  - Installation: en/installation.md
   - Usage: en/usage.md
   - API Reference: en/api.md
+  - ISO 52016:
+    - ISO 52016 - Introduction: en/iso_52016.md
+  - ISO 15316:
+    - ISO 15316 - Introduction: en/iso_15316.md
+    - ISO 15316 - Heating Circuit: en/iso_15316_heating_circuit.md
+    - ISO 15316 - Calculation procedure: en/iso_15316_calculation_procedure.md
+  - Installation: en/installation.md
 
 plugins:
   - search
