@@ -15,6 +15,20 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/ISO%2052016_input_check/"/>
     </url>
     <url>
+        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/api/</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/api/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/api/"/>
+    </url>
+    <url>
+        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/installation/</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/installation/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/installation/"/>
+    </url>
+    <url>
         <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316/</loc>
         <lastmod>2025-11-04</lastmod>
         <changefreq>daily</changefreq>
@@ -36,6 +50,13 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316_heating_circuit/"/>
     </url>
     <url>
+        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/usage/</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/usage/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/usage/"/>
+    </url>
+    <url>
         <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/</loc>
         <lastmod>2025-11-04</lastmod>
         <changefreq>daily</changefreq>
@@ -48,6 +69,20 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/ISO%2052016_input_check/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/ISO%2052016_input_check/"/>
+    </url>
+    <url>
+        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/api/</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/api/"/>
+    </url>
+    <url>
+        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/installation/</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/installation/"/>
     </url>
     <url>
         <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316/</loc>
@@ -69,5 +104,12 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316_heating_circuit/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316_heating_circuit/"/>
+    </url>
+    <url>
+        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/usage/</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/usage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/usage/"/>
     </url>
 </urlset>
