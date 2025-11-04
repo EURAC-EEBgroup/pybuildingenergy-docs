@@ -22,13 +22,6 @@
         <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/installation/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_%2052016_input_check/</loc>
-        <lastmod>2025-11-04</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_%2052016_input_check/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_%2052016_input_check/"/>
-    </url>
-    <url>
         <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316/</loc>
         <lastmod>2025-11-04</lastmod>
         <changefreq>daily</changefreq>
@@ -55,6 +48,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016/"/>
         <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016/"/>
+    </url>
+    <url>
+        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016_input_check/</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016_input_check/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check/"/>
     </url>
     <url>
         <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/usage/</loc>
@@ -85,13 +85,6 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/installation/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_%2052016_input_check/</loc>
-        <lastmod>2025-11-04</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_%2052016_input_check/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_%2052016_input_check/"/>
-    </url>
-    <url>
         <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316/</loc>
         <lastmod>2025-11-04</lastmod>
         <changefreq>daily</changefreq>
@@ -120,6 +113,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016/"/>
     </url>
     <url>
+        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check/</loc>
+        <lastmod>2025-11-04</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016_input_check/"/>
+    </url>
+    <url>
         <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/usage/</loc>
         <lastmod>2025-11-04</lastmod>
         <changefreq>daily</changefreq>
@@ -127,9 +127,9 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/usage/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_%2052016_input_check.md/</loc>
+        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check.md/</loc>
         <lastmod>2025-11-04</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_%2052016_input_check.md/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check.md/"/>
     </url>
 </urlset>
