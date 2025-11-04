@@ -20,5 +20,6 @@ They differ where there is a mixing or by-pass 3 way valve in the circuit.
 ## C2 - constant mass flow rate and varying water temperature
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/EURAC-EEBgroup/brick-llm/refs/heads/main/docs/assets/brickllm_banner.png" alt="BrickLLM" style="width: 100%;">
+  <img src="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/blob/main/images/system_c2.jpg" alt="BrickLLM" style="width: 100%;">
+  <!-- <img src="https://raw.githubusercontent.com/EURAC-EEBgroup/brick-llm/refs/heads/main/docs/assets/brickllm_banner.png" alt="BrickLLM" style="width: 100%;"> -->
 </p>    
