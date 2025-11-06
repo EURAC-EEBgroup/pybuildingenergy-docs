@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../iso_15316_heating_circuit/">
+        <link rel="prev" href="../iso_15316_generation_circuit/">
       
       
-        <link rel="next" href="../installation/">
+        <link rel="next" href="../iso_15316_calculation_procedure/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>ISO 15316 - System inputs - pybuildingenergy</title>
+        <title>ISO 15316 - HVAC System inputs - pybuildingenergy</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#system-inputs" class="md-skip">
+        <a href="#hvac-system-inputs" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ISO 15316 - System inputs
+              ISO 15316 - HVAC System inputs
             
           </span>
         </div>
@@ -357,7 +357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52016/" class="md-nav__link">
+      <a href="../iso_52016.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -466,6 +466,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_generation_circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Generation Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -482,7 +503,7 @@
           
   
   <span class="md-ellipsis">
-    ISO 15316 - System inputs
+    ISO 15316 - HVAC System inputs
   </span>
   
 
@@ -493,7 +514,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 15316 - System inputs
+    ISO 15316 - HVAC System inputs
   </span>
   
 
@@ -515,18 +536,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#emitter" class="md-nav__link">
+  <a href="#emission" class="md-nav__link">
     <span class="md-ellipsis">
-      EMITTER
+      EMISSION
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#generator" class="md-nav__link">
+  <a href="#distribution" class="md-nav__link">
     <span class="md-ellipsis">
-      GENERATOR
+      DISTRIBUTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERATION
     </span>
   </a>
   
@@ -545,6 +575,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_calculation_procedure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Calculation procedure
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -604,18 +655,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#emitter" class="md-nav__link">
+  <a href="#emission" class="md-nav__link">
     <span class="md-ellipsis">
-      EMITTER
+      EMISSION
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#generator" class="md-nav__link">
+  <a href="#distribution" class="md-nav__link">
     <span class="md-ellipsis">
-      GENERATOR
+      DISTRIBUTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERATION
     </span>
   </a>
   
@@ -653,11 +713,11 @@
   
 
 
-<h1 id="system-inputs">SYSTEM INPUTS<a class="headerlink" href="#system-inputs" title="Permanent link">&para;</a></h1>
+<h1 id="hvac-system-inputs">HVAC SYSTEM INPUTS<a class="headerlink" href="#hvac-system-inputs" title="Permanent link">&para;</a></h1>
 <p>The user must define the following parameters to perform the calculation of primary energy according to ISO 15316.1. The python class to which this calculation is requested is the <strong>HeatingSystemCalculator</strong>.</p>
 <p>Below is shown an example of a dictionary that must be passed to HeatingSystemCalculator in which the parameters necessary for the calculation are indicated. 
 The following parameters are the minimum required, this does not mean that it is possible to modify other parameters based on your own requests.  For example the table TB14 in the hereunder list. </p>
-<h3 id="emitter">EMITTER<a class="headerlink" href="#emitter" title="Permanent link">&para;</a></h3>
+<h3 id="emission">EMISSION<a class="headerlink" href="#emission" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Nominal power</strong>: it is the power of the emitter in kW, defined in the product data. </li>
 <li><strong>Emission efficiency</strong>: it is the efficiency of the emitter in %.</li>
@@ -722,8 +782,20 @@ The following parameters are the minimum required, this does not mean that it is
 </tbody>
 </table>
 <ul>
+<li><strong>Mixing valve</strong>: it is a boolean that indicates if a mixing valve is used. It refers to the varaible <strong>MIX_EM</strong>. Possible values: <em>True</em> or <em>False</em></li>
 <li>
-<p><strong>Mixing valve</strong>: it is a boolean that indicates if a mixing valve is used. It refers to the varaible <strong>MIX_EM</strong>. Possible values: <em>True</em> or <em>False</em></p>
+<p><strong>mixing valve delta</strong>: it is the offset temperature of the mixing valve in °C. It refers to the varaible <strong>mixing_valve_delta</strong>. </p>
+<ul>
+<li>
+<p>The offset refers to the temperature difference between the desired temperature and the actual temperature, which is applied when mixing hot and cold water.</p>
+</li>
+<li>
+<p>In this case, the parameter ΔθH_em_mix_sahz_i represents the temperature offset applied by the mixing valve, with a default value set to 2°C (as defined in the code).</p>
+</li>
+<li>
+<p>This means that when the mixing valve is operating, it will allow a 2°C deviation from the desired temperature to account for system dynamics, such as heat losses, system inertia, or external temperature influences.</p>
+</li>
+</ul>
 </li>
 <li>
 <p><strong>TB14</strong>: it is the table that contains the data of the emitter. If it is not provided the default values are used and the emitter_type is set to the first one in the table.</p>
@@ -760,7 +832,131 @@ The following parameters are the minimum required, this does not mean that it is
 </tr>
 </tbody>
 </table>
-<h3 id="generator">GENERATOR<a class="headerlink" href="#generator" title="Permanent link">&para;</a></h3>
+<p><strong>heat_emission_data</strong>: it is the table that contains the data of the emission circuit. If it is not provided the default values are used and the emitter_type is set to the first one in the table. In the code we have the function <code>_default_emission_data()</code> that returns the default values.
+These values are default emission circuit parameters for the heating system’s <strong>secondary side</strong> (the side connected to heating emitters, such as radiators or underfloor heating).<br />
+ They represent <strong>nominal</strong> and <strong>operational setpoints</strong> for a single heating zone (HZ1), including flow/return temperatures and load control factors.</p>
+<p><em>Table 4: Emission circuit data</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter (column name)</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Default Value</strong></th>
+<th style="text-align: center;"><strong>Unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>θH_em_flw_max_sahz_i</code></td>
+<td>Maximum flow temperature for the heating emission circuit</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: center;">°C</td>
+</tr>
+<tr>
+<td><code>ΔθH_em_w_max_sahz_i</code></td>
+<td>Maximum water flow/return temperature difference</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: center;">°C</td>
+</tr>
+<tr>
+<td><code>θH_em_ret_req_sahz_i</code></td>
+<td>Desired return temperature of the emission circuit</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: center;">°C</td>
+</tr>
+<tr>
+<td><code>βH_em_req_sahz_i</code></td>
+<td>Desired load factor with ON/OFF control</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: center;">%</td>
+</tr>
+<tr>
+<td><code>θH_em_flw_min_tz_i</code></td>
+<td>Minimum required flow temperature for the thermal zone</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: center;">°C</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="distribution">DISTRIBUTION<a class="headerlink" href="#distribution" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># --- distribution ---</span>
+<span class="s1">&#39;heat_losses_recovered&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="s1">&#39;distribution_loss_recovery&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+<span class="s1">&#39;simplified_approach&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="s1">&#39;distribution_aux_recovery&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="s1">&#39;distribution_aux_power&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+<span class="s1">&#39;distribution_loss_coeff&#39;</span><span class="p">:</span> <span class="mi">48</span><span class="p">,</span>
+<span class="s1">&#39;distribution_operation_time&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</code></pre></div>
+The parameters are used inside the class <strong>HeatingSystemCalculator</strong> as:</p>
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">Heat_losses_recovered</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;heat_losses_recovered&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">f_h_dist_i_ls</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_loss_recovery&#39;</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>  <span class="c1"># %</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">simplified_or_holistic_approach</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;simplified_approach&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>  <span class="c1"># %</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">f_h_dist_i_aux</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_aux_recovery&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>  <span class="c1"># %</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">W_H_dist_i_aux</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_aux_power&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>  <span class="c1"># W</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">Heat_loss_coefficent_dist</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_loss_coeff&#39;</span><span class="p">,</span> <span class="mi">48</span><span class="p">)</span>  <span class="c1"># W/K</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">tH_dis_i_ON</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_operation_time&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># h</span>
+</code></pre></div>
+<p>if data is not provided by the user, the default values are used.</p>
+<p>These parameters describe the <strong>thermal and electrical behavior</strong> of the <strong>heat distribution subsystem</strong>, which connects the generator to the emitters (secondary circuits).<br />
+They define how heat losses, auxiliary energy use, and simplifications in the calculation are handled within the ISO 15316-1 framework.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Variable</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>heat_losses_recovered</code></td>
+<td>Boolean flag that defines whether <strong>distribution heat losses</strong> are considered <strong>recoverable</strong> in the building (e.g., heat lost in indoor piping contributes to heating).</td>
+<td><code>True</code></td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>distribution_loss_recovery</code> (<code>f_h_dist_i_ls</code>)</td>
+<td>Fraction of distribution losses that are <strong>recoverable</strong> (typically within the heated zone).</td>
+<td><code>90</code></td>
+<td>%</td>
+</tr>
+<tr>
+<td><code>simplified_approach</code> (<code>simplified_or_holistic_approach</code>)</td>
+<td>Defines the calculation approach for recovered losses: a <strong>simplified method</strong> (<code>&gt; 0</code>) or a <strong>holistic method</strong> (<code>0</code> for detailed ISO modeling).</td>
+<td><code>80</code></td>
+<td>%</td>
+</tr>
+<tr>
+<td><code>distribution_aux_recovery</code> (<code>f_h_dist_i_aux</code>)</td>
+<td>Fraction of <strong>auxiliary electrical power</strong> (e.g., pumps, valves) that is <strong>converted into useful heat</strong> and recovered within the heated space.</td>
+<td><code>80</code></td>
+<td>%</td>
+</tr>
+<tr>
+<td><code>distribution_aux_power</code> (<code>W_H_dist_i_aux</code>)</td>
+<td>Rated <strong>auxiliary electrical power</strong> of the distribution system (e.g., circulation pumps).</td>
+<td><code>30</code></td>
+<td>W</td>
+</tr>
+<tr>
+<td><code>distribution_loss_coeff</code> (<code>Heat_loss_coefficent_dist</code>)</td>
+<td>Overall <strong>heat loss coefficient</strong> of the distribution system, representing thermal losses per degree of temperature difference between the fluid and ambient air.</td>
+<td><code>48</code></td>
+<td>W/K</td>
+</tr>
+<tr>
+<td><code>distribution_operation_time</code> (<code>tH_dis_i_ON</code>)</td>
+<td>Average <strong>operation time</strong> of the distribution system per time step (typically the same as the emission system).</td>
+<td><code>1</code></td>
+<td>h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="generation">GENERATION<a class="headerlink" href="#generation" title="Permanent link">&para;</a></h3>
 <p>The generator is modelled using the following parameters:</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># --- generator ---</span>
     <span class="s1">&#39;full_load_power&#39;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>                  <span class="c1"># kW</span>
@@ -986,6 +1182,12 @@ If the user defines a constant supply temperature of 50 °C → the generator wi
 <li>If <code>speed_control_generator_pump = "variable"</code> → ΔT may drop to <strong>10–15 °C</strong>, depending on demand.</li>
 </ul>
 </li>
+</ul>
+<hr />
+<p>It is possible to define the optional primary setpoints (used if circuit is independent).</p>
+<ul>
+<li><strong>θHW_gen_flw_set</strong>: flow temperature setpoint</li>
+<li><strong>θHW_gen_ret_set</strong>: return temperature setpoint</li>
 </ul>
 <hr />
 <h3 id="general">GENERAL<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
@@ -1215,6 +1417,28 @@ Recomputing all hydraulic and thermal equations each hour would waste time.</p>
     <span class="s1">&#39;selected_emm_cont_circuit&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s1">&#39;mixing_valve&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
     <span class="c1"># &#39;TB14&#39;: custom_TB14, #  &lt;- Uncomment and upload your emittere table, oterwhise the default stored in gloabl_inputs.py is used</span>
+    <span class="s1">&#39;heat_emission_data&#39;</span> <span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s2">&quot;θH_em_flw_max_sahz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">45</span><span class="p">],</span>
+            <span class="s2">&quot;ΔθH_em_w_max_sahz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">],</span>
+            <span class="s2">&quot;θH_em_ret_req_sahz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">],</span>
+            <span class="s2">&quot;βH_em_req_sahz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">80</span><span class="p">],</span>
+            <span class="s2">&quot;θH_em_flw_min_tz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">28</span><span class="p">],</span>
+        <span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;Max flow temperature HZ1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Max Δθ flow / return HZ1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Desired return temperature HZ1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Desired load factor with ON-OFF for HZ1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Minimum flow temperature for HZ1&quot;</span>
+        <span class="p">])</span>
+
+    <span class="c1"># --- distribution ---</span>
+    <span class="s1">&#39;heat_losses_recovered&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_loss_recovery&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="s1">&#39;simplified_approach&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_aux_recovery&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_aux_power&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_loss_coeff&#39;</span><span class="p">:</span> <span class="mi">48</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_operation_time&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
 
     <span class="c1"># --- generator ---</span>
     <span class="s1">&#39;full_load_power&#39;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>                  <span class="c1"># kW</span>
