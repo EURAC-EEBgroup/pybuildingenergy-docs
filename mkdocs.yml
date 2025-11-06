@@ -25,6 +25,7 @@ nav:
     - ISO 15316 - Calculation procedure: iso_15316_calculation_procedure.md
   - Installation: installation.md
 
+
 plugins:
   - search
   - mkdocstrings:
