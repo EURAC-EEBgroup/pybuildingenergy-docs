@@ -57,6 +57,13 @@
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_system_inputs/"/>
     </url>
     <url>
+        <loc>Noneiso_52016/</loc>
+        <lastmod>2025-11-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016/"/>
+    </url>
+    <url>
         <loc>Noneiso_52016_input_check/</loc>
         <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
@@ -127,6 +134,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_system_inputs/"/>
     </url>
     <url>
+        <loc>Noneit/iso_52016/</loc>
+        <lastmod>2025-11-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016/"/>
+    </url>
+    <url>
         <loc>Noneit/iso_52016_input_check/</loc>
         <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
@@ -139,11 +153,5 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/usage/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
-    </url>
-    <url>
-        <loc>Noneit/iso_52016_input_check.md/</loc>
-        <lastmod>2025-11-06</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_input_check.md/"/>
     </url>
 </urlset>

@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../api/">
+      
+      
+        <link rel="next" href="../iso_15316/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>ISO 52016 Input Check - pybuildingenergy</title>
+        <title>ISO 52016 - Introduction - pybuildingenergy</title>
       
     
     
@@ -46,8 +50,6 @@
     
       <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../../styles/custom.css">
-    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -70,11 +72,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#iso-52016-input-check" class="md-skip">
-          Vai al contenuto
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -108,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ISO 52016 Input Check
+              ISO 52016 - Introduction
             
           </span>
         </div>
@@ -135,7 +132,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="/" hreflang="en" class="md-select__link">
+            <a href="../../iso_52016/" hreflang="en" class="md-select__link">
               English
             </a>
           </li>
@@ -308,8 +305,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -319,11 +318,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -337,7 +336,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             ISO 52016
@@ -348,10 +347,17 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../iso_52016.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -360,6 +366,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -531,6 +538,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../iso_52016_input_check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../installation/" class="md-nav__link">
         
   
@@ -561,8 +588,6 @@
   
   
   
-    
-  
   
 </nav>
                   </div>
@@ -577,7 +602,7 @@
                   
 
   
-    <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/edit/master/docs/it/iso_52016_input_check.md.md" title="Modifica" class="md-content__button md-icon">
+    <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/edit/master/docs/it/iso_52016.md" title="Modifica" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -585,12 +610,9 @@
   
 
 
-<h1 id="iso-52016-input-check">ISO 52016 Input Check<a class="headerlink" href="#iso-52016-input-check" title="Permanent link">&para;</a></h1>
-<p>The data provided before being used for the simulation are processed and evaluated to be considered fit for the simulation. This process includes a series of checks that allow to identify any potential errors. 
-The following controls are applied:</p>
-<h1 id="thermal-and-adjacent-zone">Thermal and Adjacent Zone<a class="headerlink" href="#thermal-and-adjacent-zone" title="Permanent link">&para;</a></h1>
-<p>Uno degli errori più caratteristici può essere quello di immetere dei valori errati di superficie della parete di confine tra la zona termica e la zona non termica. Un esempio è quello di dare dei valori più alti della superificie della parete nella zona non termica rispetto alla superificie della parete nella zona termica. In questo caso se il controllo risulta essere negativo allora il tool imposta il valore del superificie della zona non termica uguale a quello della zona termica. 
-Qui voglio dire che sebbene la superficie di contatto è la stessa pu`o succedere che la parete della zona termica sia o totlamente a contatto con la zon non termica o solamente una parte a contatto con la zona termica   </p>
+  <h1>ISO 52016 - Introduction</h1>
+
+
 
 
 
