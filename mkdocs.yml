@@ -23,6 +23,7 @@ nav:
     - ISO 15316 - Generation Circuit: iso_15316_generation_circuit.md
     - ISO 15316 - HVAC System inputs: iso_15316_system_inputs.md
     - ISO 15316 - Calculation procedure: iso_15316_calculation_procedure.md
+  - Quality check: iso_52016_input_check.md
   - Installation: installation.md
 
 
@@ -58,22 +59,31 @@ plugins:
           name: English
           default: true
           build: true
+  - mermaid2
 
 
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - admonition
-  - codehilite
   - toc:
       permalink: true
   - pymdownx.highlight
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details
+  - pymdownx.snippets
 
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-extra_css:
-  - styles/custom.css
+
+# marmaid:javascript:
+#   - https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
+#   - js/mermaid-init.js     # we'll create this file (see below)
+# extra_css:
+#   - styles/custom.css

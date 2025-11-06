@@ -518,6 +518,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Calculation procedure
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -527,6 +538,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description of functions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -580,6 +619,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description-of-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description of functions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -605,13 +661,855 @@
 <div style="background-color: #FA8072; border-left: 4px solid #800000; padding: 10px; margin: 10px 0;">
 <strong>Note:</strong> THE ACTUAL CALCULATION OF PRIMARY ENRGY USING THE ISO 15316-1 IS FOR A SINGLE ZONE, IT IS NOT YET IMPLEMENTED THE CALCULATION FOR MULTIPLE ZONES.
 
-The calculation procedure follows the direction from the energy need to the source (building energy need -> primary energy)
+</div>
 
-## Building Energy Need
-The building energy need is calculated using the module ISO 52016. For more information refers to the module ISO 52016.
+<p>The calculation procedure follows the direction from the energy need to the source (building energy need -&gt; primary energy)</p>
+<p><strong>Building Energy Need</strong>: The building energy need is calculated using the module ISO 52016. For more information refers to the module ISO 52016.</p>
+<p><strong>HVAC System</strong>:Based on different type of system configuration (from type C2 to C5) the HVAC system is calculated using the ANNEX C of  ISO 15316-1. </p>
+<h2 id="description-of-functions">Description of functions<a class="headerlink" href="#description-of-functions" title="Permanent link">&para;</a></h2>
+<h1 id="heatingsystemcalculator-guida-e-commento-riga-per-riga-it">HeatingSystemCalculator — Guida e commento riga-per-riga (IT)<a class="headerlink" href="#heatingsystemcalculator-guida-e-commento-riga-per-riga-it" title="Permanent link">&para;</a></h1>
+<p>Questa guida spiega <strong>cosa fa</strong> lo script e <strong>commenta ogni funzione</strong>, con enfasi su:
+- assunzioni, unità di misura e formule utilizzate;
+- struttura dei dati in ingresso/uscita;
+- flusso di calcolo per singolo passo e per serie temporali.</p>
+<blockquote>
+<p><strong>Standard di riferimento</strong>: il calcolatore segue la logica della <strong>ISO 15316-1</strong> per i sistemi di riscaldamento e supporta 4 tipologie di circuito di emissione (C.2, C.3, C.4, C.5).</p>
+</blockquote>
+<hr />
+<h2 id="1-panoramica-rapida">1) Panoramica rapida<a class="headerlink" href="#1-panoramica-rapida" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Classe principale</strong>: <code>HeatingSystemCalculator</code></li>
+<li><strong>Input</strong>: un dizionario <code>input_data</code> con parametri di <strong>emissione</strong>, <strong>distribuzione</strong> e <strong>generazione</strong> (primario).</li>
+<li><strong>Dati tabellari</strong>:</li>
+<li><code>TB14</code> (DF): tabella ISO con <strong>ΔT nominali</strong> ed <strong>esponente n</strong> per il terminale (radiatori, pannelli, ecc.).<br />
+    Se non fornita in <code>input_data["TB14"]</code>, viene usato <code>TB14_backup</code> da <code>global_inputs</code>.</li>
+<li><strong>Unità</strong> (principali):</li>
+<li>Energia: <strong>kWh</strong> (eccezione: <code>Q_H</code> può arrivare in Wh e viene convertito)</li>
+<li>Potenza: <strong>kW</strong>, Perdite/Aux: <strong>kWh</strong></li>
+<li>Portate volumetriche: <strong>m³/h</strong></li>
+<li>Temperature: <strong>°C</strong></li>
+<li><strong>c_w</strong>: calore specifico dell’acqua in <strong>Wh/(kg·K)</strong> (≈1.16)</li>
+<li><strong>Output</strong>:</li>
+<li>per <strong>singolo passo</strong>: dizionario con temperature, portate ed energie su emissione, distribuzione e generazione;</li>
+<li>per <strong>serie temporali</strong>: DataFrame orario/temporale con la stessa struttura.</li>
+</ul>
+<hr />
+<h2 id="2-struttura-della-classe">2) Struttura della classe<a class="headerlink" href="#2-struttura-della-classe" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">HeatingSystemCalculator</span><span class="p">:</span>
+    \<span class="s2">&quot;</span><span class="se">\&quot;\&quot;</span><span class="s2">Calcolatore secondo ISO 15316-1 con 4 tipologie C.2–C.5.</span><span class="se">\&quot;\&quot;\&quot;</span>
+</code></pre></div>
+<h3 id="__init__self-input_data"><code>__init__(self, input_data)</code><a class="headerlink" href="#__init__self-input_data" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cosa fa</strong>: salva l’input, carica <strong>costanti</strong> e <strong>parametri</strong> richiamando <code>_load_constants()</code> e <code>_load_input_parameters()</code>.</li>
+<li><strong>Attenzione</strong>: <code>input_data</code> guida <em>tutto</em> (policy di controllo, efficienza generatore, curve esterne, ecc.).</li>
+</ul>
+<hr />
+<h2 id="3-caricamento-costanti-e-parametri">3) Caricamento costanti e parametri<a class="headerlink" href="#3-caricamento-costanti-e-parametri" title="Permanent link">&para;</a></h2>
+<h3 id="_load_constantsself"><code>_load_constants(self)</code><a class="headerlink" href="#_load_constantsself" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: carica i riferimenti globali e le costanti.</li>
+<li><strong>Dettagli</strong>:</li>
+<li>Se <code>input_data["TB14"]</code> è un <code>pd.DataFrame</code>, usa quello; altrimenti usa <code>TB14_backup</code>.</li>
+<li>Imposta <code>c_w = 1.16</code> Wh/(kg·K).</li>
+<li><strong>Perché serve</strong>: <code>TB14</code> fornisce ΔT nominali ed esponente <strong>n</strong> per calcolare la relazione <strong>potenza ↔ ΔT aria-emettitore</strong>.</li>
+</ul>
+<h3 id="_load_input_parametersself"><code>_load_input_parameters(self)</code><a class="headerlink" href="#_load_input_parametersself" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: legge dal dizionario d’ingresso i parametri di:</li>
+<li><strong>Emissione (secondario)</strong>: tipo emettitore, potenza nominale, efficienza, valvola di miscelazione, tipo di controllo della temperatura di mandata (domanda/esterna/costante), potenze ausiliarie, <strong>t</strong> operative, dati curva esterna secondaria.</li>
+<li><strong>Distribuzione</strong>: recupero perdite, ausiliari, coefficiente di perdita [W/K], tempo in servizio, ecc.</li>
+<li><strong>Generazione (primario)</strong>: potenza a pieno carico, fattore di carico max, tempo in servizio, schema idraulico (<strong>direct</strong> o <strong>independent</strong>), controllo pompa, ΔT nominale, setpoint opzionali, modello di efficienza del generatore (simple/parametric/manufacturer) e relative curve/parametri, controllo della mandata primaria (Type A/B/C) e curva esterna primaria.</li>
+<li><strong>Note importanti</strong>:</li>
+<li><code>selected_emm_cont_circuit</code> ∈ {0,1,2,3} → C.2/C.3/C.4/C.5.</li>
+<li>Policy <strong>Q_H ≤ 0</strong>: <code>calc_when_QH_positive_only</code> + <code>off_compute_mode</code> (<code>idle</code>/<code>temps</code>/<code>full</code>) decidono come trattare i periodi senza carico.</li>
+</ul>
+<hr />
+<h2 id="4-tabelle-e-dati-di-default">4) Tabelle e dati di default<a class="headerlink" href="#4-tabelle-e-dati-di-default" title="Permanent link">&para;</a></h2>
+<h3 id="_default_emission_dataself"><code>_default_emission_data(self)</code><a class="headerlink" href="#_default_emission_dataself" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cosa fornisce</strong>: limiti/setpoint <strong>secondari</strong> (emissione): T mandata max, ΔT max, T ritorno desiderata, fattore di carico con ON/OFF, T minima di mandata.</li>
+<li><strong>Perché</strong>: servono a vincolare il calcolo dell’emettitore in funzione della domanda e del tipo C.2–C.5.</li>
+</ul>
+<h3 id="_default_outdoor_dataself"><code>_default_outdoor_data(self)</code><a class="headerlink" href="#_default_outdoor_dataself" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cosa fornisce</strong>: curva <strong>climatica secondaria</strong> (mandata min/max vs T esterna min/max).</li>
+<li><strong>Uso</strong>: impiegata da <code>calculate_circuit_node_temperature</code> quando il controllo è “basato su esterno”.</li>
+</ul>
+<hr />
+<h2 id="5-dati-di-serie-temporali">5) Dati di serie temporali<a class="headerlink" href="#5-dati-di-serie-temporali" title="Permanent link">&para;</a></h2>
+<h3 id="load_csv_dataself-csv_path_or_df"><code>load_csv_data(self, csv_path_or_df)</code><a class="headerlink" href="#load_csv_dataself-csv_path_or_df" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: carica dati orari/temporali da <strong>CSV/DataFrame</strong> con colonne attese:</li>
+<li><code>Q_H</code>, <code>T_op</code>, <code>T_ext</code> (alias supportati).</li>
+<li><strong>Logica</strong>:</li>
+<li>Se presente <code>Q_H</code> in <strong>Wh</strong>, crea <code>Q_H_kWh = Q_H / 1000</code>.</li>
+<li>Salva in <code>self.timeseries_data</code>.</li>
+<li><strong>Ritorna</strong>: DataFrame caricato.</li>
+</ul>
+<hr />
+<h2 id="6-emissione-parametri-comuni">6) Emissione — parametri comuni<a class="headerlink" href="#6-emissione-parametri-comuni" title="Permanent link">&para;</a></h2>
+<h3 id="calculate_common_emission_parametersself-heating_needs_kwh-int"><code>calculate_common_emission_parameters(self, heating_needs_kWh, θint)</code><a class="headerlink" href="#calculate_common_emission_parametersself-heating_needs_kwh-int" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: calcola grandezze comuni a C.2–C.5:</li>
+<li>domanda netta (dopo perdite recuperabili di sistema),</li>
+<li>potenza media emessa <code>ΦH_em_eff</code> (kW) su <code>tH_em_i_ON</code>,</li>
+<li>perdite/ingressi di emissione, ausiliari,</li>
+<li>parametri nominali TB14: <code>ΔθH_em_n</code>, <code>ΔθH_em_air</code>, <code>nH_em</code>, portata nominale <code>V_H_em_nom</code>.</li>
+<li><strong>Note</strong>:</li>
+<li><code>V_H_em_nom = ΦH_em_n / (ΔθH_em_n * c_w)</code>.</li>
+<li>Calcola <strong>fattore di carico</strong> β e tempo ON parziale per ausiliari.</li>
+</ul>
+<hr />
+<h2 id="7-emissione-modelli-c2c3c4c5">7) Emissione — modelli C.2/C.3/C.4/C.5<a class="headerlink" href="#7-emissione-modelli-c2c3c4c5" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Tutti usano la relazione non lineare <strong>potenza ↔ ΔT aria-emettitore</strong> con esponente <strong>n</strong> da TB14.</p>
+</blockquote>
+<h3 id="calculate_type_c2self-common_params-int-c2-portata-costante-t-acqua-costante"><code>calculate_type_C2(self, common_params, θint)</code> — <strong>C.2: portata costante, T acqua costante</strong><a class="headerlink" href="#calculate_type_c2self-common_params-int-c2-portata-costante-t-acqua-costante" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Usa <code>V_H_em_nom</code> come portata <strong>effettiva</strong>.</li>
+<li>Stima <code>ΔθH_em_air_eff = Δθ_air_nom * (Φ_eff/Φ_nom)^(1/n)</code>.</li>
+<li>Calcola <code>θH_em_avg</code>, quindi ΔT acqua <code>ΔθH_em_w_eff = Φ_eff / (c_w * V)</code> e da qui <strong>mandata</strong>/<strong>ritorno</strong> emettitore.</li>
+<li><code>θH_em_flw_min</code> include <strong>offset di miscelazione</strong> se <code>MIX_EM=True</code>.</li>
+</ul>
+<h3 id="calculate_type_c3self-common_params-int-c3-portata-variabile-t-emettitore-costante-ritorno-vincolato"><code>calculate_type_C3(self, common_params, θint)</code> — <strong>C.3: portata variabile, T emettitore costante (ritorno vincolato)</strong><a class="headerlink" href="#calculate_type_c3self-common_params-int-c3-portata-variabile-t-emettitore-costante-ritorno-vincolato" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fissa <code>θH_em_ret_set</code> (≥ <code>θint</code>), limita T mandata (<code>θH_em_flw_max</code>, ΔT_w_max).</li>
+<li>Determina <code>θH_em_flw</code> e <code>θH_em_ret</code> coerenti e ricava la <strong>portata</strong> da ΔT acqua.</li>
+<li><code>θH_em_flw_min</code> include offset di miscelazione.</li>
+</ul>
+<h3 id="calculate_type_c4self-common_params-int-c4-onoff-intermittente"><code>calculate_type_C4(self, common_params, θint)</code> — <strong>C.4: ON–OFF intermittente</strong><a class="headerlink" href="#calculate_type_c4self-common_params-int-c4-onoff-intermittente" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Usa un <strong>duty cycle</strong> per garantire l’energia oraria con potenza <strong>ON</strong>.</li>
+<li>Determina <code>θH_em_flw_calc</code> durante ON (da TB14, β richiesto).</li>
+<li>Fornisce minimi di mandata per il circuito di distribuzione.</li>
+</ul>
+<h3 id="calculate_type_c5self-common_params-int-c5-portata-costante-scambio-variabile-bypass"><code>calculate_type_C5(self, common_params, θint)</code> — <strong>C.5: portata costante, scambio variabile (bypass)</strong><a class="headerlink" href="#calculate_type_c5self-common_params-int-c5-portata-costante-scambio-variabile-bypass" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mantiene portata nominale; la <strong>mandata effettiva</strong> è il massimo tra il calcolo e il set minimo (<code>θH_em_flw_min_tz_i</code>).</li>
+<li>L’uscita include <code>θH_em_flw_min</code> (con margine di miscelazione).</li>
+</ul>
+<hr />
+<h2 id="8-temperatura-nodo-circuito-secondario">8) Temperatura nodo circuito (secondario)<a class="headerlink" href="#8-temperatura-nodo-circuito-secondario" title="Permanent link">&para;</a></h2>
+<h3 id="calculate_circuit_node_temperatureself-ext-emission_results"><code>calculate_circuit_node_temperature(self, θext, emission_results)</code><a class="headerlink" href="#calculate_circuit_node_temperatureself-ext-emission_results" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: calcola la <strong>mandata al nodo</strong> <code>θH_nod_out</code> in base al <strong>tipo di controllo secondario</strong>:</li>
+<li><strong>Type 1 – Based on demand</strong>: usa <code>θH_em_flw_min</code> dell’emissione.</li>
+<li><strong>Type 2 – Based on outdoor</strong>: usa la <strong>curva climatica</strong> secondaria.</li>
+<li><strong>Type 3 – Constant temperature</strong>: usa <code>θem_flw_sahz_i</code> (costante).</li>
+<li><strong>Output</strong>: <code>θH_nod_out</code> (°C).</li>
+</ul>
+<hr />
+<h2 id="9-condizioni-operative-secondario">9) Condizioni operative (secondario)<a class="headerlink" href="#9-condizioni-operative-secondario" title="Permanent link">&para;</a></h2>
+<h3 id="calculate_operating_conditionsself-emission_results-common_params-int-h_nod_out"><code>calculate_operating_conditions(self, emission_results, common_params, θint, θH_nod_out)</code><a class="headerlink" href="#calculate_operating_conditionsself-emission_results-common_params-int-h_nod_out" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: combina la scelta C.2/C.3/C.4/C.5 e il nodo per generare:</li>
+<li>temperature <strong>circuito</strong>: <code>θH_cr_flw</code>, <code>θH_cr_ret</code>, portata <code>V_H_cr</code>;</li>
+<li>temperature <strong>distribuzione</strong> (tra collettore ed emettitore): <code>θH_dis_flw</code>, <code>θH_dis_ret</code>;</li>
+<li>fattore di carico <code>βH_em</code> e mandata minima richiesta <code>θH_em_flw_min</code>;</li>
+<li><strong>ritorno effettivo emettitore</strong> (usato a valle).</li>
+<li><strong>Note</strong>:</li>
+<li>C.4 introduce tempo ON e calcolo di potenza in ON;</li>
+<li>C.5 tiene mandata minima e calcola il ritorno dal bilancio con portata costante.</li>
+</ul>
+<hr />
+<h2 id="10-distribuzione">10) Distribuzione<a class="headerlink" href="#10-distribuzione" title="Permanent link">&para;</a></h2>
+<h3 id="calculate_distributionself-h_dis_flw-h_dis_ret-int-qh_em_i_in"><code>calculate_distribution(self, θH_dis_flw, θH_dis_ret, θint, QH_em_i_in)</code><a class="headerlink" href="#calculate_distributionself-h_dis_flw-h_dis_ret-int-qh_em_i_in" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: stima le <strong>perdite di distribuzione</strong> e gli <strong>ausiliari</strong>, la parte <strong>recuperabile</strong> e l’energia <strong>in ingresso</strong> richiesta dalla distribuzione.</li>
+<li><strong>Formule chiave</strong>:</li>
+<li>Perdite [kWh] ≈ <code>((T_media - T_int) * U[W/K] / 1000) * t[h]</code></li>
+<li>Ingresso richiesto: <code>QH_dis_i_in = QH_dis_i_req + perdite - aux - recuperi</code></li>
+<li>Portata di distribuzione: <code>V_H_dis = QH_dis_i_in / (c_w * ΔT_dis * t)</code></li>
+<li><strong>Output</strong>: dizionario con perdite/aux/recuperi e <code>V_H_dis</code>.</li>
+</ul>
+<hr />
+<h2 id="11-efficienza-del-generatore-primario">11) Efficienza del generatore (primario)<a class="headerlink" href="#11-efficienza-del-generatore-primario" title="Permanent link">&para;</a></h2>
+<h3 id="_efficiency_from_modelself-flw-ret-load_frac10"><code>_efficiency_from_model(self, θflw, θret, load_frac=1.0)</code><a class="headerlink" href="#_efficiency_from_modelself-flw-ret-load_frac10" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: restituisce l’<strong>efficienza</strong> (%) secondo il <strong>modello scelto</strong>:</li>
+<li><strong>simple</strong>: euristico in funzione di <code>θret</code> (condensa alta a ritorni bassi).</li>
+<li><strong>parametric</strong>: modello lineare a tratti (parametri: <code>eta_max</code>, <code>eta_no_cond</code>, <code>T_ret_min</code>, <code>T_ret_thr</code>).</li>
+<li><strong>manufacturer</strong>: curve <strong>1D</strong> (η=f(Tret)) o <strong>2D</strong> (η=f(Tflw,Tret)) con interpolazione bilineare.</li>
+<li><strong>Note</strong>: clamp a [1, 110] %; fallback a modello semplice se curve non valide.</li>
+</ul>
+<hr />
+<h2 id="12-setpoint-mandata-primaria">12) Setpoint mandata primaria<a class="headerlink" href="#12-setpoint-mandata-primaria" title="Permanent link">&para;</a></h2>
+<h3 id="_generator_flow_setpointself-ext-h_dis_flw_demand"><code>_generator_flow_setpoint(self, θext, θH_dis_flw_demand)</code><a class="headerlink" href="#_generator_flow_setpointself-ext-h_dis_flw_demand" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: calcola il <strong>setpoint di mandata primaria</strong> in base al controllo selezionato:</li>
+<li><strong>Type A – Outdoor</strong>: usa la <strong>curva primaria</strong> (min/max vs T esterna).</li>
+<li><strong>Type B – Demand</strong>: insegue la <strong>domanda secondaria</strong> (<code>θH_dis_flw</code>).</li>
+<li><strong>Type C – Constant</strong>: usa <code>θHW_gen_flw_const</code>.</li>
+</ul>
+<hr />
+<h2 id="13-generazione-primario">13) Generazione (primario)<a class="headerlink" href="#13-generazione-primario" title="Permanent link">&para;</a></h2>
+<h3 id="calculate_generationself-h_dis_flw-h_dis_ret-v_h_dis-qh_dis_i_in"><code>calculate_generation(self, θH_dis_flw, θH_dis_ret, V_H_dis, QH_dis_i_in)</code><a class="headerlink" href="#calculate_generationself-h_dis_flw-h_dis_ret-v_h_dis-qh_dis_i_in" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: calcola l’<strong>uscita termica primaria</strong> e i <strong>consumi</strong>.</li>
+<li><strong>Passi</strong>:</li>
+<li><strong>Capacità max</strong>: <code>max_output_g1 = P_full * LF_max * t</code>.</li>
+<li><strong>Richiesta</strong>: <code>QH_gen_out = min(QH_dis_i_in, max_output_g1)</code>.</li>
+<li><strong>Masse/portate</strong>: <code>ms = ρ * V_dis</code>.</li>
+<li><strong>Schemi idraulici</strong>:<ul>
+<li><strong>direct</strong>: primario=secondario;</li>
+<li><strong>independent</strong>: calcolo <code>ΔT_p</code>, setpoint mandata primaria (A/B/C), <strong>perdite linea primaria</strong>, portata primaria <code>mp = Q * 1000 / (c_w * ΔT)</code>, antimescolamento opzionale, ritorno <code>Tp_ret</code>.</li>
+</ul>
+</li>
+<li><strong>Efficienza</strong>: ricalcolo con temperature <strong>effettive</strong>.</li>
+<li><strong>Energetica</strong>:<ul>
+<li><code>EHW_gen_in = (QH_gen_out * 100) / η</code></li>
+<li><code>EHW_gen_aux = EHW_gen_in * (aux_generator/100)</code></li>
+<li>Perdite recuperabili del generatore <code>QW_gen_i_ls_rbl_H</code></li>
+<li>Bilanci <code>QW_gen_out</code>, <code>QHW_gen_out</code> e ripartizione <code>EH_gen_in</code> / <code>EWH_gen_in</code></li>
+</ul>
+</li>
+<li><strong>Output</strong>: dizionario con temperature primarie, portate, efficienza e consumi.</li>
+</ul>
+<hr />
+<h2 id="14-esecuzione-singolo-passo">14) Esecuzione <strong>singolo passo</strong><a class="headerlink" href="#14-esecuzione-singolo-passo" title="Permanent link">&para;</a></h2>
+<h3 id="compute_stepself-q_h_kwh-int-ext"><code>compute_step(self, q_h_kWh, θint, θext)</code><a class="headerlink" href="#compute_stepself-q_h_kwh-int-ext" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Flusso</strong>:</li>
+<li>Parametri comuni emissione</li>
+<li>Emissione C.2/C.3/C.4/C.5 (in base a <code>selected_emm_cont_circuit</code>)</li>
+<li>Calcolo <strong>mandata nodo</strong> (secondario)</li>
+<li><strong>Operating conditions</strong> del circuito</li>
+<li><strong>Distribuzione</strong></li>
+<li><strong>Generazione</strong> (primario)</li>
+<li>Composizione dell’<strong>output</strong> del passo (dizionario)</li>
+<li><strong>Ritorna</strong>: tutte le <strong>temperature</strong>, <strong>portate</strong> ed <strong>energie</strong> del passo.</li>
+</ul>
+<hr />
+<h2 id="15-esecuzione-serie-temporali">15) Esecuzione <strong>serie temporali</strong><a class="headerlink" href="#15-esecuzione-serie-temporali" title="Permanent link">&para;</a></h2>
+<h3 id="_temps_row_when_offself-int-ext"><code>_temps_row_when_off(self, θint, θext)</code><a class="headerlink" href="#_temps_row_when_offself-int-ext" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: in assenza di carico (<code>Q_H ≤ 0</code>) e con policy <code>off_compute_mode='temps'</code>,
+  calcola <strong>solo le temperature</strong> significative tenendo <strong>potenze/portate=0</strong>.</li>
+</ul>
+<h3 id="run_timeseriesself-dfnone"><code>run_timeseries(self, df=None)</code><a class="headerlink" href="#run_timeseriesself-dfnone" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Scopo</strong>: esegue il calcolo su tutto il DataFrame temporale.</li>
+<li><strong>Alias riconosciuti</strong>:</li>
+<li><code>Q_H_kWh</code> ↔ <code>Q_H</code>, <code>Q_h</code>, <code>Heating_needs</code></li>
+<li><code>T_op</code> ↔ <code>T_int</code>, <code>theta_int</code></li>
+<li><code>T_ext</code> ↔ <code>theta_ext</code></li>
+<li><strong>Policy quando <code>Q_H ≤ 0</code></strong>:</li>
+<li><code>calc_when_QH_positive_only=False</code>: calcola comunque il <strong>flusso completo</strong>.</li>
+<li><code>True</code> con:<ul>
+<li><code>idle</code>: riga “vuota” (NaN/0) — vedi <code>_idle_row</code>.</li>
+<li><code>temps</code>: riga <strong>solo temperature</strong> — vedi <code>_temps_row_when_off</code>.</li>
+<li><code>full</code>: calcolo <strong>completo</strong> anche con carico nullo.</li>
+</ul>
+</li>
+<li><strong>Ritorna</strong>: DataFrame indicizzato per timestamp con tutte le colonne.</li>
+</ul>
+<hr />
+<h2 id="16-colonne-chiave-in-uscita-estratto">16) Colonne chiave in uscita (estratto)<a class="headerlink" href="#16-colonne-chiave-in-uscita-estratto" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Ingressi di passo</strong>: <code>Q_h(kWh)</code>, <code>T_op(°C)</code>, <code>T_ext(°C)</code></li>
+<li><strong>Emissione</strong>: <code>ΦH_em_eff(kW)</code>, <code>θH_em_flow(°C)</code>, <code>θH_em_ret(°C)</code>, <code>V_H_em_eff(m3/h)</code>, <code>θH_em_flw_min_req(°C)</code></li>
+<li><strong>Nodo/Circuito</strong>: <code>θH_nod_out(°C)</code>, <code>θH_cr_flw(°C)</code>, <code>θH_cr_ret(°C)</code>, <code>V_H_cr(m3/h)</code>, <code>βH_em(-)</code></li>
+<li><strong>Distribuzione</strong>: <code>Q_w_dis_i_ls(kWh)</code>, <code>Q_w_dis_i_aux(kWh)</code>, <code>Q_w_dis_i_ls_rbl_H(kWh)</code>, <code>QH_dis_i_in(kWh)</code>, <code>V_H_dis(m3/h)</code></li>
+<li><strong>Generazione</strong>: <code>QH_gen_out(kWh)</code>, <code>θX_gen_cr_flw(°C)</code>, <code>θX_gen_cr_ret(°C)</code>, <code>V_H_gen(m3/h)</code>, <code>efficiency_gen(%)</code>, <code>EHW_gen_in(kWh)</code>, <code>EHW_gen_aux(kWh)</code></li>
+</ul>
+<hr />
+<h2 id="17-esempio-minimo-duso">17) Esempio minimo d’uso<a class="headerlink" href="#17-esempio-minimo-duso" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-## HVAC System
-Based on different type of system configuration (from type C2 to C5) the HVAC system is calculated using the ANNEX C of  ISO 15316-1. For more information refers to the module ISO 15316-1.
+<span class="c1"># Serie oraria minimale</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Q_H_kWh&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">],</span>
+    <span class="s2">&quot;T_op&quot;</span><span class="p">:</span>    <span class="p">[</span><span class="mf">20.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">],</span>
+    <span class="s2">&quot;T_ext&quot;</span><span class="p">:</span>   <span class="p">[</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">],</span>
+<span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;2025-01-01&quot;</span><span class="p">,</span> <span class="n">periods</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;H&quot;</span><span class="p">))</span>
+
+<span class="n">inp</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;emitter_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Floor heating&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nominal_power&quot;</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span>
+    <span class="s2">&quot;selected_emm_cont_circuit&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="c1"># C.3</span>
+    <span class="s2">&quot;flow_temp_control_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Type 1 - Based on demand&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gen_flow_temp_control_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Type A - Based on outdoor temperature&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">calc</span> <span class="o">=</span> <span class="n">HeatingSystemCalculator</span><span class="p">(</span><span class="n">inp</span><span class="p">)</span>
+<span class="n">calc</span><span class="o">.</span><span class="n">load_csv_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">out</span> <span class="o">=</span> <span class="n">calc</span><span class="o">.</span><span class="n">run_timeseries</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</code></pre></div>
+<hr />
+<h2 id="18-buone-pratiche-e-note">18) Buone pratiche e note<a class="headerlink" href="#18-buone-pratiche-e-note" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Verificare che <code>TB14</code> contenga le <strong>righe</strong> per il tipo emettitore (<code>emitter_type</code>) e le <strong>colonne</strong>:</li>
+<li><code>Emitters_nominal_deltaTeta_Water_C</code>, <code>Emitters_nominale_deltaTeta_air_C</code>, <code>Emitters_exponent_n</code>.</li>
+<li>Coerenza unità: fornire <strong>Q_H</strong> in <strong>kWh</strong> (o <strong>Wh</strong> con conversione automatica).</li>
+<li>Per schemi <strong>independent</strong>, valutare:</li>
+<li><code>generator_nominal_deltaT</code>, <code>gen_flow_temp_control_type</code>, <code>θHW_gen_flw_const</code>,</li>
+<li><code>allow_dilution</code> e <code>primary_line_loss</code> se si vuole modellare il nodo idraulico primario con/ senza miscelazione.</li>
+<li>Il modello di efficienza può essere raffinato con curve <strong>produttore</strong> (1D/2D) per caldaie/pompe di calore.</li>
+</ul>
+<hr />
+<h2 id="19-mappa-funzioni-responsabilita">19) Mappa funzioni → responsabilità<a class="headerlink" href="#19-mappa-funzioni-responsabilita" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Funzione</th>
+<th>Responsabilità principale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_load_constants</code></td>
+<td>Costanti globali e <code>TB14</code></td>
+</tr>
+<tr>
+<td><code>_load_input_parameters</code></td>
+<td>Lettura di tutti i parametri (emissione, distribuzione, generazione)</td>
+</tr>
+<tr>
+<td><code>_default_emission_data</code>, <code>_default_outdoor_data</code></td>
+<td>Default per limiti/setpoint e curva climatica secondaria</td>
+</tr>
+<tr>
+<td><code>load_csv_data</code></td>
+<td>Caricamento timeseries e normalizzazione energia</td>
+</tr>
+<tr>
+<td><code>calculate_common_emission_parameters</code></td>
+<td>Parametri comuni emissione (C.2–C.5)</td>
+</tr>
+<tr>
+<td><code>calculate_type_C2/C3/C4/C5</code></td>
+<td>Modelli specifici di emissione</td>
+</tr>
+<tr>
+<td><code>calculate_circuit_node_temperature</code></td>
+<td>Mandata al nodo secondo la policy secondaria</td>
+</tr>
+<tr>
+<td><code>calculate_operating_conditions</code></td>
+<td>Temperature/portate circuito e distribuzione</td>
+</tr>
+<tr>
+<td><code>calculate_distribution</code></td>
+<td>Perdite/ausiliari/recuperi e portata di distribuzione</td>
+</tr>
+<tr>
+<td><code>_efficiency_from_model</code></td>
+<td>Rendimento generatore secondo modello scelto</td>
+</tr>
+<tr>
+<td><code>_generator_flow_setpoint</code></td>
+<td>Setpoint mandata primaria (outdoor/demand/costante)</td>
+</tr>
+<tr>
+<td><code>calculate_generation</code></td>
+<td>Bilancio primario: potenza utile, efficienza, consumi</td>
+</tr>
+<tr>
+<td><code>compute_step</code></td>
+<td>Pipeline completa per un singolo passo</td>
+</tr>
+<tr>
+<td><code>_temps_row_when_off</code></td>
+<td>Riga “solo temperature” quando Q_H≤0</td>
+</tr>
+<tr>
+<td><code>run_timeseries</code></td>
+<td>Esecuzione sull’intera serie temporale</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Fine.</strong><br />
+Se vuoi, posso aggiungere un <em>diagramma di flusso</em> (mermaid) o una <em>tabella parametri I/O</em> dettagliata per ogni funzione.</p>
+<h1 id="heatingsystemcalculator-guida-estesa-con-diagramma-di-flusso-e-tabelle-io-it">HeatingSystemCalculator — Guida estesa con <strong>diagramma di flusso</strong> e <strong>tabelle I/O</strong> (IT)<a class="headerlink" href="#heatingsystemcalculator-guida-estesa-con-diagramma-di-flusso-e-tabelle-io-it" title="Permanent link">&para;</a></h1>
+<p>Questo documento estende la guida con:
+1) Un <strong>diagramma di flusso</strong> (Mermaid) del percorso di calcolo<br />
+2) <strong>Tabelle I/O</strong> (ingressi/uscite/side-effects) per le funzioni principali</p>
+<blockquote>
+<p>Nota: richiede un renderer che supporti i blocchi <code>mermaid</code>.</p>
+</blockquote>
+<hr />
+<h2 id="1-diagramma-di-flusso-panoramica">1) Diagramma di flusso (panoramica)<a class="headerlink" href="#1-diagramma-di-flusso-panoramica" title="Permanent link">&para;</a></h2>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+<div class="highlight"><pre><span></span><code>flowchart TB
+    subgraph Primary[&quot;Primary Circuit&quot;]
+        G[Generator/Boiler]
+        PP[Primary Pump]
+        HS[Hydraulic Separator]
+    end
+
+    subgraph Secondary[&quot;Secondary Circuit&quot;]
+        SP[Secondary Pump]
+        Z1[Zone 1]
+        Z2[Zone 2]
+        Z3[Zone 3]
+    end
+
+    G --&gt; PP
+    PP --&gt; HS
+    HS --&gt; SP
+    SP --&gt; Z1
+    SP --&gt; Z2
+    SP --&gt; Z3
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>graph TD
+    A[Start] --&gt; B{Decision}
+    B --&gt;|Yes| C[Option 1]
+    B --&gt;|No| D[Option 2]
+    C --&gt; E[End]
+    D --&gt; E
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>flowchart TD
+    A[Start] --&gt; B[__init__(input_data)]
+    B --&gt; C[_load_constants]
+    B --&gt; D[_load_input_parameters]
+    C --&gt; E{Esecuzione?}
+    D --&gt; E
+
+    E --&gt;|singolo passo| F[compute_step(q_h, θint, θext)]
+    E --&gt;|serie temporali| TS[run_timeseries(df)]
+
+    %% Pipeline singolo passo
+    subgraph Pipeline compute_step
+    F --&gt; G[calculate_common_emission_parameters]
+    G --&gt; H{Tipo circuito?}
+    H --&gt;|C.2| I1[calculate_type_C2]
+    H --&gt;|C.3| I2[calculate_type_C3]
+    H --&gt;|C.4| I3[calculate_type_C4]
+    H --&gt;|C.5| I4[calculate_type_C5]
+    I1 --&gt; J[calculate_circuit_node_temperature]
+    I2 --&gt; J
+    I3 --&gt; J
+    I4 --&gt; J
+    J --&gt; K[calculate_operating_conditions]
+    K --&gt; L[calculate_distribution]
+    L --&gt; M[calculate_generation]
+    M --&gt; N[Compose outputs dict]
+    end
+
+    %% Pipeline serie temporali
+    subgraph Timeseries run_timeseries
+    TS --&gt; TS0{Row loop}
+    TS0 --&gt;|Q_H ≤ 0 AND policy=idle| T0[_idle_row]
+    TS0 --&gt;|Q_H ≤ 0 AND policy=temps| T1[_temps_row_when_off]
+    TS0 --&gt;|altrimenti| T2[compute_step]
+    T0 --&gt; T3[accumula risultati]
+    T1 --&gt; T3
+    T2 --&gt; T3
+    end
+
+    N --&gt; O[Return dict]
+    T3 --&gt; P[Return DataFrame]
+</code></pre></div>
+<hr />
+<h2 id="2-tabelle-di-inputoutput-funzioni-principali">2) Tabelle di Input/Output (funzioni principali)<a class="headerlink" href="#2-tabelle-di-inputoutput-funzioni-principali" title="Permanent link">&para;</a></h2>
+<h3 id="21-__init__input_data">2.1 <code>__init__(input_data)</code><a class="headerlink" href="#21-__init__input_data" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_data</code></td>
+<td>dict</td>
+<td>Parametri di emissione, distribuzione, generazione, policy e tabelle.</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td></td>
+<td>Inizializza l’istanza e richiama <code>_load_constants()</code> &amp; <code>_load_input_parameters()</code>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="22-_load_constants">2.2 <code>_load_constants()</code><a class="headerlink" href="#22-_load_constants" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_data["TB14"]</code> (opzionale)</td>
+<td><code>pd.DataFrame</code></td>
+<td>Tabella ISO con ΔT nominali/esponente; se assente usa <code>TB14_backup</code>.</td>
+</tr>
+<tr>
+<td><strong>Side-effects</strong></td>
+<td></td>
+<td><code>self.TB14</code> assegnata; <code>self.c_w = 1.16</code>.</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td></td>
+<td>Nessun ritorno esplicito.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="23-_load_input_parameters">2.3 <code>_load_input_parameters()</code><a class="headerlink" href="#23-_load_input_parameters" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Blocco</th>
+<th>Chiavi principali</th>
+<th>Default (esempio)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Emissione</strong></td>
+<td><code>emitter_type</code>, <code>nominal_power</code>, <code>emission_efficiency</code>, <code>mixing_valve</code>, <code>flow_temp_control_type</code>, <code>auxiliars_power</code>, <code>emission_operation_time</code>, <code>mixing_valve_delta</code>, <code>selected_emm_cont_circuit</code>, <code>heat_emission_data</code>, <code>outdoor_temp_data</code>, <code>constant_flow_temp</code></td>
+<td><code>Floor heating</code>, <code>8 kW</code>, <code>90%</code>, <code>True</code>, <code>Type 1</code>, <code>0 W</code>, <code>1 h</code>, <code>2 °C</code>, <code>0</code>, tabelle di default</td>
+</tr>
+<tr>
+<td><strong>Distribuzione</strong></td>
+<td><code>Heat_losses_recovered</code>, <code>distribution_loss_recovery</code>, <code>simplified_approach</code>, <code>distribution_aux_recovery</code>, <code>distribution_aux_power</code>, <code>distribution_loss_coeff</code>, <code>distribution_operation_time</code>, <code>recoverable_losses</code></td>
+<td><code>True</code>, <code>90%</code>, <code>80%</code>, <code>80%</code>, <code>30 W</code>, <code>48 W/K</code>, <code>1 h</code>, <code>0 kWh</code></td>
+</tr>
+<tr>
+<td><strong>Generazione</strong></td>
+<td><code>full_load_power</code>, <code>max_monthly_load_factor</code>, <code>tH_gen_i_ON</code>, <code>auxiliary_power_generator</code>, <code>fraction_of_auxiliary_power_generator</code>, <code>generator_circuit</code>, <code>speed_control_generator_pump</code>, <code>generator_nominal_deltaT</code>, <code>θHW_gen_flw_set</code>, <code>θHW_gen_ret_set</code>, <code>calc_when_QH_positive_only</code>, <code>fill_zeros_when_skipped</code>, <code>off_compute_mode</code>, <code>efficiency_model</code>, <code>eta_max</code>, <code>eta_no_cond</code>, <code>T_ret_min</code>, <code>T_ret_thr</code>, <code>manuf_curve_1d</code>, <code>manuf_curve_2d</code>, <code>gen_flow_temp_control_type</code>, <code>gen_outdoor_temp_data</code>, <code>θHW_gen_flw_const</code></td>
+<td><code>24 kW</code>, <code>100%</code>, <code>1 h</code>, <code>0%</code>, <code>40%</code>, <code>independent</code>, <code>variable</code>, <code>20 °C</code>, <code>None</code>, <code>None</code>, <code>True</code>, <code>False</code>, <code>idle</code>, <code>simple</code>, <code>110%</code>, <code>95%</code>, <code>20 °C</code>, <code>50 °C</code>, <code>None</code>, <code>None</code>, <code>Type A</code>, curva primaria default, <code>50 °C</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="24-_default_emission_data-_default_outdoor_data">2.4 <code>_default_emission_data()</code> / <code>_default_outdoor_data()</code><a class="headerlink" href="#24-_default_emission_data-_default_outdoor_data" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Funzione</th>
+<th>Output</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>_default_emission_data</code></td>
+<td>DF con <code>θH_em_flw_max_sahz_i</code>, <code>ΔθH_em_w_max_sahz_i</code>, <code>θH_em_ret_req_sahz_i</code>, <code>βH_em_req_sahz_i</code>, <code>θH_em_flw_min_tz_i</code></td>
+<td>Limiti/setpoint lato secondario</td>
+</tr>
+<tr>
+<td><code>_default_outdoor_data</code></td>
+<td>DF con <code>θext_min_sahz_i</code>, <code>θext_max_sahz_i</code>, <code>θem_flw_max_sahz_i</code>, <code>θem_flw_min_sahz_i</code></td>
+<td>Curva climatica secondaria</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="25-load_csv_datacsv_path_or_df">2.5 <code>load_csv_data(csv_path_or_df)</code><a class="headerlink" href="#25-load_csv_datacsv_path_or_df" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Tipo</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>csv_path_or_df</code></td>
+<td>str / DataFrame</td>
+<td>Timeseries con colonne (<code>Q_H</code>, <code>T_op</code>, <code>T_ext</code> o alias)</td>
+</tr>
+<tr>
+<td>Output</td>
+<td>DataFrame</td>
+<td>Con eventuale <code>Q_H_kWh</code> aggiunto; salvato in <code>self.timeseries_data</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="26-calculate_common_emission_parametersheating_needs_kwh-int">2.6 <code>calculate_common_emission_parameters(heating_needs_kWh, θint)</code><a class="headerlink" href="#26-calculate_common_emission_parametersheating_needs_kwh-int" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Output (chiave)</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QH_sys_out_hz_i</code></td>
+<td>Richiesta netta dopo recuperi</td>
+</tr>
+<tr>
+<td><code>QH_em_i_in</code></td>
+<td>Energia in ingresso all’emissione</td>
+</tr>
+<tr>
+<td><code>ΦH_em_eff</code></td>
+<td>Potenza media su intervallo (kW)</td>
+</tr>
+<tr>
+<td><code>V_H_em_nom</code></td>
+<td>Portata nominale (m³/h)</td>
+</tr>
+<tr>
+<td><code>ΔθH_em_n</code>, <code>ΔθH_em_air</code>, <code>nH_em</code></td>
+<td>Parametri da TB14</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="27-calculate_type_c2-c3-c4-c5">2.7 <code>calculate_type_C2 / C3 / C4 / C5</code><a class="headerlink" href="#27-calculate_type_c2-c3-c4-c5" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Funzione</th>
+<th>Principio</th>
+<th>Output principali</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C2</code></td>
+<td>Portata <strong>costante</strong>, T acqua <strong>costante</strong></td>
+<td><code>θH_em_flow</code>, <code>θH_em_ret</code>, <code>V_H_em_eff</code>, <code>θH_em_flw_min</code></td>
+</tr>
+<tr>
+<td><code>C3</code></td>
+<td>Portata <strong>variabile</strong>, T emettitore <strong>costante</strong> (ritorno limitato)</td>
+<td><code>θH_em_flow</code>, <code>θH_em_ret</code>, <code>V_H_em_eff</code>, <code>θH_em_flw_min</code></td>
+</tr>
+<tr>
+<td><code>C4</code></td>
+<td><strong>ON–OFF</strong> (duty cycle)</td>
+<td><code>θH_em_flw_calc</code>, <code>θH_em_flw_min</code>, ecc.</td>
+</tr>
+<tr>
+<td><code>C5</code></td>
+<td>Portata <strong>costante</strong>, scambio <strong>variabile</strong> (bypass)</td>
+<td><code>θH_em_flow=min</code>, <code>θH_em_ret≈</code>, <code>V_H_em_eff</code>, <code>θH_em_flw_min</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="28-calculate_circuit_node_temperatureext-emission_results">2.8 <code>calculate_circuit_node_temperature(θext, emission_results)</code><a class="headerlink" href="#28-calculate_circuit_node_temperatureext-emission_results" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Controllo</th>
+<th>Logica</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type 1</td>
+<td>Domanda → <code>θH_em_flw_min</code></td>
+<td><code>θH_nod_out</code></td>
+</tr>
+<tr>
+<td>Type 2</td>
+<td>Curva climatica secondaria</td>
+<td><code>θH_nod_out</code></td>
+</tr>
+<tr>
+<td>Type 3</td>
+<td>Costante (<code>θem_flw_sahz_i</code>)</td>
+<td><code>θH_nod_out</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="29-calculate_operating_conditionsemission_results-common_params-int-h_nod_out">2.9 <code>calculate_operating_conditions(emission_results, common_params, θint, θH_nod_out)</code><a class="headerlink" href="#29-calculate_operating_conditionsemission_results-common_params-int-h_nod_out" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Caso</th>
+<th>Output principali</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C.2 / C.3 / C.4 / C.5</td>
+<td><code>θH_cr_flw</code>, <code>θH_cr_ret</code>, <code>V_H_cr</code>, <code>θH_dis_flw</code>, <code>θH_dis_ret</code>, <code>βH_em</code>, <code>θH_em_flw_min</code>, <code>θH_em_ret_eff</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="210-calculate_distributionh_dis_flw-h_dis_ret-int-qh_em_i_in">2.10 <code>calculate_distribution(θH_dis_flw, θH_dis_ret, θint, QH_em_i_in)</code><a class="headerlink" href="#210-calculate_distributionh_dis_flw-h_dis_ret-int-qh_em_i_in" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Significato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Q_w_dis_i_ls</code>, <code>Q_w_dis_i_aux</code>, <code>Q_w_dis_i_ls_rbl_H</code></td>
+<td>Perdite, ausiliari e parte recuperabile (kWh)</td>
+</tr>
+<tr>
+<td><code>QH_dis_i_req</code>, <code>QH_dis_i_in</code></td>
+<td>Richiesta e ingresso effettivo alla distribuzione</td>
+</tr>
+<tr>
+<td><code>V_H_dis</code></td>
+<td>Portata volumetrica di distribuzione (m³/h)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="211-_efficiency_from_modelflw-ret-load_frac">2.11 <code>_efficiency_from_model(θflw, θret, load_frac)</code><a class="headerlink" href="#211-_efficiency_from_modelflw-ret-load_frac" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Modelli</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>simple</code></td>
+<td>Efficienza in funzione di T_ritorno (condensa)</td>
+</tr>
+<tr>
+<td><code>parametric</code></td>
+<td>Lineare a tratti con soglie (<code>eta_max</code>, <code>eta_no_cond</code>, <code>T_ret_min</code>, <code>T_ret_thr</code>)</td>
+</tr>
+<tr>
+<td><code>manufacturer</code></td>
+<td>Curve 1D/2D del costruttore con interpolazione</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="212-_generator_flow_setpointext-h_dis_flw_demand">2.12 <code>_generator_flow_setpoint(θext, θH_dis_flw_demand)</code><a class="headerlink" href="#212-_generator_flow_setpointext-h_dis_flw_demand" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Logica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type A</td>
+<td>Curva primaria (outdoor)</td>
+</tr>
+<tr>
+<td>Type B</td>
+<td>Insegue domanda secondaria</td>
+</tr>
+<tr>
+<td>Type C</td>
+<td>Costante</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="213-calculate_generationh_dis_flw-h_dis_ret-v_h_dis-qh_dis_i_in">2.13 <code>calculate_generation(θH_dis_flw, θH_dis_ret, V_H_dis, QH_dis_i_in)</code><a class="headerlink" href="#213-calculate_generationh_dis_flw-h_dis_ret-v_h_dis-qh_dis_i_in" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Significato</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_output_g1</code>, <code>QH_gen_out</code></td>
+<td>Limite capacità e uscita termica (kWh)</td>
+</tr>
+<tr>
+<td><code>θX_gen_cr_flw</code>, <code>θX_gen_cr_ret</code></td>
+<td>Mandata/ritorno <strong>primario</strong> effettivi (°C)</td>
+</tr>
+<tr>
+<td><code>V_H_gen</code></td>
+<td>Portata primaria (m³/h)</td>
+</tr>
+<tr>
+<td><code>efficiency_gen</code></td>
+<td>Rendimento (%)</td>
+</tr>
+<tr>
+<td><code>EHW_gen_in</code>, <code>EHW_gen_aux</code></td>
+<td>Energia in ingresso e ausiliari (kWh)</td>
+</tr>
+<tr>
+<td><code>QW_gen_i_ls_rbl_H</code></td>
+<td>Perdite recuperabili generatore (kWh)</td>
+</tr>
+<tr>
+<td><code>QW_gen_out</code>, <code>QHW_gen_out</code>, <code>EH_gen_in</code>, <code>EWH_gen_in</code></td>
+<td>Bilanci termici</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="214-compute_stepq_h_kwh-int-ext">2.14 <code>compute_step(q_h_kWh, θint, θext)</code><a class="headerlink" href="#214-compute_stepq_h_kwh-int-ext" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>q_h_kWh</code>, <code>θint</code>, <code>θext</code></td>
+<td>Dizionario completo con emissione, nodo/circuito, distribuzione, generazione</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="215-_temps_row_when_offint-ext">2.15 <code>_temps_row_when_off(θint, θext)</code><a class="headerlink" href="#215-_temps_row_when_offint-ext" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Scopo</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Riga “solo temperature” per <code>Q_H ≤ 0</code></td>
+<td>Stesse chiavi principali, con potenze/portate=0</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="216-run_timeseriesdfnone">2.16 <code>run_timeseries(df=None)</code><a class="headerlink" href="#216-run_timeseriesdfnone" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>df</code> (opzionale) o <code>self.timeseries_data</code></td>
+<td>DataFrame indicizzato per timestamp con risultati di ogni passo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-suggerimenti-di-modellazione">3) Suggerimenti di modellazione<a class="headerlink" href="#3-suggerimenti-di-modellazione" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Verifica coerenza tra <strong>tipo emettitore</strong> e righe di <code>TB14</code>.  </li>
+<li>Per schemi <strong>independent</strong>, cura <code>generator_nominal_deltaT</code>, <code>primary_line_loss</code> e <code>allow_dilution</code>.  </li>
+<li>Usa <code>manufacturer</code> con curve realistiche del produttore quando disponibili.</li>
+</ul>
+<hr />
+<p><em>Fine — versione estesa.</em></p>
 
 
 
