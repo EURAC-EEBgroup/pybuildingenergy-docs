@@ -20,6 +20,8 @@ nav:
   - ISO 15316:
     - ISO 15316 - Introduction: iso_15316.md
     - ISO 15316 - Heating Circuit: iso_15316_heating_circuit.md
+    - ISO 15316 - Generation Circuit: iso_15316_generation_circuit.md
+    - ISO 15316 - HVAC System inputs: iso_15316_system_inputs.md
     - ISO 15316 - Calculation procedure: iso_15316_calculation_procedure.md
   - Installation: installation.md
 

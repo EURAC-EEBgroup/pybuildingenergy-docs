@@ -8,25 +8,23 @@
       
       
       
-        <link rel="canonical" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316_calculation_procedure/">
       
-      
-        <link rel="prev" href="../iso_15316_heating_circuit/">
+        <link rel="prev" href="../iso_15316_system_inputs/">
       
       
         <link rel="next" href="../installation/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>ISO 15316 - Procedura di calcolo - pybuildingenergy</title>
+        <title>ISO 15316 - Calculation procedure - pybuildingenergy</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -114,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ISO 15316 - Procedura di calcolo
+              ISO 15316 - Calculation procedure
             
           </span>
         </div>
@@ -152,13 +150,11 @@
 </div>
     
     
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -190,14 +186,13 @@
     </div>
   </div>
 </div>
-      
     
     
       <div class="md-header__source">
         <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs" title="Apri repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -243,7 +238,7 @@
       <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs" title="Apri repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -263,10 +258,8 @@
       <a href="../" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
     Home
-    
   </span>
   
 
@@ -285,10 +278,8 @@
       <a href="../usage/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    Utilizzo
-    
+    Usage
   </span>
   
 
@@ -307,10 +298,8 @@
       <a href="../api/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    Riferimento API
-    
+    API Reference
   </span>
   
 
@@ -325,7 +314,6 @@
   
   
   
-    
     
     
     
@@ -345,10 +333,8 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
     ISO 52016
-    
   </span>
   
 
@@ -369,13 +355,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52016/" class="md-nav__link">
+      <a href="../../iso_52016.md" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    ISO 52016 - Introduzione
-    
+    ISO 52016 - Introduction
   </span>
   
 
@@ -403,7 +387,6 @@
     
     
     
-    
       
         
         
@@ -420,10 +403,8 @@
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
-  
   <span class="md-ellipsis">
     ISO 15316
-    
   </span>
   
 
@@ -447,10 +428,8 @@
       <a href="../iso_15316/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    ISO 15316 - Introduzione
-    
+    ISO 15316 - Introduction
   </span>
   
 
@@ -470,10 +449,50 @@
       <a href="../iso_15316_heating_circuit/" class="md-nav__link">
         
   
+  <span class="md-ellipsis">
+    ISO 15316 - Heating Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_generation_circuit/" class="md-nav__link">
+        
   
   <span class="md-ellipsis">
-    ISO 15316 - Circuito di riscaldamento
-    
+    ISO 15316 - Generation Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_system_inputs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - HVAC System inputs
   </span>
   
 
@@ -499,91 +518,15 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    ISO 15316 - Procedura di calcolo
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
-  
   <span class="md-ellipsis">
-    ISO 15316 - Procedura di calcolo
-    
+    ISO 15316 - Calculation procedure
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Indice">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Indice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-inputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      SYSTEM INPUTS
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SYSTEM INPUTS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#emitter" class="md-nav__link">
-    <span class="md-ellipsis">
-      EMITTER
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generator" class="md-nav__link">
-    <span class="md-ellipsis">
-      GENERATOR
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
-    <span class="md-ellipsis">
-      GENERAL
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -607,10 +550,8 @@
       <a href="../installation/" class="md-nav__link">
         
   
-  
   <span class="md-ellipsis">
-    Installazione
-    
+    Installation
   </span>
   
 
@@ -639,56 +580,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Indice
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#system-inputs" class="md-nav__link">
-    <span class="md-ellipsis">
-      SYSTEM INPUTS
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="SYSTEM INPUTS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#emitter" class="md-nav__link">
-    <span class="md-ellipsis">
-      EMITTER
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#generator" class="md-nav__link">
-    <span class="md-ellipsis">
-      GENERATOR
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general" class="md-nav__link">
-    <span class="md-ellipsis">
-      GENERAL
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -701,9 +592,8 @@
                 
                   
 
-
   
-    <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/edit/master/docs/it/iso_15316_calculation_procedure.md" title="Modifica" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/edit/master/docs/en/iso_15316_calculation_procedure.md" title="Modifica" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -711,208 +601,17 @@
   
 
 
-<h1 id="calculation-procedure">Calculation procedure<a class="headerlink" href="#calculation-procedure" title="Permanent link">&para;</a></h1>
-<h2 id="system-inputs">SYSTEM INPUTS<a class="headerlink" href="#system-inputs" title="Permanent link">&para;</a></h2>
-<p>The user must define the following parameters to perform the calculation of primary energy according to ISO 15316.1. The python class to which this calculation is requested is the <strong>HeatingSystemCalculator</strong>.</p>
-<p>Below is shown an example of a dictionary that must be passed to HeatingSystemCalculator in which the parameters necessary for the calculation are indicated. 
-The following parameters are the minimum required, this does not mean that it is possible to modify other parameters based on your own requests.  For example the table TB14 in the hereunder list. </p>
-<h3 id="emitter">EMITTER<a class="headerlink" href="#emitter" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>Nominal power</strong>: it is the power of the emitter in kW, defined in the product data. </li>
-<li><strong>Emission efficiency</strong>: it is the efficiency of the emitter in %.</li>
-<li><strong>Flow temperature control type</strong>: it is the type of control used to control the flow temperature of the emitter. The possible choice are the ones defined in the "value" column of the following table </li>
-</ul>
-<p><em>Table 1: Flow temperature control type</em></p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Type 1 - Based on demand</td>
-<td>The flow temperature is controlled based on the energy demand of the system</td>
-</tr>
-<tr>
-<td>Type 2 - Based on outdoor temperature</td>
-<td>The flow temperature is controlled based on the outdoor temperature</td>
-</tr>
-<tr>
-<td>Type 3 - Constant temperature</td>
-<td>The flow temperature is controlled based on a constant temperature</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>Emission control circuit</strong>: the value could be from 0 to 3, according to the following table:</li>
-</ul>
-<p><em>Table 2: Emission control circuit</em></p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Emission control type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>C2 - Type 1 - Direct Connect</td>
-<td>Constant mass flow rate and varying water temperature</td>
-</tr>
-<tr>
-<td>1</td>
-<td>C3 - Type 2 - Indipendent flow rate</td>
-<td>Varying mass flow (constant temperature)</td>
-</tr>
-<tr>
-<td>2</td>
-<td>C4 - Type 3 - Heat exchanger</td>
-<td>Intermittent flow rate module, ON-OFF and varying temperature</td>
-</tr>
-<tr>
-<td>3</td>
-<td>C5 - Type 4 - Anti-condensate</td>
-<td>Constant flow rate and vaiable heat exchange</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>
-<p><strong>Mixing valve</strong>: it is a boolean that indicates if a mixing valve is used. It refers to the varaible <strong>MIX_EM</strong>. Possible values: <em>True</em> or <em>False</em></p>
-</li>
-<li>
-<p><strong>TB14</strong>: it is the table that contains the data of the emitter. If it is not provided the default values are used and the emitter_type is set to the first one in the table.</p>
-</li>
-</ul>
-<p><em>Table 3: Emitter data</em></p>
-<table>
-<thead>
-<tr>
-<th>Index</th>
-<th>Emitter nominal delta air Temp</th>
-<th>Emitter nominal delta water Temp</th>
-<th>Emitter exponent</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Radiator</td>
-<td>50</td>
-<td>20</td>
-<td>1.3</td>
-</tr>
-<tr>
-<td>Floor heating</td>
-<td>15</td>
-<td>5</td>
-<td>1.1</td>
-</tr>
-<tr>
-<td>Fan coil</td>
-<td>25</td>
-<td>10</td>
-<td>1.0</td>
-</tr>
-</tbody>
-</table>
-<h3 id="generator">GENERATOR<a class="headerlink" href="#generator" title="Permanent link">&para;</a></h3>
-<h3 id="general">GENERAL<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
-<p><strong>Efficiency model</strong></p>
-<p>The calculation of efficiency can be done using three type of choices: </p>
-<p>1) 'simple'       : linear heuristic vs. return temperature
-2) 'parametric'   : piecewise/threshold model
-3) 'manufacturer' : 1D (return) or 2D (flow/return) map</p>
-<p>the calculation is made using the function <strong>_efficiency_from_model()</strong> that requires one of the above options: simple, parameteric, manufacturer.
-It calculates how efficiently the generator converts input energy (like gas, electricity, or fuel) into useful heat, depending on the flow (θflw) and return (θret) water temperatures on the primary circuit side.
-Explanation of each option:</p>
-<p>1) <strong>'simple'</strong>: it is a linear heuristic based on the return temperature. 
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">model</span> <span class="o">==</span> <span class="s1">&#39;simple&#39;</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">θret</span> <span class="o">&lt;</span> <span class="mf">50.0</span><span class="p">:</span>
-        <span class="n">eff</span> <span class="o">=</span> <span class="mf">110.0</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">θret</span> <span class="o">-</span> <span class="mf">20.0</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">eff</span> <span class="o">=</span> <span class="mf">95.0</span>
-    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">eff</span><span class="p">,</span> <span class="mf">110.0</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
-</code></pre></div>
-This is a simplified heuristic formula typically used for condensing boilers:</p>
-<ul>
-<li>When the <strong>return temperature (θret)</strong> is <strong>below 50°C</strong>, condensation occurs in the flue gases, recovering latent heat. 
-    → The efficiency increases up to ~110% (based on lower heating value, PCI).</li>
-<li>When <strong>θret ≥ 50°C</strong>, condensation stops, and the efficiency drops to around 95%.</li>
-</ul>
-<p><strong>Meaning:</strong>
-| Condition | Return Temp | Typical Generator Behavior | Efficiency |
-Condesning mode | &lt; 50°C | Flue gas condensation → higher recovery | 95-110% |
-Ono-condensing |  ≥ 50°C | No condensation | ~95% |</p>
-<p>2) <strong>'parametric'</strong>: it is a piecewise/threshold model based on the linear interpolation of return temperature. 
-<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">model</span> <span class="o">==</span> <span class="s1">&#39;parametric&#39;</span><span class="p">:</span>
-    <span class="n">eta_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eta_max</span>
-    <span class="n">eta_nc</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eta_no_cond</span>
-    <span class="n">T_min</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">T_ret_min</span>
-    <span class="n">T_thr</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">T_ret_thr</span>
+<h1 id="calculation-procedure">CALCULATION PROCEDURE<a class="headerlink" href="#calculation-procedure" title="Permanent link">&para;</a></h1>
+<div style="background-color: #FA8072; border-left: 4px solid #800000; padding: 10px; margin: 10px 0;">
+<strong>Note:</strong> THE ACTUAL CALCULATION OF PRIMARY ENRGY USING THE ISO 15316-1 IS FOR A SINGLE ZONE, IT IS NOT YET IMPLEMENTED THE CALCULATION FOR MULTIPLE ZONES.
 
-    <span class="n">Tret_clip</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">θret</span><span class="p">,</span> <span class="n">T_thr</span><span class="p">),</span> <span class="n">T_min</span><span class="p">)</span>
-    <span class="n">slope</span> <span class="o">=</span> <span class="p">(</span><span class="n">eta_max</span> <span class="o">-</span> <span class="n">eta_nc</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">T_min</span> <span class="o">-</span> <span class="n">T_thr</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">θret</span> <span class="o">&lt;=</span> <span class="n">T_thr</span><span class="p">:</span>
-        <span class="n">eff</span> <span class="o">=</span> <span class="n">eta_max</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="p">(</span><span class="n">Tret_clip</span> <span class="o">-</span> <span class="n">T_min</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">eff</span> <span class="o">=</span> <span class="n">eta_nc</span>
-</code></pre></div>
-This is a <strong>parameterized linear model</strong> that allows flexible configuration without a full manufacturer curve:</p>
-<ul>
-<li><strong>eta_max</strong>: maximum efficiency (e.g., 110%) when return temperature is low (T_min)</li>
-<li><strong>eta_nc</strong>: non-condensing efficiency (e.g., 95%) when return temperature is high (T_thr)</li>
-<li><strong>T_min</strong>: minimum return temperature (lower bound of condensing operation)</li>
-<li><strong>T_thr</strong>: threshold temperature where condensation ceases</li>
-</ul>
-<hr />
-<p>Example of input systems: 
-<div class="highlight"><pre><span></span><code><span class="n">INPUT_SYSTEM_HVAC</span>  <span class="o">=</span> <span class="p">{</span>
+The calculation procedure follows the direction from the energy need to the source (building energy need -> primary energy)
 
-    <span class="c1"># ---- emitter ----</span>
-    <span class="s1">&#39;emitter_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Floor heating&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;nominal_power&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
-    <span class="s1">&#39;emission_efficiency&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
-    <span class="s1">&#39;flow_temp_control_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Type 2 - Based on outdoor temperature&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;selected_emm_cont_circuit&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s1">&#39;mixing_valve&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="c1"># &#39;TB14&#39;: custom_TB14, #  &lt;- Uncomment and upload your emittere table, oterwhise the default stored in gloabl_inputs.py is used</span>
+## Building Energy Need
+The building energy need is calculated using the module ISO 52016. For more information refers to the module ISO 52016.
 
-    <span class="c1"># --- generator ---</span>
-    <span class="s1">&#39;full_load_power&#39;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>                  <span class="c1"># kW</span>
-    <span class="s1">&#39;max_monthly_load_factor&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>         <span class="c1"># %</span>
-    <span class="s1">&#39;tH_gen_i_ON&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>                       <span class="c1"># h</span>
-    <span class="s1">&#39;auxiliary_power_generator&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>         <span class="c1"># %</span>
-    <span class="s1">&#39;fraction_of_auxiliary_power_generator&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>   <span class="c1"># %</span>
-    <span class="s1">&#39;generator_circuit&#39;</span><span class="p">:</span> <span class="s1">&#39;independent&#39;</span><span class="p">,</span>     <span class="c1"># &#39;direct&#39; | &#39;independent&#39;</span>
-
-    <span class="c1"># Primary: independent climatic curve</span>
-    <span class="s1">&#39;gen_flow_temp_control_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Type A - Based on outdoor temperature&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;gen_outdoor_temp_data&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-        <span class="s2">&quot;θext_min_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">],</span>
-        <span class="s2">&quot;θext_max_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span>
-        <span class="s2">&quot;θflw_gen_max&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">60</span><span class="p">],</span>
-        <span class="s2">&quot;θflw_gen_min&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">],</span>
-    <span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Generator curve&quot;</span><span class="p">]),</span>
-
-    <span class="s1">&#39;speed_control_generator_pump&#39;</span><span class="p">:</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;generator_nominal_deltaT&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>         <span class="c1"># °C</span>
-
-    <span class="c1"># Efficiency model</span>
-    <span class="s1">&#39;efficiency_model&#39;</span><span class="p">:</span> <span class="s1">&#39;simple&#39;</span><span class="p">,</span>
-
-    <span class="c1"># Calculation options</span>
-    <span class="s1">&#39;calc_when_QH_positive_only&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="s1">&#39;off_compute_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;full&#39;</span><span class="p">,</span>
-
-    <span class="c1"># Optional explicit generator setpoints (commented by default)</span>
-    <span class="c1"># &#39;θHW_gen_flw_set&#39;: 50,</span>
-    <span class="c1"># &#39;θHW_gen_ret_set&#39;: 40,</span>
-<span class="p">}</span>
-</code></pre></div></p>
+## HVAC System
+Based on different type of system configuration (from type C2 to C5) the HVAC system is calculated using the ANNEX C of  ISO 15316-1. For more information refers to the module ISO 15316-1.
 
 
 
@@ -965,12 +664,10 @@ This is a <strong>parameterized linear model</strong> that allows flexible confi
     </div>
     
     
-    
-      
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}, "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

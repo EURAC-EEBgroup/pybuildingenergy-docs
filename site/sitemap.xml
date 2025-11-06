@@ -1,135 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>None./</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/api/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneapi/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/api/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneapi/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/api/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/installation/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneinstallation/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/installation/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/installation/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneiso_15316/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316_calculation_procedure/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneiso_15316_calculation_procedure/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316_calculation_procedure/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316_calculation_procedure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_calculation_procedure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_calculation_procedure/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316_heating_circuit/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneiso_15316_generation_circuit/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316_heating_circuit/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316_heating_circuit/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_generation_circuit/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_generation_circuit/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneiso_15316_heating_circuit/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_heating_circuit/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_heating_circuit/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016_input_check/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneiso_15316_system_inputs/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016_input_check/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_system_inputs/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_system_inputs/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/usage/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneiso_52016_input_check/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/usage/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/usage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016_input_check/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_input_check/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneusage/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/usage/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/api/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneit/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/api/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/api/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/installation/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneit/api/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/installation/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/installation/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneapi/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneit/installation/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316_calculation_procedure/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneit/iso_15316/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316_calculation_procedure/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316_calculation_procedure/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316_heating_circuit/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneit/iso_15316_calculation_procedure/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_15316_heating_circuit/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_15316_heating_circuit/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_calculation_procedure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_calculation_procedure/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneit/iso_15316_generation_circuit/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_generation_circuit/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_generation_circuit/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneit/iso_15316_heating_circuit/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/iso_52016_input_check/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_heating_circuit/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_heating_circuit/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/usage/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneit/iso_15316_system_inputs/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/usage/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/usage/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_system_inputs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_system_inputs/"/>
     </url>
     <url>
-        <loc>https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check.md/</loc>
-        <lastmod>2025-11-04</lastmod>
+        <loc>Noneit/iso_52016_input_check/</loc>
+        <lastmod>2025-11-06</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="https://EURAC-EEBgroup.github.io/pybuildingenergy-docs/it/iso_52016_input_check.md/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_input_check/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016_input_check/"/>
+    </url>
+    <url>
+        <loc>Noneit/usage/</loc>
+        <lastmod>2025-11-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/usage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
+    </url>
+    <url>
+        <loc>Noneit/iso_52016_input_check.md/</loc>
+        <lastmod>2025-11-06</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_input_check.md/"/>
     </url>
 </urlset>

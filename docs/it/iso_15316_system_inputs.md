@@ -1,5 +1,3 @@
-# Calculation procedure
-
 ## SYSTEM INPUTS
 
 The user must define the following parameters to perform the calculation of primary energy according to ISO 15316.1. The python class to which this calculation is requested is the **HeatingSystemCalculator**.
