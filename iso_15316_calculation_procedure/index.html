@@ -6,7 +6,6 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../iso_15316_system_inputs/" rel="prev"/>
-<link href="../iso_52016_input_check/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.34" name="generator"/>
 <title>ISO 15316 - Calculation procedure - pybuildingenergy</title>
@@ -143,7 +142,7 @@
 </div>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="..">
+<a class="md-nav__link" href="../home/">
 <span class="md-ellipsis">
     Home
   </span>
@@ -163,16 +162,30 @@
   </span>
 </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../iso_52016_input_check/">
+<span class="md-ellipsis">
+    Quality check
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../installation/">
+<span class="md-ellipsis">
+    Installation
+  </span>
+</a>
+</li>
 <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
 <span class="md-ellipsis">
     ISO 52016
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
 <span class="md-nav__icon md-icon"></span>
             ISO 52016
           </label>
@@ -188,15 +201,15 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
-<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
 <span class="md-ellipsis">
     ISO 15316
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_5">
+<nav aria-expanded="true" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
 <span class="md-nav__icon md-icon"></span>
             ISO 15316
           </label>
@@ -720,20 +733,6 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../iso_52016_input_check/">
-<span class="md-ellipsis">
-    Quality check
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../installation/">
-<span class="md-ellipsis">
-    Installation
-  </span>
-</a>
-</li>
 </ul>
 </nav>
 </div>
@@ -1227,7 +1226,6 @@
 <h1 id="calculation-procedure">CALCULATION PROCEDURE<a class="headerlink" href="#calculation-procedure" title="Permanent link">¶</a></h1>
 <div style="background-color: #FA8072; border-left: 4px solid #800000; padding: 10px; margin: 10px 0;">
 <strong>Note:</strong> THE ACTUAL CALCULATION OF PRIMARY ENRGY USING THE ISO 15316-1 IS FOR A SINGLE ZONE, IT IS NOT YET IMPLEMENTED THE CALCULATION FOR MULTIPLE ZONES.
-
 </div>
 <p>The calculation procedure follows the direction from the energy need to the source (building energy need -&gt; primary energy)</p>
 <h2 id="description-of-functions">Description of functions<a class="headerlink" href="#description-of-functions" title="Permanent link">¶</a></h2>
@@ -1333,13 +1331,13 @@
 <li>Uses <code>V_H_em_nom</code> as <strong>effective flow</strong>.</li>
 <li>Stima <code>ΔθH_em_air_eff = Δθ_air_nom * (Φ_eff/Φ_nom)^(1/n)</code>.</li>
 <li>Calculates <code>θH_em_avg</code>, then ΔT water <code>ΔθH_em_w_eff = Φ_eff / (c_w * V)</code> and from there <strong>supply</strong>/<strong>return</strong> emitter.</li>
-<li><code>θH_em_flw_min</code> include **mixing offset ** se <code>MIX_EM=True</code>.</li>
+<li><code>θH_em_flw_min</code> include <strong>mixing offset</strong> if <code>MIX_EM=True</code>.</li>
 </ul>
 <h3 id="calculate_type_c3self-common_params-int-c3-variable-flow-constant-water-temperature-return-limited"><code>calculate_type_C3(self, common_params, θint)</code> — <strong>C.3: variable flow, constant water temperature (return limited)</strong><a class="headerlink" href="#calculate_type_c3self-common_params-int-c3-variable-flow-constant-water-temperature-return-limited" title="Permanent link">¶</a></h3>
 <ul>
 <li>Fixes <code>θH_em_ret_set</code> (≥ <code>θint</code>), limits supply (<code>θH_em_flw_max</code>, ΔT_w_max).</li>
 <li>Determines <code>θH_em_flw</code> and <code>θH_em_ret</code> coherent and derives the <strong>flow</strong> from ΔT water.</li>
-<li><code>θH_em_flw_min</code> include mixing offset.</li>
+<li><code>θH_em_flw_min</code> include <strong>mixing offset</strong>.</li>
 </ul>
 <h3 id="calculate_type_c4self-common_params-int-c4-onoff-intermittent"><code>calculate_type_C4(self, common_params, θint)</code> — <strong>C.4: ON–OFF intermittent</strong><a class="headerlink" href="#calculate_type_c4self-common_params-int-c4-onoff-intermittent" title="Permanent link">¶</a></h3>
 <ul>
