@@ -12,9 +12,11 @@ theme:
     - content.code.copy
     - content.action.edit
 nav:
-  - Home: index.md
+  - Home: home.md
   - Usage: usage.md
   - API Reference: api.md
+  - Quality check: iso_52016_input_check.md
+  - Installation: installation.md
   - ISO 52016:
     - ISO 52016 - Introduction: iso_52016.md
   - ISO 15316:
@@ -23,9 +25,7 @@ nav:
     - ISO 15316 - Generation Circuit: iso_15316_generation_circuit.md
     - ISO 15316 - HVAC System inputs: iso_15316_system_inputs.md
     - ISO 15316 - Calculation procedure: iso_15316_calculation_procedure.md
-  - Quality check: iso_52016_input_check.md
-  - Installation: installation.md
-
+  
 
 plugins:
   - search

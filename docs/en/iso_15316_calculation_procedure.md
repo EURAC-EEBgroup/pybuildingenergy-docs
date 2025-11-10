@@ -2,7 +2,6 @@
 
 <div style="background-color: #FA8072; border-left: 4px solid #800000; padding: 10px; margin: 10px 0;">
 <strong>Note:</strong> THE ACTUAL CALCULATION OF PRIMARY ENRGY USING THE ISO 15316-1 IS FOR A SINGLE ZONE, IT IS NOT YET IMPLEMENTED THE CALCULATION FOR MULTIPLE ZONES.
-
 </div>
 
 The calculation procedure follows the direction from the energy need to the source (building energy need -> primary energy)
@@ -121,12 +120,12 @@ class HeatingSystemCalculator:
 - Uses `V_H_em_nom` as **effective flow**.
 - Stima `ΔθH_em_air_eff = Δθ_air_nom * (Φ_eff/Φ_nom)^(1/n)`.
 - Calculates `θH_em_avg`, then ΔT water `ΔθH_em_w_eff = Φ_eff / (c_w * V)` and from there **supply**/**return** emitter.
-- `θH_em_flw_min` include **mixing offset ** se `MIX_EM=True`.
+- `θH_em_flw_min` include **mixing offset** if `MIX_EM=True`.
 
 ### `calculate_type_C3(self, common_params, θint)` — **C.3: variable flow, constant water temperature (return limited)**
 - Fixes `θH_em_ret_set` (≥ `θint`), limits supply (`θH_em_flw_max`, ΔT_w_max).
 - Determines `θH_em_flw` and `θH_em_ret` coherent and derives the **flow** from ΔT water.
-- `θH_em_flw_min` include mixing offset.
+- `θH_em_flw_min` include **mixing offset**.
 
 ### `calculate_type_C4(self, common_params, θint)` — **C.4: ON–OFF intermittent**
 - Uses a **duty cycle** to ensure the energy hourly with power **ON**.

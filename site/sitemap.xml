@@ -1,149 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>None./</loc>
-        <lastmod>2025-11-06</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-        <xhtml:link rel="alternate" hreflang="it" href="Noneit/"/>
-    </url>
-    <url>
         <loc>Noneapi/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneapi/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/api/"/>
     </url>
     <url>
+        <loc>Nonehome/</loc>
+        <lastmod>2025-11-10</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/home/"/>
+    </url>
+    <url>
         <loc>Noneinstallation/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/installation/"/>
     </url>
     <url>
         <loc>Noneiso_15316/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316/"/>
     </url>
     <url>
         <loc>Noneiso_15316_calculation_procedure/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_calculation_procedure/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_calculation_procedure/"/>
     </url>
     <url>
         <loc>Noneiso_15316_generation_circuit/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_generation_circuit/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_generation_circuit/"/>
     </url>
     <url>
         <loc>Noneiso_15316_heating_circuit/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_heating_circuit/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_heating_circuit/"/>
     </url>
     <url>
         <loc>Noneiso_15316_system_inputs/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_system_inputs/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_system_inputs/"/>
     </url>
     <url>
+        <loc>Noneiso_52016/</loc>
+        <lastmod>2025-11-10</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016/"/>
+    </url>
+    <url>
         <loc>Noneiso_52016_input_check/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016_input_check/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_input_check/"/>
     </url>
     <url>
         <loc>Noneusage/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/usage/"/>
     </url>
     <url>
-        <loc>Noneit/</loc>
-        <lastmod>2025-11-06</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="Noneit/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-    </url>
-    <url>
         <loc>Noneit/api/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/api/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneapi/"/>
     </url>
     <url>
+        <loc>Noneit/home/</loc>
+        <lastmod>2025-11-10</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/home/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/"/>
+    </url>
+    <url>
         <loc>Noneit/installation/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/installation/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneinstallation/"/>
     </url>
     <url>
         <loc>Noneit/iso_15316/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316/"/>
     </url>
     <url>
         <loc>Noneit/iso_15316_calculation_procedure/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_calculation_procedure/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_calculation_procedure/"/>
     </url>
     <url>
         <loc>Noneit/iso_15316_generation_circuit/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_generation_circuit/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_generation_circuit/"/>
     </url>
     <url>
         <loc>Noneit/iso_15316_heating_circuit/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_heating_circuit/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_heating_circuit/"/>
     </url>
     <url>
         <loc>Noneit/iso_15316_system_inputs/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_15316_system_inputs/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_15316_system_inputs/"/>
     </url>
     <url>
+        <loc>Noneit/iso_52016/</loc>
+        <lastmod>2025-11-10</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016/"/>
+    </url>
+    <url>
         <loc>Noneit/iso_52016_input_check/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_input_check/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016_input_check/"/>
     </url>
     <url>
         <loc>Noneit/usage/</loc>
-        <lastmod>2025-11-06</lastmod>
+        <lastmod>2025-11-10</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/usage/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
-    </url>
-    <url>
-        <loc>Noneit/iso_52016_input_check.md/</loc>
-        <lastmod>2025-11-06</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_input_check.md/"/>
     </url>
 </urlset>

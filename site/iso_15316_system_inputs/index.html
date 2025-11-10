@@ -52,8 +52,6 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
-      <link rel="stylesheet" href="../styles/custom.css">
-    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -257,7 +255,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../home/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -316,6 +314,46 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../iso_52016_input_check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     
     
     
@@ -329,10 +367,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -343,8 +381,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             ISO 52016
           </label>
@@ -357,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52016.md" class="md-nav__link">
+      <a href="../iso_52016/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,10 +437,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -413,8 +451,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             ISO 15316
           </label>
@@ -604,26 +642,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../installation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Installation
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1194,11 +1212,10 @@ If the user defines a constant supply temperature of 50 °C → the generator wi
 <hr />
 <p><strong>Efficiency model</strong></p>
 <p>The calculation of efficiency can be done using three type of choices: </p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1</span><span class="p">)</span><span class="w"> </span><span class="err">&#39;</span><span class="n">simple</span><span class="err">&#39;</span><span class="w">       </span><span class="p">:</span><span class="w"> </span><span class="n">linear</span><span class="w"> </span><span class="n">heuristic</span><span class="w"> </span><span class="n">vs</span><span class="mf">.</span><span class="w"> </span><span class="kr">return</span><span class="w"> </span><span class="n">temperature</span>
-<span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="err">&#39;</span><span class="n">parametric</span><span class="err">&#39;</span><span class="w">   </span><span class="p">:</span><span class="w"> </span><span class="n">piecewise</span><span class="o">/</span><span class="n">threshold</span><span class="w"> </span><span class="n">model</span>
-<span class="mf">3</span><span class="p">)</span><span class="w"> </span><span class="err">&#39;</span><span class="n">manufacturer</span><span class="err">&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">1</span><span class="n">D</span><span class="w"> </span><span class="p">(</span><span class="kr">return</span><span class="p">)</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="mf">2</span><span class="n">D</span><span class="w"> </span><span class="p">(</span><span class="n">flow</span><span class="o">/</span><span class="kr">return</span><span class="p">)</span><span class="w"> </span><span class="n">map</span>
+<div class="highlight"><pre><span></span><code>1) &#39;simple&#39;       : linear heuristic vs. return temperature
+2) &#39;parametric&#39;   : piecewise/threshold model
+3) &#39;manufacturer&#39; : 1D (return) or 2D (flow/return) map
 </code></pre></div>
-
 <p>the calculation is made using the function <strong>_efficiency_from_model()</strong> that requires one of the above options: simple, parameteric, manufacturer.
 It calculates how efficiently the generator converts input energy (like gas, electricity, or fuel) into useful heat, depending on the flow (θflw) and return (θret) water temperatures on the primary circuit side.
 Explanation of each option:</p>
