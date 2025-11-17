@@ -1,0 +1,1870 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../iso_15316_generation_circuit/">
+      
+      
+        <link rel="next" href="../iso_15316_calculation_procedure/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>ISO 15316 - HVAC System inputs - pybuildingenergy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hvac-system-inputs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pybuildingenergy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ISO 15316 - HVAC System inputs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../it/iso_15316_system_inputs/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    pybuildingenergy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_input_check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weather_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weather data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ISO 52010
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            ISO 52010
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52010 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ISO 52016
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            ISO 52016
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Category profiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_aggregate_surface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Aggregate Surfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_adj_zone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Adjacent Zone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ventilation_transmission_adj_zone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Ventilation and transmission adjacent zones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_virtual_ground_temperature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Virtual ground temperature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_aeral_heat_capacity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Aeral heat capacity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_solar_absorption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Solar absorption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_overall_procedure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Overall procedure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ISO 15316
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            ISO 15316
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_heating_circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Heating Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_generation_circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Generation Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ISO 15316 - HVAC System inputs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - HVAC System inputs
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#emission" class="md-nav__link">
+    <span class="md-ellipsis">
+      EMISSION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      DISTRIBUTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERATION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERAL
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_calculation_procedure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Calculation procedure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#emission" class="md-nav__link">
+    <span class="md-ellipsis">
+      EMISSION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      DISTRIBUTION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERATION
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERAL
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/edit/master/docs/en/iso_15316_system_inputs.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="hvac-system-inputs">HVAC SYSTEM INPUTS<a class="headerlink" href="#hvac-system-inputs" title="Permanent link">&para;</a></h1>
+<p>The user must define the following parameters to perform the calculation of primary energy according to ISO 15316.1. The python class to which this calculation is requested is the <strong>HeatingSystemCalculator</strong>.</p>
+<p>Below is shown an example of a dictionary that must be passed to HeatingSystemCalculator in which the parameters necessary for the calculation are indicated. 
+The following parameters are the minimum required, this does not mean that it is possible to modify other parameters based on your own requests.  For example the table TB14 in the hereunder list. </p>
+<h3 id="emission">EMISSION<a class="headerlink" href="#emission" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Nominal power</strong>: it is the power of the emitter in kW, defined in the product data. </li>
+<li><strong>Emission efficiency</strong>: it is the efficiency of the emitter in %.</li>
+<li><strong>Flow temperature control type</strong>: it is the type of control used to control the flow temperature of the emitter. The possible choice are the ones defined in the "value" column of the following table </li>
+</ul>
+<p><em>Table 1: Flow temperature control type</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type 1 - Based on demand</td>
+<td>The flow temperature is controlled based on the energy demand of the system</td>
+</tr>
+<tr>
+<td>Type 2 - Based on outdoor temperature</td>
+<td>The flow temperature is controlled based on the outdoor temperature</td>
+</tr>
+<tr>
+<td>Type 3 - Constant temperature</td>
+<td>The flow temperature is controlled based on a constant temperature</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Emission control circuit</strong>: the value could be from 0 to 3, according to the following table:</li>
+</ul>
+<p><em>Table 2: Emission control circuit</em></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Emission control type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>C2 - Type 1 - Direct Connect</td>
+<td>Constant mass flow rate and varying water temperature</td>
+</tr>
+<tr>
+<td>1</td>
+<td>C3 - Type 2 - Indipendent flow rate</td>
+<td>Varying mass flow (constant temperature)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>C4 - Type 3 - Heat exchanger</td>
+<td>Intermittent flow rate module, ON-OFF and varying temperature</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C5 - Type 4 - Anti-condensate</td>
+<td>Constant flow rate and vaiable heat exchange</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Mixing valve</strong>: it is a boolean that indicates if a mixing valve is used. It refers to the varaible <strong>MIX_EM</strong>. Possible values: <em>True</em> or <em>False</em></li>
+<li>
+<p><strong>mixing valve delta</strong>: it is the offset temperature of the mixing valve in °C. It refers to the varaible <strong>mixing_valve_delta</strong>. </p>
+<ul>
+<li>
+<p>The offset refers to the temperature difference between the desired temperature and the actual temperature, which is applied when mixing hot and cold water.</p>
+</li>
+<li>
+<p>In this case, the parameter ΔθH_em_mix_sahz_i represents the temperature offset applied by the mixing valve, with a default value set to 2°C (as defined in the code).</p>
+</li>
+<li>
+<p>This means that when the mixing valve is operating, it will allow a 2°C deviation from the desired temperature to account for system dynamics, such as heat losses, system inertia, or external temperature influences.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>TB14</strong>: it is the table that contains the data of the emitter. If it is not provided the default values are used and the emitter_type is set to the first one in the table.</p>
+</li>
+</ul>
+<p><em>Table 3: Emitter data</em></p>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Emitter nominal delta air Temp</th>
+<th>Emitter nominal delta water Temp</th>
+<th>Emitter exponent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radiator</td>
+<td>50</td>
+<td>20</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>Floor heating</td>
+<td>15</td>
+<td>5</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>Fan coil</td>
+<td>25</td>
+<td>10</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>heat_emission_data</strong>: it is the table that contains the data of the emission circuit. If it is not provided the default values are used and the emitter_type is set to the first one in the table. In the code we have the function <code>_default_emission_data()</code> that returns the default values.
+These values are default emission circuit parameters for the heating system’s <strong>secondary side</strong> (the side connected to heating emitters, such as radiators or underfloor heating).<br />
+ They represent <strong>nominal</strong> and <strong>operational setpoints</strong> for a single heating zone (HZ1), including flow/return temperatures and load control factors.</p>
+<p><em>Table 4: Emission circuit data</em></p>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter (column name)</strong></th>
+<th><strong>Description</strong></th>
+<th style="text-align: right;"><strong>Default Value</strong></th>
+<th style="text-align: center;"><strong>Unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>θH_em_flw_max_sahz_i</code></td>
+<td>Maximum flow temperature for the heating emission circuit</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: center;">°C</td>
+</tr>
+<tr>
+<td><code>ΔθH_em_w_max_sahz_i</code></td>
+<td>Maximum water flow/return temperature difference</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: center;">°C</td>
+</tr>
+<tr>
+<td><code>θH_em_ret_req_sahz_i</code></td>
+<td>Desired return temperature of the emission circuit</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: center;">°C</td>
+</tr>
+<tr>
+<td><code>βH_em_req_sahz_i</code></td>
+<td>Desired load factor with ON/OFF control</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: center;">%</td>
+</tr>
+<tr>
+<td><code>θH_em_flw_min_tz_i</code></td>
+<td>Minimum required flow temperature for the thermal zone</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: center;">°C</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="distribution">DISTRIBUTION<a class="headerlink" href="#distribution" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="c1"># --- distribution ---</span>
+<span class="s1">&#39;heat_losses_recovered&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="s1">&#39;distribution_loss_recovery&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+<span class="s1">&#39;simplified_approach&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="s1">&#39;distribution_aux_recovery&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+<span class="s1">&#39;distribution_aux_power&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+<span class="s1">&#39;distribution_loss_coeff&#39;</span><span class="p">:</span> <span class="mi">48</span><span class="p">,</span>
+<span class="s1">&#39;distribution_operation_time&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</code></pre></div>
+The parameters are used inside the class <strong>HeatingSystemCalculator</strong> as:</p>
+<div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">Heat_losses_recovered</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;heat_losses_recovered&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">f_h_dist_i_ls</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_loss_recovery&#39;</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>  <span class="c1"># %</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">simplified_or_holistic_approach</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;simplified_approach&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>  <span class="c1"># %</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">f_h_dist_i_aux</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_aux_recovery&#39;</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>  <span class="c1"># %</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">W_H_dist_i_aux</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_aux_power&#39;</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>  <span class="c1"># W</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">Heat_loss_coefficent_dist</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_loss_coeff&#39;</span><span class="p">,</span> <span class="mi">48</span><span class="p">)</span>  <span class="c1"># W/K</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">tH_dis_i_ON</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;distribution_operation_time&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># h</span>
+</code></pre></div>
+<p>if data is not provided by the user, the default values are used.</p>
+<p>These parameters describe the <strong>thermal and electrical behavior</strong> of the <strong>heat distribution subsystem</strong>, which connects the generator to the emitters (secondary circuits).<br />
+They define how heat losses, auxiliary energy use, and simplifications in the calculation are handled within the ISO 15316-1 framework.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Variable</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Default</strong></th>
+<th><strong>Unit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>heat_losses_recovered</code></td>
+<td>Boolean flag that defines whether <strong>distribution heat losses</strong> are considered <strong>recoverable</strong> in the building (e.g., heat lost in indoor piping contributes to heating).</td>
+<td><code>True</code></td>
+<td>–</td>
+</tr>
+<tr>
+<td><code>distribution_loss_recovery</code> (<code>f_h_dist_i_ls</code>)</td>
+<td>Fraction of distribution losses that are <strong>recoverable</strong> (typically within the heated zone).</td>
+<td><code>90</code></td>
+<td>%</td>
+</tr>
+<tr>
+<td><code>simplified_approach</code> (<code>simplified_or_holistic_approach</code>)</td>
+<td>Defines the calculation approach for recovered losses: a <strong>simplified method</strong> (<code>&gt; 0</code>) or a <strong>holistic method</strong> (<code>0</code> for detailed ISO modeling).</td>
+<td><code>80</code></td>
+<td>%</td>
+</tr>
+<tr>
+<td><code>distribution_aux_recovery</code> (<code>f_h_dist_i_aux</code>)</td>
+<td>Fraction of <strong>auxiliary electrical power</strong> (e.g., pumps, valves) that is <strong>converted into useful heat</strong> and recovered within the heated space.</td>
+<td><code>80</code></td>
+<td>%</td>
+</tr>
+<tr>
+<td><code>distribution_aux_power</code> (<code>W_H_dist_i_aux</code>)</td>
+<td>Rated <strong>auxiliary electrical power</strong> of the distribution system (e.g., circulation pumps).</td>
+<td><code>30</code></td>
+<td>W</td>
+</tr>
+<tr>
+<td><code>distribution_loss_coeff</code> (<code>Heat_loss_coefficent_dist</code>)</td>
+<td>Overall <strong>heat loss coefficient</strong> of the distribution system, representing thermal losses per degree of temperature difference between the fluid and ambient air.</td>
+<td><code>48</code></td>
+<td>W/K</td>
+</tr>
+<tr>
+<td><code>distribution_operation_time</code> (<code>tH_dis_i_ON</code>)</td>
+<td>Average <strong>operation time</strong> of the distribution system per time step (typically the same as the emission system).</td>
+<td><code>1</code></td>
+<td>h</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="generation">GENERATION<a class="headerlink" href="#generation" title="Permanent link">&para;</a></h3>
+<p>The generator is modelled using the following parameters:</p>
+<div class="highlight"><pre><span></span><code>    <span class="c1"># --- generator ---</span>
+    <span class="s1">&#39;full_load_power&#39;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>                  <span class="c1"># kW</span>
+    <span class="s1">&#39;max_monthly_load_factor&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>         <span class="c1"># %</span>
+    <span class="s1">&#39;tH_gen_i_ON&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>                       <span class="c1"># h</span>
+    <span class="s1">&#39;auxiliary_power_generator&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>         <span class="c1"># %</span>
+    <span class="s1">&#39;fraction_of_auxiliary_power_generator&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>   <span class="c1"># %</span>
+    <span class="s1">&#39;generator_circuit&#39;</span><span class="p">:</span> <span class="s1">&#39;independent&#39;</span><span class="p">,</span>     <span class="c1"># &#39;direct&#39; | &#39;independent&#39;</span>
+    <span class="s1">&#39;gen_flow_temp_control_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Type A - Based on outdoor temperature&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;gen_outdoor_temp_data&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;θext_min_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">],</span>
+        <span class="s2">&quot;θext_max_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span>
+        <span class="s2">&quot;θflw_gen_max&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">60</span><span class="p">],</span>
+        <span class="s2">&quot;θflw_gen_min&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">],</span>
+    <span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Generator curve&quot;</span><span class="p">])</span>
+    <span class="s1">&#39;θHW_gen_flw_const&#39;</span><span class="p">:</span> <span class="mf">50.0</span>
+    <span class="c1"># Optional explicit generator setpoints (commented by default)</span>
+    <span class="c1"># &#39;θHW_gen_flw_set&#39;: 50,</span>
+    <span class="c1"># &#39;θHW_gen_ret_set&#39;: 40,</span>
+    <span class="s1">&#39;speed_control_generator_pump&#39;</span><span class="p">:</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;generator_nominal_deltaT&#39;</span><span class="p">:</span> <span class="mi">20</span>
+</code></pre></div>
+<p>That are:
+<br></p>
+<ul>
+<li><strong>load power</strong>: it is the power of the generator in kW, defined in the product data. variable name: 'full_load_power'</li>
+<li><strong>max monthly load factor</strong>: it is the maximum load factor of the generator in %.  variable_name: 'max_monthly_load_factor'</li>
+<li><strong>tH_gen_i_ON</strong>: it is the time of the generator in ON state in hours. variable_name: 'tH_gen_i_ON'</li>
+</ul>
+<hr />
+<ul>
+<li><strong>auxiliary power generator</strong>: Percentage of generator input energy used by auxiliary systems (generally 0-5 %).Increases total system energy input. variable_name: 'auxiliary_power_generator'</li>
+<li>
+<p><strong>fraction of auxiliary power generator</strong>: it is the portion of auxiliary energy recovered as heat (generally 20–60%). Reduces auxiliary losses.variable_name: 'fraction_of_auxiliary_power_generator'.</p>
+<p><br>
+<u><strong>1. <code>auxiliary_power_generator</code></strong></u>
+This parameter defines <strong>how much additional electrical power</strong> (in %) is consumed by the generator’s own auxiliary components, such as:</p>
+<ul>
+<li>Circulation pumps  </li>
+<li>Combustion or ventilation fans  </li>
+<li>Electronic controls and sensors  </li>
+<li>Ignition systems  </li>
+<li>Internal electronics (standby mode)</li>
+</ul>
+<p><strong>Formula</strong>:</p>
+<div class="arithmatex">\[
+E_{HW,gen,aux} = E_{HW,gen,in} \times \frac{\text{auxiliary\_power\_generator}}{100}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( E_{HW,gen,in} \)</span>: Generator input energy (kWh)  </li>
+<li><span class="arithmatex">\( E_{HW,gen,aux} \)</span>: Auxiliary energy consumed (kWh)</li>
+</ul>
+<p><br>
+<u><strong>2. <code>fraction_of_auxiliary_power_generator</code></strong></u></p>
+<p>This parameter represents <strong>the fraction of auxiliary power that is recoverable as useful heat</strong>.<br />
+Some auxiliary systems release heat that can be recovered by the generator’s thermal circuit.</p>
+<p>For example:
+- Pump motors or internal electronics may release part of their heat to the water loop.<br />
+- Fans or controllers might dissipate energy inside the generator casing.</p>
+<p><strong>Formula</strong>:</p>
+<div class="arithmatex">\[
+Q_{W,gen,i,ls,rbl,H} = E_{HW,gen,aux} \times \frac{\text{fraction_of_auxiliary_power_generator}}{100}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( Q_{W,gen,i,ls,rbl,H} \)</span>: Recovered auxiliary heat (kWh)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>generator circuit</strong>: it is the circuit of the generator. It can be 'direct' or 'independent'. variable_name: 'generator_circuit'<ul>
+<li><strong>Direct</strong>: the generator is connected to the primary circuit, no hydraulic separation primary = secondary</li>
+<li><strong>Independent</strong>: the generator is connected to the secondary circuit, with hydraulic separator primary != secondary</li>
+</ul>
+</li>
+</ul>
+<p>The primary circuit supply temperature setpoint (Tp_sup_set), i.e., the flow temperature on the generator side (boiler, heat pump, etc.) is calculated using the function <strong>_generator_flow_setpoint(θext, θH_dis_flw_demand)</strong>, according to the selected control strategy of the generation system</p>
+<p>It determines how hot the generator should make the supply water based on:
+- the outdoor temperature <strong>(θext)</strong>, and/or
+- the heating demand from the distribution/emission side <strong>(θH_dis_flw_demand)</strong>, and/or
+- a fixed setpoint defined by the user.</p>
+<p>The input parameters of the function are:</p>
+<ul>
+<li><strong>θext</strong>: outdoor air temperature</li>
+<li><strong>θH_dis_flw_demand</strong>: Flow temperature requested by the secondary circuit (distribution/emission side)</li>
+</ul>
+<p>with global inputs that are:</p>
+<ul>
+<li><strong>df_gen_out_temp</strong>: Table defining the primary (generator) heating curve</li>
+<li>
+<p><strong>gen_flow_temp_control_type</strong>: Type of control used to control the flow temperature of the generator.Defines which control strategy is used (“Type A”, “Type B”, “Type C”):</p>
+<ul>
+<li>'Type A - Based on outdoor temperature': uses primary's own weather curve</li>
+<li>'Type B - Based on demand'            : follows the secondary demand (θH_dis_flw)</li>
+<li>'Type C - Constant temperature'       : uses θHW_gen_flw_const</li>
+</ul>
+</li>
+<li>
+<p><strong>θHW_gen_flw_const</strong>: Constant flow temperature of the generator</p>
+</li>
+</ul>
+<p>The user should provide the information directly in the dictionary:</p>
+<div class="highlight"><pre><span></span><code><span class="s1">&#39;gen_flow_temp_control_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Type A - Based on outdoor temperature&#39;</span><span class="p">,</span>
+<span class="s1">&#39;gen_outdoor_temp_data&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;θext_min_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">],</span>
+    <span class="s2">&quot;θext_max_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span>
+    <span class="s2">&quot;θflw_gen_max&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">60</span><span class="p">],</span>
+    <span class="s2">&quot;θflw_gen_min&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">],</span>
+<span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Generator curve&quot;</span><span class="p">])</span>
+<span class="s1">&#39;θHW_gen_flw_const&#39;</span><span class="p">:</span> <span class="mf">50.0</span>
+</code></pre></div>
+<p>where, in the code are defined as: </p>
+<p><div class="highlight"><pre><span></span><code><span class="bp">self</span><span class="o">.</span><span class="n">df_gen_out_temp</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;gen_outdoor_temp_data&#39;</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;θext_min_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">],</span>
+    <span class="s2">&quot;θext_max_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span>
+    <span class="s2">&quot;θflw_gen_max&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">60</span><span class="p">],</span>   <span class="c1"># °C, max primary supply</span>
+    <span class="s2">&quot;θflw_gen_min&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">],</span>   <span class="c1"># °C, min primary supply</span>
+<span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Generator curve&quot;</span><span class="p">]))</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">gen_flow_temp_control_type</span> <span class="o">=</span> <span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+    <span class="s1">&#39;gen_flow_temp_control_type&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Type A - Based on outdoor temperature&#39;</span>   <span class="c1"># &#39;Type A&#39; | &#39;Type B&#39; | &#39;Type C&#39;</span>
+<span class="p">)</span>
+
+<span class="bp">self</span><span class="o">.</span><span class="n">θHW_gen_flw_const</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">inp</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;θHW_gen_flw_const&#39;</span><span class="p">,</span> <span class="mf">50.0</span><span class="p">))</span>
+</code></pre></div>
+Explanation of the different type of control:</p>
+<ul>
+<li><u> Type A - Based on outdoor temperature. Climatic curve (outdoor compensation)</u>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Type A&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">θext_max</span> <span class="o">!=</span> <span class="n">θext_min</span><span class="p">:</span>
+        <span class="n">Tp</span> <span class="o">=</span> <span class="n">θflw_min</span> <span class="o">+</span> <span class="p">(</span><span class="n">θflw_max</span> <span class="o">-</span> <span class="n">θflw_min</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">θext_max</span> <span class="o">-</span> <span class="n">θext</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">θext_max</span> <span class="o">-</span> <span class="n">θext_min</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">Tp</span><span class="p">,</span> <span class="n">θflw_max</span><span class="p">),</span> <span class="n">θflw_min</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">θflw_min</span>
+</code></pre></div>
+Calculates the generator flow temperature linearly based on outdoor temperature.
+<strong>Equation</strong>:
+The generator flow temperature <span class="arithmatex">\( T_{p, \text{set}} \)</span> is calculated linearly based on the outdoor temperature <span class="arithmatex">\( \theta_{\text{ext}} \)</span>, following the formula:</li>
+</ul>
+<div class="arithmatex">\[
+T_{p, \text{set}} = T_{\text{flw}, \text{min}} + \left( T_{\text{flw}, \text{max}} - T_{\text{flw}, \text{min}} \right) \cdot \frac{\left( \theta_{\text{ext}, \text{max}} - \theta_{\text{ext}} \right)}{\left( \theta_{\text{ext}, \text{max}} - \theta_{\text{ext}, \text{min}} \right)}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( T_{\text{flw}, \text{min}} \)</span> = minimum flow temperature (e.g., 35°C)</li>
+<li><span class="arithmatex">\( T_{\text{flw}, \text{max}} \)</span> = maximum flow temperature (e.g., 60°C)</li>
+<li><span class="arithmatex">\( \theta_{\text{ext}} \)</span> = outdoor air temperature</li>
+<li><span class="arithmatex">\( \theta_{\text{ext}, \text{min}} \)</span> = minimum outdoor temperature (e.g., -7°C)</li>
+<li><span class="arithmatex">\( \theta_{\text{ext}, \text{max}} \)</span> = maximum outdoor temperature (e.g., 15°C)
+The calculated <span class="arithmatex">\( T_{p, \text{set}} \)</span> is then clamped between the minimum and maximum values:</li>
+</ul>
+<div class="arithmatex">\[
+T_{p, \text{set}} = \max\left( \min\left( T_{p, \text{set}}, T_{\text{flw}, \text{max}} \right), T_{\text{flw}, \text{min}} \right)
+\]</div>
+<p>👉🏻 <strong>Meaning</strong>: This is the typical weather-compensated control used (for example) in boilers and heat pumps.
+It automatically adjusts water temperature to the outdoor conditions for better efficiency and comfort.
+<strong>Example visualization of type A:</strong>
+<div class="highlight"><pre><span></span><code><span class="n">Generator</span> <span class="n">flow</span> <span class="n">temperature</span> <span class="p">(</span><span class="err">°</span><span class="n">C</span><span class="p">)</span>
+<span class="err">│</span>
+<span class="err">│</span>    <span class="mi">60</span><span class="err">°</span><span class="n">C</span> <span class="err">────┐</span>
+<span class="err">│</span>              \
+<span class="err">│</span>               \
+<span class="err">│</span>                \
+<span class="err">│</span>                 \
+<span class="err">│</span>    <span class="mi">35</span><span class="err">°</span><span class="n">C</span> <span class="err">────────────────┘──────────────►</span> <span class="n">Outdoor</span> <span class="n">temperature</span> <span class="p">(</span><span class="err">°</span><span class="n">C</span><span class="p">)</span>
+          <span class="o">-</span><span class="mi">7</span>          <span class="mi">0</span>           <span class="o">+</span><span class="mi">15</span>
+</code></pre></div></p>
+<ul>
+<li>
+<p><u> Type B - Based on demand. Follow secondary demand</u>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;Type B&#39;</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">θH_dis_flw_demand</span><span class="p">)</span>
+</code></pre></div>
+Sets the generator supply temperature equal to the <strong>demand from the secondary (distribution/emission) side.</strong>
+👉🏻 <strong>Meaning</strong>: This is used in systems with hydraulic separation (e.g., with a buffer tank or heat exchanger) where the generator must match the needs of the secondary circuit dynamically.
+<strong>Example</strong>:
+If the radiator loop requests 45 °C → the generator must deliver exactly 45 °C to maintain balance.</p>
+</li>
+<li>
+<p><u> Type C - Constant temperature</u>
+<div class="highlight"><pre><span></span><code><span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">θHW_gen_flw_const</span><span class="p">)</span>
+</code></pre></div>
+Ignores weather and demand — the generator runs at a fixed supply temperature (e.g., 50 °C).
+👉🏻 <strong>Meaning</strong>: Simplest and oldest control type, often found in small or legacy heating systems.
+It offers no adaptation to weather or load, typically less efficient.
+<strong>Example</strong>:
+If the user defines a constant supply temperature of 50 °C → the generator will always deliver 50 °C, regardless of the demand from the secondary circuit.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li><strong>speed control of generator pump</strong>: icontrols <strong>how ΔT varies with system load</strong> (constant vs variable). It can be in the code 'variable' or 'deltaT_constant'. variable_name: 'speed_control_generator_pump'</li>
+<li>
+<p><strong>Nominal water deltaT of generator</strong>: defines <strong>the nominal ΔT at design (full load)</strong> — the reference used in thermal balance equations in °C. variable_name: 'generator_nominal_deltaT'. It is used if speed_control_of_generator_pump is 'deltaT_constant'.</p>
+<p><strong>More info</strong>:</p>
+<ul>
+<li><strong><code>"deltaT_constant"</code></strong> → The pump maintains a <strong>fixed temperature difference (ΔT)</strong> between flow and return.</li>
+<li>Example: The pump adjusts its speed so that ΔT = 20 °C remains constant.</li>
+<li><strong><code>"variable"</code></strong> → The pump <strong>varies its speed dynamically</strong> according to the system load.</li>
+<li>When heating demand decreases, the water flow rate decreases.</li>
+<li>This leads to a smaller ΔT at partial loads, improving efficiency.</li>
+</ul>
+<p>When <code>variable</code>, the temperature difference (ΔT) <strong>decreases proportionally with the thermal load</strong>, which represents <strong>real modulating behavior</strong> of pumps and heat generators.</p>
+<hr />
+<p><u><strong><code>generator_nominal_deltaT</code></strong></u></p>
+<p>Defines the <strong>nominal temperature difference (ΔT)</strong> between the <strong>generator flow</strong> and <strong>return</strong> at <strong>full-load conditions</strong>.</p>
+<div class="arithmatex">\[
+\Delta T_{nom} = T_{flow,nominal} - T_{return,nominal}
+\]</div>
+<p>This is the <strong>design operating condition</strong> for the generator, used as a reference in calculations.</p>
+<p><u>Example:</u></p>
+<p>If <code>generator_nominal_deltaT = 20</code>, then at full load:</p>
+<ul>
+<li>Supply temperature = 60 °C  </li>
+<li>Return temperature = 40 °C<br />
+→ ΔT = 20 °C  </li>
+</ul>
+<p>At partial load:</p>
+<ul>
+<li>If <code>speed_control_generator_pump = "deltaT_constant"</code> → ΔT remains <strong>20 °C</strong>.  </li>
+<li>If <code>speed_control_generator_pump = "variable"</code> → ΔT may drop to <strong>10–15 °C</strong>, depending on demand.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p>It is possible to define the optional primary setpoints (used if circuit is independent).</p>
+<ul>
+<li><strong>θHW_gen_flw_set</strong>: flow temperature setpoint</li>
+<li><strong>θHW_gen_ret_set</strong>: return temperature setpoint</li>
+</ul>
+<hr />
+<h3 id="general">GENERAL<a class="headerlink" href="#general" title="Permanent link">&para;</a></h3>
+<hr />
+<p><strong>Efficiency model</strong></p>
+<p>The calculation of efficiency can be done using three type of choices: </p>
+<div class="highlight"><pre><span></span><code>1) &#39;simple&#39;       : linear heuristic vs. return temperature
+2) &#39;parametric&#39;   : piecewise/threshold model
+3) &#39;manufacturer&#39; : 1D (return) or 2D (flow/return) map
+</code></pre></div>
+<p>the calculation is made using the function <strong>_efficiency_from_model()</strong> that requires one of the above options: simple, parameteric, manufacturer.
+It calculates how efficiently the generator converts input energy (like gas, electricity, or fuel) into useful heat, depending on the flow (θflw) and return (θret) water temperatures on the primary circuit side.
+Explanation of each option:</p>
+<p>1) <strong>'simple'</strong>: it is a linear heuristic based on the return temperature. 
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">model</span> <span class="o">==</span> <span class="s1">&#39;simple&#39;</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">θret</span> <span class="o">&lt;</span> <span class="mf">50.0</span><span class="p">:</span>
+        <span class="n">eff</span> <span class="o">=</span> <span class="mf">110.0</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">θret</span> <span class="o">-</span> <span class="mf">20.0</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">eff</span> <span class="o">=</span> <span class="mf">95.0</span>
+    <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">eff</span><span class="p">,</span> <span class="mf">110.0</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
+</code></pre></div>
+This is a simplified heuristic formula typically used for condensing boilers:</p>
+<ul>
+<li>When the <strong>return temperature (θret)</strong> is <strong>below 50°C</strong>, condensation occurs in the flue gases, recovering latent heat. 
+    → The efficiency increases up to ~110% (based on lower heating value, PCI).</li>
+<li>When <strong>θret ≥ 50°C</strong>, condensation stops, and the efficiency drops to around 95%.</li>
+</ul>
+<p><strong>Meaning:</strong>
+| Condition | Return Temp | Typical Generator Behavior | Efficiency |
+Condesning mode | &lt; 50°C | Flue gas condensation → higher recovery | 95-110% |
+Ono-condensing |  ≥ 50°C | No condensation | ~95% |</p>
+<p>2) <strong>'parametric'</strong>: it is a piecewise/threshold model based on the linear interpolation of return temperature. 
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">model</span> <span class="o">==</span> <span class="s1">&#39;parametric&#39;</span><span class="p">:</span>
+    <span class="n">eta_max</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eta_max</span>
+    <span class="n">eta_nc</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">eta_no_cond</span>
+    <span class="n">T_min</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">T_ret_min</span>
+    <span class="n">T_thr</span>   <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">T_ret_thr</span>
+
+    <span class="n">Tret_clip</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">θret</span><span class="p">,</span> <span class="n">T_thr</span><span class="p">),</span> <span class="n">T_min</span><span class="p">)</span>
+    <span class="n">slope</span> <span class="o">=</span> <span class="p">(</span><span class="n">eta_max</span> <span class="o">-</span> <span class="n">eta_nc</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">T_min</span> <span class="o">-</span> <span class="n">T_thr</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">θret</span> <span class="o">&lt;=</span> <span class="n">T_thr</span><span class="p">:</span>
+        <span class="n">eff</span> <span class="o">=</span> <span class="n">eta_max</span> <span class="o">+</span> <span class="n">slope</span> <span class="o">*</span> <span class="p">(</span><span class="n">Tret_clip</span> <span class="o">-</span> <span class="n">T_min</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">eff</span> <span class="o">=</span> <span class="n">eta_nc</span>
+</code></pre></div>
+This is a <strong>parameterized linear model</strong> that allows flexible configuration without a full manufacturer curve:</p>
+<ul>
+<li><strong>eta_max</strong>: maximum efficiency (e.g., 110%) when return temperature is low (T_min)</li>
+<li><strong>eta_nc</strong>: non-condensing efficiency (e.g., 95%) when return temperature is high (T_thr)</li>
+<li><strong>T_min</strong>: minimum return temperature (lower bound of condensing operation)</li>
+<li><strong>T_thr</strong>: threshold temperature where condensation ceases</li>
+</ul>
+<p>The function linearly interpolates between these two operating points.</p>
+<p><strong>Meaning:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Region</th>
+<th>Return Temp</th>
+<th>Efficiency trend</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Region 1</td>
+<td>θret &lt;= T_thr</td>
+<td>Linear decrease from η_max (at T_min) to η_nc (at T_thr)</td>
+</tr>
+<tr>
+<td>Region 2</td>
+<td>θret &gt; T_thr</td>
+<td>Constant η_nc (no more condensation)</td>
+</tr>
+</tbody>
+</table>
+<p>This model offers a tunable middle ground between the simple heuristic and a full manufacturer curve — it’s ideal for parametric studies or sensitivity analyses.</p>
+<p>3) <strong>'manufacturer'</strong>: it is a 1D (return) or 2D (flow/return) map based on the manufacturer curve. 
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">model</span> <span class="o">==</span> <span class="s1">&#39;manufacturer&#39;</span><span class="p">:</span>
+    <span class="c1"># (a) 1D curve eff = f(Tret)</span>
+    <span class="c1"># (b) 2D surface eff = f(Tflw, Tret)</span>
+</code></pre></div></p>
+<p>This model uses <strong>real efficiency maps</strong> provided by the equipment manufacturer.</p>
+<p><strong>(a) 1D curve</strong></p>
+<ul>
+<li>The efficiency is interpolated from a list of measured points: Tret = [20, 30, 40, 50, 60], eta = [109, 106, 101, 95, 93].</li>
+<li>Uses linear interpolation to find the efficiency for the given θret.</li>
+</ul>
+<p><strong>(b) 2D surface</strong></p>
+<ul>
+<li>For more detailed manufacturer data, efficiency is given as a grid (matrix) depending on both flow and return temperatures.</li>
+<li>Bilinear interpolation is used between the four nearest points (Q11, Q12, Q21, Q22) to compute an accurate efficiency value.</li>
+</ul>
+<p><strong>Meaning:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Inputs</th>
+<th>Accuracy</th>
+<th>Typical Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1D</td>
+<td>Return temperature only</td>
+<td>Moderate</td>
+<td>Simplified manufacturer data</td>
+</tr>
+<tr>
+<td>2D</td>
+<td>Flow + return temperatures</td>
+<td>High</td>
+<td>Detailed boiler performance maps</td>
+</tr>
+</tbody>
+</table>
+<p>If the manufacturer data is missing or invalid, the function falls back to the simple heuristic.</p>
+<hr />
+<p><strong>Calculation Model:</strong></p>
+<div class="highlight"><pre><span></span><code>    <span class="s1">&#39;calc_when_QH_positive_only&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;off_compute_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;full&#39;</span>
+</code></pre></div>
+<p>It controls <strong>what the program does when the heating demand (Q_H) is zero or negative</strong> — i.e., when there is <strong>no heating load</strong> required in that timestep.</p>
+<p>Every timestep in the timeseries (typically 1 hour) has:</p>
+<ul>
+<li><strong>qh</strong> → heating demand in kWh</li>
+<li><strong>θint</strong> → indoor air temperature</li>
+<li><strong>θext</strong> → outdoor temperature</li>
+</ul>
+<p>The model decides how to behave based on the value of qh and the user-defined policy flags:</p>
+<ul>
+<li><strong>calc_when_QH_positive_only</strong></li>
+<li><strong>off_compute_mode</strong></li>
+</ul>
+<p>These two flags <strong>control what happens when the heating load = 0.</strong></p>
+<p><strong>Step by Step Logic</strong></p>
+<p><strong>1) Detect zero or negative heating demand</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="nb">float</span><span class="p">(</span><span class="n">qh</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+</code></pre></div>
+This means there is no heating required (or possibly cooling).
+Now the function checks which policy is set for such cases.</p>
+<p><strong>2) Case 1 — Full simulation even when Q_H = 0</strong>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc_when_QH_positive_only</span><span class="p">:</span>
+    <span class="c1"># Full calculation even with zero load</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_step</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">θint</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">θext</span><span class="p">))</span>
+    <span class="o">...</span>
+</code></pre></div></p>
+<ul>
+<li>Here, the flag <em>calc_when_QH_positive_only</em> is False, so the user wants to compute everything even when there’s no load.</li>
+<li>
+<p>It runs the complete thermal balance by calling:
+<div class="highlight"><pre><span></span><code><span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_step</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">θint</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">θext</span><span class="p">))</span>
+</code></pre></div>
+This means: compute system temperatures, efficiencies, flow rates, etc., as if the system were still active but with zero heating power.</p>
+</li>
+<li>
+<p>The results are appended to the output DataFrame as usual.</p>
+</li>
+</ul>
+<p><strong>Use case:</strong> See how the system behaves under “no load” conditions (e.g., during shoulder months) — including standby losses or auxiliary power.</p>
+<p><strong>3) Case 2 — Skip detailed calculation (calc_when_QH_positive_only = True)</strong></p>
+<p>If this flag is True, the system should behave differently depending on how “off periods” are treated.</p>
+<p>There are three “off modes” controlled by <em>self.off_compute_mode.</em></p>
+<ul>
+<li>
+<p><u> a) Mode: <strong>'idle'</strong> → Minimal record </u>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">off_compute_mode</span> <span class="o">==</span> <span class="s1">&#39;idle&#39;</span><span class="p">:</span>
+    <span class="n">res_row</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;timestamp&#39;</span><span class="p">:</span> <span class="n">idx</span><span class="p">}</span>
+    <span class="n">res_row</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_idle_row</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">θint</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">θext</span><span class="p">)))</span>
+</code></pre></div></p>
+<ul>
+<li>Produces a minimal output line using _idle_row().</li>
+<li>This function fills the row mostly with zeros or NaN values — representing that nothing is being calculated because the system is idle.</li>
+<li>Only basic fields like timestamp, indoor temperature, and outdoor temperature are kept.</li>
+</ul>
+<p>👉🏻 <strong>Use case</strong>: For speed optimization when simulating a full year — avoids doing unnecessary physics calculations.</p>
+</li>
+<li>
+<p><u> b) Mode: <strong>'temps'</strong> → Record only temperatures </u>
+<div class="highlight"><pre><span></span><code><span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">off_compute_mode</span> <span class="o">==</span> <span class="s1">&#39;temps&#39;</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_temps_row_when_off</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">θint</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">θext</span><span class="p">))</span>
+</code></pre></div></p>
+<ul>
+<li>This still computes temperatures (like circuit or node flow/return) using _temps_row_when_off(),</li>
+<li>but all energetic terms (flows, powers, losses) are set to zero.</li>
+<li>This way, you can visualize how the temperature control or mixing valves behave even with zero heating demand.</li>
+</ul>
+<p>👉🏻 <strong>Use case</strong>: For continuous temperature mapping, useful when validating system controls or comfort conditions.</p>
+</li>
+<li>
+<p><u> c) Mode: <strong>'full'</strong> → Full calculation despite Q_H = 0 </u>
+<div class="highlight"><pre><span></span><code><span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">off_compute_mode</span> <span class="o">==</span> <span class="s1">&#39;full&#39;</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_step</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">θint</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">θext</span><span class="p">))</span>
+</code></pre></div></p>
+<ul>
+<li>Similar to Case 1 but triggered explicitly by mode 'full' — performs a complete computation of all variables even if load = 0.</li>
+<li>This is a “force full calc” inside the zero-demand policy.</li>
+</ul>
+<p>👉🏻 <strong>Use case</strong>: When testing or debugging; ensures identical data structure across all timesteps.</p>
+</li>
+</ul>
+<p><strong>4) continue statements</strong></p>
+<p>Each branch ends with <em>continue</em> —
+→ meaning the loop moves to the next timestep immediately after handling this case.
+No further code in the timestep is executed once the “zero-load” policy has been applied.</p>
+<p><strong>General-physical interpretation</strong> </p>
+<p>This logic helps balance accuracy vs performance:</p>
+<p>In annual simulations (8760 hours), 70–90% of the time may have zero heating demand (e.g., in summer).
+Recomputing all hydraulic and thermal equations each hour would waste time.</p>
+<p>Therefore, this control allows skipping unnecessary computations or simplifying the result depending on your simulation purpose:</p>
+<ul>
+<li><strong>"idle"</strong> → fastest</li>
+<li><strong>"temps"</strong> → medium (keep comfort analysis)</li>
+<li><strong>"full"</strong> → slowest but most complete</li>
+</ul>
+<hr />
+<p><strong>Example of inputs system:</strong> 
+<div class="highlight"><pre><span></span><code><span class="n">INPUT_SYSTEM_HVAC</span>  <span class="o">=</span> <span class="p">{</span>
+
+    <span class="c1"># ---- emitter ----</span>
+    <span class="s1">&#39;emitter_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Floor heating&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;nominal_power&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+    <span class="s1">&#39;emission_efficiency&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="s1">&#39;flow_temp_control_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Type 2 - Based on outdoor temperature&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;selected_emm_cont_circuit&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s1">&#39;mixing_valve&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="c1"># &#39;TB14&#39;: custom_TB14, #  &lt;- Uncomment and upload your emittere table, oterwhise the default stored in gloabl_inputs.py is used</span>
+    <span class="s1">&#39;heat_emission_data&#39;</span> <span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+            <span class="s2">&quot;θH_em_flw_max_sahz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">45</span><span class="p">],</span>
+            <span class="s2">&quot;ΔθH_em_w_max_sahz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">],</span>
+            <span class="s2">&quot;θH_em_ret_req_sahz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">],</span>
+            <span class="s2">&quot;βH_em_req_sahz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">80</span><span class="p">],</span>
+            <span class="s2">&quot;θH_em_flw_min_tz_i&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">28</span><span class="p">],</span>
+        <span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;Max flow temperature HZ1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Max Δθ flow / return HZ1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Desired return temperature HZ1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Desired load factor with ON-OFF for HZ1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;Minimum flow temperature for HZ1&quot;</span>
+        <span class="p">])</span>
+
+    <span class="c1"># --- distribution ---</span>
+    <span class="s1">&#39;heat_losses_recovered&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_loss_recovery&#39;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span>
+    <span class="s1">&#39;simplified_approach&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_aux_recovery&#39;</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_aux_power&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_loss_coeff&#39;</span><span class="p">:</span> <span class="mi">48</span><span class="p">,</span>
+    <span class="s1">&#39;distribution_operation_time&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+
+    <span class="c1"># --- generator ---</span>
+    <span class="s1">&#39;full_load_power&#39;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span>                  <span class="c1"># kW</span>
+    <span class="s1">&#39;max_monthly_load_factor&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>         <span class="c1"># %</span>
+    <span class="s1">&#39;tH_gen_i_ON&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>                       <span class="c1"># h</span>
+    <span class="s1">&#39;auxiliary_power_generator&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>         <span class="c1"># %</span>
+    <span class="s1">&#39;fraction_of_auxiliary_power_generator&#39;</span><span class="p">:</span> <span class="mi">40</span><span class="p">,</span>   <span class="c1"># %</span>
+    <span class="s1">&#39;generator_circuit&#39;</span><span class="p">:</span> <span class="s1">&#39;independent&#39;</span><span class="p">,</span>     <span class="c1"># &#39;direct&#39; | &#39;independent&#39;</span>
+    <span class="c1"># Optional explicit generator setpoints (commented by default)</span>
+    <span class="c1"># &#39;θHW_gen_flw_set&#39;: 50,</span>
+    <span class="c1"># &#39;θHW_gen_ret_set&#39;: 40,</span>
+    <span class="c1"># Primary: independent climatic curve</span>
+    <span class="s1">&#39;gen_flow_temp_control_type&#39;</span><span class="p">:</span> <span class="s1">&#39;Type A - Based on outdoor temperature&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;gen_outdoor_temp_data&#39;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s2">&quot;θext_min_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">],</span>
+        <span class="s2">&quot;θext_max_gen&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span>
+        <span class="s2">&quot;θflw_gen_max&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">60</span><span class="p">],</span>
+        <span class="s2">&quot;θflw_gen_min&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">],</span>
+    <span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Generator curve&quot;</span><span class="p">]),</span>
+
+    <span class="s1">&#39;speed_control_generator_pump&#39;</span><span class="p">:</span> <span class="s1">&#39;variable&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;generator_nominal_deltaT&#39;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>         <span class="c1"># °C</span>
+
+    <span class="c1"># Efficiency model</span>
+    <span class="s1">&#39;efficiency_model&#39;</span><span class="p">:</span> <span class="s1">&#39;simple&#39;</span><span class="p">,</span>
+
+    <span class="c1"># Calculation options</span>
+    <span class="s1">&#39;calc_when_QH_positive_only&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;off_compute_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;full&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

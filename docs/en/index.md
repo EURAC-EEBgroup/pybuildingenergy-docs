@@ -1,8 +1,7 @@
 <figure align="center">
-  <img src="../assets/images/Logo_pyBuild.png" alt="logo library">
+  <img src="../assets/images/Logo_pyBuild.png" alt="pybuildingnergy">
 </figure>
-<!-- 
-Welcome to **pybuildingenergy** documentation! -->
+
 
 Please cite us if you use this library: 
 [![DOI](https://zenodo.org/badge/761715706.svg)](https://zenodo.org/doi/10.5281/zenodo.10887919)

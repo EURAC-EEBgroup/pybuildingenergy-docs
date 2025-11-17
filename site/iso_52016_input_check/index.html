@@ -1,0 +1,1542 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../api/">
+      
+      
+        <link rel="next" href="../installation/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Quality check - pybuildingenergy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#iso-52016-input-check" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pybuildingenergy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quality check
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../it/iso_52016_input_check/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    pybuildingenergy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quality check
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quality check
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#direction-from-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direction from orientation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opaque-facade-areas-in-adjacent-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opaque facade areas in adjacent zone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-heating-system-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check heating system inputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-and-optional-sanitation-of-a-bui-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation and optional sanitation of a BUI structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation and optional sanitation of a BUI structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-building-level-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Building-level checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-surface-level-checks-building_surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Surface-level checks (building_surface[*])
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-adjacent-zones-checks-adjacent_zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Adjacent zones checks (adjacent_zones[*])
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-adjacency-pairing-window-caps-residual-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Adjacency pairing, window caps &amp; residual splitting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weather_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weather data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ISO 52010
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            ISO 52010
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52010 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ISO 52016
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            ISO 52016
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Category profiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_aggregate_surface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Aggregate Surfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_adj_zone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Adjacent Zone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ventilation_transmission_adj_zone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Ventilation and transmission adjacent zones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_virtual_ground_temperature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Virtual ground temperature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_aeral_heat_capacity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Aeral heat capacity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_solar_absorption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Solar absorption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_overall_procedure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Overall procedure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ISO 15316
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            ISO 15316
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_heating_circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Heating Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_generation_circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Generation Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_system_inputs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - HVAC System inputs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_calculation_procedure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Calculation procedure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#direction-from-orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Direction from orientation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opaque-facade-areas-in-adjacent-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opaque facade areas in adjacent zone
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-heating-system-inputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Check heating system inputs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-and-optional-sanitation-of-a-bui-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation and optional sanitation of a BUI structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation and optional sanitation of a BUI structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-building-level-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) Building-level checks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-surface-level-checks-building_surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Surface-level checks (building_surface[*])
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-adjacent-zones-checks-adjacent_zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Adjacent zones checks (adjacent_zones[*])
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-adjacency-pairing-window-caps-residual-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Adjacency pairing, window caps &amp; residual splitting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/edit/master/docs/en/iso_52016_input_check.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="iso-52016-input-check">ISO 52016 Input Check<a class="headerlink" href="#iso-52016-input-check" title="Permanent link">&para;</a></h1>
+<p>The data provided before being used for the simulation are processed and evaluated to be considered fit for the simulation. This process includes a series of checks that allow to identify any potential errors. 
+The following controls are applied:</p>
+<hr />
+<h3 id="direction-from-orientation"><h3 style="color:#df1b12"><strong>Direction from orientation</strong></h3><a class="headerlink" href="#direction-from-orientation" title="Permanent link">&para;</a></h3>
+<p><strong>Function Name</strong>:
+<code>_dir_from_orientation(azimut:float, tilt:float) -&gt; str</code></p>
+<p><strong>Purpose</strong>: 
+This function mapd the orientation of the surface (azimuth and tilt) and returns the direction of the surface.</p>
+<p><strong>Return</strong>
+One of: <code>HOR</code> (horizontal), <code>NV</code>,<code>EV</code>, <code>SV</code>, <code>WV</code>(vertical faces; North, East, South, West) </p>
+<p><strong>Validations &amp; rules</strong>
+- Tilt checks
+    - If <code>tilt == 0</code> (|Δ| ≤ 1e-9): return <code>"HOR"</code>.
+    - If <code>tilt != 90</code> (|Δ| &gt; 1e-6): uses a fallback threshold:
+        - <code>tilt &lt; 45 → "HOR"</code>
+        - <code>tilt ≥ 45 → "NV"</code> (treat as a generic vertical).</p>
+<ul>
+<li>Azimuth checks (only when considered vertical):<ul>
+<li>Normalize <code>azimuth % 360</code>.</li>
+<li>Exact snaps (|Δ| ≤ 1e-6):<ul>
+<li><code>0</code> or <code>360</code> → <code>"NV"</code>, <code>90</code> → <code>"EV"</code>, <code>180</code> → <code>"SV"</code>, <code>270</code> → <code>"WV"</code>.</li>
+</ul>
+</li>
+<li>Otherwise: snap to the nearest of <code>[0,90,180,270]</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Notes</strong></p>
+<p>This function does not emit messages; it enforces interpretation by thresholds/snaps.</p>
+<hr />
+<h3 id="opaque-facade-areas-in-adjacent-zone"><h3 style="color:#df1b12"><strong>Opaque facade areas in adjacent zone</strong></h3><a class="headerlink" href="#opaque-facade-areas-in-adjacent-zone" title="Permanent link">&para;</a></h3>
+<p><strong>Function Name</strong>: <code>_adj_op_area_in_dir(adj_zone: dict, dir_code: str) -&gt; float</code></p>
+<p><strong>Purpose</strong>: 
+Compute the sum of opaque (“OP”) facade areas in <code>adj_zone</code> for the given direction code <code>("NV"|"EV"|"SV"|"WV")</code>.</p>
+<p><strong>Validations &amp; rules</strong></p>
+<ul>
+<li>
+<p>Upper-cases and matches:</p>
+<ul>
+<li><code>typology_elements == "OP"</code> and </li>
+<li><code>orientation_elements == dir_code</code></li>
+</ul>
+</li>
+<li>
+<p>If no match: returns <code>0.0</code>.</p>
+</li>
+</ul>
+<p><strong>Notes</strong></p>
+<p>No messages; pure filtering/aggregation with safe default <code>0.0</code>.</p>
+<hr />
+<h3 id="check-heating-system-inputs"><h3 style="color:#df1b12"><strong>Check heating system inputs</strong></h3><a class="headerlink" href="#check-heating-system-inputs" title="Permanent link">&para;</a></h3>
+<p><strong>Function Name</strong>: <code>check_heating_system_inputs(system_input: dict) -&gt; dict</code></p>
+<p><strong>Purpose</strong>: 
+Load and <strong>validate</strong> heating system configuration, selecting the correct <strong>TB14</strong> table and ensuring compatible fields for generator control logic
+Example of <strong>TB14</strong>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">TB14</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;Emitters_nominale_deltaTeta_air_C&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+    <span class="s2">&quot;Emitters_exponent_n&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.3</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span>
+    <span class="s2">&quot;Emitters_nominal_deltaTeta_Water_C&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span>
+<span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Radiator&quot;</span><span class="p">,</span> <span class="s2">&quot;Floor heating&quot;</span><span class="p">,</span> <span class="s2">&quot;Fan coil&quot;</span><span class="p">])</span>
+</code></pre></div>
+<p><strong>Returns</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;TB14_used&quot;</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>   <span class="c1"># custom or default TB14</span>
+  <span class="s2">&quot;emitter_type&quot;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>         <span class="c1"># validated (possibly auto-adjusted)</span>
+  <span class="s2">&quot;messages&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>       <span class="c1"># human-readable validations/fixes</span>
+  <span class="s2">&quot;config&quot;</span><span class="p">:</span> <span class="nb">dict</span>               <span class="c1"># normalized config (may include auto-fixes)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Validations &amp; auto-fix logic</strong></p>
+<p>1) <strong>TB14 selection</strong></p>
+<ul>
+<li>If <code>system_input["TB14"]</code> is a<code>pd.DataFrame</code> → use it.<ul>
+<li>Message: <code>Custom TB14 table loaded from input</code>.</li>
+</ul>
+</li>
+<li>Else → fallback to <code>TB14_backup</code>.<ul>
+<li>Message: <code>Default TB14 table loaded from global_inputs.py</code>.</li>
+</ul>
+</li>
+</ul>
+<p>2) <strong><code>emitter_type</code> presence in TB14 index</strong></p>
+<ul>
+<li>If missing from <code>TB14.index</code> → <em>auto-set</em> to the <em>first available index</em> (or <code>None</code> if empty).<ul>
+<li>Message: <code>Emitter type '...' not found ... auto-set to '...'.</code></li>
+</ul>
+</li>
+<li>Else → keep as is.<ul>
+<li>Message: <code>Emitter type '...' found in TB14.</code></li>
+</ul>
+</li>
+</ul>
+<p>3) <strong><code>gen_flow_temp_control_type</code> validation</strong>
+   - Allowed: <code>"Type A" | "Type B" | "Type C".</code>
+   - <em>Type A</em> requires <code>gen_outdoor_temp_data</code> as <code>pd.DataFrame</code>:
+      - If not a DataFrame → <em>auto-switch to "Type B"</em>.
+         - Message: <code>For 'Type A' ... must be provided ... → switched to 'Type B'.</code>
+      - Else → <code>'gen_outdoor_temp_data' provided ...</code>.
+   - <em>Type C</em> requires numeric <code>θHW_gen_flw_const</code>:
+      - If missing/None → auto-set to <code>50.0</code>.
+      - Message: <code>⚠️ 'θHW_gen_flw_const' not provided ...; setting it to 50.</code>
+   - Any other value →<em> auto-set to "Type B"</em>.
+      - Message: <code>⚠️ Invalid value ... Setting to 'Type B'.</code></p>
+<p><strong>Side effects</strong>
+Returns a normalized copy of the input config in "config"; original dict is not mutated by the function.</p>
+<hr />
+<h3 id="validation-and-optional-sanitation-of-a-bui-structure"><h3 style="color:#df1b12"><strong>Validation and optional sanitation of a BUI structure</strong></h3><a class="headerlink" href="#validation-and-optional-sanitation-of-a-bui-structure" title="Permanent link">&para;</a></h3>
+<p><strong>Function Name</strong>: <code>sanitize_and_validate_BUI(bui: dict, fix: bool = True, eps: float = 1e-6, defaults: dict | None = None) -&gt; tuple[dict, list[dict]]</code></p>
+<p><strong>Purpose</strong>: 
+Deep validation and optional sanitation of a BUI structure (building, surfaces, adjacent zones, and their pairing). It can also re-balance areas and split surfaces to maintain geometric/physical consistency.
+There are 4 main controls:
+- <strong>Building-level checks</strong>
+- <strong>Surface-level checks</strong>
+- <strong>Adjacent zone checks</strong>
+- <strong>Adjacency pairing, window caps &amp; residual splitting</strong></p>
+<p><strong>Returns</strong></p>
+<ul>
+<li><code>bui_clean</code>: deep-copied and possibly corrected BUI.</li>
+<li><code>issues</code>: list of structured messages:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="s2">&quot;level&quot;</span><span class="p">:</span> <span class="s2">&quot;ERROR|WARN|INFO&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;dot.notation or index path&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;msg&quot;</span><span class="p">:</span> <span class="s2">&quot;human-readable message&quot;</span><span class="p">,</span>
+ <span class="s2">&quot;fix_applied&quot;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">}</span>
+</code></pre></div>
+<p><strong>Defaults used when <code>defaults</code> is None</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="s2">&quot;opaque_u_default&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+  <span class="s2">&quot;transparent_u_default&quot;</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">,</span>
+  <span class="s2">&quot;g_default&quot;</span><span class="p">:</span> <span class="mf">0.6</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="1-building-level-checks">1) <strong>Building-level checks</strong><a class="headerlink" href="#1-building-level-checks" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Keys: <code>net_floor_area</code>, <code>exposed_perimeter</code>, <code>height</code></p>
+</li>
+<li>
+<p>Must be numeric and &gt; 0.</p>
+</li>
+<li>If <code>fix</code> and value is exactly <code>0</code> → set to <code>max(eps, 1.0)</code> (⚠️ <code>WARN</code> with fix).</li>
+<li>
+<p>Else → <code>ERROR</code>.</p>
+</li>
+<li>
+<p><code>n_floors</code></p>
+</li>
+<li>
+<p>Must be numeric and &gt; 0.</p>
+</li>
+<li>If <code>fix</code> and value is exactly <code>0</code> → set to <code>1</code> (⚠️ <code>WARN</code> with fix).</li>
+<li>Else → <code>ERROR</code>.</li>
+</ul>
+<h4 id="2-surface-level-checks-building_surface">2) <strong>Surface-level checks (<code>building_surface[*]</code>)</strong><a class="headerlink" href="#2-surface-level-checks-building_surface" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Type typos</strong> auto-corrected (<code>"opque"|"opaqu"|"trasparent"</code> → <code>"opaque"|"transparent"</code>) with <code>WARN</code>.</li>
+<li><code>type</code> must be in {<code>"opaque"</code>, <code>"transparent"</code>, <code>"adiabatic"</code>, <code>"adjacent"</code>} → else <code>ERROR</code>.</li>
+<li><code>area</code> must be numeric &gt; 0.</li>
+<li>If <code>fix</code> and <code>area</code> is exactly <code>0</code> → set to <code>max(eps, 1.0)</code> (⚠️ <code>WARN</code> with fix).</li>
+<li>Else → <code>ERROR</code>.</li>
+<li><code>sky_view_factor</code> must be in [0.0, 1.0].</li>
+<li>If <code>fix</code> and numeric → <strong>clipped</strong> into range (⚠️ <code>WARN</code>).</li>
+<li>
+<p>Else → <code>WARN</code>.</p>
+</li>
+<li>
+<p><strong>Thermal properties</strong></p>
+</li>
+<li>For <code>opaque/transparent</code>: <code>u_value</code> &gt; 0.<ul>
+<li>If invalid and <code>fix</code> → set to default (opaque_u_default or transparent_u_default) (⚠️ <code>WARN</code>).</li>
+<li>Else → <code>ERROR</code>.</li>
+</ul>
+</li>
+<li>
+<p>For <code>transparent</code>: <code>g_value</code> &gt; 0.</p>
+<ul>
+<li>If invalid and <code>fix</code> → set to default (g_default) (⚠️ <code>WARN</code>).</li>
+<li>Else → <code>ERROR</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Transparent dimensions</strong></p>
+</li>
+<li><code>height &gt; 0</code>, <code>width &gt; 0.</code><ul>
+<li>If invalid and <code>fix</code> → set both to <code>1.0</code> (⚠️ <code>WARN</code>).</li>
+<li>Else → <code>ERROR</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>parapet</code> must be in <code>[0, height]</code> when both numeric.</p>
+<ul>
+<li>If out of range and <code>fix</code> → clamp to <code>[0, height]</code> (⚠️ <code>WARN</code>).</li>
+<li>Else → <code>WARN</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Orientation recommendations</strong></p>
+</li>
+<li><code>tilt</code> recommended in {0, 90}.<ul>
+<li>If numeric non-standard and <code>fix</code> → normalize to nearest of {0, 90} (⚠️ <code>WARN</code>).</li>
+<li>Else → <code>WARN</code>.</li>
+</ul>
+</li>
+<li><code>azimuth</code> recommended in {0, 90, 180, 270}.<ul>
+<li>If numeric non-standard and <code>fix</code> → snap to nearest multiple of 90 (⚠️ <code>WARN</code>).</li>
+<li>Else → <code>WARN</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-adjacent-zones-checks-adjacent_zones">3) <strong>Adjacent zones checks (adjacent_zones[*])</strong><a class="headerlink" href="#3-adjacent-zones-checks-adjacent_zones" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>volume &gt; 0.</code></li>
+<li>If invalid and <code>fix</code> → set to <code>1.0</code> (⚠️ <code>WARN</code>).</li>
+<li>
+<p>Else → <code>ERROR</code>.</p>
+</li>
+<li>
+<p><strong>Array length coherence</strong> across:</p>
+</li>
+<li>
+<p><code>area_facade_elements, typology_elements, transmittance_U_elements, orientation_elements.</code></p>
+<ul>
+<li>If lengths mismatch → <code>ERROR</code>.</li>
+</ul>
+</li>
+<li>
+<p><code>transmittance_U_elements</code> must be &gt; 0:</p>
+</li>
+<li>If invalid and <code>fix</code> → set invalid entries to <code>opaque_u_default</code> (⚠️ <code>WARN</code>).</li>
+<li>Else → <code>ERROR</code>.</li>
+</ul>
+<h4 id="4-adjacency-pairing-window-caps-residual-splitting">4) <strong>Adjacency pairing, window caps &amp; residual splitting</strong><a class="headerlink" href="#4-adjacency-pairing-window-caps-residual-splitting" title="Permanent link">&para;</a></h4>
+<p>This stage ensures geometric consistency between:</p>
+<ul>
+<li>BUI vertical <strong>adjacent</strong> surfaces,</li>
+<li>the <strong>opaque</strong> (“OP”) areas declared in the <strong>adjacent zone</strong> on the <strong>same cardinal direction</strong>, and</li>
+<li>the <strong>transparent</strong> (windows) areas on the same direction.</li>
+</ul>
+<p>It operates in two passes (an inner while-loop and a later full pass), using the helpers:</p>
+<ul>
+<li><code>_azimuth_to_dir:</code> snap 0/90/180/270 →<code>"NV"|"EV"|"SV"|"WV"</code>, else <code>None</code>.</li>
+<li><code>_dir_from_orientation:</code> more general mapper used later.</li>
+</ul>
+<p><strong>4.1 For each vertical</strong> <code>building_surface</code> <strong>of type</strong> <code>"adjacent"</code> <strong>with</strong> <code>name_adj_zone</code>:</p>
+<ul>
+<li>Compute:  </li>
+<li><code>A_bui_orig</code>: area of the adjacent BUI surface.</li>
+<li>
+<p><code>A_adj_dir_cap</code>: sum of <strong>adjacent zone OP areas</strong> in the same direction.</p>
+</li>
+<li>
+<p><strong>Cap OP area to BUI area</strong>:</p>
+</li>
+<li>
+<p>If <code>A_adj_dir_cap &gt; A_bui_orig + eps</code>:</p>
+<ul>
+<li>If <code>fix</code>: scale down those OP areas proportionally (⚠️ WARN with scale factor).</li>
+<li>Else: ERROR.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Window check on same direction</strong></p>
+<ul>
+<li>Compute <code>A_win_dir</code> = sum of <em>all vertical transparent</em> surfaces in the same direction.</li>
+<li>Compute <code>diff = max(A_bui_orig - A_adj_dir_cap, 0).</code></li>
+<li>If <code>A_win_dir &gt; diff + eps</code>:<ul>
+<li>If <code>fix</code>: <strong>scale all those windows</strong> proportionally to sum to diff (⚠️ WARN with window scale factor).</li>
+<li>Else: <code>ERROR</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Residual exterior creation</strong></p>
+<ul>
+<li><code>diff_ext = max(A_bui_orig - A_adj_dir_cap, 0).</code></li>
+<li>If <code>diff_ext &gt; eps</code>:<ul>
+<li>If <code>fix</code>:<ul>
+<li><strong>Append</strong> a new <code>"opaque"</code> surface with area <code>diff_ext</code> (same orientation, external),</li>
+<li><strong>Shrink</strong> the <code>"adjacent"</code>surface area to <code>A_adj_dir_cap</code>.</li>
+<li>⚠️ <code>WARN</code> describing creation and resizing.</li>
+</ul>
+</li>
+<li>Else: <code>ERROR</code> (unallocated residual).</li>
+</ul>
+</li>
+</ul>
+<p><strong>4.2 Final pass: split all <code>"adjacent"</code> verticals (consistency sweep)</strong></p>
+<ul>
+<li>
+<p>For each <code>"adjacent"</code> vertical surface:</p>
+</li>
+<li>
+<p>Compute direction via <code>_dir_from_orientation</code>.</p>
+</li>
+<li>Fetch matching adjacent zone and compute <code>A_adj_dir</code> via <code>_adj_op_area_in_dir.</code></li>
+<li>Cap <code>A_adj_dir</code> to <code>A_bui</code> with <code>WARN</code> if it exceeds.</li>
+<li>If <code>diff = A_bui - A_adj_dir &gt; 1e-9</code>:<ul>
+<li>Shrink the "adjacent" area to A_adj_dir.</li>
+</ul>
+</li>
+</ul>
+<p>Create a new external "opaque" surface with area diff (copy selected coeffs).</p>
+<p>Emit INFO about the split.</p>
+<p>Messages</p>
+<p>Structured via add_issue(level, path, msg, fix_applied) where:</p>
+<p>level: "ERROR", "WARN", "INFO".</p>
+<p>path: e.g., building_surface[3].u_value or adjacent_zones[1].</p>
+<p>msg: human-readable description.</p>
+<p>fix_applied: True/False.</p>
+<p>Mutation policy</p>
+<p>Operates on a deep copy (bui_clean); original bui remains unchanged.</p>
+<p>When fix=False, issues are reported but values are not altered; conditions that would require rebalancing yield ERRORs.</p>
+<p>Helper direction rules used</p>
+<p>_azimuth_to_dir(az): valid only for cardinal azimuths; returns None otherwise (skips).</p>
+<p>_dir_from_orientation(azimuth, tilt): robust snapping with tilt fallback (HOR/vertical).</p>
+<hr />
+<h1 id="thermal-and-adjacent-zone">Thermal and Adjacent Zone<a class="headerlink" href="#thermal-and-adjacent-zone" title="Permanent link">&para;</a></h1>
+<p>Uno degli errori più caratteristici può essere quello di immetere dei valori errati di superficie della parete di confine tra la zona termica e la zona non termica. Un esempio è quello di dare dei valori più alti della superificie della parete nella zona non termica rispetto alla superificie della parete nella zona termica. In questo caso se il controllo risulta essere negativo allora il tool imposta il valore del superificie della zona non termica uguale a quello della zona termica. 
+Qui voglio dire che sebbene la superficie di contatto è la stessa pu`o succedere che la parete della zona termica sia o totlamente a contatto con la zon non termica o solamente una parte a contatto con la zona termica   </p>
+<h1 id="quality-check-of-system-inputs">Quality check of system inputs:<a class="headerlink" href="#quality-check-of-system-inputs" title="Permanent link">&para;</a></h1>
+<h3 id="check_heating_system_inputs-function"><code>check_heating_system_inputs</code> Function<a class="headerlink" href="#check_heating_system_inputs-function" title="Permanent link">&para;</a></h3>
+<p>This function validates and normalizes the input configuration for the heating system. It performs the following checks:</p>
+<ol>
+<li><strong>TB14 Table</strong>: </li>
+<li>If a custom <code>TB14</code> DataFrame is provided, it is used.</li>
+<li>
+<p>Otherwise, the default <code>TB14</code> from <code>global_inputs.py</code> is used.</p>
+</li>
+<li>
+<p><strong>Emitter Type Validation</strong>:</p>
+</li>
+<li>
+<p>If the <code>emitter_type</code> is not found in the selected <code>TB14</code> table, it is automatically set to the first available emitter type, and a warning message is generated.</p>
+</li>
+<li>
+<p><strong>Generator Flow Temperature Control Type (<code>gen_flow_temp_control_type</code>)</strong>:</p>
+</li>
+<li><strong>Type A</strong>: Requires <code>gen_outdoor_temp_data</code> as a DataFrame. If not provided, it switches to <code>Type B</code> and generates a warning.</li>
+<li><strong>Type C</strong>: If <code>θHW_gen_flw_const</code> is not provided, it defaults to <code>50</code> and a warning is shown.</li>
+<li><strong>Invalid Control Type</strong>: Any other values are automatically set to <code>Type B</code>.</li>
+</ol>
+<p>The function returns:
+- The selected <code>TB14</code> table.
+- The validated <code>emitter_type</code>.
+- A list of messages about any changes or validations.
+- The normalized input configuration.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

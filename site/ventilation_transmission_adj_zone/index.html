@@ -1,0 +1,2014 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../iso_52016_adj_zone/">
+      
+      
+        <link rel="next" href="../iso_52016_virtual_ground_temperature/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>ISO 52016 - Ventilation and transmission adjacent zones - pybuildingenergy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ventilation-internal-gains-and-transmission-heat-transfer-between-adjacent-zones" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pybuildingenergy
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ISO 52016 - Ventilation and transmission adjacent zones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../it/ventilation_transmission_adj_zone/" hreflang="it" class="md-select__link">
+              Italiano
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    pybuildingenergy
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API Reference
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_input_check/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quality check
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../weather_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Weather data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ISO 52010
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            ISO 52010
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52010/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52010 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ISO 52016
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            ISO 52016
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Category profiles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_aggregate_surface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Aggregate Surfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_adj_zone/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Adjacent Zone
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Ventilation and transmission adjacent zones
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Ventilation and transmission adjacent zones
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-and-function-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class and Function Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class and Function Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataclass-h_natural_vent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataclass: h_natural_vent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-ventilationinternalgains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class: VentilationInternalGains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: VentilationInternalGains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-heat_transfer_coefficient_by_ventilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function: heat_transfer_coefficient_by_ventilation(...)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Function: heat_transfer_coefficient_by_ventilation(...)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs (main)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-pseudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm (pseudo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Cases &amp; Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functioninternal_gains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function:internal_gains(...)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Function:internal_gains(...)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signature_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs-main_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs (main)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-pseudo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm (pseudo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q_occ-internal_gains_occupantsbuilding_type_classoccupants-q_app-internal_gains_occupantsbuilding_type_classappliances-phi_base-q_occh_occup-q_apph_app-a_use-eq-47-if-unconditioned_zones_nearby-phi_eff-phi_base-for-_-in-rangelist_adj_zones-phi_eff-phi_base-1-b_ztufztc_ztu_m-phi_base-return-floatphi_eff-else-return-floatphi_base" class="md-nav__link">
+    <span class="md-ellipsis">
+      q_occ = internal_gains_occupants[building_type_class][&#39;occupants&#39;] q_app = internal_gains_occupants[building_type_class][&#39;appliances&#39;] Phi_base = (q_occ*h_occup + q_app*h_app) * a_use # Eq. (4.7) if unconditioned_zones_nearby: Phi_eff = Phi_base for _ in range(list_adj_zones): Phi_eff += Phi_base + (1-b_ztu)*Fztc_ztu_m * Phi_base return float(Phi_eff) else: return float(Phi_base)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-transmission_heat_transfer_coefficient_iso13789" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function: transmission_heat_transfer_coefficient_ISO13789(...)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Function: transmission_heat_transfer_coefficient_ISO13789(...)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signature-as-provided" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature (as provided)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts &amp; Notation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-transmission-conditioned-unconditioned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 — Transmission conditioned → unconditioned
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-transmission-unconditioned-exterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 — Transmission unconditioned → exterior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-ventilation-of-unconditioned-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 — Ventilation of unconditioned zone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-aggregate-coupling-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4 — Aggregate coupling terms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-extraction-with-your-bui-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical extraction with your BUI structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-pseudo-robust-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm (pseudo; robust version)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Cases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-roadmap-future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Roadmap (Future Enhancements)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_virtual_ground_temperature/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Virtual ground temperature
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_aeral_heat_capacity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Aeral heat capacity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_solar_absorption/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Solar absorption
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_52016_overall_procedure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Overall procedure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ISO 15316
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            ISO 15316
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_input/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Input
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_heating_circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Heating Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_generation_circuit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Generation Circuit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_system_inputs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - HVAC System inputs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iso_15316_calculation_procedure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 15316 - Calculation procedure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-and-function-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class and Function Summary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class and Function Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataclass-h_natural_vent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dataclass: h_natural_vent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-ventilationinternalgains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Class: VentilationInternalGains
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Class: VentilationInternalGains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constructor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-heat_transfer_coefficient_by_ventilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function: heat_transfer_coefficient_by_ventilation(...)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Function: heat_transfer_coefficient_by_ventilation(...)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs-main" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs (main)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-pseudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm (pseudo)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Cases &amp; Validation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functioninternal_gains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function:internal_gains(...)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Function:internal_gains(...)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signature_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inputs-main_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inputs (main)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Physics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-pseudo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm (pseudo)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#q_occ-internal_gains_occupantsbuilding_type_classoccupants-q_app-internal_gains_occupantsbuilding_type_classappliances-phi_base-q_occh_occup-q_apph_app-a_use-eq-47-if-unconditioned_zones_nearby-phi_eff-phi_base-for-_-in-rangelist_adj_zones-phi_eff-phi_base-1-b_ztufztc_ztu_m-phi_base-return-floatphi_eff-else-return-floatphi_base" class="md-nav__link">
+    <span class="md-ellipsis">
+      q_occ = internal_gains_occupants[building_type_class][&#39;occupants&#39;] q_app = internal_gains_occupants[building_type_class][&#39;appliances&#39;] Phi_base = (q_occ*h_occup + q_app*h_app) * a_use # Eq. (4.7) if unconditioned_zones_nearby: Phi_eff = Phi_base for _ in range(list_adj_zones): Phi_eff += Phi_base + (1-b_ztu)*Fztc_ztu_m * Phi_base return float(Phi_eff) else: return float(Phi_base)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#function-transmission_heat_transfer_coefficient_iso13789" class="md-nav__link">
+    <span class="md-ellipsis">
+      Function: transmission_heat_transfer_coefficient_ISO13789(...)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Function: transmission_heat_transfer_coefficient_ISO13789(...)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#signature-as-provided" class="md-nav__link">
+    <span class="md-ellipsis">
+      Signature (as provided)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts &amp; Notation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-transmission-conditioned-unconditioned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1 — Transmission conditioned → unconditioned
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-transmission-unconditioned-exterior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2 — Transmission unconditioned → exterior
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-ventilation-of-unconditioned-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 — Ventilation of unconditioned zone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-aggregate-coupling-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4 — Aggregate coupling terms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-extraction-with-your-bui-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical extraction with your BUI structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-pseudo-robust-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm (pseudo; robust version)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Cases
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-roadmap-future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Roadmap (Future Enhancements)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/edit/master/docs/en/ventilation_transmission_adj_zone.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="ventilation-internal-gains-and-transmission-heat-transfer-between-adjacent-zones">Ventilation, Internal Gains and Transmission Heat Transfer between Adjacent Zones<a class="headerlink" href="#ventilation-internal-gains-and-transmission-heat-transfer-between-adjacent-zones" title="Permanent link">&para;</a></h1>
+<p>This module implements methods for evaluating <strong>heat transfer by ventilation</strong> and <strong>internal heat gains</strong> in thermally conditioned and unconditioned zones.</p>
+<p>It also includes an auxiliary function for computing <strong>transmission heat transfer coefficients</strong> between conditioned and adjacent zones, following <strong>ISO 13789</strong>.</p>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The module covers three main components:</p>
+<ol>
+<li><strong>Ventilation heat transfer coefficient</strong> (<code>VentilationInternalGains.heat_transfer_coefficient_by_ventilation</code>):</li>
+<li>Evaluates the <strong>natural ventilation</strong> rate and corresponding heat transfer coefficient (<code>H_ve_nat</code>) using <strong>ISO 16798‑7</strong> (wind and temperature-driven airflow).</li>
+<li>
+<p>Supports a simplified <strong>occupancy-based</strong> ventilation model.</p>
+</li>
+<li>
+<p><strong>Internal heat gains</strong> (<code>VentilationInternalGains.internal_gains</code>):</p>
+</li>
+<li>
+<p>Computes total internal heat gains from occupants, appliances, and optionally nearby unconditioned zones, using <strong>ISO 16798‑1</strong> and <strong>ISO 15316‑1</strong> formulations.</p>
+</li>
+<li>
+<p><strong>Transmission between zones</strong> (<code>transmission_heat_transfer_coefficient_ISO13789</code>):</p>
+</li>
+<li>Calculates inter-zone transmission coefficients (<code>H_ztu_tot</code>, <code>b_ztu_m</code>) according to <strong>ISO 13789</strong>, accounting for heat exchanges between conditioned, unconditioned, and external environments.</li>
+</ol>
+<hr />
+<h2 id="class-and-function-summary">Class and Function Summary<a class="headerlink" href="#class-and-function-summary" title="Permanent link">&para;</a></h2>
+<h3 id="dataclass-h_natural_vent">Dataclass: <code>h_natural_vent</code><a class="headerlink" href="#dataclass-h_natural_vent" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code><span class="nd">@dataclass</span>
+<span class="k">class</span> <span class="nc">h_natural_vent</span><span class="p">:</span>
+    <span class="n">H_ve_nat</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span>
+</code></pre></div>
+Stores the ventilation heat transfer coefficient array (<code>H_ve_nat</code>, in W/K).</p>
+<hr />
+<h3 id="class-ventilationinternalgains">Class: <code>VentilationInternalGains</code><a class="headerlink" href="#class-ventilationinternalgains" title="Permanent link">&para;</a></h3>
+<h4 id="constructor">Constructor<a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code><span class="n">VentilationInternalGains</span><span class="p">(</span><span class="n">building_object</span><span class="p">)</span>
+</code></pre></div>
+- <strong>Parameters</strong>
+  - <code>building_object</code>: dictionary or object with building geometry and surface data (windows, net floor area, etc.).</p>
+<hr />
+<h3 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h3>
+<h2 id="function-heat_transfer_coefficient_by_ventilation">Function:    <code>heat_transfer_coefficient_by_ventilation(...)</code><a class="headerlink" href="#function-heat_transfer_coefficient_by_ventilation" title="Permanent link">&para;</a></h2>
+<p><strong>Physical purpose</strong>: compute the <strong>ventilation heat transfer coefficient</strong> <span class="arithmatex">\(H_{ve}\)</span> <code>[W·K⁻¹]</code> of the thermal zone either:
+- from <strong>natural ventilation</strong> (ISO 16798-7:2017, single-sided airing via windows, wind/stack), or
+- from <strong>occupancy-driven flow</strong> (simplified volumetric rate per floor area).</p>
+<h4 id="signature">Signature<a class="headerlink" href="#signature" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">heat_transfer_coefficient_by_ventilation</span><span class="p">(</span>
+    <span class="n">building_object</span><span class="p">,</span> <span class="n">Tz</span><span class="p">,</span> <span class="n">Te</span><span class="p">,</span> <span class="n">u_site</span><span class="p">,</span> <span class="n">Rw_arg_i</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">c_air</span><span class="o">=</span><span class="mi">1006</span><span class="p">,</span> 
+    <span class="n">rho_air</span><span class="o">=</span><span class="mf">1.204</span><span class="p">,</span> <span class="n">C_wnd</span><span class="o">=</span><span class="mf">0.001</span><span class="p">,</span> <span class="n">C_st</span><span class="o">=</span><span class="mf">0.0035</span><span class="p">,</span> <span class="n">rho_a_ref</span><span class="o">=</span><span class="mf">1.204</span><span class="p">,</span> <span class="n">altitude</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">type_ventilation</span><span class="o">=</span><span class="s2">&quot;temp_wind&quot;</span><span class="p">,</span> <span class="n">flowrate_person</span><span class="o">=</span><span class="mf">1.4</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">h_natural_vent</span><span class="p">:</span>
+</code></pre></div>
+<h4 id="inputs-main">Inputs (main)<a class="headerlink" href="#inputs-main" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>Tz</code> <code>[°C]</code> indoor air temperature (zone).</li>
+<li><code>Te</code> <code>[°C]</code> outdoor air temperature.</li>
+<li><code>u_site</code> <code>[m·s⁻¹]</code> local wind speed at site height (as per ISO 16798-7 assumptions).</li>
+<li><code>Rw_arg_i</code> <code>[-]</code> array of <strong>opening ratios</strong> per window (<code>0…1</code>). If <code>None</code>, defaults to <code>0.9</code>.</li>
+<li><code>C_wnd = 0.001</code> <code>[(m·s⁻¹)⁻¹]</code> wind coefficient (ISO 16798-7 Table 11).</li>
+<li><code>C_st = 0.0035</code> <code>[(m·s⁻¹)/(m·K)]</code> stack coefficient (ISO 16798-7 Table 11).</li>
+<li><code>rho_a_ref</code> <code>[kg·m⁻³]</code> reference air density at ~20 °C; corrected with <code>altitude</code> if provided.</li>
+<li><code>type_ventilation</code>: <code>"temp_wind"</code> (ISO airing) or <code>"occupancy"</code> (area-based volumetric rule).</li>
+<li><code>flowrate_person</code> <code>[L·s⁻¹·m⁻²]</code> used only in <code>"occupancy"</code> branch.</li>
+</ul>
+<h4 id="physics">Physics<a class="headerlink" href="#physics" title="Permanent link">&para;</a></h4>
+<p><strong>Step A — Effective opening height (stack path)</strong><br />
+For each transparent surface:
+- parapet height <span class="arithmatex">\(h_p\)</span> <code>[m]</code>,<br />
+- window height <span class="arithmatex">\(h_w\)</span> <code>[m]</code>,<br />
+- <strong>path height</strong> (vertical center): <span class="arithmatex">\(h_{path,i} = h_p + \frac{h_w}{2}\)</span>,
+- <strong>fa height</strong>: <span class="arithmatex">\(h_{fa,i} = \frac{h_w}{2}\)</span>.</p>
+<p>The <strong>useful stack height</strong>:</p>
+<div class="arithmatex">\[
+h_{w,st} = \max_i\!\left(h_{path,i} + \frac{h_{fa,i}}{2}\right) - \min_i\!\left(h_{path,i} - \frac{h_{fa,i}}{2}\right)
+\tag{4.1}
+\]</div>
+<p><strong>Step B — Density correction</strong><br />
+If <code>altitude</code> present, a standard atmosphere relation updates <span class="arithmatex">\(\rho_{a,ref}\)</span>. Outdoor density:</p>
+<div class="arithmatex">\[
+\rho_{a,e} = \rho_{a,ref}\,\frac{291.15}{273.15 + T_e}
+\tag{4.2}
+\]</div>
+<p><strong>Step C — Effective openable area</strong>  </p>
+<p>For each window <span class="arithmatex">\(i\)</span>, geometric area <span class="arithmatex">\(A_{w,i} = h_{w,i}\,w_i\)</span>.<br />
+Open area <span class="arithmatex">\(A_{w,i}^{open} = A_{w,i}\,R_{w,i}\)</span> with <span class="arithmatex">\(R_{w,i}\in[0,1]\)</span>.
+If <code>Rw_arg_i</code> is missing or length mismatches the number of windows, default <span class="arithmatex">\(R_{w,i}=0.9\)</span>.</p>
+<div class="arithmatex">\[
+A_{w,tot} = \sum_i A_{w,i}^{open}
+\tag{4.3}
+\]</div>
+<p><strong>Step D — Airing volumetric flow (single-sided)</strong>  </p>
+<p>Using ISO 16798-7 §6.4.3.5.4:</p>
+<div class="arithmatex">\[
+q_v = 3600\;\frac{\rho_{a,ref}}{\rho_{a,e}}\;\frac{A_{w,tot}}{2}\,
+\left[\max\!\Big(C_{wnd}\,u_{site}^2,\; C_{st}\,h_{w,st}\,\lvert T_z-T_e\rvert\Big)\right]^{1/2}
+\quad [\text{m}^3/\text{h}]
+\tag{4.4}
+\]</div>
+<p><strong>Step E — Ventilation conductance</strong></p>
+<div class="arithmatex">\[
+H_{ve} = \frac{c_{air}\,\rho_{air}}{3600}\;q_v
+\quad [\text{W·K}^{-1}]
+\tag{4.5}
+\]</div>
+<p><strong>Occupancy branch</strong>: area-based simplified rule (constant per hour)</p>
+<div class="arithmatex">\[
+H_{ve} = A_{use}\cdot (3.6\,\dot v_{pers})\cdot \frac{c_{air}\,\rho_{air}}{3600}
+\tag{4.6}
+\]</div>
+<p>with <span class="arithmatex">\(\dot v_{pers}\)</span> in <code>[L·s⁻¹·m⁻²]</code> and <code>3.6</code> converting L·s⁻¹·m⁻² to m³·h⁻¹·m⁻².</p>
+<h4 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>np.ndarray</code> of <code>H_ve_k_t</code> <code>[W·K⁻¹]</code> (scalar or time-series depending on inputs).</li>
+</ul>
+<h4 id="algorithm-pseudo">Algorithm (pseudo)<a class="headerlink" href="#algorithm-pseudo" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">type_ventilation</span> <span class="o">==</span> <span class="s2">&quot;temp_wind&quot;</span><span class="p">:</span>
+    <span class="n">extract</span> <span class="nb">all</span> <span class="n">windows</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">parapet</span><span class="p">}</span>
+    <span class="n">compute</span> <span class="n">hw_path_i</span><span class="p">,</span> <span class="n">hw_fa_i</span> <span class="o">-&gt;</span> <span class="n">hw_st</span>  <span class="c1"># Eq. (4.1)</span>
+    <span class="n">density</span> <span class="n">correction</span> <span class="o">-&gt;</span> <span class="n">rho_a_e</span>        <span class="c1"># Eq. (4.2)</span>
+    <span class="n">aw_tot</span> <span class="o">-&gt;</span> <span class="n">Eq</span><span class="o">.</span> <span class="p">(</span><span class="mf">4.3</span><span class="p">)</span>
+    <span class="n">qv</span> <span class="o">-&gt;</span> <span class="n">Eq</span><span class="o">.</span> <span class="p">(</span><span class="mf">4.4</span><span class="p">)</span>
+    <span class="n">Hve</span> <span class="o">-&gt;</span> <span class="n">Eq</span><span class="o">.</span> <span class="p">(</span><span class="mf">4.5</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>  <span class="c1"># occupancy</span>
+    <span class="n">A_use</span> <span class="o">&lt;-</span> <span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building&quot;</span><span class="p">][</span><span class="s2">&quot;net_floor_area&quot;</span><span class="p">]</span>
+    <span class="n">Hve</span>  <span class="o">&lt;-</span> <span class="n">Eq</span><span class="o">.</span> <span class="p">(</span><span class="mf">4.6</span><span class="p">)</span>
+<span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">Hve</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="edge-cases-validation">Edge Cases &amp; Validation<a class="headerlink" href="#edge-cases-validation" title="Permanent link">&para;</a></h4>
+<ul>
+<li>No transparent surfaces → <span class="arithmatex">\(A_{w,tot}=0\)</span> → <span class="arithmatex">\(H_{ve}=0\)</span>.</li>
+<li><code>Rw_arg_i</code> length mismatch → warning + default 0.9.</li>
+<li>Negative or null <code>u_site</code> accepted; <code>max(·)</code> ensures stack/wind pick the dominant driver.</li>
+</ul>
+<hr />
+<h2 id="functioninternal_gains">Function:<code>internal_gains(...)</code><a class="headerlink" href="#functioninternal_gains" title="Permanent link">&para;</a></h2>
+<p><strong>Physical purpose</strong>: compute <strong>internal sensible gains</strong> <span class="arithmatex">\(\Phi_{int}\)</span> <code>[W]</code> in the <strong>thermally conditioned zone</strong>, possibly accounting for <strong>spillover</strong> to adjacent unconditioned zones.</p>
+<h4 id="signature_1">Signature<a class="headerlink" href="#signature_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">internal_gains</span><span class="p">(</span>
+    <span class="bp">cls</span><span class="p">,</span> <span class="n">building_type_class</span><span class="p">,</span> <span class="n">a_use</span><span class="p">,</span> <span class="n">unconditioned_zones_nearby</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">list_adj_zones</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">Fztc_ztu_m</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b_ztu</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">h_occup</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">h_app</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">h_light</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">h_dhw</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">h_hvac</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">h_proc</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+</code></pre></div>
+<h4 id="inputs-main_1">Inputs (main)<a class="headerlink" href="#inputs-main_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>building_type_class</code>: key for the lookup table <code>internal_gains_occupants</code> (imported from <code>source.table_iso_16798_1</code>).</li>
+<li><code>a_use</code> <code>[m²]</code>: useful area of the <strong>conditioned</strong> zone.</li>
+<li><code>h_*</code> <code>[-]</code>: hourly multipliers (profiles) for each sub-component (currently <strong>occupants</strong> and <strong>appliances</strong> are used).</li>
+<li>Coupling params for unconditioned zones:<ul>
+<li><code>b_ztu</code> <code>[-]</code>: <strong>adjustment factor</strong> of the adjacent unconditioned zone (see §4.4, Eq. (4.13)).</li>
+<li><code>Fztc_ztu_m</code> <code>[-]</code>: <strong>fractional path factor</strong> conditioned→unconditioned in month <code>m</code> (lumped path coefficient).</li>
+<li><code>list_adj_zones</code>: <strong>number</strong> of adjacent zones (note: the current signature expects an <strong>int</strong>; see note below).</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Note</strong>: The code uses <code>for zones in range(list_adj_zones)</code> — pass an <code>int</code>. If a list is desired in the future, change to <code>for z in list_adj_zones:</code>.</p>
+</blockquote>
+<h4 id="physics_1">Physics<a class="headerlink" href="#physics_1" title="Permanent link">&para;</a></h4>
+<p>Let <span class="arithmatex">\(q_{occ}\)</span> and <span class="arithmatex">\(q_{app}\)</span> be the nominal <strong>density</strong> of internal gains <code>[W·m⁻²]</code> for occupants/equipment per <code>building_type_class</code>.</p>
+<p><strong>Base internal gains</strong> in the <strong>conditioned zone</strong>:</p>
+<div class="arithmatex">\[
+\Phi_{int,z}(t) = \big(q_{occ}\,h_{occup}(t) + q_{app}\,h_{app}(t)\big)\;A_{use}
+\tag{4.7}
+\]</div>
+<p><strong>Optional spillover</strong> to <strong>unconditioned</strong> adjacent zones (<code>unconditioned_zones_nearby = True</code>):<br />
+The code currently <strong>adds</strong> a further term per adjacent zone combining a <strong>direct duplicated</strong> contribution and a <strong>fractional transfer</strong> modulated by <span class="arithmatex">\((1-b_{ztu})\,F_{ztc{\text -}ztu,m}\)</span>:</p>
+<div class="arithmatex">\[
+\Phi_{int,z}^{eff}(t)
+= \Phi_{int,z}(t) + \sum_{j=1}^{N_{adj}}
+\left[\Phi_{int,z}(t) + \big(1-b_{ztu}\big)\,F_{ztc{\text -}ztu,m}\,\Phi_{int,z}(t)\right]
+\tag{4.8}
+\]</div>
+<h4 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>float</code> <code>[W]</code> — instantaneous internal sensible gains for the conditioned zone with the current coupling rule.</li>
+</ul>
+<h4 id="algorithm-pseudo_1">Algorithm (pseudo)<a class="headerlink" href="#algorithm-pseudo_1" title="Permanent link">&para;</a></h4>
+<h2 id="q_occ-internal_gains_occupantsbuilding_type_classoccupants-q_app-internal_gains_occupantsbuilding_type_classappliances-phi_base-q_occh_occup-q_apph_app-a_use-eq-47-if-unconditioned_zones_nearby-phi_eff-phi_base-for-_-in-rangelist_adj_zones-phi_eff-phi_base-1-b_ztufztc_ztu_m-phi_base-return-floatphi_eff-else-return-floatphi_base"><div class="highlight"><pre><span></span><code><span class="n">q_occ</span> <span class="o">=</span> <span class="n">internal_gains_occupants</span><span class="p">[</span><span class="n">building_type_class</span><span class="p">][</span><span class="s1">&#39;occupants&#39;</span><span class="p">]</span>
+<span class="n">q_app</span> <span class="o">=</span> <span class="n">internal_gains_occupants</span><span class="p">[</span><span class="n">building_type_class</span><span class="p">][</span><span class="s1">&#39;appliances&#39;</span><span class="p">]</span>
+<span class="n">Phi_base</span> <span class="o">=</span> <span class="p">(</span><span class="n">q_occ</span><span class="o">*</span><span class="n">h_occup</span> <span class="o">+</span> <span class="n">q_app</span><span class="o">*</span><span class="n">h_app</span><span class="p">)</span> <span class="o">*</span> <span class="n">a_use</span>        <span class="c1"># Eq. (4.7)</span>
+<span class="k">if</span> <span class="n">unconditioned_zones_nearby</span><span class="p">:</span>
+    <span class="n">Phi_eff</span> <span class="o">=</span> <span class="n">Phi_base</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">list_adj_zones</span><span class="p">):</span>
+        <span class="n">Phi_eff</span> <span class="o">+=</span> <span class="n">Phi_base</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">b_ztu</span><span class="p">)</span><span class="o">*</span><span class="n">Fztc_ztu_m</span> <span class="o">*</span> <span class="n">Phi_base</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">Phi_eff</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">Phi_base</span><span class="p">)</span>
+</code></pre></div><a class="headerlink" href="#q_occ-internal_gains_occupantsbuilding_type_classoccupants-q_app-internal_gains_occupantsbuilding_type_classappliances-phi_base-q_occh_occup-q_apph_app-a_use-eq-47-if-unconditioned_zones_nearby-phi_eff-phi_base-for-_-in-rangelist_adj_zones-phi_eff-phi_base-1-b_ztufztc_ztu_m-phi_base-return-floatphi_eff-else-return-floatphi_base" title="Permanent link">&para;</a></h2>
+<h2 id="function-transmission_heat_transfer_coefficient_iso13789">Function: <code>transmission_heat_transfer_coefficient_ISO13789(...)</code><a class="headerlink" href="#function-transmission_heat_transfer_coefficient_iso13789" title="Permanent link">&para;</a></h2>
+<p><strong>Physical purpose</strong>: compute <strong>transmission coupling</strong> between a <strong>thermally conditioned</strong> zone (ztc) and <strong>adjacent unconditioned</strong> zone(s) (ztu) per ISO 13789, including the <strong>ventilation of the unconditioned</strong> zone to the outside.</p>
+<blockquote>
+<p><strong>Important</strong>: In the snippet, <code>building_object</code>, <code>orient_all_zones</code>, and <code>volume_all_zones</code> are referenced but <strong>not passed</strong>. In practice you should pass the <strong>adjacent zone object</strong> (or the whole <code>BUI</code>) and extract what you need locally. The equations below describe the intended physics.</p>
+</blockquote>
+<h4 id="signature-as-provided">Signature (as provided)<a class="headerlink" href="#signature-as-provided" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">transmission_heat_transfer_coefficient_ISO13789</span><span class="p">(</span><span class="n">adj_zone</span><span class="p">,</span> <span class="n">n_ue</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">qui</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="k">return</span> <span class="n">H_ztu_tot</span><span class="p">,</span> <span class="n">b_ztu_m</span>
+</code></pre></div>
+<h4 id="concepts-notation">Concepts &amp; Notation<a class="headerlink" href="#concepts-notation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex">\(H_{tr}\)</span> is decomposed as:</li>
+</ul>
+<div class="arithmatex">\[
+H_{tr} = H_d + H_g + H_u + H_a
+\tag{4.9}
+\]</div>
+<p>with:
+- <span class="arithmatex">\(H_d\)</span>: direct envelope transmission to <strong>exterior</strong>,
+- <span class="arithmatex">\(H_g\)</span>: ground transmission,
+- <span class="arithmatex">\(H_u\)</span>: via <strong>unconditioned</strong> space,
+- <span class="arithmatex">\(H_a\)</span>: to <strong>adjacent buildings</strong> (not used here).</p>
+<h4 id="step-1-transmission-conditioned-unconditioned">Step 1 — Transmission <strong>conditioned → unconditioned</strong><a class="headerlink" href="#step-1-transmission-conditioned-unconditioned" title="Permanent link">&para;</a></h4>
+<p>For the <strong>interface</strong> between ztc and ztu:</p>
+<div class="arithmatex">\[
+H_{d,zt{\text -}ztu} = \sum_{k \in\mathcal{E}_{zt{\text -}ztu}} U_k\,A_k
+\tag{4.10}
+\]</div>
+<p>where the set <span class="arithmatex">\(\mathcal{E}_{zt{\text -}ztu}\)</span> are elements on the <strong>shared</strong> boundary.</p>
+<h4 id="step-2-transmission-unconditioned-exterior">Step 2 — Transmission <strong>unconditioned → exterior</strong><a class="headerlink" href="#step-2-transmission-unconditioned-exterior" title="Permanent link">&para;</a></h4>
+<p>For ztu walls not shared with ztc (i.e., exposed or to other media):</p>
+<div class="arithmatex">\[
+H_{d,ztu{\text -}ext} = \sum_{k \in\mathcal{E}_{ztu{\text -}ext}} U_k\,A_k
+\tag{4.11}
+\]</div>
+<h4 id="step-3-ventilation-of-unconditioned-zone">Step 3 — <strong>Ventilation</strong> of unconditioned zone<a class="headerlink" href="#step-3-ventilation-of-unconditioned-zone" title="Permanent link">&para;</a></h4>
+<p>ISO 13789 suggests using <strong>air change rate</strong> <span class="arithmatex">\(n_{ue}\)</span> <code>[h⁻¹]</code> for ztu → outside.  </p>
+<p>Let <span class="arithmatex">\(V_u\)</span> <code>[m³]</code> be ztu air volume. Define:</p>
+<div class="arithmatex">\[
+q_{ue} = V_u\,n_{ue} \quad [\text{m}^3/\text{h}], \qquad
+q_{iu} = q_{i\to u} \quad [\text{m}^3/\text{h}] \text{ (often set to 0 to avoid overestimation)}
+\tag{4.12a}
+\]</div>
+<p>Use the standard <span class="arithmatex">\(\rho c\)</span> factor <span class="arithmatex">\(\approx 0.33\)</span> <code>[Wh·m⁻³·K⁻¹]</code> for flows expressed in m³·h⁻¹:</p>
+<div class="arithmatex">\[
+H_{ve,ue} = 0.33\,q_{ue}, \qquad H_{ve,iu} = 0.33\,q_{iu}
+\tag{4.12b}
+\]</div>
+<p>By <strong>default</strong> in the code: <span class="arithmatex">\(q_{iu} = 0\)</span>.</p>
+<h4 id="step-4-aggregate-coupling-terms">Step 4 — Aggregate coupling terms<a class="headerlink" href="#step-4-aggregate-coupling-terms" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+H_{ue} = H_{d,ztu{\text -}ext} + H_{ve,ue}, \qquad
+H_{iu} = H_{d,zt{\text -}ztu} + H_{ve,iu}
+\tag{4.12c}
+\]</div>
+<p>Total <strong>ztu coupling</strong>:</p>
+<div class="arithmatex">\[
+H_{ztu,tot} = H_{iu} + H_{ue}
+\tag{4.12d}
+\]</div>
+<p><strong>Adjustment factor</strong> <span class="arithmatex">\(b_{ztu,m}\)</span> (ISO 13789 monthly convention):</p>
+<div class="arithmatex">\[
+b_{ztu,m} = \frac{H_{ue}}{H_{ue} + H_{iu}} = \frac{H_{ue}}{H_{ztu,tot}}
+\tag{4.13}
+\]</div>
+<p><span class="arithmatex">\(b_{ztu,m}\in[0,1]\)</span> measures how much the unconditioned zone is “anchored” to the <strong>outside</strong> rather than to the <strong>conditioned</strong> neighbor.</p>
+<h4 id="output_1">Output<a class="headerlink" href="#output_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>H_ztu_tot</code> <code>[W·K⁻¹]</code> — total coupling of the unconditioned zone.</li>
+<li><code>b_ztu_m</code> <code>[-]</code> — monthly factor (in the current code computed once from static inputs).</li>
+</ul>
+<h4 id="practical-extraction-with-your-bui-structure">Practical extraction with your <code>BUI</code> structure<a class="headerlink" href="#practical-extraction-with-your-bui-structure" title="Permanent link">&para;</a></h4>
+<ul>
+<li>For <strong>a given unconditioned zone</strong> <code>adj_i</code>:<ul>
+<li>Build sets:<ul>
+<li><span class="arithmatex">\(\mathcal{E}_{zt{\text -}ztu}\)</span>: elements in <code>adj_i</code> whose <code>orientation_elements</code> <strong>match</strong> the interface direction to the conditioned zone (your code uses equality tests by <code>NV/SV/EV/WV/HOR</code>).</li>
+<li><span class="arithmatex">\(\mathcal{E}_{ztu{\text -}ext}\)</span>: elements in <code>adj_i</code> <strong>not</strong> on the interface.</li>
+</ul>
+</li>
+<li>Use <code>adj_i.volume</code> → <span class="arithmatex">\(V_u\)</span>.  </li>
+<li>Pick <code>n_ue</code> from <code>df_n_ue</code> by air-tightness class or keep default <code>0.5 h⁻¹</code>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="algorithm-pseudo-robust-version">Algorithm (pseudo; robust version)<a class="headerlink" href="#algorithm-pseudo-robust-version" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">transmission_heat_transfer_coefficient_ISO13789</span><span class="p">(</span><span class="n">BUI</span><span class="p">,</span> <span class="n">adj_zone_name</span><span class="p">,</span> <span class="n">n_ue</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">qui</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="n">adj</span> <span class="o">=</span> <span class="n">get_adj_zone</span><span class="p">(</span><span class="n">BUI</span><span class="p">,</span> <span class="n">adj_zone_name</span><span class="p">)</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">adj</span><span class="p">[</span><span class="s2">&quot;area_facade_elements&quot;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">U</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">adj</span><span class="p">[</span><span class="s2">&quot;transmittance_U_elements&quot;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+    <span class="n">ORI</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">adj</span><span class="p">[</span><span class="s2">&quot;orientation_elements&quot;</span><span class="p">])</span>
+    <span class="c1"># Define which orientations correspond to zt-ztu interface (project specific rule):</span>
+    <span class="n">mask_interface</span> <span class="o">=</span> <span class="n">is_interface_to_conditioned_zone</span><span class="p">(</span><span class="n">ORI</span><span class="p">,</span> <span class="n">adj</span><span class="p">,</span> <span class="n">BUI</span><span class="p">)</span>   <span class="c1"># boolean mask</span>
+    <span class="n">Hd_zt_ztu</span>  <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">mask_interface</span><span class="p">]</span> <span class="o">*</span> <span class="n">U</span><span class="p">[</span><span class="n">mask_interface</span><span class="p">]))</span>   <span class="c1"># Eq. (4.10)</span>
+    <span class="n">Hd_ztu_ext</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="o">~</span><span class="n">mask_interface</span><span class="p">]</span> <span class="o">*</span> <span class="n">U</span><span class="p">[</span><span class="o">~</span><span class="n">mask_interface</span><span class="p">]))</span> <span class="c1"># Eq. (4.11)</span>
+
+    <span class="c1"># Ventilation terms (Eq. 4.12)</span>
+    <span class="n">Vu</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">adj</span><span class="p">[</span><span class="s2">&quot;volume&quot;</span><span class="p">])</span>
+    <span class="n">que</span> <span class="o">=</span> <span class="n">Vu</span> <span class="o">*</span> <span class="n">n_ue</span>
+    <span class="n">Hve_ue</span> <span class="o">=</span> <span class="mf">0.33</span> <span class="o">*</span> <span class="n">que</span>
+    <span class="n">Hve_iu</span> <span class="o">=</span> <span class="mf">0.33</span> <span class="o">*</span> <span class="nb">float</span><span class="p">(</span><span class="n">qui</span><span class="p">)</span>
+
+    <span class="n">Hue</span> <span class="o">=</span> <span class="n">Hd_ztu_ext</span> <span class="o">+</span> <span class="n">Hve_ue</span>
+    <span class="n">Hiu</span> <span class="o">=</span> <span class="n">Hd_zt_ztu</span> <span class="o">+</span> <span class="n">Hve_iu</span>
+    <span class="n">Hztu_tot</span> <span class="o">=</span> <span class="n">Hue</span> <span class="o">+</span> <span class="n">Hiu</span>                                 <span class="c1"># Eq. (4.12d)</span>
+    <span class="n">b_ztu_m</span>  <span class="o">=</span> <span class="n">Hue</span> <span class="o">/</span> <span class="n">Hztu_tot</span> <span class="k">if</span> <span class="n">Hztu_tot</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mf">1.0</span>   <span class="c1"># Eq. (4.13)</span>
+    <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">Hztu_tot</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="n">b_ztu_m</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="edge-cases">Edge Cases<a class="headerlink" href="#edge-cases" title="Permanent link">&para;</a></h4>
+<ul>
+<li>If <code>A</code>/<code>U</code> vectors contain <strong>dtype=object</strong> (as in your snippet), cast explicitly to <code>float</code>.</li>
+<li>If <code>Hztu_tot = 0</code> (degenerate geometry), define <code>b_ztu_m = 1.0</code> by convention (fully outdoor-anchored).</li>
+</ul>
+<hr />
+<h2 id="integration-roadmap-future-enhancements">Integration Roadmap (Future Enhancements)<a class="headerlink" href="#integration-roadmap-future-enhancements" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Air leaks</strong>: integrate infiltration losses for cracks and envelope leakage tests.</li>
+<li><strong>Cross ventilation</strong>: include simultaneous airflow paths between opposite façades.</li>
+<li><strong>Mechanical ventilation</strong>: handle forced air systems with user‑defined flow rates and recovery efficiency.</li>
+</ul>
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>ISO 52016‑1:2017</strong>, § 6.5.10 Ventilation and Heat Transfer Coefficients  </li>
+<li><strong>ISO 16798‑7:2017</strong>, § 6.4.3.5 Natural Ventilation Airflow  </li>
+<li><strong>ISO 16798‑1:2019</strong>, § M1–M10 Internal Gains  </li>
+<li><strong>ISO 13789:2017</strong>, § 7 Transmission Heat Transfer Coefficients through Adjacent Spaces</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
