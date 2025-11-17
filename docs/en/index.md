@@ -6,7 +6,7 @@
 ---
 
 
-Please cite us if you use this library: 
+*Please cite us if you use this library*: 
 [![DOI](https://zenodo.org/badge/761715706.svg)](https://zenodo.org/doi/10.5281/zenodo.10887919)
 ---
 

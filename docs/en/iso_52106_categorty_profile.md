@@ -1,36 +1,9 @@
 # Category profile
 
-**Function**: `generate_category_profile()`
+**Occupancts, Lighting, Appliance, Ventilation, Heating, Cooling profile**
 ---
-
-### Context
-
-In building energy simulations — especially those following **ISO 52016-1:2017** (Energy needs for heating and cooling, internal temperatures, and loads) or the broader **EPB** (Energy Performance of Buildings) framework — each thermal zone requires **hourly profiles** for occupancy, lighting, appliances, ventilation, heating, and cooling.  
-
-These profiles describe the **temporal behavior** of internal gains and system operation (e.g., when people are present, when lights are on, or when HVAC is active).  
-This function automates the generation of such profiles by merging **custom schedules** (if defined within a building object) with **default type-based schedules**, ensuring every category has a valid 24-hour pattern.
-
-The default type-based schedules are define in the file: `table_iso_16798_1.py`, where typical profile are getting from the EN ISO 16798-1 standard.
-
----
-
-### Purpose
-
-`generate_category_profile()` builds a consistent set of **hourly category profiles** (weekday/weekend) for:
-- Occupancy  
-- Appliances  
-- Lighting  
-- Ventilation  
-- Heating  
-- Cooling  
-
-It ensures that all schedules are properly defined, validated, and ready for use in **energy balance, comfort, or control** simulations.
-
----
-
-### Function signature
 ```python
-generate_category_profile(
+def generate_category_profile(
     cls,
     building_object,
     occupants_schedule_workdays,
@@ -44,7 +17,39 @@ generate_category_profile(
 
 ---
 
-### How it works
+
+### Inputs
+
+| Parameter | Type | Description |
+|------------|------|-------------|
+| `building_object` | `dict` | Building model containing `building_type_class` and optional internal gain profiles. |
+| `occupants_schedule_workdays/weekend` | `dict[str, list[float]]` | Default hourly occupancy profiles (24 values each). |
+| `appliances_schedule_workdays/weekend` | `dict[str, list[float]]` | Default hourly appliance profiles. |
+| `lighting_schedule_workdays/weekend` | `dict[str, list[float]]` | Default hourly lighting profiles. |
+
+---
+
+
+### Purpose
+
+In building energy simulations — especially those following **ISO 52016-1:2017** (Energy needs for heating and cooling, internal temperatures, and loads) or the broader **EPB** (Energy Performance of Buildings) framework — each thermal zone requires **hourly profiles** for occupancy, lighting, appliances, ventilation, heating, and cooling.  
+
+These profiles describe the **temporal behavior** of internal gains and system operation (e.g., when people are present, when lights are on, or when HVAC is active).  
+This function automates the generation of such profiles by merging **custom schedules** (if defined within a building object) with **default type-based schedules**, ensuring every category has a valid 24-hour pattern.
+
+The default type-based schedules are define in the file: `table_iso_16798_1.py`, where typical profile are getting from the EN ISO 16798-1 standard.
+
+`generate_category_profile()` builds a consistent set of **hourly category profiles** (weekday/weekend) for:
+- Occupancy  
+- Appliances  
+- Lighting  
+- Ventilation  
+- Heating  
+- Cooling  
+
+It ensures that all schedules are properly defined, validated, and ready for use in **energy balance, comfort, or control** simulations.
+
+**How it works?**
 
 1. **Identify building type**  
    Extracts the `building_type_class` from the input object to determine which default schedules to use.
@@ -64,18 +69,7 @@ generate_category_profile(
 
 ---
 
-### Parameters
-
-| Parameter | Type | Description |
-|------------|------|-------------|
-| `building_object` | `dict` | Building model containing `building_type_class` and optional internal gain profiles. |
-| `occupants_schedule_workdays/weekend` | `dict[str, list[float]]` | Default hourly occupancy profiles (24 values each). |
-| `appliances_schedule_workdays/weekend` | `dict[str, list[float]]` | Default hourly appliance profiles. |
-| `lighting_schedule_workdays/weekend` | `dict[str, list[float]]` | Default hourly lighting profiles. |
-
----
-
-### Returns
+### Outputs
 `dict` — A complete set of hourly category profiles for use in thermal simulations, HVAC control logic, or internal gain estimation.
 
 ```python
@@ -124,22 +118,21 @@ The `**generate_category_profile()**` is based on the following functions:
 - `get_country_code_from_latlon`
 - `HourlyProfileGenerator`
 
-
-Function: `get_country_code_from_latlon(lat, lon, default='IT')`
 ---
 
-**Purpose:** Resolve a latitude/longitude to an ISO 3166-1 alpha-2 country code, using a reverse‑geocoding API (example: OpenCage).
-
-### Signature
+**Country code for calendar data**
+---
 ```python
-get_country_code_from_latlon(lat: float, lon: float, default: str = "IT") -> str
+def get_country_code_from_latlon(lat: float, lon: float, default: str = "IT") -> str
 ```
-
 ### Parameters
 - `lat`, `lon` *(float)*: Geographic coordinates.
 - `default` *(str)*: Fallback code returned on errors or when the API does not return a country code. Default is `"IT"`.
 
-### Behavior
+### Purpose
+Resolve a latitude/longitude to an ISO 3166-1 alpha-2 country code, using a reverse‑geocoding API (example: OpenCage).
+
+**How it works:**
 1. Builds a request to the OpenCage API endpoint:
    - `https://api.opencagedata.com/geocode/v1/json`
 2. Sends the request with your API key (`YOUR_OPENCAGE_API_KEY` placeholder).
@@ -154,14 +147,10 @@ get_country_code_from_latlon(lat: float, lon: float, default: str = "IT") -> str
 
 ---
 
-## 2) `HourlyProfileGenerator`
-
-**Purpose:** Generate a **continuous hourly DataFrame** (default: 13 months) with calendar flags (working day / weekend / holiday) and **per‑category normalized profiles** (0..1) for:
-`ventilation`, `heating`, `cooling`, `occupancy`, `lighting`, `appliances`.
-
-### Constructor
+**Generate hourly profiles**
+---
 ```python
-HourlyProfileGenerator(
+class HourlyProfileGenerator(
     country: str = "IT",
     num_months: int = 13,
     start_year: int | None = None,
@@ -170,14 +159,7 @@ HourlyProfileGenerator(
     category_profiles: dict | None = None
 )
 ```
-
-### Key Concepts
-- **Time span:** starts at `December 1st` of `start_year` (or previous year if `None`) and covers `num_months` months (default 13).
-- **Calendar logic:** weekend = Saturday or Sunday; holiday set via the `holidays` library using `country`.
-- **Profiles (0..1):** Per-category 24‑value arrays are mapped to each hour of the day, switching between **weekday** and **holiday/weekend** versions.
-- **Retro‑compatibility:** If `category_profiles` is not provided, two default 24‑hour arrays (one for working days, one for holidays) are used for all categories. You can also pass legacy `working_day_profile`/`holiday_profile` to override those defaults.
-
-### Parameters
+### Inputs
 - `country`: ISO 2-letter country code used by `holidays` to determine national holidays.
 - `num_months`: How many months to generate (default: `13`).
 - `start_year`: Starting year for the window. If `None`, uses the previous calendar year for the December start.
@@ -189,11 +171,21 @@ HourlyProfileGenerator(
 
 **Categories:** `("ventilation", "heating", "cooling", "occupancy", "lighting", "appliances")`
 
-### Validation
-- Every 24‑array is validated to **exactly 24 elements**; otherwise a `ValueError` is raised.
+### Purpose
+Generate a **continuous hourly DataFrame** (default: 13 months) with calendar flags (working day / weekend / holiday) and **per‑category normalized profiles** (0..1) for:
+`ventilation`, `heating`, `cooling`, `occupancy`, `lighting`, `appliances`.
 
-### Output Schema (`generate()`)
+**Key Concepts**
+- **Time span:** starts at `December 1st` of `start_year` (or previous year if `None`) and covers `num_months` months (default 13).
+- **Calendar logic:** weekend = Saturday or Sunday; holiday set via the `holidays` library using `country`.
+- **Profiles (0..1):** Per-category 24‑value arrays are mapped to each hour of the day, switching between **weekday** and **holiday/weekend** versions.
+- **Retro‑compatibility:** If `category_profiles` is not provided, two default 24‑hour arrays (one for working days, one for holidays) are used for all categories. You can also pass legacy `working_day_profile`/`holiday_profile` to override those defaults.
+
+---
+### Outputs 
+
 `generate()` returns a `pandas.DataFrame` with columns:
+
 - `datetime`: hourly timestamps (timezone‑naive).
 - `date`, `hour`, `day_of_week`, `day_name`: common time breakdowns.
 - `is_holiday`, `is_weekend`, `is_working_day`, `holiday_name`.
@@ -203,9 +195,10 @@ HourlyProfileGenerator(
 
 ---
 
-## Examples
 
-### A) Minimal generation
+### Examples
+
+#### A) Minimal generation
 ```python
 from profiles import HourlyProfileGenerator
 
@@ -217,7 +210,7 @@ gen.get_summary()
 print(df.head())
 ```
 
-### B) Custom per‑category profiles
+#### B) Custom per‑category profiles
 ```python
 import numpy as np
 
@@ -235,7 +228,7 @@ gen = HourlyProfileGenerator(country="DE", category_profiles=category_profiles)
 df = gen.generate()
 ```
 
-### C) Plot daily averages with weekend/holiday shading
+#### C) Plot daily averages with weekend/holiday shading
 ```python
 fig = gen.plot_annual_profiles(
     categories=["ventilation", "occupancy", "lighting"],
@@ -246,19 +239,20 @@ fig = gen.plot_annual_profiles(
 fig.show()
 ```
 
-### D) Resolve a country code from coordinates
+#### D) Resolve a country code from coordinates
 ```python
 from profiles import get_country_code_from_latlon
 code = get_country_code_from_latlon(46.49, 11.33, default="IT")
 print(code)  # e.g., "IT" or fallback
 ```
 
-## Error Handling & Edge Cases
-
+## Error Handling, Edge Cases and Validation
 - **Invalid profile shapes**: raises `ValueError` for any 24‑hour array not equal to `(24,)`.
 - **Geocoding failures**: returns the `default` country code; consider logging or retry strategies.
 - **Missing `generate()`**: `get_summary()` / `plot_annual_profiles()` will raise if called before `generate()`.
 - **Holiday calendars**: ensure `country` is supported by `holidays`; for custom calendars, precompute a boolean series and merge it into the DataFrame.
+- Every 24‑array is validated to **exactly 24 elements**; otherwise a `ValueError` is raised.
+
 
 ---
 

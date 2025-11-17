@@ -1,34 +1,24 @@
 # Aggregate surface  - same direction -
 
-Function:  `Aggregate_surfaces_by_direction(building_object)`
----
 
-### Purpose
-This function aggregates (merges) multiple building surfaces that share the **same orientation and ISO 52016 surface type** into a single, equivalent surface.  
-The goal is to simplify the building model so that **heat transmission and solar radiation terms** can be computed on aggregated surfaces instead of on many small, redundant ones.
-
----
-
-### Function Signature
 ```python
 def _aggregate_surfaces_by_direction(cls, building_object)
 ```
 
-### Parameters
+### Inputs
 | Name | Type | Description |
 |------|------|--------------|
 | `building_object` | `dict` | A dictionary-like building model that must contain a key `"building_surface"`, which is a list of surface definitions. Each surface should include ISO 52016 descriptors and physical properties (e.g., area, U-value, absorptance, etc.). |
 
 ---
 
-### Returns
-| Type | Description |
-|------|--------------|
-| `dict` | A shallow copy of the input `building_object`, where `building_surface` has been replaced with a **reduced list of aggregated surfaces**. |
+### Purpose
+This function aggregates (merges) multiple building surfaces that share the **same orientation and ISO 52016 surface type** into a single, equivalent surface.  
+The goal is to simplify the building model so that **heat transmission and solar radiation terms** can be computed on aggregated surfaces instead of on many small, redundant ones.
 
----
 
-### How It Works
+**How It Works:**
+
 1. **Grouping (bucketing):**  
    Surfaces are grouped by:
    - `ISO52016_type_string` (e.g., *opaque wall*, *transparent window*, etc.)
@@ -58,9 +48,19 @@ def _aggregate_surfaces_by_direction(cls, building_object)
 4. **Output:**  
    The method builds a new list of surfaces where each element represents one **equivalent aggregated surface** per direction and type.
 
+
 ---
 
-### Aggregation Example
+
+### Outputs
+| Type | Description |
+|------|--------------|
+| `dict` | A shallow copy of the input `building_object`, where `building_surface` has been replaced with a **reduced list of aggregated surfaces**. |
+
+
+---
+
+### Example
 If the input building object contains three south-facing opaque walls:
 
 | Surface Name | Type | ISO52016 Type | Orientation | Area (m²) | U-Value (W/m²K) |
@@ -81,9 +81,38 @@ where the **U-value** is computed as
 U_{agg} = \frac{\sum (U_i \times A_i)}{\sum A_i}
 \]
 
+
+**Example Usage**
+```python
+building_object = ISO52016()._aggregate_surfaces_by_direction(building_object)
+
+for surf in building_object["building_surface"]:
+    print(f"{surf['ISO52016_orientation_string']} | {surf['type']} | Area = {surf['area']:.1f} m² | U = {surf['u_value']:.2f}")
+
+```
+
+Example output:
+```
+HOR | opaque | Area = 130.0 m² | U = 2.20
+NV | opaque | Area = 30.0 m² | U = 1.40
+SV | opaque | Area = 30.0 m² | U = 1.40
+EV | opaque | Area = 30.0 m² | U = 1.20
+WV | opaque | Area = 30.0 m² | U = 1.20
+HOR | opaque | Area = 100.0 m² | U = 1.60
+EV | transparent | Area = 4.0 m² | U = 5.00
+WV | transparent | Area = 4.0 m² | U = 5.00
+```
+
+
 ---
 
-### Advantages
+
+### Notes
+- Aggregates surfaces sharing **type + ISO orientation**.
+- Uses **area-weighted** averages for intensive properties.
+- Returns a **clean, compact list of equivalent surfaces** .
+
+#### Advantages
 - Reduces model complexity for ISO 52016 energy balance computations.
 - Speeds up simulation and simplifies reporting.
 - Avoids double-counting of identical surfaces.
@@ -91,7 +120,7 @@ U_{agg} = \frac{\sum (U_i \times A_i)}{\sum A_i}
 
 ---
 
-### Limitations
+#### Limitations
 - Works only for dictionary-style `building_object`.  
 - Orientation azimuth/tilt are currently placeholders, not exact averages.
 - Requires each surface to contain both:
@@ -115,35 +144,5 @@ U_{agg} = \frac{\sum (U_i \times A_i)}{\sum A_i}
                 "name_adj_zone": None
             }
     ```
-
-
-
-### Example Usage
-```python
-building_object = ISO52016()._aggregate_surfaces_by_direction(building_object)
-
-for surf in building_object["building_surface"]:
-    print(f"{surf['ISO52016_orientation_string']} | {surf['type']} | Area = {surf['area']:.1f} m² | U = {surf['u_value']:.2f}")
-
-```
-
-Example output:
-```
-HOR | opaque | Area = 130.0 m² | U = 2.20
-NV | opaque | Area = 30.0 m² | U = 1.40
-SV | opaque | Area = 30.0 m² | U = 1.40
-EV | opaque | Area = 30.0 m² | U = 1.20
-WV | opaque | Area = 30.0 m² | U = 1.20
-HOR | opaque | Area = 100.0 m² | U = 1.60
-EV | transparent | Area = 4.0 m² | U = 5.00
-WV | transparent | Area = 4.0 m² | U = 5.00
-```
-
----
-
-### Key Takeaways
-- Aggregates surfaces sharing **type + ISO orientation**.
-- Uses **area-weighted** averages for intensive properties.
-- Returns a **clean, compact list of equivalent surfaces** .
 
 ---

@@ -133,43 +133,6 @@ If **unconditioned zones** exist:
 
 ---
 
-### 2.5 Function: `transmission_heat_transfer_coefficient_ISO13789(...)`
-
-#### Purpose
-Evaluates the **transmission heat transfer coefficient** (`H_ztu_tot`) and **adjustment factor** (`b_ztu_m`) between a conditioned zone and an adjacent unconditioned zone, following **ISO 13789**.
-
-#### Signature
-```python
-def transmission_heat_transfer_coefficient_ISO13789(adj_zone, n_ue=0.5, qui=0)
-```
-
-#### Steps
-1. Compute **direct transmission** through walls separating conditioned ↔ unconditioned zones (`Hd_zt_ztu`).
-2. Compute **transmission** from unconditioned zone to exterior (`Hd_ztu_ext`).
-3. Estimate **ventilation losses** of unconditioned zone:
-   - \( H_{ve,iu} = ρ c_p q_{iu} \)
-   - \( H_{ve,ue} = ρ c_p q_{ue} \)
-   - \( q_{ue} = V_u n_{ue} \) (with default `n_ue = 0.5 h⁻¹` for well‑sealed buildings)
-4. Compute total transmission:
-   - \( H_{ue} = H_{d,ztu,ext} + H_{ve,ue} \)
-   - \( H_{iu} = H_{d,zt,ztu} + H_{ve,iu} \)
-   - \( H_{ztu,tot} = H_{ue} + H_{iu} \)
-5. Compute the **monthly adjustment factor**:
-   \[
-   b_{ztu,m} = \\frac{H_{ue}}{H_{ue} + H_{iu}}
-   \]
-
-#### Returns
-- `H_ztu_tot`: total transmission heat transfer coefficient (W/K).
-- `b_ztu_m`: monthly adjustment factor (dimensionless).
-
-#### Notes
-- The default `n_ue = 0.5 h⁻¹` corresponds to *“All joints well sealed; no dedicated ventilation openings”* per ISO 13789 Table 7.
-- `ρ c_p` is assumed to be 0.33 Wh/(m³·K) when flow rates are in m³/h.
-- The method assumes `q_iu = 0` (no airflow between conditioned and unconditioned zones) to avoid underestimating transmission.
-
----
-
 ## 3) Typical Workflow
 
 1. **Ventilation Heat Transfer**
@@ -188,11 +151,6 @@ gains = VentilationInternalGains(my_bui).internal_gains(
     a_use=120,
     h_occup=0.8, h_app=0.6
 )
-```
-
-3. **Transmission Between Zones**
-```python
-H_ztu_tot, b_ztu_m = transmission_heat_transfer_coefficient_ISO13789(adj_zone=my_adj_zone)
 ```
 
 ---

@@ -22,40 +22,12 @@ The module covers three main components:
 
 ---
 
-## Class and Function Summary
 
-### Dataclass: `h_natural_vent`
 
-```python
-@dataclass
-class h_natural_vent:
-    H_ve_nat: np.ndarray
-```
-Stores the ventilation heat transfer coefficient array (`H_ve_nat`, in W/K).
 
+**Calculation of heat transfer coefficient by ventilation**
 ---
 
-### Class: `VentilationInternalGains`
-
-#### Constructor
-```python
-VentilationInternalGains(building_object)
-```
-- **Parameters**
-  - `building_object`: dictionary or object with building geometry and surface data (windows, net floor area, etc.).
-
----
-
-### Functions
-
-Function:    `heat_transfer_coefficient_by_ventilation(...)`  
----
-
-**Physical purpose**: compute the **ventilation heat transfer coefficient** \(H_{ve}\) `[W·K⁻¹]` of the thermal zone either:
-- from **natural ventilation** (ISO 16798-7:2017, single-sided airing via windows, wind/stack), or
-- from **occupancy-driven flow** (simplified volumetric rate per floor area).
-
-#### Signature
 ```python
 @staticmethod
 def heat_transfer_coefficient_by_ventilation(
@@ -63,7 +35,7 @@ def heat_transfer_coefficient_by_ventilation(
     rho_air=1.204, C_wnd=0.001, C_st=0.0035, rho_a_ref=1.204, altitude=None,
     type_ventilation="temp_wind", flowrate_person=1.4
 ) -> h_natural_vent:
-```
+``` 
 
 #### Inputs (main)
 - `Tz` `[°C]` indoor air temperature (zone).
@@ -75,6 +47,13 @@ def heat_transfer_coefficient_by_ventilation(
 - `rho_a_ref` `[kg·m⁻³]` reference air density at ~20 °C; corrected with `altitude` if provided.
 - `type_ventilation`: `"temp_wind"` (ISO airing) or `"occupancy"` (area-based volumetric rule).
 - `flowrate_person` `[L·s⁻¹·m⁻²]` used only in `"occupancy"` branch.
+
+
+#### Purpose
+**Physical purpose**: compute the **ventilation heat transfer coefficient** \(H_{ve}\) `[W·K⁻¹]` of the thermal zone either:
+- from **natural ventilation** (ISO 16798-7:2017, single-sided airing via windows, wind/stack), or
+- from **occupancy-driven flow** (simplified volumetric rate per floor area).
+
 
 #### Physics
 
@@ -142,7 +121,7 @@ with \(\dot v_{pers}\) in `[L·s⁻¹·m⁻²]` and `3.6` converting L·s⁻¹·
 #### Outputs
 - `np.ndarray` of `H_ve_k_t` `[W·K⁻¹]` (scalar or time-series depending on inputs).
 
-#### Algorithm (pseudo)
+#### Example
 
 ```python
 if type_ventilation == "temp_wind":
@@ -165,12 +144,8 @@ return np.array(Hve)
 
 ---
 
-Function:`internal_gains(...)`  
+**Internal gains calculation**:
 ---
-
-**Physical purpose**: compute **internal sensible gains** \(\Phi_{int}\) `[W]` in the **thermally conditioned zone**, possibly accounting for **spillover** to adjacent unconditioned zones.
-
-#### Signature
 
 ```python
 def internal_gains(
@@ -192,6 +167,10 @@ def internal_gains(
     - `list_adj_zones`: **number** of adjacent zones (note: the current signature expects an **int**; see note below).
 
 > **Note**: The code uses `for zones in range(list_adj_zones)` — pass an `int`. If a list is desired in the future, change to `for z in list_adj_zones:`.
+
+#### Purpose
+**Physical purpose**: compute **internal sensible gains** \(\Phi_{int}\) `[W]` in the **thermally conditioned zone**, possibly accounting for **spillover** to adjacent unconditioned zones.
+
 
 #### Physics
 Let \(q_{occ}\) and \(q_{app}\) be the nominal **density** of internal gains `[W·m⁻²]` for occupants/equipment per `building_type_class`.
@@ -217,7 +196,7 @@ The code currently **adds** a further term per adjacent zone combining a **direc
 #### Output
 - `float` `[W]` — instantaneous internal sensible gains for the conditioned zone with the current coupling rule.
 
-#### Algorithm (pseudo)
+#### Example
 
 ```python
 q_occ = internal_gains_occupants[building_type_class]['occupants']
@@ -231,139 +210,6 @@ if unconditioned_zones_nearby:
 else:
     return float(Phi_base)
 ```
----
-
-Function: `transmission_heat_transfer_coefficient_ISO13789(...)`  
----
-**Physical purpose**: compute **transmission coupling** between a **thermally conditioned** zone (ztc) and **adjacent unconditioned** zone(s) (ztu) per ISO 13789, including the **ventilation of the unconditioned** zone to the outside.
-
-> **Important**: In the snippet, `building_object`, `orient_all_zones`, and `volume_all_zones` are referenced but **not passed**. In practice you should pass the **adjacent zone object** (or the whole `BUI`) and extract what you need locally. The equations below describe the intended physics.
-
-#### Signature (as provided)
-```python
-def transmission_heat_transfer_coefficient_ISO13789(adj_zone, n_ue=0.5, qui=0):
-    ...
-    return H_ztu_tot, b_ztu_m
-```
-
-#### Concepts & Notation
-- \(H_{tr}\) is decomposed as:
-
-\[
-H_{tr} = H_d + H_g + H_u + H_a
-\tag{4.9}
-\]
-
-with:
-- \(H_d\): direct envelope transmission to **exterior**,
-- \(H_g\): ground transmission,
-- \(H_u\): via **unconditioned** space,
-- \(H_a\): to **adjacent buildings** (not used here).
-
-#### Step 1 — Transmission **conditioned → unconditioned**
-For the **interface** between ztc and ztu:
-
-\[
-H_{d,zt{\text -}ztu} = \sum_{k \in\mathcal{E}_{zt{\text -}ztu}} U_k\,A_k
-\tag{4.10}
-\]
-
-where the set \(\mathcal{E}_{zt{\text -}ztu}\) are elements on the **shared** boundary.
-
-#### Step 2 — Transmission **unconditioned → exterior**
-
-For ztu walls not shared with ztc (i.e., exposed or to other media):
-
-\[
-H_{d,ztu{\text -}ext} = \sum_{k \in\mathcal{E}_{ztu{\text -}ext}} U_k\,A_k
-\tag{4.11}
-\]
-
-#### Step 3 — **Ventilation** of unconditioned zone
-ISO 13789 suggests using **air change rate** \(n_{ue}\) `[h⁻¹]` for ztu → outside.  
-
-Let \(V_u\) `[m³]` be ztu air volume. Define:
-
-\[
-q_{ue} = V_u\,n_{ue} \quad [\text{m}^3/\text{h}], \qquad
-q_{iu} = q_{i\to u} \quad [\text{m}^3/\text{h}] \text{ (often set to 0 to avoid overestimation)}
-\tag{4.12a}
-\]
-
-Use the standard \(\rho c\) factor \(\approx 0.33\) `[Wh·m⁻³·K⁻¹]` for flows expressed in m³·h⁻¹:
-
-\[
-H_{ve,ue} = 0.33\,q_{ue}, \qquad H_{ve,iu} = 0.33\,q_{iu}
-\tag{4.12b}
-\]
-
-By **default** in the code: \(q_{iu} = 0\).
-
-#### Step 4 — Aggregate coupling terms
-\[
-H_{ue} = H_{d,ztu{\text -}ext} + H_{ve,ue}, \qquad
-H_{iu} = H_{d,zt{\text -}ztu} + H_{ve,iu}
-\tag{4.12c}
-\]
-
-Total **ztu coupling**:
-
-\[
-H_{ztu,tot} = H_{iu} + H_{ue}
-\tag{4.12d}
-\]
-
-**Adjustment factor** \(b_{ztu,m}\) (ISO 13789 monthly convention):
-
-\[
-b_{ztu,m} = \frac{H_{ue}}{H_{ue} + H_{iu}} = \frac{H_{ue}}{H_{ztu,tot}}
-\tag{4.13}
-\]
-
-\(b_{ztu,m}\in[0,1]\) measures how much the unconditioned zone is “anchored” to the **outside** rather than to the **conditioned** neighbor.
-
-#### Output
-- `H_ztu_tot` `[W·K⁻¹]` — total coupling of the unconditioned zone.
-- `b_ztu_m` `[-]` — monthly factor (in the current code computed once from static inputs).
-
-#### Practical extraction with your `BUI` structure
-
-- For **a given unconditioned zone** `adj_i`:
-    - Build sets:
-        - \(\mathcal{E}_{zt{\text -}ztu}\): elements in `adj_i` whose `orientation_elements` **match** the interface direction to the conditioned zone (your code uses equality tests by `NV/SV/EV/WV/HOR`).
-        - \(\mathcal{E}_{ztu{\text -}ext}\): elements in `adj_i` **not** on the interface.
-    - Use `adj_i.volume` → \(V_u\).  
-    - Pick `n_ue` from `df_n_ue` by air-tightness class or keep default `0.5 h⁻¹`.
-
-#### Algorithm (pseudo; robust version)
-
-```python
-def transmission_heat_transfer_coefficient_ISO13789(BUI, adj_zone_name, n_ue=0.5, qui=0):
-    adj = get_adj_zone(BUI, adj_zone_name)
-    A = np.asarray(adj["area_facade_elements"], dtype=float)
-    U = np.asarray(adj["transmittance_U_elements"], dtype=float)
-    ORI = np.asarray(adj["orientation_elements"])
-    # Define which orientations correspond to zt-ztu interface (project specific rule):
-    mask_interface = is_interface_to_conditioned_zone(ORI, adj, BUI)   # boolean mask
-    Hd_zt_ztu  = float(np.sum(A[mask_interface] * U[mask_interface]))   # Eq. (4.10)
-    Hd_ztu_ext = float(np.sum(A[~mask_interface] * U[~mask_interface])) # Eq. (4.11)
-
-    # Ventilation terms (Eq. 4.12)
-    Vu = float(adj["volume"])
-    que = Vu * n_ue
-    Hve_ue = 0.33 * que
-    Hve_iu = 0.33 * float(qui)
-
-    Hue = Hd_ztu_ext + Hve_ue
-    Hiu = Hd_zt_ztu + Hve_iu
-    Hztu_tot = Hue + Hiu                                 # Eq. (4.12d)
-    b_ztu_m  = Hue / Hztu_tot if Hztu_tot > 0 else 1.0   # Eq. (4.13)
-    return float(Hztu_tot), float(b_ztu_m)
-```
-
-#### Edge Cases
-- If `A`/`U` vectors contain **dtype=object** (as in your snippet), cast explicitly to `float`.
-- If `Hztu_tot = 0` (degenerate geometry), define `b_ztu_m = 1.0` by convention (fully outdoor-anchored).
 
 ---
 

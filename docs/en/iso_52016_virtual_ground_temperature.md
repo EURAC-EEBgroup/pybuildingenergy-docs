@@ -1,22 +1,6 @@
 # Virtual ground temperature calculation for slab-on-ground floor
 
 
-**Function**:  `Temp_calculation_of_ground(building_object, lambda_gr=2.0, R_si=0.17, R_se=0.04, psi_k=0.05, **kwargs)`
----
-
-### Purpose
-Computes the **virtual ground temperature** and related parameters for **slab-on-ground (SoG)** floors in accordance with **ISO 13370:2017**.  
-The routine derives:
-- `R_gr_ve`: thermal resistance of the **virtual ground layer** below the floor,
-- `Theta_gr_ve`: **monthly virtual ground temperatures** seen by the floor,
-- `thermal_bridge_heat`: linear thermal bridge contribution at the **wall–floor junction**.
-
-These quantities are used to model heat exchange with the ground in dynamic/steady-state building energy calculations.
-
----
-
-### Function Signature
-
 ```python
 def Temp_calculation_of_ground(
     cls,
@@ -31,7 +15,8 @@ def Temp_calculation_of_ground(
 
 ---
 
-### Parameters
+### Inputs
+
 | Name | Type | Default | Description |
 |------|------|---------|-------------|
 | `building_object` | `dict` | — | Building data structure (geometry, envelope, setpoints). See **Required fields** below. |
@@ -41,9 +26,7 @@ def Temp_calculation_of_ground(
 | `psi_k` | `float` | `0.05` | Linear thermal transmittance at the wall/floor junction, **W/(m·K)**. |
 | `**kwargs['path_weather_file']` | `str | PathLike` | — | Path to EPW used by `Calculation_ISO_52010` to retrieve ambient temperatures. |
 
----
-
-### Required Fields in `building_object`
+#### Required Fields in `building_object`
 - `building_parameters.temperature_setpoints.heating_setpoint` (°C)  
 - `building_parameters.temperature_setpoints.cooling_setpoint` (°C)  
 - `building_surface`: list of surfaces with at least `area`, `sky_view_factor` (used to detect floor-on-ground where `svf == 0`).  
@@ -54,16 +37,17 @@ def Temp_calculation_of_ground(
 
 ---
 
-### Returns
-The function returns a `temp_ground` wrapper with:
+### Purpose
+Computes the **virtual ground temperature** and related parameters for **slab-on-ground (SoG)** floors in accordance with **ISO 13370:2017**.  
+The routine derives:
+- `R_gr_ve`: thermal resistance of the **virtual ground layer** below the floor,
+- `Theta_gr_ve`: **monthly virtual ground temperatures** seen by the floor,
+- `thermal_bridge_heat`: linear thermal bridge contribution at the **wall–floor junction**.
 
-- **`R_gr_ve`** *(float, m²K/W)* – virtual ground-layer thermal resistance below the floor slab.  
-- **`Theta_gr_ve`** *(np.ndarray length 12, °C)* – monthly virtual ground temperatures as “seen” by the slab.  
-- **`thermal_bridge_heat`** *(float, W/K)* – heat transfer coefficient due to thermal bridges along the exposed perimeter (`exposed_perimeter × psi_k`).
+These quantities are used to model heat exchange with the ground in dynamic/steady-state building energy calculations.
 
----
 
-### Method Overview (ISO 13370 Steps)
+#### How it works
 
 1. **Reference ground resistance**  
    
@@ -113,11 +97,11 @@ The function returns a `temp_ground` wrapper with:
 
 8. **Virtual layer resistance**  
         
-        \[ R_{gr,ve} = \frac{1}{U_{sog}} - R_{si} - R_{floor} - R_{gr} \]
+    \[ R_{gr,ve} = \frac{1}{U_{sog}} - R_{si} - R_{floor} - R_{gr} \]
 
 9. **Linear thermal bridges**  
         
-        \[ H_{TB} = P \cdot \psi_k \quad (\text{W/K}) \]
+    \[ H_{TB} = P \cdot \psi_k \quad (\text{W/K}) \]
 
 10. **Steady-state & periodic ground heat transfer coefficients**  
     - Steady-state: \( H_{ss} = A\,U_{sog} + P\,\psi_k \)  
@@ -143,7 +127,17 @@ The function returns a `temp_ground` wrapper with:
 
 ---
 
-### Example (pseudocode)
+### Outputs
+The function returns a `temp_ground` wrapper with:
+
+- **`R_gr_ve`** *(float, m²K/W)* – virtual ground-layer thermal resistance below the floor slab.  
+- **`Theta_gr_ve`** *(np.ndarray length 12, °C)* – monthly virtual ground temperatures as “seen” by the slab.  
+- **`thermal_bridge_heat`** *(float, W/K)* – heat transfer coefficient due to thermal bridges along the exposed perimeter (`exposed_perimeter × psi_k`).
+
+---
+
+
+### Example 
 
 ```python
 tg = Temp_calculation_of_ground(
@@ -160,7 +154,7 @@ print(tg.thermal_bridge_heat)  # W/K
 
 ---
 
-### Notes & Assumptions
+### Notes
 - The procedure is explicitly for **slab-on-ground** floors and **conditioned** buildings (not for purely unheated spaces).  
 - The floor thermal resistance is **fixed to 5.3 m²K/W** in the code; adjust if your model requires a different construction.  
 - Monthly external temperatures are derived from `T2m` in the ISO 52010 weather pipeline; ensure your EPW/PVGIS mapping provides `T2m`.  
@@ -169,7 +163,7 @@ print(tg.thermal_bridge_heat)  # W/K
 
 ---
 
-### Standards & References
+### References
 - **ISO 13370:2017** — *Thermal performance of buildings — Heat transfer via the ground — Calculation methods*  
 - **EN ISO 52010-1:2017** — *External climatic conditions — Solar & meteorological data for energy calculations*
 
