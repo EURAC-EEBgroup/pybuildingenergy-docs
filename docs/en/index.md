@@ -1,7 +1,7 @@
 
 
 <figure align="center">
-  <img src="../assets/images/Logo_pyBuild.png" alt="pybuildingnergy">
+  <img src="../assets/images/Logo_pyBuild.png" alt="pybuildingnergy" width="200px">
 </figure>
 
 Please cite us if you use this library: 
