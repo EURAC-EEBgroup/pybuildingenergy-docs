@@ -1,12 +1,7 @@
-##  Test
+
 
 <figure align="center">
-  <img src="../docs/assets/images/Logo_pyBuild.png" alt="pybuildingnergy">
-</figure>
-
-<figure align="center">
-  <img src="../assets/images/system_c2.png" alt="System C2">
-  <figcaption><b>Figure 1:</b> System C2 - Example of heating circuit with varying temperature and constant flow, with mixing valve. </figcaption>
+  <img src="../assets/images/Logo_pyBuild.png" alt="pybuildingnergy">
 </figure>
 
 Please cite us if you use this library: 
@@ -14,7 +9,7 @@ Please cite us if you use this library:
 ---
 
 <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #003366;">
-  Introduction: EPBD Requirements for ISO 52000 and ISO 15316 Standards
+  Introduction: EPBD Requirements for ISO EN 52000 and ISO EN 15316 Standards
 </h1>
 
 <div style="border-left: 4px solid #D30000; padding: 10px; margin: 10px 0;">
@@ -28,25 +23,25 @@ New features:
 </div>
 
 
-## ISO 52000 - Overarching Standards
+## ISO EN 52000 - Overarching Standards
 
-The EPBD Directive 2018 (and confirmed in the 2024 revision) requires Member States to describe their national calculation methodology following the national annexes of the "overarching" standards, namely: ISO 52000-1, 52003-1, 52010-1, 52016-1, and 52018-1, developed under mandate M/480 given to CEN (European Committee for Standardization).
+The EPBD Directive 2018 (and confirmed in the 2024 revision) requires Member States to describe their national calculation methodology following the national annexes of the "overarching" standards, namely: ISO EN 52000-1, 52003-1, 52010-1, 52016-1, and 52018-1, developed under mandate M/480 given to CEN (European Committee for Standardization).
 
 **Important**: This provision does not constitute mandatory legal codification of these standards. However, the obligation to describe the national methodology following the annexes of the overarching standards will push Member States to explain where and why they deviate from these standards, leading to greater recognition and promotion of the EPB standards set.
 
-The ISO 52000 overarching standards are:
+The ISO EN 52000 overarching standards are:
 
-1. **ISO 52000-1**: General framework and procedures for EPB assessment
-2. **ISO 52003-1**: Indicators, requirements, ratings and certificates
-3. **ISO 52010-1**: Internal environmental parameters
-4. **ISO 52016-1**: Internal temperatures and energy needs for heating/cooling
-5. **ISO 52018-1**: Indicators for overall energy performance
+1. **ISO EN 52000-1**: General framework and procedures for EPB assessment
+2. **ISO EN 52003-1**: Indicators, requirements, ratings and certificates
+3. **ISO EN 52010-1**: Internal environmental parameters
+4. **ISO EN 52016-1**: Internal temperatures and energy needs for heating/cooling
+5. **ISO EN 52018-1**: Indicators for overall energy performance
 
 ## New EPBD Recast Methodology
 
 The new EPBD recast provides an update on building performance assessment through a methodology that must consider various factors such as the building’s thermal characteristics, the use of renewable energy sources, building automation and control systems, ventilation, cooling, energy recovery, etc. The methodology should represent actual operating conditions, use measured energy for accuracy and comparability, and be based on hourly or sub-hourly intervals to account for variable conditions significantly impacting system performance, including internal conditions.
 
-The energy performance of a building shall be expressed by a numeric indicator of primary energy use per unit of reference floor area per year, in kWh/(m².y), for energy performance certification and compliance with minimum energy performance requirements. Numeric indicators of final energy use per unit of reference floor area per year, in kWh/(m².y), and energy needs according to ISO 52000 in kWh/(m².y) shall also be used. The applied methodology for determining energy performance must be transparent, open to innovation, and reflect best practices, particularly from additional indicators.
+The energy performance of a building shall be expressed by a numeric indicator of primary energy use per unit of reference floor area per year, in kWh/(m².y), for energy performance certification and compliance with minimum energy performance requirements. Numeric indicators of final energy use per unit of reference floor area per year, in kWh/(m².y), and energy needs according to ISO EN 52000 in kWh/(m².y) shall also be used. The applied methodology for determining energy performance must be transparent, open to innovation, and reflect best practices, particularly from additional indicators.
 
 Member States shall describe their national calculation methodology based on Annex A of the key European standards on energy performance of buildings.
 
@@ -74,12 +69,12 @@ For space heating, applicable standards include EN 15316-1, EN 15316-2-1, EN 153
 
 The most recent revision of the EPBD was published in May 2024, further strengthening requirements and aligning with the EU's climate neutrality objectives. Member States are encouraged to consider applicable standards, particularly from the EPB standards list.
 
-17 of approximately 50 EPB standards are already EN ISO standards, resulting from collaboration between CEN and ISO. The other EPB standards are currently only available at the European level (CEN standards).
+17 of approximately 50 EPB standards are already ISO EN standards, resulting from collaboration between CEN and ISO. The other EPB standards are currently only available at the European level (CEN standards).
 
 
 ## pyBuildingEnergy: the python library for building performance assessment
 
-**pyBuildingEnergy** aims to provide an assessment of building performance both in terms of energy and comfort. In this initial release, it is possible to assess the energy performance of the building using ISO 52106-1:2018. Additional modules will be added for a more comprehensive evaluation of performance, assessing ventilation, renewable energies, systems, etc.
+**pyBuildingEnergy** aims to provide an assessment of building performance both in terms of energy and comfort. In this initial release, it is possible to assess the energy performance of the building using ISO EN 52106-1:2018. Additional modules will be added for a more comprehensive evaluation of performance, assessing ventilation, renewable energies, systems, etc.
 The actual calculation methods for the assessment of building performance are the following:
 
 - [x] the (sensible) energy need for heating and cooling, based on hourly or monthly calculations;
@@ -97,8 +92,8 @@ The actual calculation methods for the assessment of building performance are th
 - [ ] the conditions of the supply air to provide the necessary humidification and dehumidification.
 
 The calculation methods can be used for residential or non-residential buildings, or a part of it, referred to as "the building" or the "assessed object".
-ISO 52016-1:2018 also contains specifications for the assessment of thermal zones in the building or in the part of a building. The calculations are performed per thermal zone. In the calculations, the thermal zones can be assumed to be thermally coupled or not.
-ISO 52016-1:2018 is applicable to buildings at the design stage, to new buildings after construction and to existing buildings in the use phase
+ISO EN 52016-1:2018 also contains specifications for the assessment of thermal zones in the building or in the part of a building. The calculations are performed per thermal zone. In the calculations, the thermal zones can be assumed to be thermally coupled or not.
+ISO EN 52016-1:2018 is applicable to buildings at the design stage, to new buildings after construction and to existing buildings in the use phase
 
 ### Weather Data
 
@@ -111,11 +106,11 @@ More details in the example folder
 
 ### Domestic Hot Water - DHW
 
-- [x] Calculation of volume and energy need for domestic hot water according to ISO 12831-3. 
+- [x] Calculation of volume and energy need for domestic hot water according to ISO EN 12831-3. 
 - [] Assessment of thermal load based on the type of DHW system
 
 ### Primary energy for heating
-- [x] Calculation of primary energy for heating according to ISO 15316-1:2018
+- [x] Calculation of primary energy for heating according to ISO EN 15316-1:2018
 
 
 ### Limitations
@@ -180,12 +175,12 @@ The work was developed using the regulations and results obtained from the sprea
 3. **European Commission** - Energy Performance of Buildings Directive  
    https://energy.ec.europa.eu/topics/energy-efficiency/energy-performance-buildings/energy-performance-buildings-directive_en
 4. **Directive (EU) 2024/1275** - Official text published in the Official Journal of the EU on May 8, 2024
-5. **EN ISO 52010-1:2018** - Energy performance of buildings - External climatic conditions - Part 1: Conversion of climatic data for energy calculations
-6. **EN ISO 52016-1:2018** - Energy performance of buildings - Energy needs for heating and cooling, internal temperatures and sensible and latent heat loads 
-7. **EN ISO 12831-3:2018** - Energy performance of buildings - Method for calculation of the design heat load - Part 3: Domestic hot water systems heat load and characterisation of needs, Module M8-2, M8-3
-8. **EN ISO 15316-1:2018** - Energy performance of buildings – Method for calculation of system energy requirements and system efficiencies – Part 1: General and Energy performance expression, Module M3–1, M3–4, M3–9, M8–1
-9. **EN ISO 16798-7**  - Energy performance of buildings – Ventilation for buildings – Part 7: Calculation methods for the determination of air flow rates in buildings including infiltration (Module M5–5)
-10. **EN ISO 16798-1** - Energy performance of buildings — Ventilation of buildings — Part 1: Indoor environmental input parameters for design and assessment of energy performance of buildings addressing indoor air quality, thermal environment, lighting and acoustics (Module M1–6)
+5. **ISO EN 52010-1:2018** - Energy performance of buildings - External climatic conditions - Part 1: Conversion of climatic data for energy calculations
+6. **ISO EN 52016-1:2018** - Energy performance of buildings - Energy needs for heating and cooling, internal temperatures and sensible and latent heat loads 
+7. **ISO EN 12831-3:2018** - Energy performance of buildings - Method for calculation of the design heat load - Part 3: Domestic hot water systems heat load and characterisation of needs, Module M8-2, M8-3
+8. **ISO EN 15316-1:2018** - Energy performance of buildings – Method for calculation of system energy requirements and system efficiencies – Part 1: General and Energy performance expression, Module M3–1, M3–4, M3–9, M8–1
+9. **ISO EN 16798-7**  - Energy performance of buildings – Ventilation for buildings – Part 7: Calculation methods for the determination of air flow rates in buildings including infiltration (Module M5–5)
+10. **ISO EN 16798-1** - Energy performance of buildings — Ventilation of buildings — Part 1: Indoor environmental input parameters for design and assessment of energy performance of buildings addressing indoor air quality, thermal environment, lighting and acoustics (Module M1–6)
 11. **Directive (EU) 2024/1275** - Official text published in the Official Journal of the EU on May 8, 2024
 
 ## Authors: 
