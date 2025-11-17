@@ -7,8 +7,6 @@
 The calculation procedure follows the direction from the energy need to the source (building energy need -> primary energy)
 
 
-
-
 ## Description of functions
 
 Herunder explanation of **what the script does** and **comments each function**, with emphasis on:

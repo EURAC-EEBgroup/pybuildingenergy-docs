@@ -12,15 +12,31 @@ theme:
     - content.code.copy
     - content.action.edit
 nav:
-  - Home: home.md
+  - Home: index.md
   - Usage: usage.md
   - API Reference: api.md
   - Quality check: iso_52016_input_check.md
   - Installation: installation.md
+  - Weather data: weather_data.md
+  - ISO 52010:
+    - ISO 52010 - Introduction: iso_52010.md
   - ISO 52016:
     - ISO 52016 - Introduction: iso_52016.md
+    - ISO 52016 - Input: iso_52016_input.md
+    - ISO 52016 - Category profiles: iso_52106_categorty_profile.md
+    - ISO 52016 - Aggregate Surfaces: iso_52016_aggregate_surface.md
+    - ISO 52016 - Adjacent Zone: iso_52016_adj_zone.md
+    - ISO 52016 - Ventilation and transmission adjacent zones: ventilation_transmission_adj_zone.md
+    - ISO 52016 - Virtual ground temperature: iso_52016_virtual_ground_temperature.md
+    - ISO 52016 - Aeral heat capacity: iso_52016_aeral_heat_capacity.md
+    - ISO 52016 - Solar absorption: iso_52016_solar_absorption.md
+    - ISO 52016 - Node: iso_52016_node.md
+    # - ISO 52016 - CO2 Equivalent: iso_52016_co2_equivalent.md
+    - ISO 52016 - Overall procedure: iso_52016_overall_procedure.md
+    
   - ISO 15316:
     - ISO 15316 - Introduction: iso_15316.md
+    - ISO 15316 - Input: iso_15316_input.md
     - ISO 15316 - Heating Circuit: iso_15316_heating_circuit.md
     - ISO 15316 - Generation Circuit: iso_15316_generation_circuit.md
     - ISO 15316 - HVAC System inputs: iso_15316_system_inputs.md
@@ -45,16 +61,6 @@ plugins:
         - locale: it
           name: Italiano
           build: true
-          # Traduzioni delle label di nav (opzionali)
-          # nav_translations:
-          #   Home: Home
-          #   Usage: Utilizzo
-          #   "API Reference": "Riferimento API"
-          #   "ISO 52016 - Introduction": "ISO 52016 - Introduzione"
-          #   "ISO 15316 - Introduction": "ISO 15316 - Introduzione"
-          #   "ISO 15316 - Heating Circuit": "ISO 15316 - Circuito di riscaldamento"
-          #   "ISO 15316 - Calculation procedure": "ISO 15316 - Procedura di calcolo"
-            # Installation: Installazione
         - locale: en
           name: English
           default: true
@@ -80,10 +86,3 @@ markdown_extensions:
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-
-# marmaid:javascript:
-#   - https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
-#   - js/mermaid-init.js     # we'll create this file (see below)
-# extra_css:
-#   - styles/custom.css
