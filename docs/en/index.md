@@ -1,8 +1,10 @@
 
-
+---
 <figure align="center">
-  <img src="../assets/images/Logo_pyBuild.png" alt="pybuildingnergy" width="200px">
+  <img src="/assets/images/Logo_pyBuild.png" alt="pybuildingenergy" width="400px">
 </figure>
+---
+
 
 Please cite us if you use this library: 
 [![DOI](https://zenodo.org/badge/761715706.svg)](https://zenodo.org/doi/10.5281/zenodo.10887919)
