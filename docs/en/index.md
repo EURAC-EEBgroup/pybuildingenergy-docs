@@ -2,6 +2,10 @@
   <img src="../assets/images/Logo_pyBuild.png" alt="pybuildingnergy">
 </figure>
 
+<figure align="center">
+  <img src="../assets/images/system_c2.png" alt="System C2">
+  <figcaption><b>Figure 1:</b> System C2 - Example of heating circuit with varying temperature and constant flow, with mixing valve. </figcaption>
+</figure>
 
 Please cite us if you use this library: 
 [![DOI](https://zenodo.org/badge/761715706.svg)](https://zenodo.org/doi/10.5281/zenodo.10887919)
