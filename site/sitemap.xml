@@ -141,6 +141,13 @@
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_solar_absorption/"/>
     </url>
     <url>
+        <loc>Noneiso_52016_ventilation/</loc>
+        <lastmod>2025-11-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016_ventilation/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_ventilation/"/>
+    </url>
+    <url>
         <loc>Noneiso_52016_virtual_ground_temperature/</loc>
         <lastmod>2025-11-17</lastmod>
         <changefreq>daily</changefreq>
@@ -160,13 +167,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/usage/"/>
-    </url>
-    <url>
-        <loc>Noneventilation_transmission_adj_zone/</loc>
-        <lastmod>2025-11-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneventilation_transmission_adj_zone/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="Noneit/ventilation_transmission_adj_zone/"/>
     </url>
     <url>
         <loc>Noneweather_data/</loc>
@@ -316,6 +316,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016_solar_absorption/"/>
     </url>
     <url>
+        <loc>Noneit/iso_52016_ventilation/</loc>
+        <lastmod>2025-11-17</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="it" href="Noneit/iso_52016_ventilation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneiso_52016_ventilation/"/>
+    </url>
+    <url>
         <loc>Noneit/iso_52016_virtual_ground_temperature/</loc>
         <lastmod>2025-11-17</lastmod>
         <changefreq>daily</changefreq>
@@ -335,13 +342,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/usage/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneusage/"/>
-    </url>
-    <url>
-        <loc>Noneit/ventilation_transmission_adj_zone/</loc>
-        <lastmod>2025-11-17</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="Noneit/ventilation_transmission_adj_zone/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneventilation_transmission_adj_zone/"/>
     </url>
     <url>
         <loc>Noneit/weather_data/</loc>

@@ -13,10 +13,10 @@ theme:
     - content.action.edit
 nav:
   - Home: index.md
-  - Usage: usage.md
-  - API Reference: api.md
+  # - Usage: usage.md
+  # - API Reference: api.md
   - Quality check: iso_52016_input_check.md
-  - Installation: installation.md
+  # - Installation: installation.md
   - Weather data: weather_data.md
   - ISO 52010:
     - ISO 52010 - Introduction: iso_52010.md
