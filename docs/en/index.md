@@ -186,8 +186,8 @@ The work was developed using the regulations and results obtained from the sprea
 11. **Directive (EU) 2024/1275** - Official text published in the Official Journal of the EU on May 8, 2024
 
 ## Authors: 
-[**Daniele Antonucci**](https://www.eurac.edu/en/people/daniele-antonucci)
-[**Ulrich Filippi Oberegger**](https://www.eurac.edu/en/people/ulrich-filippi)
+- [**Daniele Antonucci**](https://www.eurac.edu/en/people/daniele-antonucci)
+- [**Ulrich Filippi Oberegger**](https://www.eurac.edu/en/people/ulrich-filippi)
 
 ## **License**: BSD 3-Clause License
 ## **Version**: 0.2
