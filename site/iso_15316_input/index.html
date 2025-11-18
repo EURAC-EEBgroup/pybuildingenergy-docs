@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -465,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +608,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -730,8 +722,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -760,8 +750,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -770,28 +758,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-high-level-structure" class="md-nav__link">
+  <a href="#input_system_hvac-reference-setup-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      1) High-level structure
+      INPUT_SYSTEM_HVAC — Reference &amp; Setup Guide
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-emitter-block-room-side-heat-delivery" class="md-nav__link">
+  <a href="#inputs" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Emitter block (room-side heat delivery)
+      Inputs
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2) Emitter block (room-side heat delivery)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emitter-block-room-side-heat-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emitter block (room-side heat delivery)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Emitter block (room-side heat delivery)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-optional-custom-emitter-tables" class="md-nav__link">
+  <a href="#optional-custom-emitter-tables" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 Optional custom emitter tables
+      Optional custom emitter tables
     </span>
   </a>
   
@@ -803,28 +800,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-distribution-block-piping-network-auxiliaries" class="md-nav__link">
+  <a href="#distribution-block-piping-network-auxiliaries" class="md-nav__link">
     <span class="md-ellipsis">
-      3) Distribution block (piping network &amp; auxiliaries)
+      Distribution block (piping network &amp; auxiliaries)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-generator-block-plant-production-side" class="md-nav__link">
+  <a href="#generator-block-plant-production-side" class="md-nav__link">
     <span class="md-ellipsis">
-      4) Generator block (plant production side)
+      Generator block (plant production side)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4) Generator block (plant production side)">
+    <nav class="md-nav" aria-label="Generator block (plant production side)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-generator-flow-temperature-control" class="md-nav__link">
+  <a href="#generator-flow-temperature-control" class="md-nav__link">
     <span class="md-ellipsis">
-      4.1 Generator flow-temperature control
+      Generator flow-temperature control
     </span>
   </a>
   
@@ -836,19 +833,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-control-strategies-cheat-sheet" class="md-nav__link">
+  <a href="#control-strategies-cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
-      5) Control strategies (cheat sheet)
+      Control strategies (cheat sheet)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5) Control strategies (cheat sheet)">
+    <nav class="md-nav" aria-label="Control strategies (cheat sheet)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-emitter-flow_temp_control_type" class="md-nav__link">
+  <a href="#emitter-flow_temp_control_type" class="md-nav__link">
     <span class="md-ellipsis">
-      5.1 Emitter flow_temp_control_type
+      Emitter flow_temp_control_type
     </span>
   </a>
   
@@ -869,63 +866,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-efficiency-model" class="md-nav__link">
+  <a href="#efficiency-model" class="md-nav__link">
     <span class="md-ellipsis">
-      6) Efficiency model
+      Efficiency model
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-calculation-options" class="md-nav__link">
+  <a href="#calculation-options" class="md-nav__link">
     <span class="md-ellipsis">
-      7) Calculation options
+      Calculation options
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-units-conventions" class="md-nav__link">
+  <a href="#units-conventions" class="md-nav__link">
     <span class="md-ellipsis">
-      8) Units &amp; conventions
+      Units &amp; conventions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-validation-checklist" class="md-nav__link">
+  <a href="#validation-checklist" class="md-nav__link">
     <span class="md-ellipsis">
-      9) Validation checklist
+      Validation checklist
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-minimal-working-example" class="md-nav__link">
+  <a href="#minimal-working-example" class="md-nav__link">
     <span class="md-ellipsis">
-      10) Minimal working example
+      Minimal working example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-advanced-customization-tips" class="md-nav__link">
+  <a href="#advanced-customization-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      11) Advanced customization tips
+      Advanced customization tips
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#13-glossary" class="md-nav__link">
+  <a href="#glossary" class="md-nav__link">
     <span class="md-ellipsis">
-      13) Glossary
+      Glossary
     </span>
   </a>
   
@@ -1048,8 +1045,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1058,28 +1053,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-high-level-structure" class="md-nav__link">
+  <a href="#input_system_hvac-reference-setup-guide" class="md-nav__link">
     <span class="md-ellipsis">
-      1) High-level structure
+      INPUT_SYSTEM_HVAC — Reference &amp; Setup Guide
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-emitter-block-room-side-heat-delivery" class="md-nav__link">
+  <a href="#inputs" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Emitter block (room-side heat delivery)
+      Inputs
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2) Emitter block (room-side heat delivery)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emitter-block-room-side-heat-delivery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Emitter block (room-side heat delivery)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Emitter block (room-side heat delivery)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-optional-custom-emitter-tables" class="md-nav__link">
+  <a href="#optional-custom-emitter-tables" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1 Optional custom emitter tables
+      Optional custom emitter tables
     </span>
   </a>
   
@@ -1091,28 +1095,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-distribution-block-piping-network-auxiliaries" class="md-nav__link">
+  <a href="#distribution-block-piping-network-auxiliaries" class="md-nav__link">
     <span class="md-ellipsis">
-      3) Distribution block (piping network &amp; auxiliaries)
+      Distribution block (piping network &amp; auxiliaries)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-generator-block-plant-production-side" class="md-nav__link">
+  <a href="#generator-block-plant-production-side" class="md-nav__link">
     <span class="md-ellipsis">
-      4) Generator block (plant production side)
+      Generator block (plant production side)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4) Generator block (plant production side)">
+    <nav class="md-nav" aria-label="Generator block (plant production side)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#41-generator-flow-temperature-control" class="md-nav__link">
+  <a href="#generator-flow-temperature-control" class="md-nav__link">
     <span class="md-ellipsis">
-      4.1 Generator flow-temperature control
+      Generator flow-temperature control
     </span>
   </a>
   
@@ -1124,19 +1128,19 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-control-strategies-cheat-sheet" class="md-nav__link">
+  <a href="#control-strategies-cheat-sheet" class="md-nav__link">
     <span class="md-ellipsis">
-      5) Control strategies (cheat sheet)
+      Control strategies (cheat sheet)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="5) Control strategies (cheat sheet)">
+    <nav class="md-nav" aria-label="Control strategies (cheat sheet)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-emitter-flow_temp_control_type" class="md-nav__link">
+  <a href="#emitter-flow_temp_control_type" class="md-nav__link">
     <span class="md-ellipsis">
-      5.1 Emitter flow_temp_control_type
+      Emitter flow_temp_control_type
     </span>
   </a>
   
@@ -1157,63 +1161,63 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-efficiency-model" class="md-nav__link">
+  <a href="#efficiency-model" class="md-nav__link">
     <span class="md-ellipsis">
-      6) Efficiency model
+      Efficiency model
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-calculation-options" class="md-nav__link">
+  <a href="#calculation-options" class="md-nav__link">
     <span class="md-ellipsis">
-      7) Calculation options
+      Calculation options
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-units-conventions" class="md-nav__link">
+  <a href="#units-conventions" class="md-nav__link">
     <span class="md-ellipsis">
-      8) Units &amp; conventions
+      Units &amp; conventions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-validation-checklist" class="md-nav__link">
+  <a href="#validation-checklist" class="md-nav__link">
     <span class="md-ellipsis">
-      9) Validation checklist
+      Validation checklist
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-minimal-working-example" class="md-nav__link">
+  <a href="#minimal-working-example" class="md-nav__link">
     <span class="md-ellipsis">
-      10) Minimal working example
+      Minimal working example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-advanced-customization-tips" class="md-nav__link">
+  <a href="#advanced-customization-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      11) Advanced customization tips
+      Advanced customization tips
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#13-glossary" class="md-nav__link">
+  <a href="#glossary" class="md-nav__link">
     <span class="md-ellipsis">
-      13) Glossary
+      Glossary
     </span>
   </a>
   
@@ -1242,13 +1246,13 @@
   
 
 
-<h1 id="input_system_hvac-reference-setup-guide">INPUT_SYSTEM_HVAC — Reference &amp; Setup Guide<a class="headerlink" href="#input_system_hvac-reference-setup-guide" title="Permanent link">&para;</a></h1>
+<h2 id="input_system_hvac-reference-setup-guide"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>INPUT_SYSTEM_HVAC — Reference &amp; Setup Guide</strong></h1><a class="headerlink" href="#input_system_hvac-reference-setup-guide" title="Permanent link">&para;</a></h2>
 <p>This document explains every field in the <code>INPUT_SYSTEM_HVAC</code> configuration used by the heating system model (emitter → distribution → generator). It also shows how to customize control curves and upload your own emitter tables.</p>
 <blockquote>
 <p><strong>Scope</strong>: space-heating only (cooling is ignored here). All powers are thermal unless stated otherwise.</p>
 </blockquote>
 <hr />
-<h2 id="1-high-level-structure">1) High-level structure<a class="headerlink" href="#1-high-level-structure" title="Permanent link">&para;</a></h2>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">INPUT_SYSTEM_HVAC</span> <span class="o">=</span> <span class="p">{</span>
   <span class="c1"># Emitter (room-side heat emission)</span>
   <span class="s2">&quot;emitter_type&quot;</span><span class="p">:</span> <span class="o">...</span><span class="p">,</span>
@@ -1301,7 +1305,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="2-emitter-block-room-side-heat-delivery">2) Emitter block (room-side heat delivery)<a class="headerlink" href="#2-emitter-block-room-side-heat-delivery" title="Permanent link">&para;</a></h2>
+<h2 id="emitter-block-room-side-heat-delivery">Emitter block (room-side heat delivery)<a class="headerlink" href="#emitter-block-room-side-heat-delivery" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1362,7 +1366,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="21-optional-custom-emitter-tables">2.1 Optional custom emitter tables<a class="headerlink" href="#21-optional-custom-emitter-tables" title="Permanent link">&para;</a></h3>
+<h3 id="optional-custom-emitter-tables">Optional custom emitter tables<a class="headerlink" href="#optional-custom-emitter-tables" title="Permanent link">&para;</a></h3>
 <p>You can override internal presets using one or both of the following:</p>
 <ul>
 <li><strong><code>TB14</code></strong>: a custom structure/table with manufacturer data (e.g., output vs. ΔT, flow temperature limits). Uncomment and provide your object to replace defaults.</li>
@@ -1386,7 +1390,7 @@
 <p><strong>Tip</strong>: If both <code>TB14</code> and <code>heat_emission_data</code> are provided, clarify which one your backend prioritizes to avoid ambiguity.</p>
 </blockquote>
 <hr />
-<h2 id="3-distribution-block-piping-network-auxiliaries">3) Distribution block (piping network &amp; auxiliaries)<a class="headerlink" href="#3-distribution-block-piping-network-auxiliaries" title="Permanent link">&para;</a></h2>
+<h2 id="distribution-block-piping-network-auxiliaries">Distribution block (piping network &amp; auxiliaries)<a class="headerlink" href="#distribution-block-piping-network-auxiliaries" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1442,7 +1446,7 @@
 </tbody>
 </table>
 <hr />
-<h2 id="4-generator-block-plant-production-side">4) Generator block (plant production side)<a class="headerlink" href="#4-generator-block-plant-production-side" title="Permanent link">&para;</a></h2>
+<h2 id="generator-block-plant-production-side">Generator block (plant production side)<a class="headerlink" href="#generator-block-plant-production-side" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1491,7 +1495,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="41-generator-flow-temperature-control">4.1 Generator flow-temperature control<a class="headerlink" href="#41-generator-flow-temperature-control" title="Permanent link">&para;</a></h3>
+<h3 id="generator-flow-temperature-control">Generator flow-temperature control<a class="headerlink" href="#generator-flow-temperature-control" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1556,8 +1560,8 @@
 </code></pre></div>
 <p>The controller interpolates a target flow temperature between <code>(θext_min_gen, θflw_gen_max)</code> and <code>(θext_max_gen, θflw_gen_min)</code>. Values are clipped outside the range.</p>
 <hr />
-<h2 id="5-control-strategies-cheat-sheet">5) Control strategies (cheat sheet)<a class="headerlink" href="#5-control-strategies-cheat-sheet" title="Permanent link">&para;</a></h2>
-<h3 id="51-emitter-flow_temp_control_type">5.1 Emitter <code>flow_temp_control_type</code><a class="headerlink" href="#51-emitter-flow_temp_control_type" title="Permanent link">&para;</a></h3>
+<h2 id="control-strategies-cheat-sheet">Control strategies (cheat sheet)<a class="headerlink" href="#control-strategies-cheat-sheet" title="Permanent link">&para;</a></h2>
+<h3 id="emitter-flow_temp_control_type">Emitter <code>flow_temp_control_type</code><a class="headerlink" href="#emitter-flow_temp_control_type" title="Permanent link">&para;</a></h3>
 <p>Common patterns (implementation-dependent; typical meanings):
 - <strong>Type 1 – Constant setpoint</strong>: use <code>constant_flow_temp</code> (°C).<br />
 - <strong>Type 2 – Based on outdoor temperature</strong>: emitter flow is computed via an outdoor reset (may reuse the generator curve or a dedicated one).
@@ -1573,7 +1577,7 @@
 <li><strong>Type C – Demand-following</strong>: track emitter request (requires coupling logic and min/max clamps).</li>
 </ul>
 <hr />
-<h2 id="6-efficiency-model">6) Efficiency model<a class="headerlink" href="#6-efficiency-model" title="Permanent link">&para;</a></h2>
+<h2 id="efficiency-model">Efficiency model<a class="headerlink" href="#efficiency-model" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1592,7 +1596,7 @@
 </table>
 <p>Backends typically compute <strong>delivered heat</strong>, <strong>electric/primary energy</strong>, and <strong>auxiliary fractions</strong> accordingly.</p>
 <hr />
-<h2 id="7-calculation-options">7) Calculation options<a class="headerlink" href="#7-calculation-options" title="Permanent link">&para;</a></h2>
+<h2 id="calculation-options">Calculation options<a class="headerlink" href="#calculation-options" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1615,7 +1619,7 @@
 </tbody>
 </table>
 <hr />
-<h2 id="8-units-conventions">8) Units &amp; conventions<a class="headerlink" href="#8-units-conventions" title="Permanent link">&para;</a></h2>
+<h2 id="units-conventions">Units &amp; conventions<a class="headerlink" href="#units-conventions" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Temperatures in <strong>°C</strong>, ΔT in <strong>K</strong> (numerically the same scale).</li>
 <li>Powers: <code>kW</code> for generator/emitter nominal; auxiliaries commonly in <strong>W</strong> (check your backend).</li>
@@ -1624,7 +1628,7 @@
 <li>Time base: typically <strong>hourly</strong> steps.</li>
 </ul>
 <hr />
-<h2 id="9-validation-checklist">9) Validation checklist<a class="headerlink" href="#9-validation-checklist" title="Permanent link">&para;</a></h2>
+<h2 id="validation-checklist">Validation checklist<a class="headerlink" href="#validation-checklist" title="Permanent link">&para;</a></h2>
 <ul>
 <li>[ ] <code>nominal_power</code> ≤ <code>full_load_power</code> (kW).  </li>
 <li>[ ] <code>emission_efficiency</code> ∈ [0, 100].  </li>
@@ -1636,7 +1640,7 @@
 <li>[ ] <code>speed_control_generator_pump</code> ∈ {<code>"fixed"</code>, <code>"variable"</code>}.</li>
 </ul>
 <hr />
-<h2 id="10-minimal-working-example">10) Minimal working example<a class="headerlink" href="#10-minimal-working-example" title="Permanent link">&para;</a></h2>
+<h2 id="minimal-working-example">Minimal working example<a class="headerlink" href="#minimal-working-example" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">INPUT_SYSTEM_HVAC</span> <span class="o">=</span> <span class="p">{</span>
   <span class="c1"># Emitter</span>
   <span class="s2">&quot;emitter_type&quot;</span><span class="p">:</span> <span class="s2">&quot;Floor heating 1&quot;</span><span class="p">,</span>
@@ -1686,7 +1690,7 @@
 <span class="p">}</span>
 </code></pre></div>
 <hr />
-<h2 id="11-advanced-customization-tips">11) Advanced customization tips<a class="headerlink" href="#11-advanced-customization-tips" title="Permanent link">&para;</a></h2>
+<h2 id="advanced-customization-tips">Advanced customization tips<a class="headerlink" href="#advanced-customization-tips" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Multiple heating circuits</strong>: use <code>selected_emm_cont_circuit</code> to switch presets, or pass a <strong>per-circuit</strong> <code>heat_emission_data</code> table.  </li>
 <li><strong>Manufacturer curves</strong>: provide detailed COP/efficiency maps via <code>efficiency_model="manufacturer"</code> and custom data structures.  </li>
@@ -1704,7 +1708,7 @@
 
 --- -->
 
-<h2 id="13-glossary">13) Glossary<a class="headerlink" href="#13-glossary" title="Permanent link">&para;</a></h2>
+<h2 id="glossary">Glossary<a class="headerlink" href="#glossary" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Emitter</strong>: the device exchanging heat with the room (radiators, floor heating).  </li>
 <li><strong>Distribution</strong>: pipes, valves, pumps between generator and emitters.  </li>

@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -467,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -536,8 +528,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -566,14 +556,21 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ventilation-internal-gains-and-transmission-heat-transfer-between-adjacent-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventilation, Internal Gains and Transmission Heat Transfer between Adjacent Zones
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
@@ -656,11 +653,11 @@
         <li class="md-nav__item">
   <a href="#internal-gains-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      Internal gains calculation:
+      Internal gains calculation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Internal gains calculation:">
+    <nav class="md-nav" aria-label="Internal gains calculation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -814,7 +811,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -1042,14 +1039,21 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ventilation-internal-gains-and-transmission-heat-transfer-between-adjacent-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventilation, Internal Gains and Transmission Heat Transfer between Adjacent Zones
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
@@ -1132,11 +1136,11 @@
         <li class="md-nav__item">
   <a href="#internal-gains-calculation" class="md-nav__link">
     <span class="md-ellipsis">
-      Internal gains calculation:
+      Internal gains calculation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Internal gains calculation:">
+    <nav class="md-nav" aria-label="Internal gains calculation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1230,10 +1234,9 @@
   
 
 
-<h1 id="ventilation-internal-gains-and-transmission-heat-transfer-between-adjacent-zones">Ventilation, Internal Gains and Transmission Heat Transfer between Adjacent Zones<a class="headerlink" href="#ventilation-internal-gains-and-transmission-heat-transfer-between-adjacent-zones" title="Permanent link">&para;</a></h1>
+<h2 id="ventilation-internal-gains-and-transmission-heat-transfer-between-adjacent-zones"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Ventilation, Internal Gains and Transmission Heat Transfer between Adjacent Zones</strong></h1><a class="headerlink" href="#ventilation-internal-gains-and-transmission-heat-transfer-between-adjacent-zones" title="Permanent link">&para;</a></h2>
 <p>This module implements methods for evaluating <strong>heat transfer by ventilation</strong> and <strong>internal heat gains</strong> in thermally conditioned and unconditioned zones.</p>
 <p>It also includes an auxiliary function for computing <strong>transmission heat transfer coefficients</strong> between conditioned and adjacent zones, following <strong>ISO 13789</strong>.</p>
-<hr />
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The module covers three main components:</p>
 <ol>
@@ -1254,7 +1257,7 @@
 <li>Calculates inter-zone transmission coefficients (<code>H_ztu_tot</code>, <code>b_ztu_m</code>) according to <strong>ISO 13789</strong>, accounting for heat exchanges between conditioned, unconditioned, and external environments.</li>
 </ol>
 <hr />
-<h2 id="calculation-of-heat-transfer-coefficient-by-ventilation"><strong>Calculation of heat transfer coefficient by ventilation</strong><a class="headerlink" href="#calculation-of-heat-transfer-coefficient-by-ventilation" title="Permanent link">&para;</a></h2>
+<h2 id="calculation-of-heat-transfer-coefficient-by-ventilation"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Calculation of heat transfer coefficient by ventilation</strong></h2><a class="headerlink" href="#calculation-of-heat-transfer-coefficient-by-ventilation" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nd">@staticmethod</span>
 <span class="k">def</span> <span class="nf">heat_transfer_coefficient_by_ventilation</span><span class="p">(</span>
     <span class="n">building_object</span><span class="p">,</span> <span class="n">Tz</span><span class="p">,</span> <span class="n">Te</span><span class="p">,</span> <span class="n">u_site</span><span class="p">,</span> <span class="n">Rw_arg_i</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">c_air</span><span class="o">=</span><span class="mi">1006</span><span class="p">,</span> 
@@ -1348,7 +1351,7 @@ H_{ve} = A_{use}\cdot (3.6\,\dot v_{pers})\cdot \frac{c_{air}\,\rho_{air}}{3600}
 <li>Negative or null <code>u_site</code> accepted; <code>max(·)</code> ensures stack/wind pick the dominant driver.</li>
 </ul>
 <hr />
-<h2 id="internal-gains-calculation"><strong>Internal gains calculation</strong>:<a class="headerlink" href="#internal-gains-calculation" title="Permanent link">&para;</a></h2>
+<h2 id="internal-gains-calculation"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Internal gains calculation</strong></h2><a class="headerlink" href="#internal-gains-calculation" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">internal_gains</span><span class="p">(</span>
     <span class="bp">cls</span><span class="p">,</span> <span class="n">building_type_class</span><span class="p">,</span> <span class="n">a_use</span><span class="p">,</span> <span class="n">unconditioned_zones_nearby</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">list_adj_zones</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">Fztc_ztu_m</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b_ztu</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>

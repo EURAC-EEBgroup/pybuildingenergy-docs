@@ -20,14 +20,11 @@
     
     
       
-        <title>ISO 52016 - Node - pybuildingenergy</title>
+        <title>ISO 52016 - Facade elements (nodes) - pybuildingenergy</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,15 +105,15 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ISO 52016 - Node
+              ISO 52016 - Facade elements (nodes)
             
           </span>
         </div>
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -467,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,14 +612,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -638,7 +628,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -650,8 +640,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -660,32 +648,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-number_of_nodes_elementbuilding_object" class="md-nav__link">
+  <a href="#node-of-building-element" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: Number_of_nodes_element(building_object)
+      Node of building element
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function: Number_of_nodes_element(building_object)">
+    <nav class="md-nav" aria-label="Node of building element">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
@@ -694,7 +664,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-fields-in-building_objectbuilding_surface" class="md-nav__link">
@@ -705,19 +676,39 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Purpose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
     </span>
   </a>
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#method-overview" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
-      Method Overview
+      Output
     </span>
   </a>
   
@@ -747,32 +738,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-conduttance_node_of_elementbuilding_object-lambda_gr20" class="md-nav__link">
+  <a href="#calculation-of-conduttance" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: Conduttance_node_of_element(building_object, lambda_gr=2.0)
+      Calculation of conduttance
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function: Conduttance_node_of_element(building_object, lambda_gr=2.0)">
+    <nav class="md-nav" aria-label="Calculation of conduttance">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purpose_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#parameters_1" class="md-nav__link">
@@ -781,7 +754,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-fields-in-building_objectbuilding_surface_1" class="md-nav__link">
@@ -792,28 +766,39 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#returns_1" class="md-nav__link">
+  <a href="#purpose_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Purpose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#method-overview_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method Overview
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#notes_1" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes
+      Outputs
     </span>
   </a>
   
@@ -823,6 +808,15 @@
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
       Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
     </span>
   </a>
   
@@ -1069,8 +1063,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1079,32 +1071,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-number_of_nodes_elementbuilding_object" class="md-nav__link">
+  <a href="#node-of-building-element" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: Number_of_nodes_element(building_object)
+      Node of building element
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function: Number_of_nodes_element(building_object)">
+    <nav class="md-nav" aria-label="Node of building element">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
@@ -1113,7 +1087,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-fields-in-building_objectbuilding_surface" class="md-nav__link">
@@ -1124,19 +1099,39 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Purpose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
     </span>
   </a>
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#method-overview" class="md-nav__link">
+  <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
-      Method Overview
+      Output
     </span>
   </a>
   
@@ -1166,32 +1161,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#function-conduttance_node_of_elementbuilding_object-lambda_gr20" class="md-nav__link">
+  <a href="#calculation-of-conduttance" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: Conduttance_node_of_element(building_object, lambda_gr=2.0)
+      Calculation of conduttance
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function: Conduttance_node_of_element(building_object, lambda_gr=2.0)">
+    <nav class="md-nav" aria-label="Calculation of conduttance">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purpose_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#parameters_1" class="md-nav__link">
@@ -1200,7 +1177,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-fields-in-building_objectbuilding_surface_1" class="md-nav__link">
@@ -1211,28 +1189,39 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#returns_1" class="md-nav__link">
+  <a href="#purpose_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Purpose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#method-overview_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Method Overview
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#notes_1" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes
+      Outputs
     </span>
   </a>
   
@@ -1242,6 +1231,15 @@
   <a href="#example_1" class="md-nav__link">
     <span class="md-ellipsis">
       Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
     </span>
   </a>
   
@@ -1284,17 +1282,10 @@
   
 
 
-<h1 id="node-of-building-element">Node of building element<a class="headerlink" href="#node-of-building-element" title="Permanent link">&para;</a></h1>
+<h2 id="node-of-building-element"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Node of building element </strong></h1><a class="headerlink" href="#node-of-building-element" title="Permanent link">&para;</a></h2>
 <p>The following two functions calculates the number of nodes to be used in opaque and transparent elements in the 5-node thermal network model.</p>
-<h2 id="function-number_of_nodes_elementbuilding_object">Function: <code>Number_of_nodes_element(building_object)</code><a class="headerlink" href="#function-number_of_nodes_elementbuilding_object" title="Permanent link">&para;</a></h2>
-<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
-<p>Determines the <strong>number of thermal nodes</strong> for each building element, according to its type (opaque, transparent, or adiabatic).<br />
-This step is part of the nodal network definition in <strong>EN ISO 52016-1:2017</strong>, used for energy balance and dynamic thermal simulations.</p>
-<hr />
-<h3 id="function-signature">Function Signature<a class="headerlink" href="#function-signature" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Number_of_nodes_element</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">building_object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">numb_nodes_facade_elements</span>
 </code></pre></div>
-<hr />
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1312,8 +1303,7 @@ This step is part of the nodal network definition in <strong>EN ISO 52016-1:2017
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="required-fields-in-building_objectbuilding_surface">Required Fields in <code>building_object["building_surface"]</code><a class="headerlink" href="#required-fields-in-building_objectbuilding_surface" title="Permanent link">&para;</a></h3>
+<h4 id="required-fields-in-building_objectbuilding_surface">Required Fields in <code>building_object["building_surface"]</code><a class="headerlink" href="#required-fields-in-building_objectbuilding_surface" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -1328,8 +1318,77 @@ This step is part of the nodal network definition in <strong>EN ISO 52016-1:2017
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h3>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
+<p>Determines the <strong>number of thermal nodes</strong> for each building element, according to its type (opaque, transparent, or adiabatic).<br />
+This step is part of the nodal network definition in <strong>EN ISO 52016-1:2017</strong>, used for energy balance and dynamic thermal simulations.</p>
+<h4 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Initialize all elements as 5-node systems</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">el_list</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building_surface&quot;</span><span class="p">])</span>
+<span class="n">Pln</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">el_list</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+<p>ISO 52016 default: each opaque surface is modeled with 5 thermal nodes.</p>
+</li>
+<li>
+<p><strong>Adjust per element type</strong></p>
+<ul>
+<li>Transparent (<code>"transparent"</code>) → 2 nodes (external/internal surfaces only).  </li>
+<li>Adiabatic (<code>"adiabatic"</code>) → 0 nodes (no heat transfer).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">surf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building_surface&quot;</span><span class="p">]):</span>
+    <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;transparent&quot;</span><span class="p">:</span>
+        <span class="n">Pln</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adiabatic&quot;</span><span class="p">:</span>
+        <span class="n">Pln</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div>
+</li>
+<li>
+<p><strong>Compute cumulative node index (<code>PlnSum</code>)</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">Eli</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">el_list</span><span class="p">):</span>
+    <span class="n">PlnSum</span><span class="p">[</span><span class="n">Eli</span><span class="p">]</span> <span class="o">=</span> <span class="n">PlnSum</span><span class="p">[</span><span class="n">Eli</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pln</span><span class="p">[</span><span class="n">Eli</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</code></pre></div>
+Each element’s node sequence starts where the previous one ends.</p>
+</li>
+<li>
+<p><strong>Compute the last node index (<code>Rn</code>)</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">Rn</span> <span class="o">=</span> <span class="n">PlnSum</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pln</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+</code></pre></div>
+<p>Adds one final node for matrix dimensioning in the solver.</p>
+</li>
+<li>
+<p><strong>Return wrapper</strong></p>
+<div class="highlight"><pre><span></span><code><span class="k">return</span> <span class="n">numb_nodes_facade_elements</span><span class="p">(</span><span class="n">Rn</span><span class="p">,</span> <span class="n">Pln</span><span class="p">,</span> <span class="n">PlnSum</span><span class="p">)</span>
+</code></pre></div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The type of the surface has been mapped in the calculation using the following code:</p>
+<ul>
+<li><code>OP</code>: Opaque element</li>
+<li><code>W</code>: Transparent element</li>
+<li><code>GR</code>: Ground-contact element</li>
+<li><code>AD</code>: Adiabatic element</li>
+<li><code>ADJ</code>: Adjacent element</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">...</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">surf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building_surface&quot;</span><span class="p">]):</span>
+    <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;opaque&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;sky_view_factor&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;GR&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;OP&quot;</span>
+    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adiabatic&quot;</span><span class="p">:</span>
+        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;AD&quot;</span>
+    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;transparent&quot;</span><span class="p">:</span>
+        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;W&quot;</span>
+    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adjacent&quot;</span><span class="p">:</span>
+        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ADJ&quot;</span>
+    <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;ISO52016_type_string&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre></div>
+</div>
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1361,75 +1420,6 @@ This step is part of the nodal network definition in <strong>EN ISO 52016-1:2017
 </tr>
 </tbody>
 </table>
-<hr />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The type of the surface has been mapped in the calculation using the following code:</p>
-<ul>
-<li><code>OP</code>: Opaque element</li>
-<li><code>W</code>: Transparent element</li>
-<li><code>GR</code>: Ground-contact element</li>
-<li><code>AD</code>: Adiabatic element</li>
-<li><code>ADJ</code>: Adjacent element</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="o">...</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">surf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building_surface&quot;</span><span class="p">]):</span>
-    <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;opaque&quot;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;sky_view_factor&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;GR&quot;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;OP&quot;</span>
-    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adiabatic&quot;</span><span class="p">:</span>
-        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;AD&quot;</span>
-    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;transparent&quot;</span><span class="p">:</span>
-        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;W&quot;</span>
-    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adjacent&quot;</span><span class="p">:</span>
-        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ADJ&quot;</span>
-    <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;ISO52016_type_string&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</code></pre></div>
-</div>
-<h3 id="method-overview">Method Overview<a class="headerlink" href="#method-overview" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>Initialize all elements as 5-node systems</strong></li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><span class="n">el_list</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building_surface&quot;</span><span class="p">])</span>
-<span class="n">Pln</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">el_list</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</code></pre></div>
-   ISO 52016 default: each opaque surface is modeled with 5 thermal nodes.</p>
-<ol>
-<li>
-<p><strong>Adjust per element type</strong></p>
-</li>
-<li>
-<p>Transparent (<code>"transparent"</code>) → 2 nodes (external/internal surfaces only).  </p>
-</li>
-<li>Adiabatic (<code>"adiabatic"</code>) → 0 nodes (no heat transfer).</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">surf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building_surface&quot;</span><span class="p">]):</span>
-    <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;transparent&quot;</span><span class="p">:</span>
-        <span class="n">Pln</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adiabatic&quot;</span><span class="p">:</span>
-        <span class="n">Pln</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-</code></pre></div>
-<ol>
-<li><strong>Compute cumulative node index (<code>PlnSum</code>)</strong></li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">Eli</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">el_list</span><span class="p">):</span>
-    <span class="n">PlnSum</span><span class="p">[</span><span class="n">Eli</span><span class="p">]</span> <span class="o">=</span> <span class="n">PlnSum</span><span class="p">[</span><span class="n">Eli</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pln</span><span class="p">[</span><span class="n">Eli</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</code></pre></div>
-   Each element’s node sequence starts where the previous one ends.</p>
-<ol>
-<li><strong>Compute the last node index (<code>Rn</code>)</strong></li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><span class="n">Rn</span> <span class="o">=</span> <span class="n">PlnSum</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">Pln</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-</code></pre></div>
-   Adds one final node for matrix dimensioning in the solver.</p>
-<ol>
-<li><strong>Return wrapper</strong></li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="k">return</span> <span class="n">numb_nodes_facade_elements</span><span class="p">(</span><span class="n">Rn</span><span class="p">,</span> <span class="n">Pln</span><span class="p">,</span> <span class="n">PlnSum</span><span class="p">)</span>
-</code></pre></div>
-<hr />
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p><div class="highlight"><pre><span></span><code><span class="n">building_object</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;building_surface&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -1445,7 +1435,7 @@ This step is part of the nodal network definition in <strong>EN ISO 52016-1:2017
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pln:&quot;</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">Pln</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PlnSum:&quot;</span><span class="p">,</span> <span class="n">nodes</span><span class="o">.</span><span class="n">PlnSum</span><span class="p">)</span>
 </code></pre></div>
-Output:
+Example Output:
 <div class="highlight"><pre><span></span><code>Rn: 13
 Pln: [5 2 5 0]
 PlnSum: [0 5 7 12]
@@ -1459,15 +1449,9 @@ PlnSum: [0 5 7 12]
 <li>The function prepares data for the later calculation of <strong>heat capacity</strong>, <strong>conductance</strong>, and <strong>solar absorption</strong> matrices.</li>
 </ul>
 <hr />
-<h2 id="function-conduttance_node_of_elementbuilding_object-lambda_gr20">Function: <code>Conduttance_node_of_element(building_object, lambda_gr=2.0)</code><a class="headerlink" href="#function-conduttance_node_of_elementbuilding_object-lambda_gr20" title="Permanent link">&para;</a></h2>
-<h3 id="purpose_1">Purpose<a class="headerlink" href="#purpose_1" title="Permanent link">&para;</a></h3>
-<p>Calculates the <strong>thermal conductance</strong> between the internal nodes (<code>pli</code> and <code>pli-1</code>) of each construction element in accordance with <strong>EN ISO 52016-1 (Section 6.5.7)</strong>.<br />
-It defines the inter-nodal conductances (W/m²·K) that represent the heat transfer capability through each layer of opaque, transparent, or ground-contact elements in the 5-node thermal network model.</p>
-<hr />
-<h3 id="function-signature_1">Function Signature<a class="headerlink" href="#function-signature_1" title="Permanent link">&para;</a></h3>
+<h2 id="calculation-of-conduttance"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Calculation of conduttance </strong></h2><a class="headerlink" href="#calculation-of-conduttance" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Conduttance_node_of_element</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">building_object</span><span class="p">,</span> <span class="n">lambda_gr</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">conduttance_elements</span>
 </code></pre></div>
-<hr />
 <h3 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1493,34 +1477,7 @@ It defines the inter-nodal conductances (W/m²·K) that represent the heat trans
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="required-fields-in-building_objectbuilding_surface_1">Required Fields in <code>building_object["building_surface"]</code><a class="headerlink" href="#required-fields-in-building_objectbuilding_surface_1" title="Permanent link">&para;</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The type of the surface has been mapped in the calculation using the following code:</p>
-<ul>
-<li><code>OP</code>: Opaque element</li>
-<li><code>W</code>: Transparent element</li>
-<li><code>GR</code>: Ground-contact element</li>
-<li><code>AD</code>: Adiabatic element</li>
-<li><code>ADJ</code>: Adjacent element</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="o">...</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">surf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building_surface&quot;</span><span class="p">]):</span>
-    <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;opaque&quot;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;sky_view_factor&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;GR&quot;</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;OP&quot;</span>
-    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adiabatic&quot;</span><span class="p">:</span>
-        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;AD&quot;</span>
-    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;transparent&quot;</span><span class="p">:</span>
-        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;W&quot;</span>
-    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adjacent&quot;</span><span class="p">:</span>
-        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ADJ&quot;</span>
-    <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;ISO52016_type_string&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</code></pre></div>
-</div>
+<h4 id="required-fields-in-building_objectbuilding_surface_1">Required Fields in <code>building_object["building_surface"]</code><a class="headerlink" href="#required-fields-in-building_objectbuilding_surface_1" title="Permanent link">&para;</a></h4>
 <p>Each surface element must include:</p>
 <table>
 <thead>
@@ -1560,24 +1517,10 @@ It defines the inter-nodal conductances (W/m²·K) that represent the heat trans
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>conduttance_elements</code></td>
-<td>Wrapper object containing the matrix <code>h_pli_eli</code> (4×N) where N = number of envelope elements. Each row corresponds to a node pair (<code>pli</code>, <code>pli−1</code>) and each column to an element. Units: <strong>W/m²·K</strong>.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="method-overview_1">Method Overview<a class="headerlink" href="#method-overview_1" title="Permanent link">&para;</a></h3>
+<h3 id="purpose_1">Purpose<a class="headerlink" href="#purpose_1" title="Permanent link">&para;</a></h3>
+<p>Calculates the <strong>thermal conductance</strong> between the internal nodes (<code>pli</code> and <code>pli-1</code>) of each construction element in accordance with <strong>EN ISO 52016-1 (Section 6.5.7)</strong>.<br />
+It defines the inter-nodal conductances (W/m²·K) that represent the heat transfer capability through each layer of opaque, transparent, or ground-contact elements in the 5-node thermal network model.</p>
+<h4 id="how-it-works_1">How it works<a class="headerlink" href="#how-it-works_1" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Initialize constants and arrays</strong></p>
@@ -1585,24 +1528,22 @@ It defines the inter-nodal conductances (W/m²·K) that represent the heat trans
 <li>Ground resistance:  </li>
 </ul>
 <div class="arithmatex">\[ R_{gr} = \frac{0.5}{\lambda_{gr}} \;(\text{m}^2K/W) \]</div>
-</li>
-<li>
-<p>Build lists of:</p>
 <ul>
+<li>Build lists of:<ul>
 <li>element types (<code>el_type</code>),  </li>
 <li>U-values,  </li>
 <li>internal heat-transfer coefficients (<code>h_ci</code>, <code>h_ri</code>),  </li>
 <li>external coefficients (<code>h_ce</code>, <code>h_re</code>).</li>
 </ul>
 </li>
+</ul>
+</li>
 <li>
 <p><strong>Assign external coefficients</strong></p>
-</li>
-<li>
-<p>Default convective = <strong>20 W/m²·K</strong>, radiative = <strong>4.14 W/m²·K</strong>.  </p>
-</li>
-<li>
-<p>For <em>adjacent</em> elements (<code>AD</code>), both coefficients are set to 0 → no external exchange.</p>
+<ul>
+<li>Default convective = <strong>20 W/m²·K</strong>, radiative = <strong>4.14 W/m²·K</strong>.  </li>
+<li>For <em>adjacent</em> elements (<code>AD</code>), both coefficients are set to 0 → no external exchange.</li>
+</ul>
 </li>
 <li>
 <p><strong>Compute construction resistance</strong>  </p>
@@ -1611,8 +1552,6 @@ It defines the inter-nodal conductances (W/m²·K) that represent the heat trans
 </li>
 <li>
 <p><strong>Distribute conductances among layers</strong>  </p>
-</li>
-</ol>
 <p>For each element <em>i</em>, the nodal conductances <code>h_pli_eli[layer, i]</code> are defined as:</p>
 <p><strong>Layer 1 (node pair 1–2)</strong></p>
 <table>
@@ -1694,10 +1633,59 @@ It defines the inter-nodal conductances (W/m²·K) that represent the heat trans
 </tr>
 </tbody>
 </table>
-<ol>
-<li><strong>Return</strong>
-   The final 4×N matrix is wrapped in <code>conduttance_elements(h_pli_eli=h_pli_eli)</code>.</li>
+</li>
+<li>
+<p><strong>Return</strong>
+   The final 4×N matrix is wrapped in <code>conduttance_elements(h_pli_eli=h_pli_eli)</code>.</p>
+</li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The type of the surface has been mapped in the calculation using the following code:</p>
+<ul>
+<li><code>OP</code>: Opaque element</li>
+<li><code>W</code>: Transparent element</li>
+<li><code>GR</code>: Ground-contact element</li>
+<li><code>AD</code>: Adiabatic element</li>
+<li><code>ADJ</code>: Adjacent element</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="o">...</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">surf</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building_surface&quot;</span><span class="p">]):</span>
+    <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;opaque&quot;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;sky_view_factor&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;GR&quot;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;OP&quot;</span>
+    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adiabatic&quot;</span><span class="p">:</span>
+        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;AD&quot;</span>
+    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;transparent&quot;</span><span class="p">:</span>
+        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;W&quot;</span>
+    <span class="k">elif</span> <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;type&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;adjacent&quot;</span><span class="p">:</span>
+        <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ADJ&quot;</span>
+    <span class="n">surf</span><span class="p">[</span><span class="s2">&quot;ISO52016_type_string&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">typology_elements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre></div>
+</div>
+<h3 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>conduttance_elements</code></td>
+<td>Wrapper object containing the matrix <code>h_pli_eli</code> (4×N) where N = number of envelope elements. Each row corresponds to a node pair (<code>pli</code>, <code>pli−1</code>) and each column to an element. Units: <strong>W/m²·K</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="n">h</span> <span class="o">=</span> <span class="n">Conduttance_node_of_element</span><span class="p">(</span><span class="n">building_object</span><span class="o">=</span><span class="n">bui</span><span class="p">,</span> <span class="n">lambda_gr</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
+<span class="n">H</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">h_pli_eli</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># (4, N)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">H</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># conductance values for element #0</span>
+</code></pre></div>
 <hr />
 <h3 id="notes_1">Notes<a class="headerlink" href="#notes_1" title="Permanent link">&para;</a></h3>
 <ul>
@@ -1707,13 +1695,6 @@ It defines the inter-nodal conductances (W/m²·K) that represent the heat trans
 <li>Default coefficients (20 W/m²·K, 4.14 W/m²·K) are consistent with <strong>ISO 13789</strong> recommendations.  </li>
 <li>The 4 layers correspond to the 5-node surface temperature network used in ISO 52016.  </li>
 </ul>
-<hr />
-<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">h</span> <span class="o">=</span> <span class="n">Conduttance_node_of_element</span><span class="p">(</span><span class="n">building_object</span><span class="o">=</span><span class="n">bui</span><span class="p">,</span> <span class="n">lambda_gr</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
-<span class="n">H</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">h_pli_eli</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">H</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># (4, N)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">H</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span>  <span class="c1"># conductance values for element #0</span>
-</code></pre></div>
 <hr />
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <ul>

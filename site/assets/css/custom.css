@@ -7,3 +7,22 @@ th, td {
   word-wrap: break-word;
   text-align: left;
 }
+
+
+/* Change header bar background color */
+.md-header {
+  background-color:#D8DADA;
+  color:rgb(223 27 18) !important;
+}
+
+:root {
+  --md-accent-fg-color: #666B6C;  /* grey */
+  --md-accent-fg-color--transparent: rgba(158, 158, 158, 0.1);
+}
+
+/* ACTIVE PAGE LINK (selected page in sidebar or top nav) */
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: #DF1B12 !important; /* grey for active links */
+}

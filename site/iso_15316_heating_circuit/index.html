@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -465,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +608,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -751,8 +743,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -781,14 +771,21 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#heating-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      HEATING CIRCUIT
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#system-type-and-input-parameters" class="md-nav__link">
@@ -955,14 +952,21 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#heating-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      HEATING CIRCUIT
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#system-type-and-input-parameters" class="md-nav__link">
@@ -1056,7 +1060,7 @@
   
 
 
-<h1 id="heating-circuit">Heating circuit.<a class="headerlink" href="#heating-circuit" title="Permanent link">&para;</a></h1>
+<h2 id="heating-circuit"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>HEATING CIRCUIT</strong></h1><a class="headerlink" href="#heating-circuit" title="Permanent link">&para;</a></h2>
 <p>The library provides modules for evaluating 4 types of hydraulic circuits, where, based on Table C.1 of the standard, for each circuit it is identified which type of emission system to use and the type of control. as defined below: </p>
 <table>
 <thead>
@@ -1098,8 +1102,8 @@
 - the emitter tmperature and flow rate;
 - the circuit temperature and flow rate; </p>
 <p>They differ where there is a mixing or by-pass 3 way valve in the circuit.</p>
-<h2 id="system-type-and-input-parameters">System type and input parameters<a class="headerlink" href="#system-type-and-input-parameters" title="Permanent link">&para;</a></h2>
-<h3 id="c2-constant-mass-flow-rate-and-varying-water-temperature">C2 - constant mass flow rate and varying water temperature<a class="headerlink" href="#c2-constant-mass-flow-rate-and-varying-water-temperature" title="Permanent link">&para;</a></h3>
+<h2 id="system-type-and-input-parameters"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>System type and input parameters</strong></h2><a class="headerlink" href="#system-type-and-input-parameters" title="Permanent link">&para;</a></h2>
+<h3 id="c2-constant-mass-flow-rate-and-varying-water-temperature"><strong>C2 - constant mass flow rate and varying water temperature</strong><a class="headerlink" href="#c2-constant-mass-flow-rate-and-varying-water-temperature" title="Permanent link">&para;</a></h3>
 <p>This conffiguration is for sample heating circuit with varying temperature and constant flow, with mixing valve. </p>
 <figure align="center">
   <img src="../assets/images/system_c2.png" alt="System C2">
@@ -1291,7 +1295,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="c3-varying-mass-flow-rate-and-constant-water-temperature">C3 - varying mass flow rate and constant water temperature<a class="headerlink" href="#c3-varying-mass-flow-rate-and-constant-water-temperature" title="Permanent link">&para;</a></h3>
+<h3 id="c3-varying-mass-flow-rate-and-constant-water-temperature"><strong>C3 - varying mass flow rate and constant water temperature</strong><a class="headerlink" href="#c3-varying-mass-flow-rate-and-constant-water-temperature" title="Permanent link">&para;</a></h3>
 <p>This configuration is for sample heating circuit with varying mass flow rate and constant water temperature. </p>
 <figure align="center">
   <img src="../assets/images/system_c3_1.png" alt="System C3-1">
@@ -1513,7 +1517,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="c4-intermittent-flow-rate-module-on-off">C4 - Intermittent flow rate module (ON-OFF)<a class="headerlink" href="#c4-intermittent-flow-rate-module-on-off" title="Permanent link">&para;</a></h3>
+<h3 id="c4-intermittent-flow-rate-module-on-off"><strong>C4 - Intermittent flow rate module (ON-OFF)</strong><a class="headerlink" href="#c4-intermittent-flow-rate-module-on-off" title="Permanent link">&para;</a></h3>
 <p>This configuration is for sample heating circuit with intermittent flow rate and constant water temperature. </p>
 <figure align="center">
   <img src="../assets/images/system_c4.png" alt="System C4">
@@ -1711,7 +1715,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="c5-constant-flow-rate-and-variable-heat-exchange">C5 - Constant flow rate and variable heat exchange<a class="headerlink" href="#c5-constant-flow-rate-and-variable-heat-exchange" title="Permanent link">&para;</a></h3>
+<h3 id="c5-constant-flow-rate-and-variable-heat-exchange"><strong>C5 - Constant flow rate and variable heat exchange</strong><a class="headerlink" href="#c5-constant-flow-rate-and-variable-heat-exchange" title="Permanent link">&para;</a></h3>
 <figure align="center">
   <img src="../assets/images/system_c5_1.png" alt="System C5-1">
   <figcaption><b>Figure 1:</b> System C5-1 - Example of sample heating circuit with varying heat exchange

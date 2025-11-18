@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -465,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +608,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -772,8 +764,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -802,8 +792,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -812,6 +800,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERATION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GENERATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#direct-circuit" class="md-nav__link">
     <span class="md-ellipsis">
       DIRECT circuit
@@ -819,13 +817,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#independent-circuit" class="md-nav__link">
     <span class="md-ellipsis">
       INDEPENDENT circuit
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -913,8 +916,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -923,6 +924,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENERATION
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GENERATION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#direct-circuit" class="md-nav__link">
     <span class="md-ellipsis">
       DIRECT circuit
@@ -930,13 +941,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#independent-circuit" class="md-nav__link">
     <span class="md-ellipsis">
       INDEPENDENT circuit
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -972,13 +988,13 @@
   
 
 
-<h1 id="generation">GENERATION<a class="headerlink" href="#generation" title="Permanent link">&para;</a></h1>
+<h2 id="generation"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>GENERATION</strong></h1><a class="headerlink" href="#generation" title="Permanent link">&para;</a></h2>
 <p>The annex D of ISO 15316-1 standard provides the calculation procedure for the generation circuit.
 It is the general procedure that can be improved using the detailed standards for different type of generator, such as Heat pump, Combustion boilers, District heating and cooling, etc. </p>
 <p>There are 2 typed of generaiont circuit:</p>
 <p>1) Generation with <strong>DIRECT</strong> circuit withou hydraulic separtion
 2) Generation with <strong>INDIPENDENT</strong> flow rate circuit, using the hydraulic separtion</p>
-<h2 id="direct-circuit">DIRECT circuit<a class="headerlink" href="#direct-circuit" title="Permanent link">&para;</a></h2>
+<h3 id="direct-circuit"><strong>DIRECT circuit</strong><a class="headerlink" href="#direct-circuit" title="Permanent link">&para;</a></h3>
 <figure align="center">
   <img src="../assets/images/Generator_1.png" alt="Direct circuit">
   <figcaption><b>Figure 1:</b> System C5-1 - Example of sample heating circuit with varying heat exchange
@@ -1054,7 +1070,7 @@ In the pybuildingenergy, the contol have been applied on the generator based on:
 </tr>
 </tbody>
 </table>
-<h2 id="independent-circuit">INDEPENDENT circuit<a class="headerlink" href="#independent-circuit" title="Permanent link">&para;</a></h2>
+<h3 id="independent-circuit"><strong>INDEPENDENT circuit</strong><a class="headerlink" href="#independent-circuit" title="Permanent link">&para;</a></h3>
 <figure align="center">
   <img src="../assets/images/Generator_2.png" alt="Indipendent circuit">
   <figcaption><b>Figure 1:</b> System C5-1 - Example of sample heating circuit with varying heat exchange

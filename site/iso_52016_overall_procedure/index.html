@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -76,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overall-procedure-energy-need-en-iso-52016-step-by-step-guide" class="md-skip">
+        <a href="#overall-procedure-energy-need-en-iso-52016" class="md-skip">
           Skip to content
         </a>
       
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -467,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,7 +610,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -640,8 +632,6 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
-      
-        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -671,8 +661,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -681,46 +669,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-temperature_and_energy_needs_calculation" class="md-nav__link">
+  <a href="#overall-procedure-energy-need-en-iso-52016" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: Temperature_and_Energy_needs_calculation(...)
+      Overall procedure - Energy Need EN ISO 52016
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#0-function-signature" class="md-nav__link">
+  <a href="#inputs" class="md-nav__link">
     <span class="md-ellipsis">
-      0) Function signature
+      Inputs
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-inputs-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      1) Inputs &amp; parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1) Inputs & parameters">
+    <nav class="md-nav" aria-label="Inputs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-building-description-building_object" class="md-nav__link">
+  <a href="#building-description-building_object" class="md-nav__link">
     <span class="md-ellipsis">
-      1.1 Building description (building_object)
+      Building description (building_object)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-model-parameters-function-arguments" class="md-nav__link">
+  <a href="#model-parameters-function-arguments" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2 Model parameters (function arguments)
+      Model parameters (function arguments)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
     </span>
   </a>
   
@@ -732,82 +720,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-weather-timebase" class="md-nav__link">
+  <a href="#1-weather-timebase" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Weather &amp; timebase
+      1) Weather &amp; timebase
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-surface-hydration-classification-and-aggregation" class="md-nav__link">
+  <a href="#2-surface-hydration-classification-and-aggregation" class="md-nav__link">
     <span class="md-ellipsis">
-      3) Surface hydration, classification, and aggregation
+      2) Surface hydration, classification, and aggregation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-zone-state-node-topology" class="md-nav__link">
+  <a href="#3-zone-state-node-topology" class="md-nav__link">
     <span class="md-ellipsis">
-      4) Zone state &amp; node topology
+      3) Zone state &amp; node topology
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-ground-thermal-bridges-and-solar-preparatory-data" class="md-nav__link">
+  <a href="#4-ground-thermal-bridges-and-solar-preparatory-data" class="md-nav__link">
     <span class="md-ellipsis">
-      5) Ground, thermal bridges, and solar preparatory data
+      4) Ground, thermal bridges, and solar preparatory data
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-internal-and-ventilation-gains-profiles" class="md-nav__link">
+  <a href="#5-internal-and-ventilation-gains-profiles" class="md-nav__link">
     <span class="md-ellipsis">
-      6) Internal and ventilation gains &amp; profiles
+      5) Internal and ventilation gains &amp; profiles
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-adjacent-unconditioned-zones-if-any" class="md-nav__link">
+  <a href="#6-adjacent-unconditioned-zones-if-any" class="md-nav__link">
     <span class="md-ellipsis">
-      7) Adjacent (unconditioned) zones (if any)
+      6) Adjacent (unconditioned) zones (if any)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-pertimestep-assembly-iso-52016-equations" class="md-nav__link">
+  <a href="#7-pertimestep-assembly-iso-52016-equations" class="md-nav__link">
     <span class="md-ellipsis">
-      8) Per‑timestep assembly (ISO 52016 equations)
+      7) Per‑timestep assembly (ISO 52016 equations)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="8) Per‑timestep assembly (ISO 52016 equations)">
+    <nav class="md-nav" aria-label="7) Per‑timestep assembly (ISO 52016 equations)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#81-righthand-side-b-contributions" class="md-nav__link">
+  <a href="#71-righthand-side-b-contributions" class="md-nav__link">
     <span class="md-ellipsis">
-      8.1 Right‑hand side B contributions
+      7.1 Right‑hand side B contributions
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-matrix-a-contributions" class="md-nav__link">
+  <a href="#72-matrix-a-contributions" class="md-nav__link">
     <span class="md-ellipsis">
-      8.2 Matrix A contributions
+      7.2 Matrix A contributions
     </span>
   </a>
   
@@ -819,55 +807,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-solve-the-systems-and-compute-operative-temperatures" class="md-nav__link">
+  <a href="#8-solve-the-systems-and-compute-operative-temperatures" class="md-nav__link">
     <span class="md-ellipsis">
-      9) Solve the system(s) and compute operative temperatures
+      8) Solve the system(s) and compute operative temperatures
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-hvac-setpoint-logic-iso-52016-6552" class="md-nav__link">
+  <a href="#9-hvac-setpoint-logic-iso-52016-6552" class="md-nav__link">
     <span class="md-ellipsis">
-      10) HVAC setpoint logic (ISO 52016 §6.5.5.2)
+      9) HVAC setpoint logic (ISO 52016 §6.5.5.2)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-energy-accounting-sankey-style-optional" class="md-nav__link">
+  <a href="#10-energy-accounting-sankey-style-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      11) Energy accounting (Sankey-style, optional)
+      10) Energy accounting (Sankey-style, optional)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-build-outputs" class="md-nav__link">
+  <a href="#11-build-outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      12) Build outputs
+      11) Build outputs
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="12) Build outputs">
+    <nav class="md-nav" aria-label="11) Build outputs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#121-hourly-results-after-warmup" class="md-nav__link">
+  <a href="#111-hourly-results-after-warmup" class="md-nav__link">
     <span class="md-ellipsis">
-      12.1 Hourly results (after warm‑up)
+      11.1 Hourly results (after warm‑up)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#122-annual-aggregation" class="md-nav__link">
+  <a href="#112-annual-aggregation" class="md-nav__link">
     <span class="md-ellipsis">
-      12.2 Annual aggregation
+      11.2 Annual aggregation
     </span>
   </a>
   
@@ -879,54 +867,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#13-units-conventions" class="md-nav__link">
+  <a href="#12-units-conventions" class="md-nav__link">
     <span class="md-ellipsis">
-      13) Units &amp; conventions
+      12) Units &amp; conventions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#14-numerical-stability-robustness" class="md-nav__link">
+  <a href="#13-numerical-stability-robustness" class="md-nav__link">
     <span class="md-ellipsis">
-      14) Numerical stability &amp; robustness
+      13) Numerical stability &amp; robustness
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#15-minimal-checklist-before-running" class="md-nav__link">
+  <a href="#14-minimal-checklist-before-running" class="md-nav__link">
     <span class="md-ellipsis">
-      15) Minimal checklist before running
+      14) Minimal checklist before running
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#16-worked-outline-pseudoalgorithm" class="md-nav__link">
+  <a href="#15-worked-outline-pseudoalgorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      16) Worked outline (pseudo‑algorithm)
+      15) Worked outline (pseudo‑algorithm)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#17-interpretation-tips" class="md-nav__link">
+  <a href="#16-interpretation-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      17) Interpretation tips
+      16) Interpretation tips
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#18-common-pitfalls-remedies" class="md-nav__link">
+  <a href="#17-common-pitfalls-remedies" class="md-nav__link">
     <span class="md-ellipsis">
-      18) Common pitfalls &amp; remedies
+      17) Common pitfalls &amp; remedies
     </span>
   </a>
   
@@ -1138,8 +1126,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1148,46 +1134,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-temperature_and_energy_needs_calculation" class="md-nav__link">
+  <a href="#overall-procedure-energy-need-en-iso-52016" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: Temperature_and_Energy_needs_calculation(...)
+      Overall procedure - Energy Need EN ISO 52016
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#0-function-signature" class="md-nav__link">
+  <a href="#inputs" class="md-nav__link">
     <span class="md-ellipsis">
-      0) Function signature
+      Inputs
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-inputs-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      1) Inputs &amp; parameters
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1) Inputs & parameters">
+    <nav class="md-nav" aria-label="Inputs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#11-building-description-building_object" class="md-nav__link">
+  <a href="#building-description-building_object" class="md-nav__link">
     <span class="md-ellipsis">
-      1.1 Building description (building_object)
+      Building description (building_object)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#12-model-parameters-function-arguments" class="md-nav__link">
+  <a href="#model-parameters-function-arguments" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2 Model parameters (function arguments)
+      Model parameters (function arguments)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose
     </span>
   </a>
   
@@ -1199,82 +1185,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-weather-timebase" class="md-nav__link">
+  <a href="#1-weather-timebase" class="md-nav__link">
     <span class="md-ellipsis">
-      2) Weather &amp; timebase
+      1) Weather &amp; timebase
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-surface-hydration-classification-and-aggregation" class="md-nav__link">
+  <a href="#2-surface-hydration-classification-and-aggregation" class="md-nav__link">
     <span class="md-ellipsis">
-      3) Surface hydration, classification, and aggregation
+      2) Surface hydration, classification, and aggregation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-zone-state-node-topology" class="md-nav__link">
+  <a href="#3-zone-state-node-topology" class="md-nav__link">
     <span class="md-ellipsis">
-      4) Zone state &amp; node topology
+      3) Zone state &amp; node topology
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-ground-thermal-bridges-and-solar-preparatory-data" class="md-nav__link">
+  <a href="#4-ground-thermal-bridges-and-solar-preparatory-data" class="md-nav__link">
     <span class="md-ellipsis">
-      5) Ground, thermal bridges, and solar preparatory data
+      4) Ground, thermal bridges, and solar preparatory data
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-internal-and-ventilation-gains-profiles" class="md-nav__link">
+  <a href="#5-internal-and-ventilation-gains-profiles" class="md-nav__link">
     <span class="md-ellipsis">
-      6) Internal and ventilation gains &amp; profiles
+      5) Internal and ventilation gains &amp; profiles
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-adjacent-unconditioned-zones-if-any" class="md-nav__link">
+  <a href="#6-adjacent-unconditioned-zones-if-any" class="md-nav__link">
     <span class="md-ellipsis">
-      7) Adjacent (unconditioned) zones (if any)
+      6) Adjacent (unconditioned) zones (if any)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-pertimestep-assembly-iso-52016-equations" class="md-nav__link">
+  <a href="#7-pertimestep-assembly-iso-52016-equations" class="md-nav__link">
     <span class="md-ellipsis">
-      8) Per‑timestep assembly (ISO 52016 equations)
+      7) Per‑timestep assembly (ISO 52016 equations)
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="8) Per‑timestep assembly (ISO 52016 equations)">
+    <nav class="md-nav" aria-label="7) Per‑timestep assembly (ISO 52016 equations)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#81-righthand-side-b-contributions" class="md-nav__link">
+  <a href="#71-righthand-side-b-contributions" class="md-nav__link">
     <span class="md-ellipsis">
-      8.1 Right‑hand side B contributions
+      7.1 Right‑hand side B contributions
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#82-matrix-a-contributions" class="md-nav__link">
+  <a href="#72-matrix-a-contributions" class="md-nav__link">
     <span class="md-ellipsis">
-      8.2 Matrix A contributions
+      7.2 Matrix A contributions
     </span>
   </a>
   
@@ -1286,55 +1272,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-solve-the-systems-and-compute-operative-temperatures" class="md-nav__link">
+  <a href="#8-solve-the-systems-and-compute-operative-temperatures" class="md-nav__link">
     <span class="md-ellipsis">
-      9) Solve the system(s) and compute operative temperatures
+      8) Solve the system(s) and compute operative temperatures
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-hvac-setpoint-logic-iso-52016-6552" class="md-nav__link">
+  <a href="#9-hvac-setpoint-logic-iso-52016-6552" class="md-nav__link">
     <span class="md-ellipsis">
-      10) HVAC setpoint logic (ISO 52016 §6.5.5.2)
+      9) HVAC setpoint logic (ISO 52016 §6.5.5.2)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#11-energy-accounting-sankey-style-optional" class="md-nav__link">
+  <a href="#10-energy-accounting-sankey-style-optional" class="md-nav__link">
     <span class="md-ellipsis">
-      11) Energy accounting (Sankey-style, optional)
+      10) Energy accounting (Sankey-style, optional)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#12-build-outputs" class="md-nav__link">
+  <a href="#11-build-outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      12) Build outputs
+      11) Build outputs
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="12) Build outputs">
+    <nav class="md-nav" aria-label="11) Build outputs">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#121-hourly-results-after-warmup" class="md-nav__link">
+  <a href="#111-hourly-results-after-warmup" class="md-nav__link">
     <span class="md-ellipsis">
-      12.1 Hourly results (after warm‑up)
+      11.1 Hourly results (after warm‑up)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#122-annual-aggregation" class="md-nav__link">
+  <a href="#112-annual-aggregation" class="md-nav__link">
     <span class="md-ellipsis">
-      12.2 Annual aggregation
+      11.2 Annual aggregation
     </span>
   </a>
   
@@ -1346,54 +1332,54 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#13-units-conventions" class="md-nav__link">
+  <a href="#12-units-conventions" class="md-nav__link">
     <span class="md-ellipsis">
-      13) Units &amp; conventions
+      12) Units &amp; conventions
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#14-numerical-stability-robustness" class="md-nav__link">
+  <a href="#13-numerical-stability-robustness" class="md-nav__link">
     <span class="md-ellipsis">
-      14) Numerical stability &amp; robustness
+      13) Numerical stability &amp; robustness
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#15-minimal-checklist-before-running" class="md-nav__link">
+  <a href="#14-minimal-checklist-before-running" class="md-nav__link">
     <span class="md-ellipsis">
-      15) Minimal checklist before running
+      14) Minimal checklist before running
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#16-worked-outline-pseudoalgorithm" class="md-nav__link">
+  <a href="#15-worked-outline-pseudoalgorithm" class="md-nav__link">
     <span class="md-ellipsis">
-      16) Worked outline (pseudo‑algorithm)
+      15) Worked outline (pseudo‑algorithm)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#17-interpretation-tips" class="md-nav__link">
+  <a href="#16-interpretation-tips" class="md-nav__link">
     <span class="md-ellipsis">
-      17) Interpretation tips
+      16) Interpretation tips
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#18-common-pitfalls-remedies" class="md-nav__link">
+  <a href="#17-common-pitfalls-remedies" class="md-nav__link">
     <span class="md-ellipsis">
-      18) Common pitfalls &amp; remedies
+      17) Common pitfalls &amp; remedies
     </span>
   </a>
   
@@ -1422,12 +1408,7 @@
   
 
 
-<h1 id="overall-procedure-energy-need-en-iso-52016-step-by-step-guide">Overall procedure - Energy Need EN ISO 52016. Step by Step Guide<a class="headerlink" href="#overall-procedure-energy-need-en-iso-52016-step-by-step-guide" title="Permanent link">&para;</a></h1>
-<h2 id="function-temperature_and_energy_needs_calculation">Function: <code>Temperature_and_Energy_needs_calculation(...)</code><a class="headerlink" href="#function-temperature_and_energy_needs_calculation" title="Permanent link">&para;</a></h2>
-<p>This guide explains how the <code>Temperature_and_Energy_needs_calculation(...)</code> classmethod computes hourly <strong>operative temperatures</strong> and <strong>heating/cooling needs</strong> following <strong>ISO 52016:2017</strong>. 
-It walks through inputs, preprocessing, per‑timestep assembly of the linear system, HVAC setpoint logic, numerical safeguards, and outputs.</p>
-<hr />
-<h2 id="0-function-signature">0) Function signature<a class="headerlink" href="#0-function-signature" title="Permanent link">&para;</a></h2>
+<h2 id="overall-procedure-energy-need-en-iso-52016"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Overall procedure - Energy Need EN ISO 52016</strong></h1><a class="headerlink" href="#overall-procedure-energy-need-en-iso-52016" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nd">@classmethod</span>
 <span class="k">def</span> <span class="nf">Temperature_and_Energy_needs_calculation</span><span class="p">(</span>
     <span class="bp">cls</span><span class="p">,</span>
@@ -1442,21 +1423,11 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
     <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>   <span class="c1"># weather_source=&#39;pvgis&#39; | &#39;epw&#39;, path_weather_file=... (when epw)</span>
 <span class="p">)</span>
 </code></pre></div>
-<p><strong>Purpose</strong>: Solve the <strong>zone energy balance</strong> hour by hour:</p>
-<div class="arithmatex">\[
-\underbrace{\mathbf{A}}_{\text{conduction + convection + radiation + capacities}} 
-\cdot 
-\underbrace{\mathbf{X}}_{\text{node temps}}
-=
-\underbrace{\mathbf{B}}_{\text{weather + gains + HVAC}}
-\]</div>
-<ul>
-<li><code>X</code> contains the unknown temperatures at the <strong>air node</strong> (zone) and the <strong>conduction nodes</strong> for each surface.</li>
-<li>The solution is computed for up to <strong>three columns</strong>: free-floating, heating-upper, cooling-upper.</li>
-</ul>
+<p>This guide explains how the <code>Temperature_and_Energy_needs_calculation(...)</code> classmethod computes hourly <strong>operative temperatures</strong> and <strong>heating/cooling needs</strong> following <strong>ISO 52016:2017</strong>. 
+It walks through inputs, preprocessing, per‑timestep assembly of the linear system, HVAC setpoint logic, numerical safeguards, and outputs.</p>
 <hr />
-<h2 id="1-inputs-parameters">1) Inputs &amp; parameters<a class="headerlink" href="#1-inputs-parameters" title="Permanent link">&para;</a></h2>
-<h3 id="11-building-description-building_object">1.1 Building description (<code>building_object</code>)<a class="headerlink" href="#11-building-description-building_object" title="Permanent link">&para;</a></h3>
+<h2 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h2>
+<h3 id="building-description-building_object">Building description (<code>building_object</code>)<a class="headerlink" href="#building-description-building_object" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>building.net_floor_area</code> (m²)</li>
 <li><code>building_parameters.temperature_setpoints</code></li>
@@ -1470,7 +1441,7 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
 <li>windows: <code>g_value</code>, shading info (optional)</li>
 <li>optional <strong>adjacent zones</strong> block for coupling to unconditioned zones.</li>
 </ul>
-<h3 id="12-model-parameters-function-arguments">1.2 Model parameters (function arguments)<a class="headerlink" href="#12-model-parameters-function-arguments" title="Permanent link">&para;</a></h3>
+<h3 id="model-parameters-function-arguments">Model parameters (function arguments)<a class="headerlink" href="#model-parameters-function-arguments" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>nrHCmodes</code> — modes evaluated: 1=free, 2=H or C, 3=both (default 2).</li>
 <li><code>c_int_per_A_us</code> — areal internal capacity (J/m²K) → multiplied by <code>net_floor_area</code> to get <code>C_int</code>.</li>
@@ -1480,7 +1451,21 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
 <li><code>kwargs</code>: weather provider (<code>"pvgis"</code> or <code>"epw"</code>, with <code>path_weather_file</code> for EPW).</li>
 </ul>
 <hr />
-<h2 id="2-weather-timebase">2) Weather &amp; timebase<a class="headerlink" href="#2-weather-timebase" title="Permanent link">&para;</a></h2>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
+<p><strong>Purpose</strong>: Solve the <strong>zone energy balance</strong> hour by hour:</p>
+<div class="arithmatex">\[
+\underbrace{\mathbf{A}}_{\text{conduction + convection + radiation + capacities}} 
+\cdot 
+\underbrace{\mathbf{X}}_{\text{node temps}}
+=
+\underbrace{\mathbf{B}}_{\text{weather + gains + HVAC}}
+\]</div>
+<ul>
+<li><code>X</code> contains the unknown temperatures at the <strong>air node</strong> (zone) and the <strong>conduction nodes</strong> for each surface.</li>
+<li>The solution is computed for up to <strong>three columns</strong>: free-floating, heating-upper, cooling-upper.</li>
+</ul>
+<hr />
+<h2 id="1-weather-timebase">1) Weather &amp; timebase<a class="headerlink" href="#1-weather-timebase" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Choose weather source:<ul>
 <li><code>"pvgis"</code> → provider called without a file path.</li>
@@ -1495,7 +1480,7 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
 <li>Define <code>Dtime = 3600 s</code> for each hour (1‑hour step).</li>
 </ol>
 <hr />
-<h2 id="3-surface-hydration-classification-and-aggregation">3) Surface hydration, classification, and aggregation<a class="headerlink" href="#3-surface-hydration-classification-and-aggregation" title="Permanent link">&para;</a></h2>
+<h2 id="2-surface-hydration-classification-and-aggregation">2) Surface hydration, classification, and aggregation<a class="headerlink" href="#2-surface-hydration-classification-and-aggregation" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Classify</strong> each surface:<ul>
 <li><code>"GR"</code>: ground (opaque with <code>sky_view_factor == 0</code>)</li>
@@ -1520,7 +1505,7 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
 <li><strong>Aggregate</strong> by direction (optional internal step) to simplify the system, then <strong>rebuild arrays</strong> (types, orientations, <code>h_ci</code>, <code>h_ce</code>, <code>h_ri</code>, <code>h_re</code>, areas, <code>g_value</code>, <code>sky_view_factor</code>).</li>
 </ol>
 <hr />
-<h2 id="4-zone-state-node-topology">4) Zone state &amp; node topology<a class="headerlink" href="#4-zone-state-node-topology" title="Permanent link">&para;</a></h2>
+<h2 id="3-zone-state-node-topology">3) Zone state &amp; node topology<a class="headerlink" href="#3-zone-state-node-topology" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Node graph</strong> (<code>Number_of_nodes_element</code>):<ul>
 <li>Node index <code>0</code> → <strong>zone air/furniture</strong>.</li>
@@ -1544,7 +1529,7 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
 </li>
 </ol>
 <hr />
-<h2 id="5-ground-thermal-bridges-and-solar-preparatory-data">5) Ground, thermal bridges, and solar preparatory data<a class="headerlink" href="#5-ground-thermal-bridges-and-solar-preparatory-data" title="Permanent link">&para;</a></h2>
+<h2 id="4-ground-thermal-bridges-and-solar-preparatory-data">4) Ground, thermal bridges, and solar preparatory data<a class="headerlink" href="#4-ground-thermal-bridges-and-solar-preparatory-data" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Ground</strong> model: <code>Temp_calculation_of_ground(building_object)</code> returns:<ul>
 <li>monthly ground temperature <code>Theta_gr_ve[1..12]</code></li>
@@ -1562,7 +1547,7 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
 </li>
 </ol>
 <hr />
-<h2 id="6-internal-and-ventilation-gains-profiles">6) Internal and ventilation gains &amp; profiles<a class="headerlink" href="#6-internal-and-ventilation-gains-profiles" title="Permanent link">&para;</a></h2>
+<h2 id="5-internal-and-ventilation-gains-profiles">5) Internal and ventilation gains &amp; profiles<a class="headerlink" href="#5-internal-and-ventilation-gains-profiles" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Build hourly <strong>profiles</strong>:<ul>
 <li><code>occupancy_profile</code>, <code>appliances_profile</code>, <code>lighting_profile</code></li>
@@ -1579,7 +1564,7 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
 </li>
 </ol>
 <hr />
-<h2 id="7-adjacent-unconditioned-zones-if-any">7) Adjacent (unconditioned) zones (if any)<a class="headerlink" href="#7-adjacent-unconditioned-zones-if-any" title="Permanent link">&para;</a></h2>
+<h2 id="6-adjacent-unconditioned-zones-if-any">6) Adjacent (unconditioned) zones (if any)<a class="headerlink" href="#6-adjacent-unconditioned-zones-if-any" title="Permanent link">&para;</a></h2>
 <ol>
 <li>If <code>adj_zones_present</code>:<ul>
 <li>Use ISO 13789 to calculate the transmission (<code>H_ztu</code>, <code>b_ztu</code>, <code>F_ztc_ztu_m</code>) per adjacent zone.</li>
@@ -1595,9 +1580,9 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
 <li>For <strong>ADJ</strong> surfaces, use <code>θ_ztu(t)</code> as the <strong>external boundary</strong> in the matrix assembly.</li>
 </ol>
 <hr />
-<h2 id="8-pertimestep-assembly-iso-52016-equations">8) Per‑timestep assembly (ISO 52016 equations)<a class="headerlink" href="#8-pertimestep-assembly-iso-52016-equations" title="Permanent link">&para;</a></h2>
+<h2 id="7-pertimestep-assembly-iso-52016-equations">7) Per‑timestep assembly (ISO 52016 equations)<a class="headerlink" href="#7-pertimestep-assembly-iso-52016-equations" title="Permanent link">&para;</a></h2>
 <p>At each hour <strong>t</strong>, assemble the system for up to <strong>3 columns</strong> (free, heating-upper, cooling-upper):</p>
-<h3 id="81-righthand-side-b-contributions">8.1 Right‑hand side <code>B</code> contributions<a class="headerlink" href="#81-righthand-side-b-contributions" title="Permanent link">&para;</a></h3>
+<h3 id="71-righthand-side-b-contributions">7.1 Right‑hand side <code>B</code> contributions<a class="headerlink" href="#71-righthand-side-b-contributions" title="Permanent link">&para;</a></h3>
 <p>For the <strong>zone air node (row 0)</strong>:</p>
 <ul>
 <li><strong>Capacitive carryover</strong>: <code>(C_int / Δt) · θ_old_air</code></li>
@@ -1620,7 +1605,7 @@ It walks through inputs, preprocessing, per‑timestep assembly of the linear sy
 <li>For <strong>ADJ</strong> surfaces, use <code>T_adj_zone(t)</code> instead of <code>T_out(t)</code>.</li>
 <li>For <strong>GR</strong> surfaces, use <code>(1/R_gr) · T_ground(month)</code>.</li>
 </ul>
-<h3 id="82-matrix-a-contributions">8.2 Matrix <code>A</code> contributions<a class="headerlink" href="#82-matrix-a-contributions" title="Permanent link">&para;</a></h3>
+<h3 id="72-matrix-a-contributions">7.2 Matrix <code>A</code> contributions<a class="headerlink" href="#72-matrix-a-contributions" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Zone air row (0,0)</strong>:<ul>
 <li>add <code>(C_int/Δt) + H_ve + H_tb + Σ (A_eli·h_ci_eli)</code>  </li>
@@ -1653,7 +1638,7 @@ h_{ri,eli} \cdot \sum_k \left( \frac{A_k}{A_\text{int,tot}} \right)
 <p>A small <strong>diagonal regularization</strong> is applied to keep <code>A</code> non‑singular.</p>
 </blockquote>
 <hr />
-<h2 id="9-solve-the-systems-and-compute-operative-temperatures">9) Solve the system(s) and compute operative temperatures<a class="headerlink" href="#9-solve-the-systems-and-compute-operative-temperatures" title="Permanent link">&para;</a></h2>
+<h2 id="8-solve-the-systems-and-compute-operative-temperatures">8) Solve the system(s) and compute operative temperatures<a class="headerlink" href="#8-solve-the-systems-and-compute-operative-temperatures" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Check rank/conditioning; regularize if needed.</li>
 <li>Solve <code>A·X = B</code> for each column (free, heating-upper, cooling-upper).</li>
@@ -1665,7 +1650,7 @@ h_{ri,eli} \cdot \sum_k \left( \frac{A_k}{A_\text{int,tot}} \right)
 </li>
 </ol>
 <hr />
-<h2 id="10-hvac-setpoint-logic-iso-52016-6552">10) HVAC setpoint logic (ISO 52016 §6.5.5.2)<a class="headerlink" href="#10-hvac-setpoint-logic-iso-52016-6552" title="Permanent link">&para;</a></h2>
+<h2 id="9-hvac-setpoint-logic-iso-52016-6552">9) HVAC setpoint logic (ISO 52016 §6.5.5.2)<a class="headerlink" href="#9-hvac-setpoint-logic-iso-52016-6552" title="Permanent link">&para;</a></h2>
 <p>For each hour:</p>
 <ol>
 <li>
@@ -1694,7 +1679,7 @@ h_{ri,eli} \cdot \sum_k \left( \frac{A_k}{A_\text{int,tot}} \right)
 <li>Save <code>Φ_HC(t)</code> into the time series (<code>Q_HC</code>, positive for heating, negative for cooling) and record <code>θ_op_act(t)</code>.</li>
 </ol>
 <hr />
-<h2 id="11-energy-accounting-sankey-style-optional">11) Energy accounting (Sankey-style, optional)<a class="headerlink" href="#11-energy-accounting-sankey-style-optional" title="Permanent link">&para;</a></h2>
+<h2 id="10-energy-accounting-sankey-style-optional">10) Energy accounting (Sankey-style, optional)<a class="headerlink" href="#10-energy-accounting-sankey-style-optional" title="Permanent link">&para;</a></h2>
 <p>Per hour, accumulate <strong>Wh</strong> contributions:</p>
 <ul>
 <li><strong>Inputs</strong>: <code>Heating</code>, <code>Internal gains</code>, <code>Solar &amp; free-gain</code></li>
@@ -1706,8 +1691,8 @@ h_{ri,eli} \cdot \sum_k \left( \frac{A_k}{A_\text{int,tot}} \right)
 <li>Check balance: Inputs ≈ Outputs + Storage (absorb small residuals into Storage if &lt;1% Inputs).</li>
 </ul>
 <hr />
-<h2 id="12-build-outputs">12) Build outputs<a class="headerlink" href="#12-build-outputs" title="Permanent link">&para;</a></h2>
-<h3 id="121-hourly-results-after-warmup">12.1 Hourly results (after warm‑up)<a class="headerlink" href="#121-hourly-results-after-warmup" title="Permanent link">&para;</a></h3>
+<h2 id="11-build-outputs">11) Build outputs<a class="headerlink" href="#11-build-outputs" title="Permanent link">&para;</a></h2>
+<h3 id="111-hourly-results-after-warmup">11.1 Hourly results (after warm‑up)<a class="headerlink" href="#111-hourly-results-after-warmup" title="Permanent link">&para;</a></h3>
 <p>DataFrame columns:</p>
 <ul>
 <li><code>Q_HC</code> (W) — signed HVAC need (+: heating, −: cooling)</li>
@@ -1719,14 +1704,14 @@ h_{ri,eli} \cdot \sum_k \left( \frac{A_k}{A_\text{int,tot}} \right)
 </ul>
 </li>
 </ul>
-<h3 id="122-annual-aggregation">12.2 Annual aggregation<a class="headerlink" href="#122-annual-aggregation" title="Permanent link">&para;</a></h3>
+<h3 id="112-annual-aggregation">11.2 Annual aggregation<a class="headerlink" href="#112-annual-aggregation" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>Q_H_annual = Σ Q_H · Δt</code> (Wh)</li>
 <li><code>Q_C_annual = Σ Q_C · Δt</code> (Wh)</li>
 <li>Per-area KPIs (Wh/m²): divide by <code>building.net_floor_area</code>.</li>
 </ul>
 <hr />
-<h2 id="13-units-conventions">13) Units &amp; conventions<a class="headerlink" href="#13-units-conventions" title="Permanent link">&para;</a></h2>
+<h2 id="12-units-conventions">12) Units &amp; conventions<a class="headerlink" href="#12-units-conventions" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Temperature <code>θ</code>: <strong>°C</strong>  </li>
 <li>Power <code>Φ</code> / <code>Q</code>: <strong>W</strong>  </li>
@@ -1735,7 +1720,7 @@ h_{ri,eli} \cdot \sum_k \left( \frac{A_k}{A_\text{int,tot}} \right)
 <li>Conductances <code>h_*</code>: <strong>W/m²K</strong>; when multiplied by area → <strong>W/K</strong>.</li>
 </ul>
 <hr />
-<h2 id="14-numerical-stability-robustness">14) Numerical stability &amp; robustness<a class="headerlink" href="#14-numerical-stability-robustness" title="Permanent link">&para;</a></h2>
+<h2 id="13-numerical-stability-robustness">13) Numerical stability &amp; robustness<a class="headerlink" href="#13-numerical-stability-robustness" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Diagonal regularization</strong> of <code>A</code> (min diag value based on ∥A∥∞) to avoid singularities.</li>
 <li><strong>Warm‑up</strong> (e.g., first month) simulated and typically <strong>excluded</strong> from reporting to reduce initial transients.</li>
@@ -1743,7 +1728,7 @@ h_{ri,eli} \cdot \sum_k \left( \frac{A_k}{A_\text{int,tot}} \right)
 <li>Clamp microscopic residuals (|x| &lt; 1e‑9 → 0) in energy accounting.</li>
 </ul>
 <hr />
-<h2 id="15-minimal-checklist-before-running">15) Minimal checklist before running<a class="headerlink" href="#15-minimal-checklist-before-running" title="Permanent link">&para;</a></h2>
+<h2 id="14-minimal-checklist-before-running">14) Minimal checklist before running<a class="headerlink" href="#14-minimal-checklist-before-running" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Weather source set correctly; EPW file path valid if used.</li>
 <li>Surfaces have: <code>type</code>, <code>area</code>, <code>orientation</code>, <code>sky_view_factor</code>, and suitable <code>U</code>/<code>g_value</code> where relevant.</li>
@@ -1751,7 +1736,7 @@ h_{ri,eli} \cdot \sum_k \left( \frac{A_k}{A_\text{int,tot}} \right)
 <li>Profiles are present or fallbacks enabled.</li>
 </ul>
 <hr />
-<h2 id="16-worked-outline-pseudoalgorithm">16) Worked outline (pseudo‑algorithm)<a class="headerlink" href="#16-worked-outline-pseudoalgorithm" title="Permanent link">&para;</a></h2>
+<h2 id="15-worked-outline-pseudoalgorithm">15) Worked outline (pseudo‑algorithm)<a class="headerlink" href="#15-worked-outline-pseudoalgorithm" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>get weather(sim_df), Tstepn
 classify &amp; hydrate surfaces (types, orientation strings, h_ci/h_ce/h_ri/h_re, areas, g-values)
 aggregate by direction (optional) → rebuild arrays
@@ -1779,14 +1764,14 @@ post:
   return hourly_results, annual_results_df
 </code></pre></div>
 <hr />
-<h2 id="17-interpretation-tips">17) Interpretation tips<a class="headerlink" href="#17-interpretation-tips" title="Permanent link">&para;</a></h2>
+<h2 id="16-interpretation-tips">16) Interpretation tips<a class="headerlink" href="#16-interpretation-tips" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>Q_HC</code> is <strong>need</strong>, not system energy use. Apply system efficiencies (e.g., seasonal COP/η) downstream to obtain <strong>consumption</strong>.</li>
 <li>If <code>T_op</code> frequently deviates from setpoints, the <strong>capacity</strong> is insufficient or profiles/weather are too demanding.</li>
 <li>Large <strong>storage</strong> swings indicate high thermal mass; near-zero annual storage is expected (balance closure).</li>
 </ul>
 <hr />
-<h2 id="18-common-pitfalls-remedies">18) Common pitfalls &amp; remedies<a class="headerlink" href="#18-common-pitfalls-remedies" title="Permanent link">&para;</a></h2>
+<h2 id="17-common-pitfalls-remedies">17) Common pitfalls &amp; remedies<a class="headerlink" href="#17-common-pitfalls-remedies" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>All-zero profiles</strong> → no HVAC action: enable fallbacks or fix schedules.</li>
 <li><strong>Missing g-values</strong> → underestimated solar gains for windows: add <code>g_value</code>.</li>
