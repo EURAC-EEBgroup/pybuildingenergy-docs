@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -467,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -599,8 +591,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -629,8 +619,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -639,41 +627,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functionsolar_absorption_of_elementbuilding_object" class="md-nav__link">
+  <a href="#solar-absorption-of-building-envelope-elements" class="md-nav__link">
     <span class="md-ellipsis">
-      Function:Solar_absorption_of_element(building_object)
+      Solar absorption of building envelope elements
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function:Solar_absorption_of_element(building_object)">
+    <nav class="md-nav" aria-label="Solar absorption of building envelope elements">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#inputs" class="md-nav__link">
     <span class="md-ellipsis">
-      Purpose
+      Inputs
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
+    <nav class="md-nav" aria-label="Inputs">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-fields-in-building_objectbuilding_surface" class="md-nav__link">
@@ -684,19 +655,39 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Purpose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
     </span>
   </a>
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#method-overview" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      Method Overview
+      Outputs
     </span>
   </a>
   
@@ -754,7 +745,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -982,8 +973,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -992,41 +981,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functionsolar_absorption_of_elementbuilding_object" class="md-nav__link">
+  <a href="#solar-absorption-of-building-envelope-elements" class="md-nav__link">
     <span class="md-ellipsis">
-      Function:Solar_absorption_of_element(building_object)
+      Solar absorption of building envelope elements
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function:Solar_absorption_of_element(building_object)">
+    <nav class="md-nav" aria-label="Solar absorption of building envelope elements">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#inputs" class="md-nav__link">
     <span class="md-ellipsis">
-      Purpose
+      Inputs
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
-  
-</li>
+    <nav class="md-nav" aria-label="Inputs">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-fields-in-building_objectbuilding_surface" class="md-nav__link">
@@ -1037,19 +1009,39 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      Purpose
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How it works
     </span>
   </a>
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#method-overview" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      Method Overview
+      Outputs
     </span>
   </a>
   
@@ -1110,17 +1102,10 @@
   
 
 
-<h1 id="solar-absorption-of-building-envelope-elements">Solar absorption of building envelope elements<a class="headerlink" href="#solar-absorption-of-building-envelope-elements" title="Permanent link">&para;</a></h1>
-<h2 id="functionsolar_absorption_of_elementbuilding_object">Function:<code>Solar_absorption_of_element(building_object)</code><a class="headerlink" href="#functionsolar_absorption_of_elementbuilding_object" title="Permanent link">&para;</a></h2>
-<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
-<p>Computes the <strong>solar absorption coefficients</strong> for each building envelope element in accordance with <strong>EN ISO 52016-1</strong> solar heat gain modeling.<br />
-The result is a <strong>5×N matrix</strong> <code>a_sol_pli_eli</code> assigning solar absorption values to the nodal structure of each surface.</p>
-<hr />
-<h3 id="function-signature">Function Signature<a class="headerlink" href="#function-signature" title="Permanent link">&para;</a></h3>
+<h2 id="solar-absorption-of-building-envelope-elements"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Solar absorption of building envelope elements </strong></h1><a class="headerlink" href="#solar-absorption-of-building-envelope-elements" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Solar_absorption_of_element</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">building_object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">solar_absorption_elements</span>
 </code></pre></div>
-<hr />
-<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<h3 id="inputs">Inputs<a class="headerlink" href="#inputs" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1137,8 +1122,7 @@ The result is a <strong>5×N matrix</strong> <code>a_sol_pli_eli</code> assignin
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="required-fields-in-building_objectbuilding_surface">Required Fields in <code>building_object["building_surface"]</code><a class="headerlink" href="#required-fields-in-building_objectbuilding_surface" title="Permanent link">&para;</a></h3>
+<h4 id="required-fields-in-building_objectbuilding_surface">Required Fields in <code>building_object["building_surface"]</code><a class="headerlink" href="#required-fields-in-building_objectbuilding_surface" title="Permanent link">&para;</a></h4>
 <p>Each element in <code>building_surface</code> should include:</p>
 <table>
 <thead>
@@ -1162,24 +1146,10 @@ The result is a <strong>5×N matrix</strong> <code>a_sol_pli_eli</code> assignin
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>solar_absorption_elements</code></td>
-<td>Wrapper containing the 2D array <code>a_sol_pli_eli</code> (shape 5×N), where N = number of elements in <code>building_surface</code>.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="method-overview">Method Overview<a class="headerlink" href="#method-overview" title="Permanent link">&para;</a></h3>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
+<p>Computes the <strong>solar absorption coefficients</strong> for each building envelope element in accordance with <strong>EN ISO 52016-1</strong> solar heat gain modeling.<br />
+The result is a <strong>5×N matrix</strong> <code>a_sol_pli_eli</code> assigning solar absorption values to the nodal structure of each surface.</p>
+<h4 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h4>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The type of the surface has been mapped in the calculation using the following code:</p>
@@ -1207,12 +1177,12 @@ The result is a <strong>5×N matrix</strong> <code>a_sol_pli_eli</code> assignin
 </code></pre></div>
 </div>
 <ol>
-<li><strong>Determine number of envelope elements</strong></li>
-</ol>
+<li>
+<p><strong>Determine number of envelope elements</strong></p>
 <p><div class="highlight"><pre><span></span><code><span class="n">el_list</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">building_object</span><span class="p">[</span><span class="s2">&quot;building_surface&quot;</span><span class="p">])</span>
 </code></pre></div>
-   Creates an empty coefficient list <code>solar_abs_elements</code> of length N.</p>
-<ol>
+Creates an empty coefficient list <code>solar_abs_elements</code> of length N.</p>
+</li>
 <li>
 <p><strong>Extract solar properties</strong></p>
 <ul>
@@ -1226,17 +1196,33 @@ The result is a <strong>5×N matrix</strong> <code>a_sol_pli_eli</code> assignin
 </li>
 <li>
 <p><strong>Create absorption matrix</strong></p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code><span class="n">a_sol_pli_eli</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">5</span><span class="p">,</span> <span class="n">el_list</span><span class="p">))</span>
 <span class="n">a_sol_pli_eli</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">solar_abs_elements</span>
 </code></pre></div>
 <p>Only the <strong>first node (external surface)</strong> receives the solar absorptance value; deeper nodes remain zero.</p>
-<ol>
-<li><strong>Return result</strong></li>
-</ol>
+</li>
+<li>
+<p><strong>Return result</strong></p>
 <div class="highlight"><pre><span></span><code><span class="k">return</span> <span class="n">solar_absorption_elements</span><span class="p">(</span><span class="n">a_sol_pli_eli</span><span class="o">=</span><span class="n">a_sol_pli_eli</span><span class="p">)</span>
 </code></pre></div>
+</li>
+</ol>
+<hr />
+<h3 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>solar_absorption_elements</code></td>
+<td>Wrapper containing the 2D array <code>a_sol_pli_eli</code> (shape 5×N), where N = number of elements in <code>building_surface</code>.</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Expected result:</span>
@@ -1259,8 +1245,7 @@ The result is a <strong>5×N matrix</strong> <code>a_sol_pli_eli</code> assignin
 <hr />
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>EN ISO 52016-1:2017</strong> – <em>Energy performance of buildings – Calculation of energy needs for heating and cooling</em>.  </li>
-<li>Section 6.5.7 – Definition of solar absorptance and its application to surface nodes.</li>
+<li><strong>EN ISO 52016-1:2017</strong> – <em>Energy performance of buildings – Calculation of energy needs for heating and cooling</em>. - Section 6.5.7 – Definition of solar absorptance and its application to surface nodes.</li>
 </ul>
 
 

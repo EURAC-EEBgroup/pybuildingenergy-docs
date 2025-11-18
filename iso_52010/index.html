@@ -20,14 +20,11 @@
     
     
       
-        <title>ISO 52010 - Introduction - pybuildingenergy</title>
+        <title>ISO 52010 - Calculation procedure - pybuildingenergy</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -112,15 +105,15 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ISO 52010 - Introduction
+              ISO 52010 - Calculation procedure
             
           </span>
         </div>
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -363,14 +355,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -381,7 +371,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -393,8 +383,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -403,14 +391,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functioncalculation_iso_52010building_object-path_weather_file-weather_sourcepvgis" class="md-nav__link">
+  <a href="#iso-52010-calculation-procedure" class="md-nav__link">
     <span class="md-ellipsis">
-      Function:Calculation_ISO_52010(building_object, path_weather_file, weather_source="pvgis")
+      ISO 52010 - Calculation procedure
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function:Calculation_ISO_52010(building_object, path_weather_file, weather_source="pvgis")">
+    <nav class="md-nav" aria-label="ISO 52010 - Calculation procedure">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#purpose" class="md-nav__link">
@@ -419,43 +416,32 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Function Signature
+      How it works
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#what-the-function-does-step-by-step" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      What the Function Does (Step-by-step)
+      Outputs
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns
-    </span>
-  </a>
-  
-</li>
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#columns-added-by-the-procedure" class="md-nav__link">
@@ -475,10 +461,15 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#notes-assumptions" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes &amp; Assumptions
+      Notes
     </span>
   </a>
   
@@ -494,9 +485,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
+  <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
-      Related
+      Reference
     </span>
   </a>
   
@@ -612,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -763,7 +754,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -991,8 +982,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1001,14 +990,23 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#functioncalculation_iso_52010building_object-path_weather_file-weather_sourcepvgis" class="md-nav__link">
+  <a href="#iso-52010-calculation-procedure" class="md-nav__link">
     <span class="md-ellipsis">
-      Function:Calculation_ISO_52010(building_object, path_weather_file, weather_source="pvgis")
+      ISO 52010 - Calculation procedure
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function:Calculation_ISO_52010(building_object, path_weather_file, weather_source="pvgis")">
+    <nav class="md-nav" aria-label="ISO 52010 - Calculation procedure">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#purpose" class="md-nav__link">
@@ -1017,43 +1015,32 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Function Signature
+      How it works
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Parameters
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#what-the-function-does-step-by-step" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      What the Function Does (Step-by-step)
+      Outputs
     </span>
   </a>
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns
-    </span>
-  </a>
-  
-</li>
+    <nav class="md-nav" aria-label="Outputs">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#columns-added-by-the-procedure" class="md-nav__link">
@@ -1073,10 +1060,15 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#notes-assumptions" class="md-nav__link">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes &amp; Assumptions
+      Notes
     </span>
   </a>
   
@@ -1092,9 +1084,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
+  <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
-      Related
+      Reference
     </span>
   </a>
   
@@ -1128,16 +1120,10 @@
   
 
 
-<h1 id="iso-52010-calculation-procedure">ISO 52010 - Calculation procedure<a class="headerlink" href="#iso-52010-calculation-procedure" title="Permanent link">&para;</a></h1>
-<h2 id="functioncalculation_iso_52010building_object-path_weather_file-weather_sourcepvgis">Function:<code>Calculation_ISO_52010(building_object, path_weather_file, weather_source="pvgis")</code><a class="headerlink" href="#functioncalculation_iso_52010building_object-path_weather_file-weather_sourcepvgis" title="Permanent link">&para;</a></h2>
-<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
-<p>Implements the <strong>EN ISO 52010-1</strong> processing pipeline to convert raw climatic data (EPW/PVGIS TMY) into <strong>simulation-ready time series</strong> and to compute <strong>solar irradiance on arbitrary surfaces</strong> plus <strong>window shading reduction factors</strong>. The function returns a wrapper around a <code>pandas.DataFrame</code> containing all derived variables.</p>
-<hr />
-<h3 id="function-signature">Function Signature<a class="headerlink" href="#function-signature" title="Permanent link">&para;</a></h3>
+<h2 id="iso-52010-calculation-procedure"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>ISO 52010 - Calculation procedure</strong></h1><a class="headerlink" href="#iso-52010-calculation-procedure" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Calculation_ISO_52010</span><span class="p">(</span><span class="n">building_object</span><span class="p">,</span> <span class="n">path_weather_file</span><span class="p">,</span> <span class="n">weather_source</span><span class="o">=</span><span class="s2">&quot;pvgis&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">simdf_52010</span>
 </code></pre></div>
-<hr />
-<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<h3 id="input">Input<a class="headerlink" href="#input" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1164,8 +1150,9 @@
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="what-the-function-does-step-by-step">What the Function Does (Step-by-step)<a class="headerlink" href="#what-the-function-does-step-by-step" title="Permanent link">&para;</a></h3>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
+<p>Implements the <strong>EN ISO 52010-1</strong> processing pipeline to convert raw climatic data (EPW/PVGIS TMY) into <strong>simulation-ready time series</strong> and to compute <strong>solar irradiance on arbitrary surfaces</strong> plus <strong>window shading reduction factors</strong>. The function returns a wrapper around a <code>pandas.DataFrame</code> containing all derived variables.</p>
+<h4 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h4>
 <ol>
 <li>
 <p><strong>Fetch raw weather</strong>  </p>
@@ -1223,8 +1210,7 @@ WV  → (beta=90,  gamma=-90)
 </ol>
 <div class="highlight"><pre><span></span><code><span class="k">return</span> <span class="n">simdf_52010</span><span class="p">(</span><span class="n">sim_df</span><span class="o">=</span><span class="n">sim_df</span><span class="p">)</span>
 </code></pre></div>
-<hr />
-<h3 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h3>
+<h3 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1239,8 +1225,7 @@ WV  → (beta=90,  gamma=-90)
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="columns-added-by-the-procedure">Columns Added by the Procedure<a class="headerlink" href="#columns-added-by-the-procedure" title="Permanent link">&para;</a></h3>
+<h4 id="columns-added-by-the-procedure">Columns Added by the Procedure<a class="headerlink" href="#columns-added-by-the-procedure" title="Permanent link">&para;</a></h4>
 <ul>
 <li><strong>Calendar helpers</strong>: <code>day of year</code>, <code>hour of day</code> (1–24)  </li>
 <li><strong>Solar (per orientation)</strong>:  </li>
@@ -1252,15 +1237,14 @@ WV  → (beta=90,  gamma=-90)
 <blockquote>
 <p>The base weather columns depend on the chosen source but typically include dry-bulb temperature, relative humidity, wind speed, <strong>DHI</strong> = <code>Gd(h)</code>, <strong>DNI</strong> = <code>Gb(n)</code>, and global horizontal.</p>
 </blockquote>
-<hr />
-<h3 id="orientation-angles">Orientation &amp; Angles<a class="headerlink" href="#orientation-angles" title="Permanent link">&para;</a></h3>
+<h4 id="orientation-angles">Orientation &amp; Angles<a class="headerlink" href="#orientation-angles" title="Permanent link">&para;</a></h4>
 <ul>
 <li><code>beta</code> = <strong>tilt</strong> (0° = horizontal, 90° = vertical)  </li>
 <li><code>gamma</code> = <strong>azimuth</strong> (0° = South, 90° = East, 180° = North, -90°/270° = West)  </li>
 <li>Time <strong>index</strong> is <strong>local</strong> after the <code>utc_offset</code> roll.</li>
 </ul>
 <hr />
-<h3 id="notes-assumptions">Notes &amp; Assumptions<a class="headerlink" href="#notes-assumptions" title="Permanent link">&para;</a></h3>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Leap year handling: if <code>len(sim_df) &gt; 8760</code> (8784 hours), the index is left as-is and <code>n_days_year=366</code>.  </li>
 <li><code>np.roll</code> shifts <strong>all columns equally</strong>; ensure the source weather data are aligned and cyclical.  </li>
@@ -1278,7 +1262,7 @@ WV  → (beta=90,  gamma=-90)
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="s2">&quot;I_sol_tot_&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </code></pre></div>
 <hr />
-<h3 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h3>
+<h3 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>EN ISO 52010-1:2017</strong> – <em>Energy performance of buildings — External climatic conditions</em>  </li>
 <li><code>Weather_data_bui</code> – convenience wrapper that returns a <code>simulation_df</code> built on top of this pipeline  </li>

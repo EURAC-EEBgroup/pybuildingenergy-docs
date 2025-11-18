@@ -24,9 +24,6 @@
     
       <link rel="stylesheet" href="assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -50,6 +47,8 @@
     
       <link rel="stylesheet" href="assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="assets/css/custom.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -60,12 +59,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -92,8 +86,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -117,8 +110,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -225,8 +218,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -319,20 +311,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="EN 15316 - Heating and Cooling Systems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#en-15316-modular-structure" class="md-nav__link">
     <span class="md-ellipsis">
       EN 15316 Modular Structure:
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -352,10 +338,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="pyBuildingEnergy: the python library for building performance assessment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#weather-data" class="md-nav__link">
     <span class="md-ellipsis">
       Weather Data
@@ -363,8 +348,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#domestic-hot-water-dhw" class="md-nav__link">
     <span class="md-ellipsis">
       Domestic Hot Water - DHW
@@ -372,8 +357,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#primary-energy-for-heating" class="md-nav__link">
     <span class="md-ellipsis">
       Primary energy for heating
@@ -381,8 +366,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       Limitations
@@ -390,8 +375,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
       Getting Started
@@ -399,8 +384,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#building-inputs" class="md-nav__link">
     <span class="md-ellipsis">
       Building Inputs
@@ -408,8 +393,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     <span class="md-ellipsis">
       Documentation
@@ -417,8 +402,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
@@ -426,70 +411,11 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#contributing-and-support" class="md-nav__link">
     <span class="md-ellipsis">
       Contributing and Support
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#acknowledgment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Acknowledgment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authors:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license-bsd-3-clause-license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License: BSD 3-Clause License
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#version-02" class="md-nav__link">
-    <span class="md-ellipsis">
-      Version: 0.2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintainer-daniele-antonucci" class="md-nav__link">
-    <span class="md-ellipsis">
-      Maintainer: Daniele Antonucci
     </span>
   </a>
   
@@ -594,7 +520,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -700,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -851,7 +777,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -1111,20 +1037,14 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="EN 15316 - Heating and Cooling Systems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#en-15316-modular-structure" class="md-nav__link">
     <span class="md-ellipsis">
       EN 15316 Modular Structure:
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1144,10 +1064,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="pyBuildingEnergy: the python library for building performance assessment">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#weather-data" class="md-nav__link">
     <span class="md-ellipsis">
       Weather Data
@@ -1155,8 +1074,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#domestic-hot-water-dhw" class="md-nav__link">
     <span class="md-ellipsis">
       Domestic Hot Water - DHW
@@ -1164,8 +1083,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#primary-energy-for-heating" class="md-nav__link">
     <span class="md-ellipsis">
       Primary energy for heating
@@ -1173,8 +1092,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       Limitations
@@ -1182,8 +1101,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
       Getting Started
@@ -1191,8 +1110,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#building-inputs" class="md-nav__link">
     <span class="md-ellipsis">
       Building Inputs
@@ -1200,8 +1119,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     <span class="md-ellipsis">
       Documentation
@@ -1209,8 +1128,8 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
@@ -1218,70 +1137,11 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#contributing-and-support" class="md-nav__link">
     <span class="md-ellipsis">
       Contributing and Support
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#acknowledgment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Acknowledgment
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#authors" class="md-nav__link">
-    <span class="md-ellipsis">
-      Authors:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license-bsd-3-clause-license" class="md-nav__link">
-    <span class="md-ellipsis">
-      License: BSD 3-Clause License
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#version-02" class="md-nav__link">
-    <span class="md-ellipsis">
-      Version: 0.2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#maintainer-daniele-antonucci" class="md-nav__link">
-    <span class="md-ellipsis">
-      Maintainer: Daniele Antonucci
     </span>
   </a>
   
@@ -1318,7 +1178,7 @@
 <p><em>Please cite us if you use this library</em>: 
 <a href="https://zenodo.org/doi/10.5281/zenodo.10887919"><img alt="DOI" src="https://zenodo.org/badge/761715706.svg" /></a></p>
 <hr />
-<h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #003366;">
+<h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">
   Introduction: EPBD Requirements for ISO EN 52000 and ISO EN 15316 Standards
 </h1>
 
@@ -1332,7 +1192,7 @@ New features:
 
 </div>
 
-<h2 id="iso-en-52000-overarching-standards">ISO EN 52000 - Overarching Standards<a class="headerlink" href="#iso-en-52000-overarching-standards" title="Permanent link">&para;</a></h2>
+<h3 id="iso-en-52000-overarching-standards"><strong>ISO EN 52000 - Overarching Standards</strong><a class="headerlink" href="#iso-en-52000-overarching-standards" title="Permanent link">&para;</a></h3>
 <p>The EPBD Directive 2018 (and confirmed in the 2024 revision) requires Member States to describe their national calculation methodology following the national annexes of the "overarching" standards, namely: ISO EN 52000-1, 52003-1, 52010-1, 52016-1, and 52018-1, developed under mandate M/480 given to CEN (European Committee for Standardization).</p>
 <p><strong>Important</strong>: This provision does not constitute mandatory legal codification of these standards. However, the obligation to describe the national methodology following the annexes of the overarching standards will push Member States to explain where and why they deviate from these standards, leading to greater recognition and promotion of the EPB standards set.</p>
 <p>The ISO EN 52000 overarching standards are:</p>
@@ -1343,13 +1203,13 @@ New features:
 <li><strong>ISO EN 52016-1</strong>: Internal temperatures and energy needs for heating/cooling</li>
 <li><strong>ISO EN 52018-1</strong>: Indicators for overall energy performance</li>
 </ol>
-<h2 id="new-epbd-recast-methodology">New EPBD Recast Methodology<a class="headerlink" href="#new-epbd-recast-methodology" title="Permanent link">&para;</a></h2>
+<h3 id="new-epbd-recast-methodology"><strong>New EPBD Recast Methodology</strong><a class="headerlink" href="#new-epbd-recast-methodology" title="Permanent link">&para;</a></h3>
 <p>The new EPBD recast provides an update on building performance assessment through a methodology that must consider various factors such as the building’s thermal characteristics, the use of renewable energy sources, building automation and control systems, ventilation, cooling, energy recovery, etc. The methodology should represent actual operating conditions, use measured energy for accuracy and comparability, and be based on hourly or sub-hourly intervals to account for variable conditions significantly impacting system performance, including internal conditions.</p>
 <p>The energy performance of a building shall be expressed by a numeric indicator of primary energy use per unit of reference floor area per year, in kWh/(m².y), for energy performance certification and compliance with minimum energy performance requirements. Numeric indicators of final energy use per unit of reference floor area per year, in kWh/(m².y), and energy needs according to ISO EN 52000 in kWh/(m².y) shall also be used. The applied methodology for determining energy performance must be transparent, open to innovation, and reflect best practices, particularly from additional indicators.</p>
 <p>Member States shall describe their national calculation methodology based on Annex A of the key European standards on energy performance of buildings.</p>
-<h2 id="en-15316-heating-and-cooling-systems">EN 15316 - Heating and Cooling Systems<a class="headerlink" href="#en-15316-heating-and-cooling-systems" title="Permanent link">&para;</a></h2>
+<h3 id="en-15316-heating-and-cooling-systems"><strong>EN 15316 - Heating and Cooling Systems</strong><a class="headerlink" href="#en-15316-heating-and-cooling-systems" title="Permanent link">&para;</a></h3>
 <p>The EN 15316 series covers the calculation method for system energy requirements and system efficiencies. This family of standards is an integral part of the EPB set and covers:</p>
-<h3 id="en-15316-modular-structure">EN 15316 Modular Structure:<a class="headerlink" href="#en-15316-modular-structure" title="Permanent link">&para;</a></h3>
+<h3 id="en-15316-modular-structure"><strong>EN 15316 Modular Structure:</strong><a class="headerlink" href="#en-15316-modular-structure" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>EN 15316-1</strong>: General and expression of energy performance (Modules M3-1, M3-4, M3-9, M8-1, M8-4)</li>
 <li><strong>EN 15316-2</strong>: Emission systems (heating and cooling)</li>
@@ -1366,10 +1226,10 @@ New features:
 <li><strong>EN 15316-5</strong>: Storage systems</li>
 </ul>
 <p>For space heating, applicable standards include EN 15316-1, EN 15316-2-1, EN 15316-2-3 and the appropriate parts of EN 15316-4 depending on the system type, including losses and control aspects.</p>
-<h2 id="relationship-between-epbd-2024-and-standards">Relationship between EPBD 2024 and Standards<a class="headerlink" href="#relationship-between-epbd-2024-and-standards" title="Permanent link">&para;</a></h2>
+<h3 id="relationship-between-epbd-2024-and-standards"><strong>Relationship between EPBD 2024 and Standards</strong><a class="headerlink" href="#relationship-between-epbd-2024-and-standards" title="Permanent link">&para;</a></h3>
 <p>The most recent revision of the EPBD was published in May 2024, further strengthening requirements and aligning with the EU's climate neutrality objectives. Member States are encouraged to consider applicable standards, particularly from the EPB standards list.</p>
 <p>17 of approximately 50 EPB standards are already ISO EN standards, resulting from collaboration between CEN and ISO. The other EPB standards are currently only available at the European level (CEN standards).</p>
-<h2 id="pybuildingenergy-the-python-library-for-building-performance-assessment">pyBuildingEnergy: the python library for building performance assessment<a class="headerlink" href="#pybuildingenergy-the-python-library-for-building-performance-assessment" title="Permanent link">&para;</a></h2>
+<h3 id="pybuildingenergy-the-python-library-for-building-performance-assessment"><strong>pyBuildingEnergy: the python library for building performance assessment</strong><a class="headerlink" href="#pybuildingenergy-the-python-library-for-building-performance-assessment" title="Permanent link">&para;</a></h3>
 <p><strong>pyBuildingEnergy</strong> aims to provide an assessment of building performance both in terms of energy and comfort. In this initial release, it is possible to assess the energy performance of the building using ISO EN 52106-1:2018. Additional modules will be added for a more comprehensive evaluation of performance, assessing ventilation, renewable energies, systems, etc.
 The actual calculation methods for the assessment of building performance are the following:</p>
 <ul>
@@ -1398,58 +1258,60 @@ The actual calculation methods for the assessment of building performance are th
 <p>The calculation methods can be used for residential or non-residential buildings, or a part of it, referred to as "the building" or the "assessed object".
 ISO EN 52016-1:2018 also contains specifications for the assessment of thermal zones in the building or in the part of a building. The calculations are performed per thermal zone. In the calculations, the thermal zones can be assumed to be thermally coupled or not.
 ISO EN 52016-1:2018 is applicable to buildings at the design stage, to new buildings after construction and to existing buildings in the use phase</p>
-<h3 id="weather-data">Weather Data<a class="headerlink" href="#weather-data" title="Permanent link">&para;</a></h3>
+<h3 id="weather-data"><strong>Weather Data</strong><a class="headerlink" href="#weather-data" title="Permanent link">&para;</a></h3>
 <p>The tool can use wather data coming from 2 main sources:</p>
 <ul>
 <li>pvgis api (https://re.jrc.ec.europa.eu/pvg_tools/en/) - PHOTOVOLTAIC GEOGRAPHICAL INFORMATION SYSTEM</li>
 <li>.epw file from https://www.ladybug.tools/epwmap/</li>
 </ul>
 <p>More details in the example folder</p>
-<h3 id="domestic-hot-water-dhw">Domestic Hot Water - DHW<a class="headerlink" href="#domestic-hot-water-dhw" title="Permanent link">&para;</a></h3>
+<h3 id="domestic-hot-water-dhw"><strong>Domestic Hot Water - DHW</strong><a class="headerlink" href="#domestic-hot-water-dhw" title="Permanent link">&para;</a></h3>
 <ul>
 <li>[x] Calculation of volume and energy need for domestic hot water according to ISO EN 12831-3. </li>
 <li>[] Assessment of thermal load based on the type of DHW system</li>
 </ul>
-<h3 id="primary-energy-for-heating">Primary energy for heating<a class="headerlink" href="#primary-energy-for-heating" title="Permanent link">&para;</a></h3>
+<h3 id="primary-energy-for-heating"><strong>Primary energy for heating</strong><a class="headerlink" href="#primary-energy-for-heating" title="Permanent link">&para;</a></h3>
 <ul>
 <li>[x] Calculation of primary energy for heating according to ISO EN 15316-1:2018</li>
 </ul>
-<h3 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
+<h3 id="limitations"><strong>Limitations</strong><a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h3>
 <p>The library is developed with the intent of demonstrating specific elements of calculation procedures in the relevant standards. It is not intended to replace the regulations but to complement them, as the latter are essential for understanding the calculation. 
 This library is meant to be used for demonstration and testing purposes and is therefore provided as open source, without protection against misuse or inappropriate use.</p>
 <p>The information and views set out in this document are those of the authors and do not necessarily reflect the official opinion of the European Union. Neither the European Union institutions and bodies nor any person acting on their behalf may be held responsible for the use that may be made of the information contained herein.</p>
-<h3 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h3>
+<h3 id="getting-started"><strong>Getting Started</strong><a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h3>
 <p>The following command will install the latest pyBuildinEnergy library</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span>pip<span class="w"> </span>install<span class="w"> </span>pybuildingenergy
 </code></pre></div>
 <p>The tool allows you to evaluate the performance of buildings in different ways: </p>
-<h3 id="building-inputs">Building Inputs<a class="headerlink" href="#building-inputs" title="Permanent link">&para;</a></h3>
+<h3 id="building-inputs"><strong>Building Inputs</strong><a class="headerlink" href="#building-inputs" title="Permanent link">&para;</a></h3>
 <ul>
 <li>for building inputs refer to <code>Building Inputs</code>: <a href="https://eurac-eebgroup.github.io/pybuildingenergy-docs/iso_52016_input/">https://eurac-eebgroup.github.io/pybuildingenergy-docs/iso_52016_input/</a></li>
 <li>for heating system input (ISO EN 15316-1) refer to <code>Heating System Input</code>: <a href="https://eurac-eebgroup.github.io/pybuildingenergy-docs/iso_15316_input/">https://eurac-eebgroup.github.io/pybuildingenergy-docs/iso_15316_input/</a></li>
 </ul>
-<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
+<h3 id="documentation"><strong>Documentation</strong><a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
 <hr />
 <p>Check our new documentation here: <code>Documentation &lt;https://eurac-eebgroup.github.io/pybuildingenergy-docs/&gt;</code></p>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<h3 id="example"><strong>Example</strong><a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p>Here some <code>Examples &lt;https://github.com/EURAC-EEBgroup/pyBuildingEnergy/tree/master/examples&gt;</code> on pybuildingenergy application.
 For more information
 .....</p>
-<h3 id="contributing-and-support">Contributing and Support<a class="headerlink" href="#contributing-and-support" title="Permanent link">&para;</a></h3>
+<h3 id="contributing-and-support"><strong>Contributing and Support</strong><a class="headerlink" href="#contributing-and-support" title="Permanent link">&para;</a></h3>
 <p><strong>Bug reports/Questions</strong>
 If you encounter a bug, kindly create a GitLab issue detailing the bug. 
 Please provide steps to reproduce the issue and ideally, include a snippet of code that triggers the bug. 
 If the bug results in an error, include the traceback. If it leads to unexpected behavior, specify the expected behavior.</p>
 <p><strong>Code contributions</strong>
 We welcome and deeply appreciate contributions! Every contribution, no matter how small, makes a difference. Click here to find out more about contributing to the project.</p>
-<h2 id="acknowledgment">Acknowledgment<a class="headerlink" href="#acknowledgment" title="Permanent link">&para;</a></h2>
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Acknowledgment</h2>
+
 <p>This work was carried out within European projects: 
 Infinite - This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 958397, 
 Moderate - Horizon Europe research and innovation programme under grant agreement No 101069834, 
 with the aim of contributing to the development of open products useful for defining plausible scenarios for the decarbonization of the built environment</p>
 <p>Reagrding the DHW Calculation: 
 The work was developed using the regulations and results obtained from the spreadsheet created by the EPBCenter.</p>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">References</h2>
+
 <ol>
 <li><strong>EPB Center</strong> - The Energy Performance of Buildings Directive (EPBD)<br />
    https://epb.center/epb-standards/the-energy-performance-of-buildings-directive-epbd/</li>
@@ -1466,14 +1328,17 @@ The work was developed using the regulations and results obtained from the sprea
 <li><strong>ISO EN 16798-1</strong> - Energy performance of buildings — Ventilation of buildings — Part 1: Indoor environmental input parameters for design and assessment of energy performance of buildings addressing indoor air quality, thermal environment, lighting and acoustics (Module M1–6)</li>
 <li><strong>Directive (EU) 2024/1275</strong> - Official text published in the Official Journal of the EU on May 8, 2024</li>
 </ol>
-<h2 id="authors">Authors:<a class="headerlink" href="#authors" title="Permanent link">&para;</a></h2>
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Authors</h2>
 <ul>
 <li><a href="https://www.eurac.edu/en/people/daniele-antonucci"><strong>Daniele Antonucci</strong></a></li>
 <li><a href="https://www.eurac.edu/en/people/ulrich-filippi"><strong>Ulrich Filippi Oberegger</strong></a></li>
 </ul>
-<h2 id="license-bsd-3-clause-license"><strong>License</strong>: BSD 3-Clause License<a class="headerlink" href="#license-bsd-3-clause-license" title="Permanent link">&para;</a></h2>
-<h2 id="version-02"><strong>Version</strong>: 0.2<a class="headerlink" href="#version-02" title="Permanent link">&para;</a></h2>
-<h2 id="maintainer-daniele-antonucci"><strong>Maintainer</strong>: Daniele Antonucci<a class="headerlink" href="#maintainer-daniele-antonucci" title="Permanent link">&para;</a></h2>
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">License</h2>
+<p>BSD 3-Clause License</p>
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Version</h2>
+<p>0.2</p>
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Maintainer</h2>
+<p>Daniele Antonucci</p>
 
 
 

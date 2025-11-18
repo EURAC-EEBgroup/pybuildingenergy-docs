@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -431,8 +423,17 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ISO 52016 - Introduction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -443,6 +444,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iso-5201052016-building-thermal-simulation-module-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISO 52010/52016 Building Thermal Simulation – Module-level
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relation-to-other-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation to Other Standards
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -477,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -628,7 +682,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -856,8 +910,50 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iso-5201052016-building-thermal-simulation-module-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISO 52010/52016 Building Thermal Simulation – Module-level
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purpose-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purpose and Scope
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calculation-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Principles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relation-to-other-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relation to Other Standards
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -880,7 +976,7 @@
   
 
 
-<h1 id="iso-5201052016-building-thermal-simulation-module-level">ISO 52010/52016 Building Thermal Simulation – Module-level<a class="headerlink" href="#iso-5201052016-building-thermal-simulation-module-level" title="Permanent link">&para;</a></h1>
+<h2 id="iso-5201052016-building-thermal-simulation-module-level"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>ISO 52010/52016 Building Thermal Simulation – Module-level</strong></h1><a class="headerlink" href="#iso-5201052016-building-thermal-simulation-module-level" title="Permanent link">&para;</a></h2>
 <p><strong>Standard alignment</strong>: ISO EN 52010-1 (climate/solar), ISO EN 52016-1 (zone balance), ISO EN 13789 (transmission &amp; unconditioned zones), ISO EN 16798-1/-7 (internal gains &amp; natural ventilation), ISO EN 15316-1 (calculation of system energy requirements and system efficiencies)<br />
 <strong>License</strong>: MIT<br />
 <strong>Version</strong>: 0.1<br />
@@ -888,6 +984,40 @@
 <hr />
 <p>This documentation explains each function’s purpose, physics, inputs/outputs, algorithmic flow, and edge cases. All equations use SI unless otherwise stated.</p>
 <hr />
+<p>ISO EN 52016 is a key international standard that defines methods for the calculation of energy needs for heating and cooling, as well as the internal temperatures and sensible and latent heat loads of buildings. It is part of the ISO 52000 family, which provides a comprehensive framework for assessing the energy performance of buildings (EPB) in accordance with European energy efficiency directives.</p>
+<h2 id="purpose-and-scope"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Purpose and Scope</strong></h2><a class="headerlink" href="#purpose-and-scope" title="Permanent link">&para;</a></h2>
+<p>The standard provides detailed calculation procedures for:</p>
+<ul>
+<li>Hourly or monthly determination of energy needs for space heating and cooling;</li>
+<li>Evaluation of internal air temperatures in different thermal zones;</li>
+<li>Calculation of sensible and latent heat loads on the building;</li>
+<li>Assessment of the impact of building envelope characteristics, internal gains, solar gains, and ventilation.</li>
+</ul>
+<p>It replaces and extends earlier standards such as EN ISO 13790, aligning the methodology with modern requirements for dynamic simulation and integration into building energy performance assessments.</p>
+<h2 id="calculation-principles"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Calculation Principles</strong></h2><a class="headerlink" href="#calculation-principles" title="Permanent link">&para;</a></h2>
+<p>ISO EN 52016 introduces both hourly and monthly calculation methods:</p>
+<ul>
+<li>The hourly method offers a dynamic approach suitable for detailed analysis, design, and simulation tools.</li>
+<li>The monthly method provides simplified procedures for compliance checks and energy certification purposes.</li>
+</ul>
+<p>Key aspects considered in the calculations include:</p>
+<ul>
+<li>Thermal properties of opaque and transparent envelope elements;</li>
+<li>Solar and internal heat gains;</li>
+<li>Ventilation and infiltration rates;</li>
+<li>Thermal mass and dynamic effects;</li>
+<li>Zoning and adjacent space interactions.</li>
+</ul>
+<h2 id="relation-to-other-standards"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Relation to Other Standards</strong></h2><a class="headerlink" href="#relation-to-other-standards" title="Permanent link">&para;</a></h2>
+<p>ISO EN 52016 works in coordination with:</p>
+<ul>
+<li>ISO 52010, which defines the calculation of solar and daylight quantities on building surfaces;</li>
+<li>ISO 52017, which provides the dynamic hourly simulation framework for the thermal behavior of buildings;</li>
+<li>ISO 52000-1, which establishes the overall energy performance assessment framework.</li>
+<li>and other, such asEN ISO 15316-1, EN ISO 16798-1/-7, etc
+Together, these standards ensure consistency between the physical modeling of buildings, system performance, and overall energy efficiency evaluation.</li>
+</ul>
+<p>By harmonizing calculation methods across Europe, ISO EN 52016 helps ensure that building energy performance is transparent, comparable, and technically robust, supporting sustainable design and policy implementation.</p>
 
 
 

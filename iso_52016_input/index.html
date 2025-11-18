@@ -12,7 +12,7 @@
         <link rel="prev" href="../iso_52016/">
       
       
-        <link rel="next" href="../iso_52106_categorty_profile/">
+        <link rel="next" href="../iso_52016_categorty_profile/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -25,9 +25,6 @@
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -452,8 +444,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -482,8 +472,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -492,40 +480,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-structure-overview" class="md-nav__link">
+  <a href="#building-input-bui-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      1) Structure Overview
+      Building Input (BUI) Structure
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-building-main-building-metadata" class="md-nav__link">
+  <a href="#structure-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      2) "building" — Main Building Metadata
+      Structure Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-adjacent_zones-adjoiningunconditioned-spaces" class="md-nav__link">
+  <a href="#main-building-metadata-building" class="md-nav__link">
     <span class="md-ellipsis">
-      3) "adjacent_zones" — Adjoining/Unconditioned Spaces
+      Main Building Metadata: "building"
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-building_surface-envelope-elements" class="md-nav__link">
+  <a href="#adjoiningunconditioned-spaces-adjacent_zones" class="md-nav__link">
     <span class="md-ellipsis">
-      4) "building_surface" — Envelope Elements
+      Adjoining/Unconditioned Spaces: "adjacent_zones"
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4) "building_surface" — Envelope Elements">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#envelope-elements-building_surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Envelope Elements: "building_surface"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Envelope Elements: "building_surface"">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -552,82 +549,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-units-unit-definitions" class="md-nav__link">
+  <a href="#unit-definitions-units" class="md-nav__link">
     <span class="md-ellipsis">
-      5) "units" — Unit Definitions
+      Unit Definitions: "units"
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-building_parameters-thermal-system-and-operational-settings" class="md-nav__link">
+  <a href="#thermal-system-and-operational-settings-building_parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      6) "building_parameters" — Thermal, System, and Operational Settings
+      Thermal, System, and Operational Settings: "building_parameters"
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6) "building_parameters" — Thermal, System, and Operational Settings">
+    <nav class="md-nav" aria-label="Thermal, System, and Operational Settings: "building_parameters"">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-temperature-setpoints" class="md-nav__link">
+  <a href="#temperature-setpoints" class="md-nav__link">
     <span class="md-ellipsis">
-      6.1 Temperature Setpoints
+      Temperature Setpoints
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-system-capacities" class="md-nav__link">
+  <a href="#system-capacities" class="md-nav__link">
     <span class="md-ellipsis">
-      6.2 System Capacities
+      System Capacities
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#63-airflow-rates" class="md-nav__link">
+  <a href="#airflow-rates" class="md-nav__link">
     <span class="md-ellipsis">
-      6.3 Airflow Rates
+      Airflow Rates
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#64-internal-gains" class="md-nav__link">
+  <a href="#internal-gains" class="md-nav__link">
     <span class="md-ellipsis">
-      6.4 Internal Gains
+      Internal Gains
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#65-construction" class="md-nav__link">
+  <a href="#construction" class="md-nav__link">
     <span class="md-ellipsis">
-      6.5 Construction
+      Construction
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#66-climate-parameters" class="md-nav__link">
+  <a href="#climate-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      6.6 Climate Parameters
+      Climate Parameters
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#67-hvac-and-ventilation-profiles" class="md-nav__link">
+  <a href="#hvac-and-ventilation-profiles" class="md-nav__link">
     <span class="md-ellipsis">
-      6.7 HVAC and Ventilation Profiles
+      HVAC and Ventilation Profiles
     </span>
   </a>
   
@@ -639,40 +636,40 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-example-workflow" class="md-nav__link">
+  <a href="#example-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      7) Example Workflow
+      Example Workflow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-good-practices" class="md-nav__link">
+  <a href="#good-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      8) Good Practices
+      Good Practices
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-outputs-of-iso-52016" class="md-nav__link">
+  <a href="#outputs-of-iso-52016" class="md-nav__link">
     <span class="md-ellipsis">
-      9) Outputs of ISO 52016
+      Outputs of ISO 52016
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-global_inputspy-static-data-constants" class="md-nav__link">
+  <a href="#static-data-constants-global_inputspy" class="md-nav__link">
     <span class="md-ellipsis">
-      10) global_inputs.py — Static data &amp; constants
+      Static data &amp; constants: global_inputs.py
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="10) global_inputs.py — Static data & constants">
+    <nav class="md-nav" aria-label="Static data & constants: global_inputs.py">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -732,7 +729,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -883,7 +880,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -1111,8 +1108,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1121,40 +1116,49 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-structure-overview" class="md-nav__link">
+  <a href="#building-input-bui-structure" class="md-nav__link">
     <span class="md-ellipsis">
-      1) Structure Overview
+      Building Input (BUI) Structure
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-building-main-building-metadata" class="md-nav__link">
+  <a href="#structure-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      2) "building" — Main Building Metadata
+      Structure Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-adjacent_zones-adjoiningunconditioned-spaces" class="md-nav__link">
+  <a href="#main-building-metadata-building" class="md-nav__link">
     <span class="md-ellipsis">
-      3) "adjacent_zones" — Adjoining/Unconditioned Spaces
+      Main Building Metadata: "building"
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-building_surface-envelope-elements" class="md-nav__link">
+  <a href="#adjoiningunconditioned-spaces-adjacent_zones" class="md-nav__link">
     <span class="md-ellipsis">
-      4) "building_surface" — Envelope Elements
+      Adjoining/Unconditioned Spaces: "adjacent_zones"
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4) "building_surface" — Envelope Elements">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#envelope-elements-building_surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Envelope Elements: "building_surface"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Envelope Elements: "building_surface"">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1181,82 +1185,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-units-unit-definitions" class="md-nav__link">
+  <a href="#unit-definitions-units" class="md-nav__link">
     <span class="md-ellipsis">
-      5) "units" — Unit Definitions
+      Unit Definitions: "units"
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-building_parameters-thermal-system-and-operational-settings" class="md-nav__link">
+  <a href="#thermal-system-and-operational-settings-building_parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      6) "building_parameters" — Thermal, System, and Operational Settings
+      Thermal, System, and Operational Settings: "building_parameters"
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6) "building_parameters" — Thermal, System, and Operational Settings">
+    <nav class="md-nav" aria-label="Thermal, System, and Operational Settings: "building_parameters"">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#61-temperature-setpoints" class="md-nav__link">
+  <a href="#temperature-setpoints" class="md-nav__link">
     <span class="md-ellipsis">
-      6.1 Temperature Setpoints
+      Temperature Setpoints
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#62-system-capacities" class="md-nav__link">
+  <a href="#system-capacities" class="md-nav__link">
     <span class="md-ellipsis">
-      6.2 System Capacities
+      System Capacities
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#63-airflow-rates" class="md-nav__link">
+  <a href="#airflow-rates" class="md-nav__link">
     <span class="md-ellipsis">
-      6.3 Airflow Rates
+      Airflow Rates
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#64-internal-gains" class="md-nav__link">
+  <a href="#internal-gains" class="md-nav__link">
     <span class="md-ellipsis">
-      6.4 Internal Gains
+      Internal Gains
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#65-construction" class="md-nav__link">
+  <a href="#construction" class="md-nav__link">
     <span class="md-ellipsis">
-      6.5 Construction
+      Construction
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#66-climate-parameters" class="md-nav__link">
+  <a href="#climate-parameters" class="md-nav__link">
     <span class="md-ellipsis">
-      6.6 Climate Parameters
+      Climate Parameters
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#67-hvac-and-ventilation-profiles" class="md-nav__link">
+  <a href="#hvac-and-ventilation-profiles" class="md-nav__link">
     <span class="md-ellipsis">
-      6.7 HVAC and Ventilation Profiles
+      HVAC and Ventilation Profiles
     </span>
   </a>
   
@@ -1268,40 +1272,40 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-example-workflow" class="md-nav__link">
+  <a href="#example-workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      7) Example Workflow
+      Example Workflow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-good-practices" class="md-nav__link">
+  <a href="#good-practices" class="md-nav__link">
     <span class="md-ellipsis">
-      8) Good Practices
+      Good Practices
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#9-outputs-of-iso-52016" class="md-nav__link">
+  <a href="#outputs-of-iso-52016" class="md-nav__link">
     <span class="md-ellipsis">
-      9) Outputs of ISO 52016
+      Outputs of ISO 52016
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#10-global_inputspy-static-data-constants" class="md-nav__link">
+  <a href="#static-data-constants-global_inputspy" class="md-nav__link">
     <span class="md-ellipsis">
-      10) global_inputs.py — Static data &amp; constants
+      Static data &amp; constants: global_inputs.py
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="10) global_inputs.py — Static data & constants">
+    <nav class="md-nav" aria-label="Static data & constants: global_inputs.py">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1368,11 +1372,11 @@
   
 
 
-<h1 id="building-input-bui-structure">Building Input (BUI) Structure<a class="headerlink" href="#building-input-bui-structure" title="Permanent link">&para;</a></h1>
+<h2 id="building-input-bui-structure"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Building Input (BUI) Structure </strong></h1><a class="headerlink" href="#building-input-bui-structure" title="Permanent link">&para;</a></h2>
 <p>This document explains the <strong>BUI</strong> (Building Input) dictionary used for ISO 52016 simulations.<br />
 It defines the building geometry, surfaces, (general)systems, and operational parameters required to calculate hourly temperatures and energy needs.</p>
 <hr />
-<h2 id="1-structure-overview">1) Structure Overview<a class="headerlink" href="#1-structure-overview" title="Permanent link">&para;</a></h2>
+<h2 id="structure-overview"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Structure Overview</strong></h2><a class="headerlink" href="#structure-overview" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="n">BUI</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;building&quot;</span><span class="p">:</span> <span class="p">{</span><span class="o">...</span><span class="p">},</span>
     <span class="s2">&quot;adjacent_zones&quot;</span><span class="p">:</span> <span class="p">[</span><span class="o">...</span><span class="p">],</span>
@@ -1408,7 +1412,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </code></pre></div>
 </div>
 <hr />
-<h2 id="2-building-main-building-metadata">2) <code>"building"</code> — Main Building Metadata<a class="headerlink" href="#2-building-main-building-metadata" title="Permanent link">&para;</a></h2>
+<h2 id="main-building-metadata-building"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Main Building Metadata: <code>"building"</code></strong></h2><a class="headerlink" href="#main-building-metadata-building" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1481,7 +1485,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </tbody>
 </table>
 <hr />
-<h2 id="3-adjacent_zones-adjoiningunconditioned-spaces">3) <code>"adjacent_zones"</code> — Adjoining/Unconditioned Spaces<a class="headerlink" href="#3-adjacent_zones-adjoiningunconditioned-spaces" title="Permanent link">&para;</a></h2>
+<h2 id="adjoiningunconditioned-spaces-adjacent_zones"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Adjoining/Unconditioned Spaces: <code>"adjacent_zones"</code></strong></h2><a class="headerlink" href="#adjoiningunconditioned-spaces-adjacent_zones" title="Permanent link">&para;</a></h2>
 <p>Defines zones adjacent to the conditioned area, used for ISO 13789 transmission heat transfer.</p>
 <p>Each zone has:</p>
 <table>
@@ -1531,7 +1535,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </tbody>
 </table>
 <hr />
-<h2 id="4-building_surface-envelope-elements">4) <code>"building_surface"</code> — Envelope Elements<a class="headerlink" href="#4-building_surface-envelope-elements" title="Permanent link">&para;</a></h2>
+<h2 id="envelope-elements-building_surface"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Envelope Elements: <code>"building_surface"</code></strong></h2><a class="headerlink" href="#envelope-elements-building_surface" title="Permanent link">&para;</a></h2>
 <p>Describes all external and internal surfaces forming the building envelope.</p>
 <h3 id="common-attributes">Common attributes<a class="headerlink" href="#common-attributes" title="Permanent link">&para;</a></h3>
 <table>
@@ -1595,7 +1599,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 | <code>width_or_distance_of_shading_elements</code> | Distance or overhang width. |
 | <code>overhang_proprieties</code> | Additional geometric data for shading devices. |</p>
 <hr />
-<h2 id="5-units-unit-definitions">5) <code>"units"</code> — Unit Definitions<a class="headerlink" href="#5-units-unit-definitions" title="Permanent link">&para;</a></h2>
+<h2 id="unit-definitions-units"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Unit Definitions: <code>"units"</code></strong></h2><a class="headerlink" href="#unit-definitions-units" title="Permanent link">&para;</a></h2>
 <p>Defines unit conventions for each physical quantity.</p>
 <table>
 <thead>
@@ -1644,8 +1648,8 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </tbody>
 </table>
 <hr />
-<h2 id="6-building_parameters-thermal-system-and-operational-settings">6) <code>"building_parameters"</code> — Thermal, System, and Operational Settings<a class="headerlink" href="#6-building_parameters-thermal-system-and-operational-settings" title="Permanent link">&para;</a></h2>
-<h3 id="61-temperature-setpoints">6.1 Temperature Setpoints<a class="headerlink" href="#61-temperature-setpoints" title="Permanent link">&para;</a></h3>
+<h2 id="thermal-system-and-operational-settings-building_parameters"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Thermal, System, and Operational Settings: <code>"building_parameters"</code></strong></h2><a class="headerlink" href="#thermal-system-and-operational-settings-building_parameters" title="Permanent link">&para;</a></h2>
+<h3 id="temperature-setpoints">Temperature Setpoints<a class="headerlink" href="#temperature-setpoints" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1668,7 +1672,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </tr>
 </tbody>
 </table>
-<h3 id="62-system-capacities">6.2 System Capacities<a class="headerlink" href="#62-system-capacities" title="Permanent link">&para;</a></h3>
+<h3 id="system-capacities">System Capacities<a class="headerlink" href="#system-capacities" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1687,7 +1691,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </tr>
 </tbody>
 </table>
-<h3 id="63-airflow-rates">6.3 Airflow Rates<a class="headerlink" href="#63-airflow-rates" title="Permanent link">&para;</a></h3>
+<h3 id="airflow-rates">Airflow Rates<a class="headerlink" href="#airflow-rates" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1706,14 +1710,14 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </tr>
 </tbody>
 </table>
-<h3 id="64-internal-gains">6.4 Internal Gains<a class="headerlink" href="#64-internal-gains" title="Permanent link">&para;</a></h3>
+<h3 id="internal-gains">Internal Gains<a class="headerlink" href="#internal-gains" title="Permanent link">&para;</a></h3>
 <p>Each internal source (occupants, appliances, lighting) defines:
 | Key | Description |
 |------|-------------|
 | <code>name</code> | Gain type. |
 | <code>full_load</code> | Peak power density (W/m²). |
 | <code>weekday</code>, <code>weekend</code> | 24-hour normalized (0–1) schedules. |</p>
-<h3 id="65-construction">6.5 Construction<a class="headerlink" href="#65-construction" title="Permanent link">&para;</a></h3>
+<h3 id="construction">Construction<a class="headerlink" href="#construction" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1732,7 +1736,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </tr>
 </tbody>
 </table>
-<h3 id="66-climate-parameters">6.6 Climate Parameters<a class="headerlink" href="#66-climate-parameters" title="Permanent link">&para;</a></h3>
+<h3 id="climate-parameters">Climate Parameters<a class="headerlink" href="#climate-parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1747,7 +1751,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </tr>
 </tbody>
 </table>
-<h3 id="67-hvac-and-ventilation-profiles">6.7 HVAC and Ventilation Profiles<a class="headerlink" href="#67-hvac-and-ventilation-profiles" title="Permanent link">&para;</a></h3>
+<h3 id="hvac-and-ventilation-profiles">HVAC and Ventilation Profiles<a class="headerlink" href="#hvac-and-ventilation-profiles" title="Permanent link">&para;</a></h3>
 <p>Hourly normalized profiles for system operation:</p>
 <table>
 <thead>
@@ -1772,7 +1776,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 </tbody>
 </table>
 <hr />
-<h2 id="7-example-workflow">7) Example Workflow<a class="headerlink" href="#7-example-workflow" title="Permanent link">&para;</a></h2>
+<h2 id="example-workflow"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Example Workflow</strong></h2><a class="headerlink" href="#example-workflow" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">iso52016</span> <span class="kn">import</span> <span class="n">ISO52016</span>
 
 <span class="c1"># Validate input</span>
@@ -1786,7 +1790,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 <span class="nb">print</span><span class="p">(</span><span class="n">annual</span><span class="p">)</span>
 </code></pre></div>
 <hr />
-<h2 id="8-good-practices">8) Good Practices<a class="headerlink" href="#8-good-practices" title="Permanent link">&para;</a></h2>
+<h2 id="good-practices"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Good Practices</strong></h2><a class="headerlink" href="#good-practices" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Always verify <strong>units</strong> and <strong>orientation angles</strong> before running simulations.  </li>
 <li>Ensure <strong>surface U-values</strong> and <strong>areas</strong> are consistent with geometry.  </li>
@@ -1795,14 +1799,14 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 <li>Latitude/longitude and azimuth are essential for solar radiation accuracy.</li>
 </ul>
 <hr />
-<h2 id="9-outputs-of-iso-52016">9) Outputs of ISO 52016<a class="headerlink" href="#9-outputs-of-iso-52016" title="Permanent link">&para;</a></h2>
+<h2 id="outputs-of-iso-52016"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Outputs of ISO 52016</strong></h2><a class="headerlink" href="#outputs-of-iso-52016" title="Permanent link">&para;</a></h2>
 <p>After running the calculation, typical outputs include:
 - Hourly heating/cooling needs (<code>Q_HC</code>, W)
 - Operative temperature (<code>T_op</code>, °C)
 - External temperature (<code>T_ext</code>, °C)
 - Annual heating/cooling energy (Wh/m²)</p>
 <hr />
-<h2 id="10-global_inputspy-static-data-constants">10) <code>global_inputs.py</code> — Static data &amp; constants<a class="headerlink" href="#10-global_inputspy-static-data-constants" title="Permanent link">&para;</a></h2>
+<h2 id="static-data-constants-global_inputspy"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Static data &amp; constants: <code>global_inputs.py</code> </strong></h2><a class="headerlink" href="#static-data-constants-global_inputspy" title="Permanent link">&para;</a></h2>
 <h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Provide <strong>reference tables</strong> (e.g., ISO 13789 <code>n_ue</code> air-tightness classes) and <strong>thermophysical constants</strong>.</li>
@@ -1865,7 +1869,7 @@ It defines the building geometry, surfaces, (general)systems, and operational pa
 <li>Water constants are useful for DHW/emitters energy conversions (not used inside <code>ventilation.py</code> yet).</li>
 </ul>
 <hr />
-<h2 id="implementation-notes-robustness">Implementation Notes &amp; Robustness<a class="headerlink" href="#implementation-notes-robustness" title="Permanent link">&para;</a></h2>
+<h2 id="implementation-notes-robustness"><h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Implementation Notes &amp; Robustness</strong></h2><a class="headerlink" href="#implementation-notes-robustness" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Type safety</strong>: many arrays in <code>BUI</code> are <code>dtype=object</code>. Cast to <code>np.asarray(..., dtype=float)</code> before algebra.</li>
 <li><strong>Orientation logic</strong>: To identify interface elements for <span class="arithmatex">\(H_{d,zt{\text -}ztu}\)</span>, define a <strong>clear mapping</strong> between <code>building_surface[*].name_adj_zone</code> and the <code>adjacent_zones[*].name</code> and use that to split <span class="arithmatex">\(\mathcal{E}_{zt{\text -}ztu}\)</span> vs <span class="arithmatex">\(\mathcal{E}_{ztu{\text -}ext}\)</span>. Avoid relying only on cardinal labels like <code>NV/SV/...</code> when adjacency is explicit in the <code>BUI</code>.</li>

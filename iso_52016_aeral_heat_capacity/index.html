@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -359,7 +351,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -467,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,8 +570,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -608,8 +598,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -618,32 +606,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-areal_heat_capacity_of_elementbuilding_object" class="md-nav__link">
+  <a href="#aeral-heat-capacity" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: Areal_heat_capacity_of_element(building_object)
+      Aeral Heat capacity
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function: Areal_heat_capacity_of_element(building_object)">
+    <nav class="md-nav" aria-label="Aeral Heat capacity">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
@@ -652,7 +622,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-fields" class="md-nav__link">
@@ -663,23 +634,20 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#method-outline" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Method Outline
+      Purpose
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#node-indexing" class="md-nav__link">
@@ -690,10 +658,24 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#example-pseudo" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      Example (pseudo)
+      Outputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
     </span>
   </a>
   
@@ -763,7 +745,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -991,8 +973,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1001,32 +981,14 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-areal_heat_capacity_of_elementbuilding_object" class="md-nav__link">
+  <a href="#aeral-heat-capacity" class="md-nav__link">
     <span class="md-ellipsis">
-      Function: Areal_heat_capacity_of_element(building_object)
+      Aeral Heat capacity
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Function: Areal_heat_capacity_of_element(building_object)">
+    <nav class="md-nav" aria-label="Aeral Heat capacity">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
@@ -1035,7 +997,8 @@
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Parameters">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#required-fields" class="md-nav__link">
@@ -1046,23 +1009,20 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Returns
-    </span>
-  </a>
+      </ul>
+    </nav>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#method-outline" class="md-nav__link">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      Method Outline
+      Purpose
     </span>
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Purpose">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#node-indexing" class="md-nav__link">
@@ -1073,10 +1033,24 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#example-pseudo" class="md-nav__link">
+  <a href="#outputs" class="md-nav__link">
     <span class="md-ellipsis">
-      Example (pseudo)
+      Outputs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
     </span>
   </a>
   
@@ -1128,22 +1102,9 @@
   
 
 
-<h1 id="aeral-heat-capacity">Aeral Heat capacity<a class="headerlink" href="#aeral-heat-capacity" title="Permanent link">&para;</a></h1>
-<h2 id="function-areal_heat_capacity_of_elementbuilding_object">Function: <code>Areal_heat_capacity_of_element(building_object)</code><a class="headerlink" href="#function-areal_heat_capacity_of_elementbuilding_object" title="Permanent link">&para;</a></h2>
-<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
-<p>Computes the <strong>areal heat capacity allocation per node</strong> for each building envelope element according to <strong>EN ISO 52016-1 (6.5.7)</strong> and Annex B tables (e.g., <strong>B.13</strong> classes and <strong>B.14</strong> capacities).<br />
-The routine returns a 5×N matrix <code>kappa_pli_eli_</code> where:
-- rows (0..4) correspond to <strong>nodes</strong> <code>kpl1..kpl5</code> (external → internal or per the chosen nodal scheme),
-- columns (0..N-1) correspond to <strong>envelope elements</strong>,
-- entries hold the <strong>areal heat capacity</strong> assigned to each node/element.</p>
-<blockquote>
-<p>The node distribution depends on the <strong>construction mass class</strong> (<code>class_i</code>, <code>class_e</code>, <code>class_ie</code>, <code>class_d</code>, <code>class_m</code>).</p>
-</blockquote>
-<hr />
-<h3 id="function-signature">Function Signature<a class="headerlink" href="#function-signature" title="Permanent link">&para;</a></h3>
+<h2 id="aeral-heat-capacity"><h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Aeral Heat capacity </strong></h1><a class="headerlink" href="#aeral-heat-capacity" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Areal_heat_capacity_of_element</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">building_object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">aeral_heat_capacity</span>
 </code></pre></div>
-<hr />
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1161,51 +1122,42 @@ The routine returns a 5×N matrix <code>kappa_pli_eli_</code> where:
 </tr>
 </tbody>
 </table>
-<hr />
-<h3 id="required-fields">Required Fields<a class="headerlink" href="#required-fields" title="Permanent link">&para;</a></h3>
-<p><strong>On each surface in <code>building_surface</code>:</strong>
-- <code>ISO52016_type_string</code> — element type: <code>"OP"</code> (opaque), <code>"W"</code> (transparent), <code>"GR"</code> (ground-contact), <code>"ADJ"</code> (adjacent opaque).<br />
-- <code>thermal_capacity</code> — <strong>areal heat capacity</strong> (e.g., from ISO 52016 Table B.14).</p>
-<p><strong>On the building object:</strong>
-- <code>building.construction_class</code> — construction mass class from ISO 52016 Table B.13:<br />
-  - <code>class_i</code>, <code>class_e</code>, <code>class_ie</code>, <code>class_d</code>, <code>class_m</code>.</p>
-<hr />
-<h3 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Contents</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>aeral_heat_capacity</code></td>
-<td>Wrapper carrying <code>kappa_pli_eli</code> (shape <strong>5 × N</strong>). Each column is an element; rows are nodes <code>kpl1..kpl5</code>.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="method-outline">Method Outline<a class="headerlink" href="#method-outline" title="Permanent link">&para;</a></h3>
+<h4 id="required-fields">Required Fields<a class="headerlink" href="#required-fields" title="Permanent link">&para;</a></h4>
+<p><strong>On each surface in <code>building_surface</code>:</strong></p>
+<ul>
+<li><code>ISO52016_type_string</code> — element type: <code>"OP"</code> (opaque), <code>"W"</code> (transparent), <code>"GR"</code> (ground-contact), <code>"ADJ"</code> (adjacent opaque).  </li>
+<li><code>thermal_capacity</code> — <strong>areal heat capacity</strong> (e.g., from ISO 52016 Table B.14).</li>
+</ul>
+<p><strong>On the building object:</strong></p>
+<ul>
+<li><code>building.construction_class</code> — construction mass class from ISO 52016 Table B.13:  </li>
+<li><code>class_i</code>, <code>class_e</code>, <code>class_ie</code>, <code>class_d</code>, <code>class_m</code>.</li>
+</ul>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
+<p>Computes the <strong>areal heat capacity allocation per node</strong> for each building envelope element according to <strong>EN ISO 52016-1 (6.5.7)</strong> and Annex B tables (e.g., <strong>B.13</strong> classes and <strong>B.14</strong> capacities).<br />
+The routine returns a 5×N matrix <code>kappa_pli_eli_</code> where:
+- rows (0..4) correspond to <strong>nodes</strong> <code>kpl1..kpl5</code> (external → internal or per the chosen nodal scheme),
+- columns (0..N-1) correspond to <strong>envelope elements</strong>,
+- entries hold the <strong>areal heat capacity</strong> assigned to each node/element.</p>
+<blockquote>
+<p>The node distribution depends on the <strong>construction mass class</strong> (<code>class_i</code>, <code>class_e</code>, <code>class_ie</code>, <code>class_d</code>, <code>class_m</code>).</p>
+</blockquote>
+<p><strong>How it works</strong></p>
 <ol>
 <li>
 <p><strong>Collect element types and capacities</strong>  </p>
-</li>
-<li>
-<p>Build <code>el_type</code> from <code>surface["ISO52016_type_string"]</code>.  </p>
-</li>
-<li>
-<p>Build <code>list_kappa_el</code> from <code>surface["thermal_capacity"]</code> (default <strong>0</strong> if missing).</p>
+<ul>
+<li>Build <code>el_type</code> from <code>surface["ISO52016_type_string"]</code>.  </li>
+<li>Build <code>list_kappa_el</code> from <code>surface["thermal_capacity"]</code> (default <strong>0</strong> if missing).</li>
+</ul>
 </li>
 <li>
 <p><strong>Initialize matrix</strong>  </p>
-</li>
-</ol>
 <div class="highlight"><pre><span></span><code>kappa_pli_eli_ : (5 × N) zeros
 rows 0..4 → nodes kpl1..kpl5
 cols 0..N → elements
 </code></pre></div>
-<ol>
+</li>
 <li>
 <p><strong>Distribute areal heat capacity by construction class (ISO 52016 Table B.13)</strong></p>
 </li>
@@ -1249,11 +1201,24 @@ cols 0..N → elements
    Wrap <code>kappa_pli_eli_</code> in <code>aeral_heat_capacity(kappa_pli_eli=...)</code>.</p>
 </li>
 </ol>
-<hr />
-<h3 id="node-indexing">Node Indexing<a class="headerlink" href="#node-indexing" title="Permanent link">&para;</a></h3>
+<h4 id="node-indexing">Node Indexing<a class="headerlink" href="#node-indexing" title="Permanent link">&para;</a></h4>
 <p>The implementation uses a <strong>5-node</strong> scheme (rows 0..4 → <code>kpl1..kpl5</code>). The physical mapping (external↔internal) should match your solver’s convention. This function follows the same node positions as used elsewhere in your ISO 52016 implementation.</p>
-<hr />
-<h3 id="example-pseudo">Example (pseudo)<a class="headerlink" href="#example-pseudo" title="Permanent link">&para;</a></h3>
+<h3 id="outputs">Outputs<a class="headerlink" href="#outputs" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aeral_heat_capacity</code></td>
+<td>Wrapper carrying <code>kappa_pli_eli</code> (shape <strong>5 × N</strong>). Each column is an element; rows are nodes <code>kpl1..kpl5</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="n">cap</span> <span class="o">=</span> <span class="n">Areal_heat_capacity_of_element</span><span class="p">(</span><span class="n">building_object</span><span class="o">=</span><span class="n">bui</span><span class="p">)</span>
 
 <span class="n">M</span> <span class="o">=</span> <span class="n">cap</span><span class="o">.</span><span class="n">kappa_pli_eli</span>  <span class="c1"># shape 5 × N</span>
@@ -1271,8 +1236,7 @@ cols 0..N → elements
 <hr />
 <h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>EN ISO 52016-1</strong> — <em>Energy performance of buildings — Calculation of energy needs for heating and cooling</em>.  </li>
-<li>§6.5.7 (nodal method), Annex B (Tables <strong>B.13</strong> construction classes, <strong>B.14</strong> areal heat capacities).</li>
+<li><strong>EN ISO 52016-1</strong> — <em>Energy performance of buildings — Calculation of energy needs for heating and cooling</em>.  §6.5.7 (nodal method), Annex B (Tables <strong>B.13</strong> construction classes, <strong>B.14</strong> areal heat capacities).</li>
 </ul>
 
 

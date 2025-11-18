@@ -26,9 +26,6 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
       
 
 
@@ -52,6 +49,8 @@
     
       <link rel="stylesheet" href="../assets/_mkdocstrings.css">
     
+      <link rel="stylesheet" href="../assets/css/custom.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,12 +61,7 @@
   </head>
   
   
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -94,8 +88,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="pybuildingenergy" class="md-header__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -119,8 +112,8 @@
       </div>
     </div>
     
-      
     
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
       <div class="md-header__option">
@@ -227,8 +220,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="pybuildingenergy" class="md-nav__button md-logo" aria-label="pybuildingenergy" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/images/favicon.png" alt="logo">
 
     </a>
     pybuildingenergy
@@ -341,34 +333,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-weather_data_buibuilding_object-path_weather_file-weather_sourcepvgis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function: Weather_data_bui(building_object, path_weather_file, weather_source="pvgis")
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Function: Weather_data_bui(building_object, path_weather_file, weather_source="pvgis")">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Parameters
@@ -376,26 +340,35 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#what-the-function-does" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      What the Function Does
+      Purpose
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      How it works:
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#typical-sim_df-columns" class="md-nav__link">
     <span class="md-ellipsis">
       Typical sim_df Columns
@@ -403,17 +376,17 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#notes-assumptions" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes &amp; Assumptions
+      Notes
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
@@ -421,18 +394,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
-      Related
+      Reference
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -495,7 +463,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52010 - Introduction
+    ISO 52010 - Calculation procedure
   </span>
   
 
@@ -601,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iso_52106_categorty_profile/" class="md-nav__link">
+      <a href="../iso_52016_categorty_profile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +720,7 @@
         
   
   <span class="md-ellipsis">
-    ISO 52016 - Node
+    ISO 52016 - Facade elements (nodes)
   </span>
   
 
@@ -990,34 +958,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#function-weather_data_buibuilding_object-path_weather_file-weather_sourcepvgis" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function: Weather_data_bui(building_object, path_weather_file, weather_source="pvgis")
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Function: Weather_data_bui(building_object, path_weather_file, weather_source="pvgis")">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#function-signature" class="md-nav__link">
-    <span class="md-ellipsis">
-      Function Signature
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#parameters" class="md-nav__link">
     <span class="md-ellipsis">
       Parameters
@@ -1025,26 +965,35 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#what-the-function-does" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
     <span class="md-ellipsis">
-      What the Function Does
+      Purpose
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#returns" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Returns
+      How it works:
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#typical-sim_df-columns" class="md-nav__link">
     <span class="md-ellipsis">
       Typical sim_df Columns
@@ -1052,17 +1001,17 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#notes-assumptions" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
     <span class="md-ellipsis">
-      Notes &amp; Assumptions
+      Notes
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
       Example
@@ -1070,18 +1019,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#related" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
     <span class="md-ellipsis">
-      Related
+      Reference
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1109,19 +1053,8 @@
 
 
 <h1 id="weather-data">Weather Data<a class="headerlink" href="#weather-data" title="Permanent link">&para;</a></h1>
-<p>The weather data can be retrieved in two ways:</p>
-<ol>
-<li>through the pvgis website (https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en). In this case, you only need to provide the latitude and longitude of the site to retrieve the data directly from the pvgis API</li>
-<li>through a file epw. The user can provide a meteo file type epw downloadable also from: https://www.ladybug.tools/epwmap/</li>
-</ol>
-<h2 id="function-weather_data_buibuilding_object-path_weather_file-weather_sourcepvgis"><strong>Function</strong>: <code>Weather_data_bui(building_object, path_weather_file, weather_source="pvgis")</code><a class="headerlink" href="#function-weather_data_buibuilding_object-path_weather_file-weather_sourcepvgis" title="Permanent link">&para;</a></h2>
-<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
-<p>Fetches and prepares <strong>weather time series</strong> for a building simulation by invoking an ISO 52010-compliant pre-processor and returning a small wrapper that carries the resulting <code>pandas.DataFrame</code>.</p>
-<hr />
-<h3 id="function-signature">Function Signature<a class="headerlink" href="#function-signature" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">Weather_data_bui</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">building_object</span><span class="p">,</span> <span class="n">path_weather_file</span><span class="p">,</span> <span class="n">weather_source</span><span class="o">=</span><span class="s2">&quot;pvgis&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">simulation_df</span>
 </code></pre></div>
-<hr />
 <h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -1154,7 +1087,14 @@
 </tbody>
 </table>
 <hr />
-<h3 id="what-the-function-does">What the Function Does<a class="headerlink" href="#what-the-function-does" title="Permanent link">&para;</a></h3>
+<h3 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h3>
+<p>Fetches and prepares <strong>weather time series</strong> for a building simulation by invoking an ISO 52010-compliant pre-processor and returning a small wrapper that carries the resulting <code>pandas.DataFrame</code>.</p>
+<p>The weather data can be retrieved in two ways:</p>
+<ol>
+<li>through the pvgis website <code>(https://joint-research-centre.ec.europa.eu/photovoltaic-geographical-information-system-pvgis_en)</code>. In this case, you only need to provide the latitude and longitude of the site to retrieve the data directly from the pvgis API</li>
+<li>through a file epw. The user can provide a meteo file type epw downloadable also from: <code>https://www.ladybug.tools/epwmap/</code></li>
+</ol>
+<h3 id="how-it-works">How it works:<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Calls the ISO 52010 pipeline</strong><br />
    <div class="highlight"><pre><span></span><code><span class="n">Calculation_ISO_52010</span><span class="p">(</span><span class="n">building_object</span><span class="p">,</span> <span class="n">path_weather_file</span><span class="p">,</span> <span class="n">weather_source</span><span class="o">=</span><span class="n">weather_source</span><span class="p">)</span><span class="o">.</span><span class="n">sim_df</span>
@@ -1167,7 +1107,7 @@
 </code></pre></div></li>
 </ol>
 <hr />
-<h3 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h3>
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1184,15 +1124,17 @@
 </table>
 <hr />
 <h3 id="typical-sim_df-columns">Typical <code>sim_df</code> Columns<a class="headerlink" href="#typical-sim_df-columns" title="Permanent link">&para;</a></h3>
-<p>Exact columns depend on your <code>Calculation_ISO_52010</code> implementation, but commonly include:
-- Dry-bulb temperature, relative humidity, wind speed
-- Solar irradiance terms (e.g., direct/diffuse/global or plane-of-array)
-- Sky temperature / longwave terms if modeled</p>
+<p>Exact columns depend on your <code>Calculation_ISO_52010</code> implementation, but commonly include:</p>
+<ul>
+<li>Dry-bulb temperature, relative humidity, wind speed</li>
+<li>Solar irradiance terms (e.g., direct/diffuse/global or plane-of-array)</li>
+<li>Sky temperature / longwave terms if modeled</li>
+</ul>
 <blockquote>
 <p>Non-weather operational drivers (occupancy, setpoints) are <strong>not</strong> constructed here; this function only prepares weather data.</p>
 </blockquote>
 <hr />
-<h3 id="notes-assumptions">Notes &amp; Assumptions<a class="headerlink" href="#notes-assumptions" title="Permanent link">&para;</a></h3>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>weather_source="pvgis"</code> and <code>weather_source="epw"</code> currently execute the <strong>same</strong> code path. Add branching logic later if you need different parsing or metadata handling.</li>
 <li>The index is expected to be <strong>continuous hourly</strong>. If your EPW contains gaps or DST shifts, ensure the ISO 52010 routine resolves them.</li>
@@ -1210,7 +1152,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()[:</span><span class="mi">8</span><span class="p">])</span>    <span class="c1"># peek at columns</span>
 </code></pre></div>
 <hr />
-<h3 id="related">Related<a class="headerlink" href="#related" title="Permanent link">&para;</a></h3>
+<h3 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>EN ISO 52010-1</strong> – Calculation of solar &amp; daylight quantities for building energy needs</li>
 <li>Project class/type: <code>simulation_df</code></li>
