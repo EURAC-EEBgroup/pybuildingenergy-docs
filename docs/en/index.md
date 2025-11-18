@@ -47,7 +47,7 @@ The energy performance of a building shall be expressed by a numeric indicator o
 
 Member States shall describe their national calculation methodology based on Annex A of the key European standards on energy performance of buildings.
 
-### **EN 15316 - Heating and Cooling Systems**
+### **EN 15316 - Heating Systems**
 
 The EN 15316 series covers the calculation method for system energy requirements and system efficiencies. This family of standards is an integral part of the EPB set and covers:
 
@@ -76,7 +76,7 @@ The most recent revision of the EPBD was published in May 2024, further strength
 
 ### **pyBuildingEnergy: the python library for building performance assessment**
 
-**pyBuildingEnergy** aims to provide an assessment of building performance both in terms of energy and comfort. In this initial release, it is possible to assess the energy performance of the building using ISO EN 52106-1:2018. Additional modules will be added for a more comprehensive evaluation of performance, assessing ventilation, renewable energies, systems, etc.
+**pyBuildingEnergy** aims to provide an assessment of building performance both in terms of energy and comfort. In this initial release, it is possible to assess the energy performance of the building using ISO EN 52106-1:2018, EN ISO 52010-1:2018, EN ISO 15316-1:2018, ISO EN 16798-1:2018, ISO EN1 6798-7:2018, etc.. Additional modules will be added for a more comprehensive evaluation of performance, assessing ventilation, renewable energies, HVAC systems, etc.
 The actual calculation methods for the assessment of building performance are the following:
 
 - [x] the (sensible) energy need for heating and cooling, based on hourly or monthly calculations;
