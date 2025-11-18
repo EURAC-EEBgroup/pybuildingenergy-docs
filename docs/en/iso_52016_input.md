@@ -1,11 +1,12 @@
-# Building Input (BUI) Structure 
+
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Building Input (BUI) Structure </strong></h1>
+
 
 This document explains the **BUI** (Building Input) dictionary used for ISO 52016 simulations.  
 It defines the building geometry, surfaces, (general)systems, and operational parameters required to calculate hourly temperatures and energy needs.
 
 ---
-
-## 1) Structure Overview
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Structure Overview</strong></h2>
 
 ```python
 BUI = {
@@ -46,7 +47,8 @@ BUI = {
 
 ---
 
-## 2) `"building"` — Main Building Metadata
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Main Building Metadata: `"building"`</strong></h2> 
+
 
 | Key | Type | Description |
 |------|------|-------------|
@@ -66,7 +68,7 @@ BUI = {
 
 ---
 
-## 3) `"adjacent_zones"` — Adjoining/Unconditioned Spaces
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Adjoining/Unconditioned Spaces: `"adjacent_zones"`</strong></h2> 
 
 Defines zones adjacent to the conditioned area, used for ISO 13789 transmission heat transfer.
 
@@ -86,7 +88,7 @@ Each zone has:
 
 ---
 
-## 4) `"building_surface"` — Envelope Elements
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Envelope Elements: `"building_surface"`</strong></h2> 
 
 Describes all external and internal surfaces forming the building envelope.
 
@@ -117,7 +119,7 @@ Include window-specific attributes:
 
 ---
 
-## 5) `"units"` — Unit Definitions
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Unit Definitions: `"units"`</strong></h2> 
 
 Defines unit conventions for each physical quantity.
 
@@ -133,28 +135,28 @@ Defines unit conventions for each physical quantity.
 
 ---
 
-## 6) `"building_parameters"` — Thermal, System, and Operational Settings
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Thermal, System, and Operational Settings: `"building_parameters"`</strong></h2> 
 
-### 6.1 Temperature Setpoints
+### Temperature Setpoints
 | Key | Description |
 |------|-------------|
 | `heating_setpoint`, `heating_setback` | Comfort and setback temperatures (°C). |
 | `cooling_setpoint`, `cooling_setback` | Cooling comfort and setback (°C). |
 | `units` | `"°C"`. |
 
-### 6.2 System Capacities
+### System Capacities
 | Key | Description |
 |------|-------------|
 | `heating_capacity`, `cooling_capacity` | Maximum system capacities (W). |
 | `units` | `"W"`. |
 
-### 6.3 Airflow Rates
+### Airflow Rates
 | Key | Description |
 |------|-------------|
 | `infiltration_rate` | Airflow in air changes per hour (ACH). |
 | `units` | `"ACH"`. |
 
-### 6.4 Internal Gains
+### Internal Gains
 Each internal source (occupants, appliances, lighting) defines:
 | Key | Description |
 |------|-------------|
@@ -162,18 +164,18 @@ Each internal source (occupants, appliances, lighting) defines:
 | `full_load` | Peak power density (W/m²). |
 | `weekday`, `weekend` | 24-hour normalized (0–1) schedules. |
 
-### 6.5 Construction
+### Construction
 | Key | Description |
 |------|-------------|
 | `wall_thickness` | Wall thickness (m). |
 | `thermal_bridges` | Linear thermal bridge coefficient (W/m·K). |
 
-### 6.6 Climate Parameters
+### Climate Parameters
 | Key | Description |
 |------|-------------|
 | `coldest_month` | Index of coldest month (1 = Jan, 12 = Dec). |
 
-### 6.7 HVAC and Ventilation Profiles
+### HVAC and Ventilation Profiles
 Hourly normalized profiles for system operation:
 
 | Profile | Description |
@@ -184,7 +186,7 @@ Hourly normalized profiles for system operation:
 
 ---
 
-## 7) Example Workflow
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Example Workflow</strong></h2>
 
 ```python
 from iso52016 import ISO52016
@@ -202,7 +204,7 @@ print(annual)
 
 ---
 
-## 8) Good Practices
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Good Practices</strong></h2>
 
 - Always verify **units** and **orientation angles** before running simulations.  
 - Ensure **surface U-values** and **areas** are consistent with geometry.  
@@ -212,7 +214,7 @@ print(annual)
 
 ---
 
-## 9) Outputs of ISO 52016
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Outputs of ISO 52016</strong></h2>
 
 After running the calculation, typical outputs include:
 - Hourly heating/cooling needs (`Q_HC`, W)
@@ -222,7 +224,7 @@ After running the calculation, typical outputs include:
 
 ---
 
-## 10) `global_inputs.py` — Static data & constants
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Static data & constants: `global_inputs.py` </strong></h2>
 
 ### Purpose
 
@@ -257,7 +259,7 @@ After running the calculation, typical outputs include:
 
 ---
 
-## Implementation Notes & Robustness
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Implementation Notes & Robustness</strong></h2>
 
 - **Type safety**: many arrays in `BUI` are `dtype=object`. Cast to `np.asarray(..., dtype=float)` before algebra.
 - **Orientation logic**: To identify interface elements for \(H_{d,zt{\text -}ztu}\), define a **clear mapping** between `building_surface[*].name_adj_zone` and the `adjacent_zones[*].name` and use that to split \(\mathcal{E}_{zt{\text -}ztu}\) vs \(\mathcal{E}_{ztu{\text -}ext}\). Avoid relying only on cardinal labels like `NV/SV/...` when adjacency is explicit in the `BUI`.

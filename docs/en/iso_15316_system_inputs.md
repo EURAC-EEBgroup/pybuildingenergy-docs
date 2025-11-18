@@ -1,11 +1,13 @@
-# HVAC SYSTEM INPUTS
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>HVAC SYSTEM INPUTS</strong></h1>
+ 
 
 The user must define the following parameters to perform the calculation of primary energy according to ISO 15316.1. The python class to which this calculation is requested is the **HeatingSystemCalculator**.
 
 Below is shown an example of a dictionary that must be passed to HeatingSystemCalculator in which the parameters necessary for the calculation are indicated. 
 The following parameters are the minimum required, this does not mean that it is possible to modify other parameters based on your own requests.  For example the table TB14 in the hereunder list. 
 
-### EMISSION
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>EMISSION</strong></h2>
+
 
 - **Nominal power**: it is the power of the emitter in kW, defined in the product data. 
 - **Emission efficiency**: it is the efficiency of the emitter in %.
@@ -67,7 +69,7 @@ These values are default emission circuit parameters for the heating system’s 
 
 ---
 
-### DISTRIBUTION 
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>DISTRIBUTION</strong></h2> 
 
 ```python 
 # --- distribution ---
@@ -109,7 +111,7 @@ They define how heat losses, auxiliary energy use, and simplifications in the ca
 ---
 
 
-### GENERATION
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>GENERATION</strong></h2>
 
 The generator is modelled using the following parameters:
 
@@ -359,7 +361,7 @@ It is possible to define the optional primary setpoints (used if circuit is inde
 
 ---
 
-### GENERAL
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>GENERAL</strong></h2>
 
 ---
 **Efficiency model**

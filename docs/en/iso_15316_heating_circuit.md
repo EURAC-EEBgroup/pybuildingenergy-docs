@@ -1,4 +1,4 @@
-# Heating circuit.
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>HEATING CIRCUIT</strong></h1>
 
 
 The library provides modules for evaluating 4 types of hydraulic circuits, where, based on Table C.1 of the standard, for each circuit it is identified which type of emission system to use and the type of control. as defined below: 
@@ -16,9 +16,10 @@ All modules allow the us of a mixing valve to allow different temperatures in th
 - the circuit temperature and flow rate; 
 
 They differ where there is a mixing or by-pass 3 way valve in the circuit.
-## System type and input parameters
 
-### C2 - constant mass flow rate and varying water temperature
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>System type and input parameters</strong></h2>
+
+### **C2 - constant mass flow rate and varying water temperature**
 
 This conffiguration is for sample heating circuit with varying temperature and constant flow, with mixing valve. 
 
@@ -128,7 +129,7 @@ Internal temperature | θint | °C | - | 0-45| Indoor operative temperature of t
 Operating time | tH_em_i | h | 1 | - | Operating time of the system, generally in hours|
 Maximum distribution water temperature | θH_nod_out | °C | - | - | it is the maximum temperature of the ditribution system, this values depends on the type of applied control. If MIX_VALVE == False, this value is equal to the minimum of the emitter temperature θH_em_flw_min |
 
-### C3 - varying mass flow rate and constant water temperature
+### **C3 - varying mass flow rate and constant water temperature**
 
 This configuration is for sample heating circuit with varying mass flow rate and constant water temperature. 
 
@@ -245,7 +246,7 @@ Internal temperature | θint | °C | - | 0-45| Indoor operative temperature of t
 Operating time | tH_em_i | h | 1 | - | Operating time of the system, generally in hours|
 Maxium distribution water temperature | θH_nod_out | °C | - | - | it is the maximum temperature of the ditribution system, this values depends on the type of applied control. If MIX_VALVE == False, this value is equal to the minimum of the emitter temperature θH_em_flw_min |
 
-### C4 - Intermittent flow rate module (ON-OFF)
+### **C4 - Intermittent flow rate module (ON-OFF)**
 
 This configuration is for sample heating circuit with intermittent flow rate and constant water temperature. 
 
@@ -351,7 +352,7 @@ Internal temperature | θint | °C | - | 0-45| Indoor operative temperature of t
 Operating time | tH_em_i | h | 1 | - | Operating time of the system, generally in hours|
 Maxium distribution water temperature | θH_nod_out | °C | - | - | it is the maximum temperature of the ditribution system, this values depends on the type of applied control. If MIX_VALVE == False, this value is equal to the minimum of the emitter temperature θH_em_flw_min |
 
-### C5 - Constant flow rate and variable heat exchange
+### **C5 - Constant flow rate and variable heat exchange**
 
 
 <figure align="center">

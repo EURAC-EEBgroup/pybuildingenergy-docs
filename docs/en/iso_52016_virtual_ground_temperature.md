@@ -1,4 +1,4 @@
-# Virtual ground temperature calculation for slab-on-ground floor
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Calculation of virtual ground temperature</strong></h1>
 
 
 ```python
@@ -35,7 +35,6 @@ def Temp_calculation_of_ground(
 - *(Optional)* `building.thermal_resistance_floor` (m²K/W). In the current code, `thermal_resistance_floor` is set to **5.3 m²K/W** internally.  
 - The function stores `building_parameters.coldest_month` (=1) for later reference.
 
----
 
 ### Purpose
 Computes the **virtual ground temperature** and related parameters for **slab-on-ground (SoG)** floors in accordance with **ISO 13370:2017**.  
@@ -125,7 +124,6 @@ These quantities are used to model heat exchange with the ground in dynamic/stea
     
     \[ \Theta_{gr,ve}(m) = T_{i,m} - \frac{ \dot{Q}_{avg}(m) - P\,\psi_k (\overline{T_i} - \overline{T_e}) }{A\, U_{sog}} \]
 
----
 
 ### Outputs
 The function returns a `temp_ground` wrapper with:
@@ -134,7 +132,6 @@ The function returns a `temp_ground` wrapper with:
 - **`Theta_gr_ve`** *(np.ndarray length 12, °C)* – monthly virtual ground temperatures as “seen” by the slab.  
 - **`thermal_bridge_heat`** *(float, W/K)* – heat transfer coefficient due to thermal bridges along the exposed perimeter (`exposed_perimeter × psi_k`).
 
----
 
 
 ### Example 

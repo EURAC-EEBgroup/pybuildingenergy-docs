@@ -1,9 +1,10 @@
-# Adjacent zone
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Adjacent zone </strong></h1>
 
 The `adj_zone` dictionary provides all necessary geometric and physical properties of an **adjacent unconditioned zone** (e.g., attic, basement, or corridor) required to compute the **transmission heat transfer coefficient** according to **ISO 13789**.
 
 
-## Adjacent Zone Input (`adj_zone`)
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Adjacent Zone Input (`adj_zone`) </strong></h2>
+
 It is possible to simulate a not conditioned adjacent zone providing the following input: 
 
 **Example Structure:**
@@ -88,7 +89,8 @@ In each not thermal adjacent zone the calcualtion of heat transfer coefficent by
 
 ---
 
-**Transmission heat transfer coefficients - EN ISO 13789**
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Transmission heat transfer coefficients - EN ISO 13789</strong></h2>
+
 ---
 ```python
 def transmission_heat_transfer_coefficient_ISO13789(cls, adj_zone, n_ue=0.5, qui=0)

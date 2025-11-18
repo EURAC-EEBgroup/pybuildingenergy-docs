@@ -1,7 +1,8 @@
-# Category profile
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Category profile </strong></h1>
 
-**Occupancts, Lighting, Appliance, Ventilation, Heating, Cooling profile**
----
+
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Occupancts, Lighting, Appliance, Ventilation, Heating, Cooling profile</strong></h2>
+
 ```python
 def generate_category_profile(
     cls,
@@ -15,9 +16,6 @@ def generate_category_profile(
 )
 ```
 
----
-
-
 ### Inputs
 
 | Parameter | Type | Description |
@@ -26,8 +24,6 @@ def generate_category_profile(
 | `occupants_schedule_workdays/weekend` | `dict[str, list[float]]` | Default hourly occupancy profiles (24 values each). |
 | `appliances_schedule_workdays/weekend` | `dict[str, list[float]]` | Default hourly appliance profiles. |
 | `lighting_schedule_workdays/weekend` | `dict[str, list[float]]` | Default hourly lighting profiles. |
-
----
 
 
 ### Purpose
@@ -67,7 +63,6 @@ It ensures that all schedules are properly defined, validated, and ready for use
 4. **Output assembly**  
    Returns all category profiles in a structured dictionary format.
 
----
 
 ### Outputs
 `dict` — A complete set of hourly category profiles for use in thermal simulations, HVAC control logic, or internal gain estimation.
@@ -84,8 +79,6 @@ It ensures that all schedules are properly defined, validated, and ready for use
 ```
 
 Each category contains **24 hourly fractions** for weekdays and weekends (holidays), typically in the range 0–1 or as relative intensity values.
-
----
 
 ### Example
 
@@ -104,8 +97,6 @@ profiles = generate_category_profile(
 lighting_profile = profiles["lighting"]["weekday"]
 ```
 
----
-
 ### Notes
 - All profiles **must contain exactly 24 numeric values**.  
 - Missing **ventilation**, **heating**, or **cooling** profiles automatically default to the **occupancy** profile.  
@@ -120,14 +111,15 @@ The `**generate_category_profile()**` is based on the following functions:
 
 ---
 
-**Country code for calendar data**
----
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Country code for calendar data</strong></h2>
+
 ```python
 def get_country_code_from_latlon(lat: float, lon: float, default: str = "IT") -> str
 ```
 ### Parameters
 - `lat`, `lon` *(float)*: Geographic coordinates.
 - `default` *(str)*: Fallback code returned on errors or when the API does not return a country code. Default is `"IT"`.
+
 
 ### Purpose
 Resolve a latitude/longitude to an ISO 3166-1 alpha-2 country code, using a reverse‑geocoding API (example: OpenCage).
@@ -147,8 +139,8 @@ Resolve a latitude/longitude to an ISO 3166-1 alpha-2 country code, using a reve
 
 ---
 
-**Generate hourly profiles**
----
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Generate hourly profiles</strong></h2>
+
 ```python
 class HourlyProfileGenerator(
     country: str = "IT",
@@ -159,6 +151,7 @@ class HourlyProfileGenerator(
     category_profiles: dict | None = None
 )
 ```
+
 ### Inputs
 - `country`: ISO 2-letter country code used by `holidays` to determine national holidays.
 - `num_months`: How many months to generate (default: `13`).
@@ -181,7 +174,7 @@ Generate a **continuous hourly DataFrame** (default: 13 months) with calendar fl
 - **Profiles (0..1):** Per-category 24‑value arrays are mapped to each hour of the day, switching between **weekday** and **holiday/weekend** versions.
 - **Retro‑compatibility:** If `category_profiles` is not provided, two default 24‑hour arrays (one for working days, one for holidays) are used for all categories. You can also pass legacy `working_day_profile`/`holiday_profile` to override those defaults.
 
----
+
 ### Outputs 
 
 `generate()` returns a `pandas.DataFrame` with columns:
@@ -192,8 +185,6 @@ Generate a **continuous hourly DataFrame** (default: 13 months) with calendar fl
 - One column per category: `"{category}_profile"` (values in 0..1).
 - `profile_value`: retro‑compatibility alias (uses `occupancy_profile`).
 - `day_type`: `"Working Day"` or `"Holiday/Weekend"`.
-
----
 
 
 ### Examples
@@ -245,6 +236,8 @@ from profiles import get_country_code_from_latlon
 code = get_country_code_from_latlon(46.49, 11.33, default="IT")
 print(code)  # e.g., "IT" or fallback
 ```
+
+---
 
 ## Error Handling, Edge Cases and Validation
 - **Invalid profile shapes**: raises `ValueError` for any 24‑hour array not equal to `(24,)`.

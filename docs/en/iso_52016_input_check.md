@@ -1,10 +1,12 @@
-# ISO 52016 Input Check
+<h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">ISO 52016 Input Check</h1>
+
 
 The data provided before being used for the simulation are processed and evaluated to be considered fit for the simulation. This process includes a series of checks that allow to identify any potential errors. 
 The following controls are applied:
 
 ---
-### <h3 style="color:#df1b12"><strong>Direction from orientation</strong></h3>
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Direction from orientation</h2>
+
 
 **Function Name**:
 `_dir_from_orientation(azimut:float, tilt:float) -> str`
@@ -33,8 +35,7 @@ One of: `HOR` (horizontal), `NV`,`EV`, `SV`, `WV`(vertical faces; North, East, S
 This function does not emit messages; it enforces interpretation by thresholds/snaps.
 
 ---
-
-### <h3 style="color:#df1b12"><strong>Opaque facade areas in adjacent zone</strong></h3>
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Opaque facade areas in adjacent zone</h2>
 
 **Function Name**: `_adj_op_area_in_dir(adj_zone: dict, dir_code: str) -> float`
 
@@ -54,8 +55,7 @@ Compute the sum of opaque (“OP”) facade areas in `adj_zone` for the given di
 No messages; pure filtering/aggregation with safe default `0.0`.
 
 ---
-
-### <h3 style="color:#df1b12"><strong>Check heating system inputs</strong></h3>
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Check heating system inputs</h2>
 
 **Function Name**: `check_heating_system_inputs(system_input: dict) -> dict`
 
@@ -115,7 +115,7 @@ Returns a normalized copy of the input config in "config"; original dict is not 
 
 ---
 
-### <h3 style="color:#df1b12"><strong>Validation and optional sanitation of a BUI structure</strong></h3>
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Validation and optional sanitation of a BUI structure</h2>
 
 **Function Name**: `sanitize_and_validate_BUI(bui: dict, fix: bool = True, eps: float = 1e-6, defaults: dict | None = None) -> tuple[dict, list[dict]]`
 
@@ -266,45 +266,15 @@ It operates in two passes (an inner while-loop and a later full pass), using the
    - If `diff = A_bui - A_adj_dir > 1e-9`:
       - Shrink the "adjacent" area to A_adj_dir.
 
-Create a new external "opaque" surface with area diff (copy selected coeffs).
-
-Emit INFO about the split.
-
-Messages
-
-Structured via add_issue(level, path, msg, fix_applied) where:
-
-level: "ERROR", "WARN", "INFO".
-
-path: e.g., building_surface[3].u_value or adjacent_zones[1].
-
-msg: human-readable description.
-
-fix_applied: True/False.
-
-Mutation policy
-
-Operates on a deep copy (bui_clean); original bui remains unchanged.
-
-When fix=False, issues are reported but values are not altered; conditions that would require rebalancing yield ERRORs.
-
-Helper direction rules used
-
-_azimuth_to_dir(az): valid only for cardinal azimuths; returns None otherwise (skips).
-
-_dir_from_orientation(azimuth, tilt): robust snapping with tilt fallback (HOR/vertical).
-
-
 ---
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Thermal and Adjacent Zone</h2>
 
-# Thermal and Adjacent Zone
 Uno degli errori più caratteristici può essere quello di immetere dei valori errati di superficie della parete di confine tra la zona termica e la zona non termica. Un esempio è quello di dare dei valori più alti della superificie della parete nella zona non termica rispetto alla superificie della parete nella zona termica. In questo caso se il controllo risulta essere negativo allora il tool imposta il valore del superificie della zona non termica uguale a quello della zona termica. 
 Qui voglio dire che sebbene la superficie di contatto è la stessa pu`o succedere che la parete della zona termica sia o totlamente a contatto con la zon non termica o solamente una parte a contatto con la zona termica   
 
 
-# Quality check of system inputs:
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Quality check of system input `check_heating_system_inputs`</h2>
 
-### `check_heating_system_inputs` Function
 
 This function validates and normalizes the input configuration for the heating system. It performs the following checks:
 

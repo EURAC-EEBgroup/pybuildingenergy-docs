@@ -1,10 +1,10 @@
-# Ventilation, Internal Gains and Transmission Heat Transfer between Adjacent Zones
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Ventilation, Internal Gains and Transmission Heat Transfer between Adjacent Zones</strong></h1>
+
 
 This module implements methods for evaluating **heat transfer by ventilation** and **internal heat gains** in thermally conditioned and unconditioned zones.
 
 It also includes an auxiliary function for computing **transmission heat transfer coefficients** between conditioned and adjacent zones, following **ISO 13789**.
 
----
 
 ## Overview
 
@@ -22,11 +22,9 @@ The module covers three main components:
 
 ---
 
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Calculation of heat transfer coefficient by ventilation</strong></h2>
 
 
-
-**Calculation of heat transfer coefficient by ventilation**
----
 
 ```python
 @staticmethod
@@ -144,8 +142,8 @@ return np.array(Hve)
 
 ---
 
-**Internal gains calculation**:
----
+## <h2 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Internal gains calculation</strong></h2>
+
 
 ```python
 def internal_gains(

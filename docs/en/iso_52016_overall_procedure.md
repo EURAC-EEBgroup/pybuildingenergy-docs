@@ -1,14 +1,5 @@
-# Overall procedure - Energy Need EN ISO 52016. Step by Step Guide
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Overall procedure - Energy Need EN ISO 52016</strong></h1>
 
-Function: `Temperature_and_Energy_needs_calculation(...)`
----
-
-This guide explains how the `Temperature_and_Energy_needs_calculation(...)` classmethod computes hourly **operative temperatures** and **heating/cooling needs** following **ISO 52016:2017**. 
-It walks through inputs, preprocessing, per‑timestep assembly of the linear system, HVAC setpoint logic, numerical safeguards, and outputs.
-
----
-
-## 0) Function signature
 
 ```python
 @classmethod
@@ -26,6 +17,39 @@ def Temperature_and_Energy_needs_calculation(
 )
 ```
 
+This guide explains how the `Temperature_and_Energy_needs_calculation(...)` classmethod computes hourly **operative temperatures** and **heating/cooling needs** following **ISO 52016:2017**. 
+It walks through inputs, preprocessing, per‑timestep assembly of the linear system, HVAC setpoint logic, numerical safeguards, and outputs.
+
+---
+
+## Inputs
+
+### Building description (`building_object`)
+- `building.net_floor_area` (m²)
+- `building_parameters.temperature_setpoints`
+  - `heating_setpoint`, `heating_setback`, `cooling_setpoint`, `cooling_setback` (°C)
+- `building_parameters.system_capacities`
+  - `heating_capacity` (W), `cooling_capacity` (W)
+- `building_surface`: list of surfaces with fields (examples)
+  - `type`: `"opaque" | "transparent" | "adiabatic" | "adjacent" | "ground"`
+  - `area` (m²), `u_value` (W/m²K) (if relevant), `thermal_capacity` (J/K) (optional)
+  - `orientation = { azimuth, tilt }` with sky view factor `sky_view_factor ∈ [0,1]`
+  - windows: `g_value`, shading info (optional)
+- optional **adjacent zones** block for coupling to unconditioned zones.
+
+### Model parameters (function arguments)
+- `nrHCmodes` — modes evaluated: 1=free, 2=H or C, 3=both (default 2).
+- `c_int_per_A_us` — areal internal capacity (J/m²K) → multiplied by `net_floor_area` to get `C_int`.
+- `f_int_c`, `f_sol_c` — convective fractions for **internal** and **solar** gains.
+- `f_H_c`, `f_C_c` — convective fractions for **heating** and **cooling** system emission.
+- `delta_Theta_er` — ΔT external air–sky (°C) for radiative exchange on external surfaces.
+- `kwargs`: weather provider (`"pvgis"` or `"epw"`, with `path_weather_file` for EPW).
+
+---
+
+
+### Purpose
+
 **Purpose**: Solve the **zone energy balance** hour by hour:
 
 \[
@@ -39,34 +63,10 @@ def Temperature_and_Energy_needs_calculation(
 - `X` contains the unknown temperatures at the **air node** (zone) and the **conduction nodes** for each surface.
 - The solution is computed for up to **three columns**: free-floating, heating-upper, cooling-upper.
 
----
-
-## 1) Inputs & parameters
-
-### 1.1 Building description (`building_object`)
-- `building.net_floor_area` (m²)
-- `building_parameters.temperature_setpoints`
-  - `heating_setpoint`, `heating_setback`, `cooling_setpoint`, `cooling_setback` (°C)
-- `building_parameters.system_capacities`
-  - `heating_capacity` (W), `cooling_capacity` (W)
-- `building_surface`: list of surfaces with fields (examples)
-  - `type`: `"opaque" | "transparent" | "adiabatic" | "adjacent" | "ground"`
-  - `area` (m²), `u_value` (W/m²K) (if relevant), `thermal_capacity` (J/K) (optional)
-  - `orientation = { azimuth, tilt }` with sky view factor `sky_view_factor ∈ [0,1]`
-  - windows: `g_value`, shading info (optional)
-- optional **adjacent zones** block for coupling to unconditioned zones.
-
-### 1.2 Model parameters (function arguments)
-- `nrHCmodes` — modes evaluated: 1=free, 2=H or C, 3=both (default 2).
-- `c_int_per_A_us` — areal internal capacity (J/m²K) → multiplied by `net_floor_area` to get `C_int`.
-- `f_int_c`, `f_sol_c` — convective fractions for **internal** and **solar** gains.
-- `f_H_c`, `f_C_c` — convective fractions for **heating** and **cooling** system emission.
-- `delta_Theta_er` — ΔT external air–sky (°C) for radiative exchange on external surfaces.
-- `kwargs`: weather provider (`"pvgis"` or `"epw"`, with `path_weather_file` for EPW).
 
 ---
 
-## 2) Weather & timebase
+## 1) Weather & timebase
 
 1. Choose weather source:
     - `"pvgis"` → provider called without a file path.
@@ -78,7 +78,7 @@ def Temperature_and_Energy_needs_calculation(
 
 ---
 
-## 3) Surface hydration, classification, and aggregation
+## 2) Surface hydration, classification, and aggregation
 
 1. **Classify** each surface:
     - `"GR"`: ground (opaque with `sky_view_factor == 0`)
@@ -98,7 +98,7 @@ def Temperature_and_Energy_needs_calculation(
 
 ---
 
-## 4) Zone state & node topology
+## 3) Zone state & node topology
 
 1. **Node graph** (`Number_of_nodes_element`):
     - Node index `0` → **zone air/furniture**.
@@ -115,7 +115,7 @@ def Temperature_and_Energy_needs_calculation(
 
 ---
 
-## 5) Ground, thermal bridges, and solar preparatory data
+## 4) Ground, thermal bridges, and solar preparatory data
 
 1. **Ground** model: `Temp_calculation_of_ground(building_object)` returns:
     - monthly ground temperature `Theta_gr_ve[1..12]`
@@ -128,7 +128,7 @@ def Temperature_and_Energy_needs_calculation(
 
 ---
 
-## 6) Internal and ventilation gains & profiles
+## 5) Internal and ventilation gains & profiles
 
 1. Build hourly **profiles**:
     - `occupancy_profile`, `appliances_profile`, `lighting_profile`
@@ -142,7 +142,7 @@ def Temperature_and_Energy_needs_calculation(
 
 ---
 
-## 7) Adjacent (unconditioned) zones (if any)
+## 6) Adjacent (unconditioned) zones (if any)
 
 1. If `adj_zones_present`:
     - Use ISO 13789 to calculate the transmission (`H_ztu`, `b_ztu`, `F_ztc_ztu_m`) per adjacent zone.
@@ -155,11 +155,11 @@ def Temperature_and_Energy_needs_calculation(
 
 ---
 
-## 8) Per‑timestep assembly (ISO 52016 equations)
+## 7) Per‑timestep assembly (ISO 52016 equations)
 
 At each hour **t**, assemble the system for up to **3 columns** (free, heating-upper, cooling-upper):
 
-### 8.1 Right‑hand side `B` contributions
+### 7.1 Right‑hand side `B` contributions
 
 For the **zone air node (row 0)**:
 
@@ -183,7 +183,7 @@ For each **external surface node**:
 - For **ADJ** surfaces, use `T_adj_zone(t)` instead of `T_out(t)`.
 - For **GR** surfaces, use `(1/R_gr) · T_ground(month)`.
 
-### 8.2 Matrix `A` contributions
+### 7.2 Matrix `A` contributions
 
 - **Zone air row (0,0)**:
     - add `(C_int/Δt) + H_ve + H_tb + Σ (A_eli·h_ci_eli)`  
@@ -208,7 +208,7 @@ For each **external surface node**:
 
 ---
 
-## 9) Solve the system(s) and compute operative temperatures
+## 8) Solve the system(s) and compute operative temperatures
 
 1. Check rank/conditioning; regularize if needed.
 2. Solve `A·X = B` for each column (free, heating-upper, cooling-upper).
@@ -219,7 +219,7 @@ For each **external surface node**:
 
 ---
 
-## 10) HVAC setpoint logic (ISO 52016 §6.5.5.2)
+## 9) HVAC setpoint logic (ISO 52016 §6.5.5.2)
 
 For each hour:
 
@@ -243,7 +243,7 @@ For each hour:
 
 ---
 
-## 11) Energy accounting (Sankey-style, optional)
+## 10) Energy accounting (Sankey-style, optional)
 
 Per hour, accumulate **Wh** contributions:
 
@@ -257,9 +257,9 @@ At the end:
 
 ---
 
-## 12) Build outputs
+## 11) Build outputs
 
-### 12.1 Hourly results (after warm‑up)
+### 11.1 Hourly results (after warm‑up)
 DataFrame columns:
 
 - `Q_HC` (W) — signed HVAC need (+: heating, −: cooling)
@@ -269,7 +269,7 @@ DataFrame columns:
     - `Q_H = max(Q_HC, 0)`
     - `Q_C = max(-Q_HC, 0)`
 
-### 12.2 Annual aggregation
+### 11.2 Annual aggregation
 
 - `Q_H_annual = Σ Q_H · Δt` (Wh)
 - `Q_C_annual = Σ Q_C · Δt` (Wh)
@@ -277,7 +277,7 @@ DataFrame columns:
 
 ---
 
-## 13) Units & conventions
+## 12) Units & conventions
 
 - Temperature `θ`: **°C**  
 - Power `Φ` / `Q`: **W**  
@@ -287,7 +287,7 @@ DataFrame columns:
 
 ---
 
-## 14) Numerical stability & robustness
+## 13) Numerical stability & robustness
 
 - **Diagonal regularization** of `A` (min diag value based on ∥A∥∞) to avoid singularities.
 - **Warm‑up** (e.g., first month) simulated and typically **excluded** from reporting to reduce initial transients.
@@ -296,7 +296,7 @@ DataFrame columns:
 
 ---
 
-## 15) Minimal checklist before running
+## 14) Minimal checklist before running
 
 - Weather source set correctly; EPW file path valid if used.
 - Surfaces have: `type`, `area`, `orientation`, `sky_view_factor`, and suitable `U`/`g_value` where relevant.
@@ -305,7 +305,7 @@ DataFrame columns:
 
 ---
 
-## 16) Worked outline (pseudo‑algorithm)
+## 15) Worked outline (pseudo‑algorithm)
 
 ```text
 get weather(sim_df), Tstepn
@@ -337,7 +337,7 @@ post:
 
 ---
 
-## 17) Interpretation tips
+## 16) Interpretation tips
 
 - `Q_HC` is **need**, not system energy use. Apply system efficiencies (e.g., seasonal COP/η) downstream to obtain **consumption**.
 - If `T_op` frequently deviates from setpoints, the **capacity** is insufficient or profiles/weather are too demanding.
@@ -345,7 +345,7 @@ post:
 
 ---
 
-## 18) Common pitfalls & remedies
+## 17) Common pitfalls & remedies
 
 - **All-zero profiles** → no HVAC action: enable fallbacks or fix schedules.
 - **Missing g-values** → underestimated solar gains for windows: add `g_value`.

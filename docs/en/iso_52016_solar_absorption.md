@@ -1,30 +1,16 @@
-# Solar absorption of building envelope elements
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>Solar absorption of building envelope elements </strong></h1>
 
-Function:`Solar_absorption_of_element(building_object)`
----
-
-### Purpose
-Computes the **solar absorption coefficients** for each building envelope element in accordance with **EN ISO 52016-1** solar heat gain modeling.  
-The result is a **5×N matrix** `a_sol_pli_eli` assigning solar absorption values to the nodal structure of each surface.
-
----
-
-### Function Signature
 
 ```python
 def Solar_absorption_of_element(cls, building_object) -> solar_absorption_elements
 ```
 
----
-
-### Parameters
+### Inputs
 | Name | Type | Description |
 |------|------|-------------|
 | `building_object` | `dict` | Building data structure that contains a list of surfaces under `building_surface`. Each surface must define `ISO52016_type_string` and optical parameters (`solar_absorptance` or `g_value`). |
 
----
-
-### Required Fields in `building_object["building_surface"]`
+#### Required Fields in `building_object["building_surface"]`
 
 Each element in `building_surface` should include:
 
@@ -34,17 +20,13 @@ Each element in `building_surface` should include:
 | `solar_absorptance` | Solar absorptance coefficient (0–1) for opaque elements. |
 | `g_value` | Solar energy transmittance (0–1) for transparent elements. |
 
----
 
-### Returns
 
-| Type | Description |
-|------|--------------|
-| `solar_absorption_elements` | Wrapper containing the 2D array `a_sol_pli_eli` (shape 5×N), where N = number of elements in `building_surface`. |
+### Purpose
+Computes the **solar absorption coefficients** for each building envelope element in accordance with **EN ISO 52016-1** solar heat gain modeling.  
+The result is a **5×N matrix** `a_sol_pli_eli` assigning solar absorption values to the nodal structure of each surface.
 
----
-
-### Method Overview
+#### How it works
 
 !!! Note
     The type of the surface has been mapped in the calculation using the following code:
@@ -74,10 +56,10 @@ Each element in `building_surface` should include:
 
 1. **Determine number of envelope elements**
    
-   ```python
-   el_list = len(building_object["building_surface"])
-   ```
-   Creates an empty coefficient list `solar_abs_elements` of length N.
+    ```python
+    el_list = len(building_object["building_surface"])
+    ```
+    Creates an empty coefficient list `solar_abs_elements` of length N.
 
 2. **Extract solar properties**
    
@@ -88,20 +70,31 @@ Each element in `building_surface` should include:
 
 3. **Create absorption matrix**
    
-   ```python
-   a_sol_pli_eli = np.zeros((5, el_list))
-   a_sol_pli_eli[0, :] = solar_abs_elements
-   ```
+    ```python
+    a_sol_pli_eli = np.zeros((5, el_list))
+    a_sol_pli_eli[0, :] = solar_abs_elements
+    ```
    
-   Only the **first node (external surface)** receives the solar absorptance value; deeper nodes remain zero.
+    Only the **first node (external surface)** receives the solar absorptance value; deeper nodes remain zero.
 
 4. **Return result**
    
-   ```python
-   return solar_absorption_elements(a_sol_pli_eli=a_sol_pli_eli)
-   ```
+    ```python
+    return solar_absorption_elements(a_sol_pli_eli=a_sol_pli_eli)
+    ```
+
 
 ---
+
+### Outputs
+
+| Type | Description |
+|------|--------------|
+| `solar_absorption_elements` | Wrapper containing the 2D array `a_sol_pli_eli` (shape 5×N), where N = number of elements in `building_surface`. |
+
+---
+
+
 
 ### Example
 
@@ -128,5 +121,4 @@ a_sol_pli_eli = np.array([
 ---
 
 ### References
-- **EN ISO 52016-1:2017** – *Energy performance of buildings – Calculation of energy needs for heating and cooling*.  
-  - Section 6.5.7 – Definition of solar absorptance and its application to surface nodes.
+- **EN ISO 52016-1:2017** – *Energy performance of buildings – Calculation of energy needs for heating and cooling*. - Section 6.5.7 – Definition of solar absorptance and its application to surface nodes.

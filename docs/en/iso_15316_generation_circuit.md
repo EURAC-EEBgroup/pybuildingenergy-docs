@@ -1,4 +1,6 @@
-# GENERATION
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>GENERATION</strong></h1>
+
+
 
 The annex D of ISO 15316-1 standard provides the calculation procedure for the generation circuit.
 It is the general procedure that can be improved using the detailed standards for different type of generator, such as Heat pump, Combustion boilers, District heating and cooling, etc. 
@@ -8,7 +10,8 @@ There are 2 typed of generaiont circuit:
 1) Generation with **DIRECT** circuit withou hydraulic separtion
 2) Generation with **INDIPENDENT** flow rate circuit, using the hydraulic separtion
 
-## DIRECT circuit
+
+### **DIRECT circuit**
 
 <figure align="center">
   <img src="../assets/images/Generator_1.png" alt="Direct circuit">
@@ -50,7 +53,7 @@ Generator circuit flow temperature | θH_gen_cr_flw | °C | - | 0 to 110 | Gener
 Generator circuit return temperature | θH_gen_cr_ret | °C | - | 0 to 110 | Generator circuit return temperature |
 Generator circuit flow rate | V_H_gen_cr | m3/h | - | 0 to ∞ | Generator circuit flow rate |
 
-## INDEPENDENT circuit
+### **INDEPENDENT circuit**
 
 <figure align="center">
   <img src="../assets/images/Generator_2.png" alt="Indipendent circuit">

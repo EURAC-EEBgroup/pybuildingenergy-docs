@@ -10,7 +10,7 @@
 [![DOI](https://zenodo.org/badge/761715706.svg)](https://zenodo.org/doi/10.5281/zenodo.10887919)
 ---
 
-<h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #003366;">
+<h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">
   Introduction: EPBD Requirements for ISO EN 52000 and ISO EN 15316 Standards
 </h1>
 
@@ -25,7 +25,7 @@ New features:
 </div>
 
 
-## ISO EN 52000 - Overarching Standards
+### **ISO EN 52000 - Overarching Standards**
 
 The EPBD Directive 2018 (and confirmed in the 2024 revision) requires Member States to describe their national calculation methodology following the national annexes of the "overarching" standards, namely: ISO EN 52000-1, 52003-1, 52010-1, 52016-1, and 52018-1, developed under mandate M/480 given to CEN (European Committee for Standardization).
 
@@ -39,7 +39,7 @@ The ISO EN 52000 overarching standards are:
 4. **ISO EN 52016-1**: Internal temperatures and energy needs for heating/cooling
 5. **ISO EN 52018-1**: Indicators for overall energy performance
 
-## New EPBD Recast Methodology
+### **New EPBD Recast Methodology**
 
 The new EPBD recast provides an update on building performance assessment through a methodology that must consider various factors such as the building’s thermal characteristics, the use of renewable energy sources, building automation and control systems, ventilation, cooling, energy recovery, etc. The methodology should represent actual operating conditions, use measured energy for accuracy and comparability, and be based on hourly or sub-hourly intervals to account for variable conditions significantly impacting system performance, including internal conditions.
 
@@ -47,11 +47,11 @@ The energy performance of a building shall be expressed by a numeric indicator o
 
 Member States shall describe their national calculation methodology based on Annex A of the key European standards on energy performance of buildings.
 
-## EN 15316 - Heating and Cooling Systems
+### **EN 15316 - Heating and Cooling Systems**
 
 The EN 15316 series covers the calculation method for system energy requirements and system efficiencies. This family of standards is an integral part of the EPB set and covers:
 
-### EN 15316 Modular Structure:
+### **EN 15316 Modular Structure:**
 
 - **EN 15316-1**: General and expression of energy performance (Modules M3-1, M3-4, M3-9, M8-1, M8-4)
 - **EN 15316-2**: Emission systems (heating and cooling)
@@ -67,14 +67,14 @@ The EN 15316 series covers the calculation method for system energy requirements
 
 For space heating, applicable standards include EN 15316-1, EN 15316-2-1, EN 15316-2-3 and the appropriate parts of EN 15316-4 depending on the system type, including losses and control aspects.
 
-## Relationship between EPBD 2024 and Standards
+### **Relationship between EPBD 2024 and Standards**
 
 The most recent revision of the EPBD was published in May 2024, further strengthening requirements and aligning with the EU's climate neutrality objectives. Member States are encouraged to consider applicable standards, particularly from the EPB standards list.
 
 17 of approximately 50 EPB standards are already ISO EN standards, resulting from collaboration between CEN and ISO. The other EPB standards are currently only available at the European level (CEN standards).
 
 
-## pyBuildingEnergy: the python library for building performance assessment
+### **pyBuildingEnergy: the python library for building performance assessment**
 
 **pyBuildingEnergy** aims to provide an assessment of building performance both in terms of energy and comfort. In this initial release, it is possible to assess the energy performance of the building using ISO EN 52106-1:2018. Additional modules will be added for a more comprehensive evaluation of performance, assessing ventilation, renewable energies, systems, etc.
 The actual calculation methods for the assessment of building performance are the following:
@@ -97,7 +97,7 @@ The calculation methods can be used for residential or non-residential buildings
 ISO EN 52016-1:2018 also contains specifications for the assessment of thermal zones in the building or in the part of a building. The calculations are performed per thermal zone. In the calculations, the thermal zones can be assumed to be thermally coupled or not.
 ISO EN 52016-1:2018 is applicable to buildings at the design stage, to new buildings after construction and to existing buildings in the use phase
 
-### Weather Data
+### **Weather Data**
 
 The tool can use wather data coming from 2 main sources:
 
@@ -106,23 +106,23 @@ The tool can use wather data coming from 2 main sources:
 
 More details in the example folder
 
-### Domestic Hot Water - DHW
+### **Domestic Hot Water - DHW**
 
 - [x] Calculation of volume and energy need for domestic hot water according to ISO EN 12831-3. 
 - [] Assessment of thermal load based on the type of DHW system
 
-### Primary energy for heating
+### **Primary energy for heating**
 - [x] Calculation of primary energy for heating according to ISO EN 15316-1:2018
 
 
-### Limitations
+### **Limitations**
 
 The library is developed with the intent of demonstrating specific elements of calculation procedures in the relevant standards. It is not intended to replace the regulations but to complement them, as the latter are essential for understanding the calculation. 
 This library is meant to be used for demonstration and testing purposes and is therefore provided as open source, without protection against misuse or inappropriate use.
 
 The information and views set out in this document are those of the authors and do not necessarily reflect the official opinion of the European Union. Neither the European Union institutions and bodies nor any person acting on their behalf may be held responsible for the use that may be made of the information contained herein.
 
-### Getting Started
+### **Getting Started**
 
 The following command will install the latest pyBuildinEnergy library
 
@@ -133,22 +133,22 @@ The following command will install the latest pyBuildinEnergy library
 The tool allows you to evaluate the performance of buildings in different ways: 
 
 
-### Building Inputs
+### **Building Inputs**
 
 - for building inputs refer to `Building Inputs`: <https://eurac-eebgroup.github.io/pybuildingenergy-docs/iso_52016_input/>
 - for heating system input (ISO EN 15316-1) refer to `Heating System Input`: <https://eurac-eebgroup.github.io/pybuildingenergy-docs/iso_15316_input/>
 
-### Documentation
+### **Documentation**
 --------------
 Check our new documentation here: `Documentation <https://eurac-eebgroup.github.io/pybuildingenergy-docs/>`
 
-### Example
+### **Example**
 
 Here some `Examples <https://github.com/EURAC-EEBgroup/pyBuildingEnergy/tree/master/examples>` on pybuildingenergy application.
 For more information
 .....
   
-### Contributing and Support
+### **Contributing and Support**
 
 **Bug reports/Questions**
 If you encounter a bug, kindly create a GitLab issue detailing the bug. 
@@ -158,7 +158,10 @@ If the bug results in an error, include the traceback. If it leads to unexpected
 **Code contributions**
 We welcome and deeply appreciate contributions! Every contribution, no matter how small, makes a difference. Click here to find out more about contributing to the project.
 
-## Acknowledgment
+
+
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Acknowledgment</h2>
+
 
 This work was carried out within European projects: 
 Infinite - This project has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 958397, 
@@ -168,7 +171,8 @@ with the aim of contributing to the development of open products useful for defi
 Reagrding the DHW Calculation: 
 The work was developed using the regulations and results obtained from the spreadsheet created by the EPBCenter.
 
-## References
+
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">References</h2>
 
 1. **EPB Center** - The Energy Performance of Buildings Directive (EPBD)  
    https://epb.center/epb-standards/the-energy-performance-of-buildings-directive-epbd/
@@ -185,10 +189,15 @@ The work was developed using the regulations and results obtained from the sprea
 10. **ISO EN 16798-1** - Energy performance of buildings — Ventilation of buildings — Part 1: Indoor environmental input parameters for design and assessment of energy performance of buildings addressing indoor air quality, thermal environment, lighting and acoustics (Module M1–6)
 11. **Directive (EU) 2024/1275** - Official text published in the Official Journal of the EU on May 8, 2024
 
-## Authors: 
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Authors</h2>
 - [**Daniele Antonucci**](https://www.eurac.edu/en/people/daniele-antonucci)
 - [**Ulrich Filippi Oberegger**](https://www.eurac.edu/en/people/ulrich-filippi)
 
-## **License**: BSD 3-Clause License
-## **Version**: 0.2
-## **Maintainer**: Daniele Antonucci
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">License</h2>
+BSD 3-Clause License
+
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Version</h2>
+0.2
+
+<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Maintainer</h2>
+Daniele Antonucci
