@@ -160,7 +160,7 @@ We welcome and deeply appreciate contributions! Every contribution, no matter ho
 
 
 
-<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Acknowledgment</h2>
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Acknowledgment</h2>
 
 
 This work was carried out within European projects: 
@@ -172,7 +172,7 @@ Reagrding the DHW Calculation:
 The work was developed using the regulations and results obtained from the spreadsheet created by the EPBCenter.
 
 
-<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">References</h2>
+## <h2 style="font-family: 'Segoe UI', TTahoma, Geneva, Verdana, sans-serif; color: #df1b12;">References</h2>
 
 1. **EPB Center** - The Energy Performance of Buildings Directive (EPBD)  
    https://epb.center/epb-standards/the-energy-performance-of-buildings-directive-epbd/
@@ -189,15 +189,15 @@ The work was developed using the regulations and results obtained from the sprea
 10. **ISO EN 16798-1** - Energy performance of buildings — Ventilation of buildings — Part 1: Indoor environmental input parameters for design and assessment of energy performance of buildings addressing indoor air quality, thermal environment, lighting and acoustics (Module M1–6)
 11. **Directive (EU) 2024/1275** - Official text published in the Official Journal of the EU on May 8, 2024
 
-<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Authors</h2>
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Authors</h2>
 - [**Daniele Antonucci**](https://www.eurac.edu/en/people/daniele-antonucci)
 - [**Ulrich Filippi Oberegger**](https://www.eurac.edu/en/people/ulrich-filippi)
 
-<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">License</h2>
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">License</h2>
 BSD 3-Clause License
 
-<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Version</h2>
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Version</h2>
 0.2
 
-<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Maintainer</h2>
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Maintainer</h2>
 Daniele Antonucci

@@ -55,7 +55,7 @@ Compute the sum of opaque (“OP”) facade areas in `adj_zone` for the given di
 No messages; pure filtering/aggregation with safe default `0.0`.
 
 ---
-<h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Check heating system inputs</h2>
+## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Check heating system inputs</h2>
 
 **Function Name**: `check_heating_system_inputs(system_input: dict) -> dict`
 
