@@ -8,13 +8,6 @@
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/"/>
     </url>
     <url>
-        <loc>Noneapi/</loc>
-        <lastmod>2025-11-18</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneapi/"/>
-        <xhtml:link rel="alternate" hreflang="it" href="Noneit/api/"/>
-    </url>
-    <url>
         <loc>Noneiso_15316/</loc>
         <lastmod>2025-11-18</lastmod>
         <changefreq>daily</changefreq>
@@ -167,13 +160,6 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="it" href="Noneit/"/>
         <xhtml:link rel="alternate" hreflang="en" href="None"/>
-    </url>
-    <url>
-        <loc>Noneit/api/</loc>
-        <lastmod>2025-11-18</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="it" href="Noneit/api/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneapi/"/>
     </url>
     <url>
         <loc>Noneit/iso_15316/</loc>
