@@ -35,6 +35,9 @@ nav:
     - ISO 52016 - Facade elements (nodes): iso_52016_node.md
     # - ISO 52016 - CO2 Equivalent: iso_52016_co2_equivalent.md
     - ISO 52016 - Overall procedure: iso_52016_overall_procedure.md
+  - ISO 12831-3:
+    - ISO 12831-3 - Introduction: iso_12831_3_introduction.md
+    - ISO 12831-3 - Calculation procedure: iso_12831_3_calculation.md
     
   - ISO 15316:
     - ISO 15316 - Introduction: iso_15316.md
