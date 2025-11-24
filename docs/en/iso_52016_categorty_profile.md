@@ -33,7 +33,7 @@ In building energy simulations — especially those following **ISO 52016-1:2017
 These profiles describe the **temporal behavior** of internal gains and system operation (e.g., when people are present, when lights are on, or when HVAC is active).  
 This function automates the generation of such profiles by merging **custom schedules** (if defined within a building object) with **default type-based schedules**, ensuring every category has a valid 24-hour pattern.
 
-The default type-based schedules are define in the file: `table_iso_16798_1.py`, where typical profile are getting from the EN ISO 16798-1 standard.
+The default type-based schedules are define in the file: `table_iso_16798_1.py`, where typical profile are getting from the EN 16798-1 standard.
 
 `generate_category_profile()` builds a consistent set of **hourly category profiles** (weekday/weekend) for:
 - Occupancy  

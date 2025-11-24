@@ -11,7 +11,7 @@
 ---
 
 <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">
-  Introduction: EPBD Requirements for ISO EN 52000 and ISO EN 15316 Standards
+  Introduction: EPBD Requirements for ISO EN 52000 and ISO 15316 Standards
 </h1>
 
 <div style="border-left: 4px solid #D30000; padding: 10px; margin: 10px 0;">
@@ -76,7 +76,7 @@ The most recent revision of the EPBD was published in May 2024, further strength
 
 ### **pyBuildingEnergy: the python library for building performance assessment**
 
-**pyBuildingEnergy** aims to provide an assessment of building performance both in terms of energy and comfort. In this initial release, it is possible to assess the energy performance of the building using ISO EN 52106-1:2018, EN ISO 52010-1:2018, EN ISO 15316-1:2018, ISO EN 16798-1:2018, ISO EN1 6798-7:2018, etc.. Additional modules will be added for a more comprehensive evaluation of performance, assessing ventilation, renewable energies, HVAC systems, etc.
+**pyBuildingEnergy** aims to provide an assessment of building performance both in terms of energy and comfort. In this initial release, it is possible to assess the energy performance of the building using ISO EN 52106-1:2018, EN ISO 52010-1:2018, EN 15316-1:2018, EN 16798-1:2018, EN 16798-7:2018, etc.. Additional modules will be added for a more comprehensive evaluation of performance, assessing ventilation, renewable energies, HVAC systems, etc.
 The actual calculation methods for the assessment of building performance are the following:
 
 - [x] the (sensible) energy need for heating and cooling, based on hourly or monthly calculations;
@@ -108,11 +108,11 @@ More details in the example folder
 
 ### **Domestic Hot Water - DHW**
 
-- [x] Calculation of volume and energy need for domestic hot water according to ISO EN 12831-3. 
+- [x] Calculation of volume and energy need for domestic hot water according to EN 12831-3. 
 - [] Assessment of thermal load based on the type of DHW system
 
 ### **Primary energy for heating**
-- [x] Calculation of primary energy for heating according to ISO EN 15316-1:2018
+- [x] Calculation of primary energy for heating according to EN 15316-1:2018
 
 
 ### **Limitations**
@@ -136,7 +136,7 @@ The tool allows you to evaluate the performance of buildings in different ways:
 ### **Building Inputs**
 
 - for building inputs refer to `Building Inputs`: <https://eurac-eebgroup.github.io/pybuildingenergy-docs/iso_52016_input/>
-- for heating system input (ISO EN 15316-1) refer to `Heating System Input`: <https://eurac-eebgroup.github.io/pybuildingenergy-docs/iso_15316_input/>
+- for heating system input (EN 15316-1) refer to `Heating System Input`: <https://eurac-eebgroup.github.io/pybuildingenergy-docs/iso_15316_input/>
 
 ### **Documentation**
 --------------
@@ -183,10 +183,10 @@ The work was developed using the regulations and results obtained from the sprea
 4. **Directive (EU) 2024/1275** - Official text published in the Official Journal of the EU on May 8, 2024
 5. **ISO EN 52010-1:2018** - Energy performance of buildings - External climatic conditions - Part 1: Conversion of climatic data for energy calculations
 6. **ISO EN 52016-1:2018** - Energy performance of buildings - Energy needs for heating and cooling, internal temperatures and sensible and latent heat loads 
-7. **ISO EN 12831-3:2018** - Energy performance of buildings - Method for calculation of the design heat load - Part 3: Domestic hot water systems heat load and characterisation of needs, Module M8-2, M8-3
-8. **ISO EN 15316-1:2018** - Energy performance of buildings – Method for calculation of system energy requirements and system efficiencies – Part 1: General and Energy performance expression, Module M3–1, M3–4, M3–9, M8–1
-9. **ISO EN 16798-7**  - Energy performance of buildings – Ventilation for buildings – Part 7: Calculation methods for the determination of air flow rates in buildings including infiltration (Module M5–5)
-10. **ISO EN 16798-1** - Energy performance of buildings — Ventilation of buildings — Part 1: Indoor environmental input parameters for design and assessment of energy performance of buildings addressing indoor air quality, thermal environment, lighting and acoustics (Module M1–6)
+7. **EN 12831-3:2018** - Energy performance of buildings - Method for calculation of the design heat load - Part 3: Domestic hot water systems heat load and characterisation of needs, Module M8-2, M8-3
+8. **EN 15316-1:2018** - Energy performance of buildings – Method for calculation of system energy requirements and system efficiencies – Part 1: General and Energy performance expression, Module M3–1, M3–4, M3–9, M8–1
+9. **EN 16798-7**  - Energy performance of buildings – Ventilation for buildings – Part 7: Calculation methods for the determination of air flow rates in buildings including infiltration (Module M5–5)
+10. **EN 16798-1** - Energy performance of buildings — Ventilation of buildings — Part 1: Indoor environmental input parameters for design and assessment of energy performance of buildings addressing indoor air quality, thermal environment, lighting and acoustics (Module M1–6)
 11. **Directive (EU) 2024/1275** - Official text published in the Official Journal of the EU on May 8, 2024
 
 ## <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #df1b12;">Authors</h2>

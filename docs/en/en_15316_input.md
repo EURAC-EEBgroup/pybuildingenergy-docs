@@ -1,5 +1,6 @@
 
-# INPUT_SYSTEM_HVAC — Reference & Setup Guide
+## <h1 style="color:#df1b12; margin-bottom:0px; font-weight:bold"><strong>INPUT_SYSTEM_HVAC — Reference & Setup Guide</strong></h1>
+
 
 This document explains every field in the `INPUT_SYSTEM_HVAC` configuration used by the heating system model (emitter → distribution → generator). It also shows how to customize control curves and upload your own emitter tables.
 
@@ -7,7 +8,7 @@ This document explains every field in the `INPUT_SYSTEM_HVAC` configuration used
 
 ---
 
-## 1) High-level structure
+## Inputs
 
 ```python
 INPUT_SYSTEM_HVAC = {
@@ -64,7 +65,7 @@ INPUT_SYSTEM_HVAC = {
 
 ---
 
-## 2) Emitter block (room-side heat delivery)
+## Emitter block (room-side heat delivery)
 
 | Field | Type | Example | Meaning |
 |---|---|---|---|
@@ -77,7 +78,7 @@ INPUT_SYSTEM_HVAC = {
 | `mixing_valve_delta` | `float` | `2` | °C delta used when mixing valve is active (typical blending margin). |
 | `constant_flow_temp` | `float` (optional) | `42` | Overrides control curve with a constant emitter flow setpoint (°C). *Commented by default*. |
 
-### 2.1 Optional custom emitter tables
+### Optional custom emitter tables
 
 You can override internal presets using one or both of the following:
 
@@ -104,7 +105,7 @@ heat_emission_data = pd.DataFrame({
 
 ---
 
-## 3) Distribution block (piping network & auxiliaries)
+## Distribution block (piping network & auxiliaries)
 
 | Field | Type | Example | Meaning |
 |---|---|---|---|
@@ -118,7 +119,7 @@ heat_emission_data = pd.DataFrame({
 
 ---
 
-## 4) Generator block (plant production side)
+## Generator block (plant production side)
 
 | Field | Type | Example | Meaning |
 |---|---|---|---|
@@ -129,7 +130,7 @@ heat_emission_data = pd.DataFrame({
 | `fraction_of_auxiliary_power_generator` | `float` | `40` | % of generator auxiliaries credited as internal gains. |
 | `generator_circuit` | `str` | `"independent"` | Hydraulic layout: `"direct"` or `"independent"` (primary/secondary with HX). |
 
-### 4.1 Generator flow-temperature control
+### Generator flow-temperature control
 
 | Field | Type | Example | Meaning |
 |---|---|---|---|
@@ -156,9 +157,9 @@ The controller interpolates a target flow temperature between `(θext_min_gen, �
 
 ---
 
-## 5) Control strategies (cheat sheet)
+## Control strategies (cheat sheet)
 
-### 5.1 Emitter `flow_temp_control_type`
+### Emitter `flow_temp_control_type`
 Common patterns (implementation-dependent; typical meanings):
 - **Type 1 – Constant setpoint**: use `constant_flow_temp` (°C).  
 - **Type 2 – Based on outdoor temperature**: emitter flow is computed via an outdoor reset (may reuse the generator curve or a dedicated one).
@@ -174,7 +175,7 @@ Common patterns (implementation-dependent; typical meanings):
 
 ---
 
-## 6) Efficiency model
+## Efficiency model
 
 | Field | Allowed | Notes |
 |---|---|---|
@@ -184,7 +185,7 @@ Backends typically compute **delivered heat**, **electric/primary energy**, and 
 
 ---
 
-## 7) Calculation options
+## Calculation options
 
 | Field | Type | Meaning |
 |---|---|---|
@@ -193,7 +194,7 @@ Backends typically compute **delivered heat**, **electric/primary energy**, and 
 
 ---
 
-## 8) Units & conventions
+## Units & conventions
 
 - Temperatures in **°C**, ΔT in **K** (numerically the same scale).
 - Powers: `kW` for generator/emitter nominal; auxiliaries commonly in **W** (check your backend).
@@ -203,7 +204,7 @@ Backends typically compute **delivered heat**, **electric/primary energy**, and 
 
 ---
 
-## 9) Validation checklist
+## Validation checklist
 
 - [ ] `nominal_power` ≤ `full_load_power` (kW).  
 - [ ] `emission_efficiency` ∈ [0, 100].  
@@ -216,7 +217,7 @@ Backends typically compute **delivered heat**, **electric/primary energy**, and 
 
 ---
 
-## 10) Minimal working example
+## Minimal working example
 
 ```python
 INPUT_SYSTEM_HVAC = {
@@ -270,7 +271,7 @@ INPUT_SYSTEM_HVAC = {
 
 ---
 
-## 11) Advanced customization tips
+## Advanced customization tips
 
 - **Multiple heating circuits**: use `selected_emm_cont_circuit` to switch presets, or pass a **per-circuit** `heat_emission_data` table.  
 - **Manufacturer curves**: provide detailed COP/efficiency maps via `efficiency_model="manufacturer"` and custom data structures.  
@@ -279,7 +280,7 @@ INPUT_SYSTEM_HVAC = {
 
 ---
 
-## 12) Troubleshooting
+<!-- ## 12) Troubleshooting
 
 - **The system never meets setpoint**: check `full_load_power` (kW) and `nominal_power` vs the building peak load. Verify flow-temp curve (too low?).  
 - **Return temperature too high**: reduce `ΔθH_em_w_max_sahz_i` or decrease flow temperature; consider increasing emitter area.  
@@ -287,9 +288,9 @@ INPUT_SYSTEM_HVAC = {
 - **Short cycling**: increase `tH_gen_i_ON` and/or use variable-speed pumps.  
 - **Fixed temps ignored**: ensure the selected control type actually uses `constant_flow_temp` or explicit `θHW_gen_*` setpoints.
 
----
+--- -->
 
-## 13) Glossary
+## Glossary
 
 - **Emitter**: the device exchanging heat with the room (radiators, floor heating).  
 - **Distribution**: pipes, valves, pumps between generator and emitters.  

@@ -3,7 +3,7 @@
 
 This module implements methods for evaluating **heat transfer by ventilation** and **internal heat gains** in thermally conditioned and unconditioned zones.
 
-It also includes an auxiliary function for computing **transmission heat transfer coefficients** between conditioned and adjacent zones, following **ISO 13789**.
+It also includes an auxiliary function for computing **transmission heat transfer coefficients** between conditioned and adjacent zones, following **EN 13789**.
 
 
 ## Overview
@@ -11,14 +11,14 @@ It also includes an auxiliary function for computing **transmission heat transfe
 The module covers three main components:
 
 1. **Ventilation heat transfer coefficient** (`VentilationInternalGains.heat_transfer_coefficient_by_ventilation`):
-   - Evaluates the **natural ventilation** rate and corresponding heat transfer coefficient (`H_ve_nat`) using **ISO 16798‑7** (wind and temperature-driven airflow).
+   - Evaluates the **natural ventilation** rate and corresponding heat transfer coefficient (`H_ve_nat`) using **EN 16798‑7** (wind and temperature-driven airflow).
    - Supports a simplified **occupancy-based** ventilation model.
 
 2. **Internal heat gains** (`VentilationInternalGains.internal_gains`):
-   - Computes total internal heat gains from occupants, appliances, and optionally nearby unconditioned zones, using **ISO 16798‑1** and **ISO 15316‑1** formulations.
+   - Computes total internal heat gains from occupants, appliances, and optionally nearby unconditioned zones, using **EN 16798‑1** and **EN 15316‑1** formulations.
 
 3. **Transmission between zones** (`transmission_heat_transfer_coefficient_ISO13789`):
-   - Calculates inter-zone transmission coefficients (`H_ztu_tot`, `b_ztu_m`) according to **ISO 13789**, accounting for heat exchanges between conditioned, unconditioned, and external environments.
+   - Calculates inter-zone transmission coefficients (`H_ztu_tot`, `b_ztu_m`) according to **EN 13789**, accounting for heat exchanges between conditioned, unconditioned, and external environments.
 
 ---
 
@@ -38,10 +38,10 @@ def heat_transfer_coefficient_by_ventilation(
 #### Inputs (main)
 - `Tz` `[°C]` indoor air temperature (zone).
 - `Te` `[°C]` outdoor air temperature.
-- `u_site` `[m·s⁻¹]` local wind speed at site height (as per ISO 16798-7 assumptions).
+- `u_site` `[m·s⁻¹]` local wind speed at site height (as per EN 16798-7 assumptions).
 - `Rw_arg_i` `[-]` array of **opening ratios** per window (`0…1`). If `None`, defaults to `0.9`.
-- `C_wnd = 0.001` `[(m·s⁻¹)⁻¹]` wind coefficient (ISO 16798-7 Table 11).
-- `C_st = 0.0035` `[(m·s⁻¹)/(m·K)]` stack coefficient (ISO 16798-7 Table 11).
+- `C_wnd = 0.001` `[(m·s⁻¹)⁻¹]` wind coefficient (EN 16798-7 Table 11).
+- `C_st = 0.0035` `[(m·s⁻¹)/(m·K)]` stack coefficient (EN 16798-7 Table 11).
 - `rho_a_ref` `[kg·m⁻³]` reference air density at ~20 °C; corrected with `altitude` if provided.
 - `type_ventilation`: `"temp_wind"` (ISO airing) or `"occupancy"` (area-based volumetric rule).
 - `flowrate_person` `[L·s⁻¹·m⁻²]` used only in `"occupancy"` branch.
@@ -49,7 +49,7 @@ def heat_transfer_coefficient_by_ventilation(
 
 #### Purpose
 **Physical purpose**: compute the **ventilation heat transfer coefficient** \(H_{ve}\) `[W·K⁻¹]` of the thermal zone either:
-- from **natural ventilation** (ISO 16798-7:2017, single-sided airing via windows, wind/stack), or
+- from **natural ventilation** (EN 16798-7:2017, single-sided airing via windows, wind/stack), or
 - from **occupancy-driven flow** (simplified volumetric rate per floor area).
 
 
@@ -90,7 +90,7 @@ A_{w,tot} = \sum_i A_{w,i}^{open}
 
 **Step D — Airing volumetric flow (single-sided)**  
 
-Using ISO 16798-7 §6.4.3.5.4:
+Using EN 16798-7 §6.4.3.5.4:
 
 \[
 q_v = 3600\;\frac{\rho_{a,ref}}{\rho_{a,e}}\;\frac{A_{w,tot}}{2}\,

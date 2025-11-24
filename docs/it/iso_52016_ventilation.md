@@ -11,14 +11,14 @@ It also includes an auxiliary function for computing **transmission heat transfe
 The module covers three main components:
 
 1. **Ventilation heat transfer coefficient** (`VentilationInternalGains.heat_transfer_coefficient_by_ventilation`):
-   - Evaluates the **natural ventilation** rate and corresponding heat transfer coefficient (`H_ve_nat`) using **ISO 16798‑7** (wind and temperature-driven airflow).
+   - Evaluates the **natural ventilation** rate and corresponding heat transfer coefficient (`H_ve_nat`) using **EN 16798‑7** (wind and temperature-driven airflow).
    - Supports a simplified **occupancy-based** ventilation model.
 
 2. **Internal heat gains** (`VentilationInternalGains.internal_gains`):
-   - Computes total internal heat gains from occupants, appliances, and optionally nearby unconditioned zones, using **ISO 16798‑1** and **ISO 15316‑1** formulations.
+   - Computes total internal heat gains from occupants, appliances, and optionally nearby unconditioned zones, using **EN 16798‑1** and **EN 15316‑1** formulations.
 
 3. **Transmission between zones** (`transmission_heat_transfer_coefficient_ISO13789`):
-   - Calculates inter-zone transmission coefficients (`H_ztu_tot`, `b_ztu_m`) according to **ISO 13789**, accounting for heat exchanges between conditioned, unconditioned, and external environments.
+   - Calculates inter-zone transmission coefficients (`H_ztu_tot`, `b_ztu_m`) according to **EN 13789**, accounting for heat exchanges between conditioned, unconditioned, and external environments.
 
 ---
 
@@ -65,7 +65,7 @@ def heat_transfer_coefficient_by_ventilation(
 
 #### Modes
 1. **Natural ventilation** (`type_ventilation="temp_wind"`)
-   - Based on **ISO 16798‑7 (2017)** section 6.4.3.5.4.
+   - Based on **EN 16798‑7 (2017)** section 6.4.3.5.4.
    - Uses wind speed (`u_site`) and indoor/outdoor temperature difference (`|Tz – Te|`) to estimate air exchange through windows.
    - Airflow rate formula:
      \n\\[ q_v = 3600 * \\frac{\\rho_{ref}}{\\rho_e} * \\frac{A_w}{2} * \\sqrt{ \\max(C_{wnd} u_{site}^2, C_{st} h_{st} |T_z - T_e|) } \\]\n
@@ -97,7 +97,7 @@ def heat_transfer_coefficient_by_ventilation(
 ### 2.4 Method: `internal_gains(...)`
 
 #### Purpose
-Calculates **internal heat gains** to the conditioned zone according to **ISO 16798‑1** and **ISO 15316‑1**.
+Calculates **internal heat gains** to the conditioned zone according to **EN 16798‑1** and **EN 15316‑1**.
 
 #### Signature
 ```python

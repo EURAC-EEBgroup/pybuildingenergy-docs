@@ -17,35 +17,36 @@ nav:
   - Home: index.md
   # - Usage: usage.md
   # - API Reference: api.md
+  - Thermal zones: thermal_zones.md
   - Quality check: iso_52016_input_check.md
   # - Installation: installation.md
   - Weather data: weather_data.md
-  - ISO 52010:
-    - ISO 52010 - Calculation procedure: iso_52010.md
-  - ISO 52016:
-    - ISO 52016 - Introduction: iso_52016.md
-    - ISO 52016 - Input: iso_52016_input.md
-    - ISO 52016 - Category profiles: iso_52016_categorty_profile.md
-    - ISO 52016 - Aggregate Surfaces: iso_52016_aggregate_surface.md
-    - ISO 52016 - Adjacent Zone: iso_52016_adj_zone.md
-    - ISO 52016 - Ventilation: iso_52016_ventilation.md
-    - ISO 52016 - Virtual ground temperature: iso_52016_virtual_ground_temperature.md
-    - ISO 52016 - Aeral heat capacity: iso_52016_aeral_heat_capacity.md
-    - ISO 52016 - Solar absorption: iso_52016_solar_absorption.md
-    - ISO 52016 - Facade elements (nodes): iso_52016_node.md
-    # - ISO 52016 - CO2 Equivalent: iso_52016_co2_equivalent.md
-    - ISO 52016 - Overall procedure: iso_52016_overall_procedure.md
-  - ISO 12831-3:
-    - ISO 12831-3 - Introduction: iso_12831_3_introduction.md
-    - ISO 12831-3 - Calculation procedure: iso_12831_3_calculation.md
+  - ISO EN 52010:
+    - ISO EN 52010 - Calculation procedure: iso_52010.md
+  - ISO EN 52016:
+    - ISO EN 52016 - Introduction: iso_52016.md
+    - ISO EN 52016 - Input: iso_52016_input.md
+    - ISO EN 52016 - Category profiles: iso_52016_categorty_profile.md
+    - ISO EN 52016 - Aggregate Surfaces: iso_52016_aggregate_surface.md
+    - ISO EN 52016 - Adjacent Zone: iso_52016_adj_zone.md
+    - ISO EN 52016 - Ventilation: iso_52016_ventilation.md
+    - ISO EN 52016 - Virtual ground temperature: iso_52016_virtual_ground_temperature.md
+    - ISO EN 52016 - Aeral heat capacity: iso_52016_aeral_heat_capacity.md
+    - ISO EN 52016 - Solar absorption: iso_52016_solar_absorption.md
+    - ISO EN 52016 - Facade elements (nodes): iso_52016_node.md
+    # - ISO EN 52016 - CO2 Equivalent: iso_52016_co2_equivalent.md
+    - ISO EN 52016 - Overall procedure: iso_52016_overall_procedure.md
+  - EN 12831-3:
+    - EN 12831-3 - Introduction: en_12831_3_introduction.md
+    - EN 12831-3 - Calculation procedure: en_12831_3_calculation.md
     
-  - ISO 15316:
-    - ISO 15316 - Introduction: iso_15316.md
-    - ISO 15316 - Input: iso_15316_input.md
-    - ISO 15316 - Heating Circuit: iso_15316_heating_circuit.md
-    - ISO 15316 - Generation Circuit: iso_15316_generation_circuit.md
-    - ISO 15316 - HVAC System inputs: iso_15316_system_inputs.md
-    - ISO 15316 - Calculation procedure: iso_15316_calculation_procedure.md
+  - EN 15316:
+    - EN 15316 - Introduction: en_15316.md
+    - EN 15316 - Input: en_15316_input.md
+    - EN 15316 - Heating Circuit: en_15316_heating_circuit.md
+    - EN 15316 - Generation Circuit: en_15316_generation_circuit.md
+    - EN 15316 - HVAC System inputs: en_15316_system_inputs.md
+    - EN 15316 - Calculation procedure: en_15316_calculation_procedure.md
   
 
 plugins:
@@ -63,9 +64,9 @@ plugins:
   - i18n:
       docs_structure: folder
       languages:
-        - locale: it
-          name: Italiano
-          build: true
+        # - locale: it
+        #   name: Italiano
+        #   build: false
         - locale: en
           name: English
           default: true
