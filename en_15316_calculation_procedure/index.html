@@ -5,9 +5,10 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../en_15316_generation_circuit/" rel="prev"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.5.34" name="generator"/>
-<title>CALCULATION PROCEDURE - pybuildingenergy</title>
+<title>EN 15316 - Calculation procedure - pybuildingenergy</title>
 <link href="../assets/stylesheets/main.35f28582.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -45,7 +46,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              CALCULATION PROCEDURE
+              EN 15316 - Calculation procedure
             
           </span>
 </div>
@@ -279,14 +280,14 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../en_12831_3_introduction.md">
+<a class="md-nav__link" href="../en_12831_3_introduction/">
 <span class="md-ellipsis">
     EN 12831-3 - Introduction
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../en_12831_3_calculation.md">
+<a class="md-nav__link" href="../en_12831_3_calculation/">
 <span class="md-ellipsis">
     EN 12831-3 - Calculation procedure
   </span>
@@ -295,43 +296,43 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--section md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
 <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
 <span class="md-ellipsis">
     EN 15316
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_8">
 <span class="md-nav__icon md-icon"></span>
             EN 15316
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../en_15316.md">
+<a class="md-nav__link" href="../en_15316/">
 <span class="md-ellipsis">
     EN 15316 - Introduction
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../en_15316_input.md">
+<a class="md-nav__link" href="../en_15316_input/">
 <span class="md-ellipsis">
     EN 15316 - Input
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../en_15316_heating_circuit.md">
+<a class="md-nav__link" href="../en_15316_heating_circuit/">
 <span class="md-ellipsis">
     EN 15316 - Heating Circuit
   </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../en_15316_generation_circuit.md">
+<a class="md-nav__link" href="../en_15316_generation_circuit/">
 <span class="md-ellipsis">
     EN 15316 - Generation Circuit
   </span>
@@ -344,12 +345,493 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../en_15316_calculation_procedure.md">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    EN 15316 - Calculation procedure
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <span class="md-ellipsis">
     EN 15316 - Calculation procedure
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#description-of-functions">
+<span class="md-ellipsis">
+      Description of functions
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#1-overview">
+<span class="md-ellipsis">
+      1) Overview
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#2-class-structure">
+<span class="md-ellipsis">
+      2) Class structure
+    </span>
+</a>
+<nav aria-label="2) Class structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#__init__self-input_data">
+<span class="md-ellipsis">
+      __init__(self, input_data)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#3-loading-constants-and-parameters">
+<span class="md-ellipsis">
+      3) Loading constants and parameters
+    </span>
+</a>
+<nav aria-label="3) Loading constants and parameters" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_load_constantsself">
+<span class="md-ellipsis">
+      _load_constants(self)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_load_input_parametersself">
+<span class="md-ellipsis">
+      _load_input_parameters(self)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#4-default-tables-and-data">
+<span class="md-ellipsis">
+      4) Default tables and data
+    </span>
+</a>
+<nav aria-label="4) Default tables and data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_default_emission_dataself">
+<span class="md-ellipsis">
+      _default_emission_data(self)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_default_outdoor_dataself">
+<span class="md-ellipsis">
+      _default_outdoor_data(self)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-time-series-data">
+<span class="md-ellipsis">
+      5) Time series data
+    </span>
+</a>
+<nav aria-label="5) Time series data" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#load_csv_dataself-csv_path_or_df">
+<span class="md-ellipsis">
+      load_csv_data(self, csv_path_or_df)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#6-emission-common-parameters">
+<span class="md-ellipsis">
+      6) Emission — common parameters
+    </span>
+</a>
+<nav aria-label="6) Emission — common parameters" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculate_common_emission_parametersself-heating_needs_kwh-int">
+<span class="md-ellipsis">
+      calculate_common_emission_parameters(self, heating_needs_kWh, θint)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#7-emission-models-c2c3c4c5">
+<span class="md-ellipsis">
+      7) Emission — models C.2/C.3/C.4/C.5
+    </span>
+</a>
+<nav aria-label="7) Emission — models C.2/C.3/C.4/C.5" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculate_type_c2self-common_params-int-c2-constant-flow-constant-water-temperature">
+<span class="md-ellipsis">
+      calculate_type_C2(self, common_params, θint) — C.2: constant flow, constant water temperature
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculate_type_c3self-common_params-int-c3-variable-flow-constant-water-temperature-return-limited">
+<span class="md-ellipsis">
+      calculate_type_C3(self, common_params, θint) — C.3: variable flow, constant water temperature (return limited)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculate_type_c4self-common_params-int-c4-onoff-intermittent">
+<span class="md-ellipsis">
+      calculate_type_C4(self, common_params, θint) — C.4: ON–OFF intermittent
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculate_type_c5self-common_params-int-c5-constant-flow-variable-exchange-bypass">
+<span class="md-ellipsis">
+      calculate_type_C5(self, common_params, θint) — C.5: constant flow, variable exchange (bypass)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#8-circuit-node-temperature">
+<span class="md-ellipsis">
+      8) Circuit node temperature
+    </span>
+</a>
+<nav aria-label="8) Circuit node temperature" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculate_circuit_node_temperatureself-ext-emission_results">
+<span class="md-ellipsis">
+      calculate_circuit_node_temperature(self, θext, emission_results)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#9-operating-conditions-secondary">
+<span class="md-ellipsis">
+      9) Operating conditions (secondary)
+    </span>
+</a>
+<nav aria-label="9) Operating conditions (secondary)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculate_operating_conditionsself-emission_results-common_params-int-h_nod_out">
+<span class="md-ellipsis">
+      calculate_operating_conditions(self, emission_results, common_params, θint, θH_nod_out)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#10-distribution">
+<span class="md-ellipsis">
+      10) Distribution
+    </span>
+</a>
+<nav aria-label="10) Distribution" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculate_distributionself-h_dis_flw-h_dis_ret-int-qh_em_i_in">
+<span class="md-ellipsis">
+      calculate_distribution(self, θH_dis_flw, θH_dis_ret, θint, QH_em_i_in)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#11-generator-efficiency-primary">
+<span class="md-ellipsis">
+      11) Generator efficiency (primary)
+    </span>
+</a>
+<nav aria-label="11) Generator efficiency (primary)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_efficiency_from_modelself-flw-ret-load_frac10">
+<span class="md-ellipsis">
+      _efficiency_from_model(self, θflw, θret, load_frac=1.0)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#12-primary-circuit-setpoint">
+<span class="md-ellipsis">
+      12) Primary circuit setpoint
+    </span>
+</a>
+<nav aria-label="12) Primary circuit setpoint" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_generator_flow_setpointself-ext-h_dis_flw_demand">
+<span class="md-ellipsis">
+      _generator_flow_setpoint(self, θext, θH_dis_flw_demand)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#13-generation-primary">
+<span class="md-ellipsis">
+      13) Generation (primary)
+    </span>
+</a>
+<nav aria-label="13) Generation (primary)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#calculate_generationself-h_dis_flw-h_dis_ret-v_h_dis-qh_dis_i_in">
+<span class="md-ellipsis">
+      calculate_generation(self, θH_dis_flw, θH_dis_ret, V_H_dis, QH_dis_i_in)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#14-single-step-execution">
+<span class="md-ellipsis">
+      14) Single step execution
+    </span>
+</a>
+<nav aria-label="14) Single step execution" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#compute_stepself-q_h_kwh-int-ext">
+<span class="md-ellipsis">
+      compute_step(self, q_h_kWh, θint, θext)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#15-time-series-execution">
+<span class="md-ellipsis">
+      15) Time series execution
+    </span>
+</a>
+<nav aria-label="15) Time series execution" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_temps_row_when_offself-int-ext">
+<span class="md-ellipsis">
+      _temps_row_when_off(self, θint, θext)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#run_timeseriesself-dfnone">
+<span class="md-ellipsis">
+      run_timeseries(self, df=None)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#16-output-columns-extracted">
+<span class="md-ellipsis">
+      16) Output columns (extracted)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#17-best-practices-and-notes">
+<span class="md-ellipsis">
+      17) Best practices and notes
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#18-function-responsibility-mapping">
+<span class="md-ellipsis">
+      18) Function → responsibility mapping
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#flowchart-overview">
+<span class="md-ellipsis">
+      Flowchart (overview)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#inputoutput-tables-main-functions">
+<span class="md-ellipsis">
+      Input/Output tables (main functions)
+    </span>
+</a>
+<nav aria-label="Input/Output tables (main functions)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#21-__init__input_data">
+<span class="md-ellipsis">
+      2.1 __init__(input_data)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#22-_load_constants">
+<span class="md-ellipsis">
+      2.2 _load_constants()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#23-_load_input_parameters">
+<span class="md-ellipsis">
+      2.3 _load_input_parameters()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#24-_default_emission_data-_default_outdoor_data">
+<span class="md-ellipsis">
+      2.4 _default_emission_data() / _default_outdoor_data()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#25-load_csv_datacsv_path_or_df">
+<span class="md-ellipsis">
+      2.5 load_csv_data(csv_path_or_df)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#26-calculate_common_emission_parametersheating_needs_kwh-int">
+<span class="md-ellipsis">
+      2.6 calculate_common_emission_parameters(heating_needs_kWh, θint)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#27-calculate_type_c2-c3-c4-c5">
+<span class="md-ellipsis">
+      2.7 calculate_type_C2 / C3 / C4 / C5
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#28-calculate_circuit_node_temperatureext-emission_results">
+<span class="md-ellipsis">
+      2.8 calculate_circuit_node_temperature(θext, emission_results)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#29-calculate_operating_conditionsemission_results-common_params-int-h_nod_out">
+<span class="md-ellipsis">
+      2.9 calculate_operating_conditions(emission_results, common_params, θint, θH_nod_out)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#210-calculate_distributionh_dis_flw-h_dis_ret-int-qh_em_i_in">
+<span class="md-ellipsis">
+      2.10 calculate_distribution(θH_dis_flw, θH_dis_ret, θint, QH_em_i_in)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#211-_efficiency_from_modelflw-ret-load_frac">
+<span class="md-ellipsis">
+      2.11 _efficiency_from_model(θflw, θret, load_frac)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#212-_generator_flow_setpointext-h_dis_flw_demand">
+<span class="md-ellipsis">
+      2.12 _generator_flow_setpoint(θext, θH_dis_flw_demand)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#213-calculate_generationh_dis_flw-h_dis_ret-v_h_dis-qh_dis_i_in">
+<span class="md-ellipsis">
+      2.13 calculate_generation(θH_dis_flw, θH_dis_ret, V_H_dis, QH_dis_i_in)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#214-compute_stepq_h_kwh-int-ext">
+<span class="md-ellipsis">
+      2.14 compute_step(q_h_kWh, θint, θext)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#215-_temps_row_when_offint-ext">
+<span class="md-ellipsis">
+      2.15 _temps_row_when_off(θint, θext)
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#216-run_timeseriesdfnone">
+<span class="md-ellipsis">
+      2.16 run_timeseries(df=None)
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#modelling-suggestions">
+<span class="md-ellipsis">
+      Modelling suggestions
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -841,7 +1323,7 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/edit/master/docs/en/iso_15316_calculation_procedure.md" title="Edit this page">
+<a class="md-content__button md-icon" href="https://github.com/EURAC-EEBgroup/pybuildingenergy-docs/edit/master/docs/en/en_15316_calculation_procedure.md" title="Edit this page">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
 </a>
 <h1 id="calculation-procedure">CALCULATION PROCEDURE<a class="headerlink" href="#calculation-procedure" title="Permanent link">¶</a></h1>
