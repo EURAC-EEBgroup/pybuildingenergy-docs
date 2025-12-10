@@ -1641,11 +1641,13 @@
 <hr />
 <h2 id="control-strategies-cheat-sheet">Control strategies (cheat sheet)<a class="headerlink" href="#control-strategies-cheat-sheet" title="Permanent link">&para;</a></h2>
 <h3 id="emitter-flow_temp_control_type">Emitter <code>flow_temp_control_type</code><a class="headerlink" href="#emitter-flow_temp_control_type" title="Permanent link">&para;</a></h3>
-<p>Common patterns (implementation-dependent; typical meanings):
-- <strong>Type 1 – Constant setpoint</strong>: use <code>constant_flow_temp</code> (°C).<br />
-- <strong>Type 2 – Based on outdoor temperature</strong>: emitter flow is computed via an outdoor reset (may reuse the generator curve or a dedicated one).
-- <strong>Type 3 – Room feedback</strong>: modulate flow to maintain room operative temperature; requires a PI logic in the backend.
-- <strong>Type 4 – Return-limited</strong>: aim for a maximum return temperature (useful in condensing systems).</p>
+<p>Common patterns (implementation-dependent; typical meanings):</p>
+<ul>
+<li><strong>Type 1 – Constant setpoint</strong>: use <code>constant_flow_temp</code> (°C).  </li>
+<li><strong>Type 2 – Based on outdoor temperature</strong>: emitter flow is computed via an outdoor reset (may reuse the generator curve or a dedicated one).</li>
+<li><strong>Type 3 – Room feedback</strong>: modulate flow to maintain room operative temperature; requires a PI logic in the backend.</li>
+<li><strong>Type 4 – Return-limited</strong>: aim for a maximum return temperature (useful in condensing systems).</li>
+</ul>
 <blockquote>
 <p><strong>Note</strong>: Your codebase may define the exact meanings of each "Type N". Ensure the UI/CLI lists allowed values.</p>
 </blockquote>
