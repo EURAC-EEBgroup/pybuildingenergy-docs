@@ -161,6 +161,7 @@ The controller interpolates a target flow temperature between `(θext_min_gen, �
 
 ### Emitter `flow_temp_control_type`
 Common patterns (implementation-dependent; typical meanings):
+
 - **Type 1 – Constant setpoint**: use `constant_flow_temp` (°C).  
 - **Type 2 – Based on outdoor temperature**: emitter flow is computed via an outdoor reset (may reuse the generator curve or a dedicated one).
 - **Type 3 – Room feedback**: modulate flow to maintain room operative temperature; requires a PI logic in the backend.

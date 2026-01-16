@@ -101,7 +101,7 @@ Describes all external and internal surfaces forming the building envelope.
 | `sky_view_factor` | Fraction of visible sky (0–1). |
 | `u_value` | Thermal transmittance (W/m²K). |
 | `solar_absorptance` | Fraction of solar radiation absorbed (0–1). |
-| `thermal_capacity` | Surface thermal capacity (J/K). |
+| `thermal_capacity` |  Thermal capacity (J/KgK). |
 | `orientation.azimuth` | Azimuth (0 = N, 90 = E, 180 = S, 270 = W). |
 | `orientation.tilt` | Tilt angle (0 = horizontal, 90 = vertical). |
 | `name_adj_zone` | Linked adjacent zone (if applicable). |

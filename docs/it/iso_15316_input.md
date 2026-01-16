@@ -165,7 +165,7 @@ Common patterns (implementation-dependent; typical meanings):
 - **Type 3 – Room feedback**: modulate flow to maintain room operative temperature; requires a PI logic in the backend.
 - **Type 4 – Return-limited**: aim for a maximum return temperature (useful in condensing systems).
 
-> **Note**: Your codebase may define the exact meanings of each "Type N". Ensure the UI/CLI lists allowed values.
+<!-- > **Note**: Your codebase may define the exact meanings of each "Type N". Ensure the UI/CLI lists allowed values. -->
 
 ### 5.2 Generator `gen_flow_temp_control_type`
 - **Type A – Based on outdoor temperature**: uses `gen_outdoor_temp_data` (reset curve).  
