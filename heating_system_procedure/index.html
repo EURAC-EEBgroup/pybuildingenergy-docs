@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../weather_data/">
+      
+      
+        <link rel="next" href="../iso_52010/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>Heating system procedure - pybuildingenergy</title>
+        <title>heating_system - pybuildingenergy</title>
       
     
     
@@ -61,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#architecture-of-the-calculation" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -92,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Heating system procedure
+              heating_system
             
           </span>
         </div>
@@ -285,6 +294,163 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Procedure
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Procedure
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    heating_system
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    heating_system
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-of-the-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture of the calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture of the calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-collegare-energia-oraria-e-potenza-nominale-dimensionamentolimitazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Collegare energia oraria e potenza nominale (dimensionamento/limitazione)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-stimare-il-tempo-di-funzionamento-effettivo-on-time-e-quindi-il-consumo-degli-ausiliari" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Stimare il tempo di funzionamento effettivo (ON-time) e quindi il consumo degli ausiliari
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-modellare-correttamente-i-casi-intermittenti-c4-e-il-duty-cycle-finale" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Modellare correttamente i casi intermittenti (C.4) e il duty-cycle finale
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -300,10 +466,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -314,8 +480,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             ISO EN 52010
           </label>
@@ -368,10 +534,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -382,8 +548,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             ISO EN 52016
           </label>
@@ -585,6 +751,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../iso_52016_co2_equivalent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO EN 52016 - CO2 equivalent
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../iso_52016_node/" class="md-nav__link">
         
   
@@ -646,10 +833,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -660,8 +847,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             EN 12831-3
           </label>
@@ -735,10 +922,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -749,8 +936,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             EN 15316
           </label>
@@ -889,6 +1076,158 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Implementation and validation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Implementation and validation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EURAC-EEBgroup/pyBuildingEnergy/tree/master/examples/ashrae140_bestest" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ASHRAE 140 validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EURAC-EEBgroup/pyBuildingEnergy/tree/master/examples/iso52016_bestest" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ISO 52016-1 validation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EURAC-EEBgroup/pyBuildingEnergy/blob/master/docs/dhw_12831_3_audit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DHW EN 12831-3 audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EURAC-EEBgroup/pyBuildingEnergy/blob/master/docs/emission_15316_2_audit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Emission systems audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/EURAC-EEBgroup/pyBuildingEnergy/blob/master/docs/distribution_15316_3_audit.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Distribution systems audit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -906,6 +1245,65 @@
   
   
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-of-the-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture of the calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture of the calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 0
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-collegare-energia-oraria-e-potenza-nominale-dimensionamentolimitazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Collegare energia oraria e potenza nominale (dimensionamento/limitazione)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-stimare-il-tempo-di-funzionamento-effettivo-on-time-e-quindi-il-consumo-degli-ausiliari" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Stimare il tempo di funzionamento effettivo (ON-time) e quindi il consumo degli ausiliari
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-modellare-correttamente-i-casi-intermittenti-c4-e-il-duty-cycle-finale" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Modellare correttamente i casi intermittenti (C.4) e il duty-cycle finale
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -928,9 +1326,90 @@
   
 
 
-  <h1>Heating system procedure</h1>
+  <h1>heating_system</h1>
 
-
+<h2 id="architecture-of-the-calculation">Architecture of the calculation<a class="headerlink" href="#architecture-of-the-calculation" title="Permanent link">&para;</a></h2>
+<p>Per il calcolo dell'energia finale, il processo segue il seguente flusso:</p>
+<h3 id="step-0">Step 0<a class="headerlink" href="#step-0" title="Permanent link">&para;</a></h3>
+<p>la funzione <code>run_timeseries(...)</code> utilizza:</p>
+<ul>
+<li>qh = Q_H_kWh (o alias),</li>
+<li>θint = T_op (o default),</li>
+<li>θext = T_ext (o default).</li>
+</ul>
+<p>Se <code>qh &lt;= 0</code> e <code>calc_when_QH_positive_only=True</code>, gestisce la riga con modalità <code>off_compute_mode</code>:</p>
+<ul>
+<li><code>idle</code>: output vuoto (NaN/0) + <code>calculated=False</code></li>
+<li><code>temps</code>: calcola solo temperature coerenti con zero scambio</li>
+</ul>
+<p>full: calcolo completo anche a carico nullo</p>
+<p>1) perchè viene calcolato il fattore di carico del sistema di emissione βH_em?
+Serve per vedere quanto vicino al potenziale nominale sta lavorando l'emettitore in quel timestep.
+di seguito le funzioni principali:</p>
+<ul>
+<li>
+<h2 id="1-collegare-energia-oraria-e-potenza-nominale-dimensionamentolimitazione">1. Collegare energia oraria e potenza nominale (dimensionamento/limitazione)<a class="headerlink" href="#1-collegare-energia-oraria-e-potenza-nominale-dimensionamentolimitazione" title="Permanent link">&para;</a></h2>
+<p>in <code>calculate_common_emission_parameters</code>:
+si calcola una potenza media richiesta nell’ora:</p>
+<p><code>ΦH_em_eff_initial = QH_em_i_out / tH_em_i_ON (kWh/h → kW)</code></p>
+<p>tale potenza viene confrontata con la potenza nominale emettitore ΦH_em_n per ottenere:
+<code>BetaH_em = min(ΦH_em_eff_initial / ΦH_em_n, 1.0)</code></p>
+<p>Cosa vuol dire a livello fisico:</p>
+<p><code>βH_em = 0.3</code> ⇒ nell’ora si sta richiedendo circa il 30% della potenza nominale (in media).
+<code>βH_em = 1</code> ⇒ pieno carico (o oltre, ma tagliato a 1).</p>
+<p>Questo è utile per capire se il sistema è sottodimensionato/sovradimensionato, e per legare i calcoli al “nominale” definito nella tabella dell prestazione del sistaema di emissione (TB14).</p>
+</li>
+<li>
+<h2 id="2-stimare-il-tempo-di-funzionamento-effettivo-on-time-e-quindi-il-consumo-degli-ausiliari">2. Stimare il tempo di funzionamento effettivo (ON-time) e quindi il consumo degli ausiliari<a class="headerlink" href="#2-stimare-il-tempo-di-funzionamento-effettivo-on-time-e-quindi-il-consumo-degli-ausiliari" title="Permanent link">&para;</a></h2>
+<p>Sempre nel common:</p>
+<p><code>tH_cr_i_ON = tH_em_i_ON * BetaH_em</code>
+<code>WH_em_i_aux = tH_cr_i_ON * auxiliars_power / 1000</code></p>
+<p>gli ausiliari (pompe, attuatori, ventilatori terminali) consumano energia quando il circuito è attivo. Se il carico è basso, il sistema potrebbe funzionare meno tempo (o modulare), quindi gli ausiliari vengono ridotti proporzionalmente.</p>
+<p><code>βH_em</code> è usato come proxy semplice del “duty cycle” per stimare energia ausiliaria.</p>
+<p>Esempio numerico</p>
+<p>timestep = 1 h
+auxiliars_power = 40 W
+βH_em = 0,25</p>
+<p>Allora:</p>
+<p>t_ON = 1h * 0,25 = 0,25 h
+E_aux = 40 W * 0,25 h = 10 Wh = 0,01 kWh</p>
+<hr />
+<p>Per quali condizioni va bene:
+funziona bene se vale almeno una di queste ipotesi:</p>
+<ul>
+<li>il sistema è ON/OFF (quindi davvero esiste un duty cycle),</li>
+<li>i consumi ausiliari sono proporzionali al “grado di utilizzo” (approssimazione).</li>
+</ul>
+<p>Per quali condizioni non va bene:</p>
+<ul>
+<li>la pompa gira comunque anche a basso carico (duty cycle ~1),</li>
+<li>la potenza ausiliaria non è costante ma varia con la portata (pompe a inverter: 𝑃∼𝑉3),</li>
+<li>l’emissione modula potenza senza “spegnersi” (duty cycle non coincide con carico).</li>
+</ul>
+<hr />
+<hr />
+<p>Cos'è il <em>duty-cycle</em>?
+Per duty-cycle si intende la frazione di tempo in cui un componente o un sistema è acceso (ON) rispetto al tempo totale considerato.</p>
+<p>Esempi (timestep = 1 ora)</p>
+<ul>
+<li>acceso 60 minuti → duty-cycle = 60/60 = 1.0 (100%)</li>
+<li>acceso 30 minuti → duty-cycle = 30/60 = 0.5 (50%)</li>
+<li>acceso 15 minuti → duty-cycle = 15/60 = 0.25 (25%)</li>
+</ul>
+<hr />
+</li>
+<li>
+<h2 id="3-modellare-correttamente-i-casi-intermittenti-c4-e-il-duty-cycle-finale">3. Modellare correttamente i casi intermittenti (C.4) e il duty-cycle finale<a class="headerlink" href="#3-modellare-correttamente-i-casi-intermittenti-c4-e-il-duty-cycle-finale" title="Permanent link">&para;</a></h2>
+<p>Nel circuito C.4 (ON/OFF), βH_em diventa direttamente un indicatore di “quanto dell’ora” il sistema deve essere ON per consegnare l’energia richiesta:</p>
+<ul>
+<li>si calcola una potenza quando ON (ΦH_em_ON)</li>
+<li>poi il tempo ON necessario: t_H_cr_ON = QH_sys_out_hz_i / ΦH_em_ON</li>
+<li>infine: βH_em = t_H_cr_ON / tH_em_i_ON</li>
+</ul>
+<p>Significato fisico:</p>
+<p>βH_em = 0.25 ⇒ in quell’ora il terminale deve funzionare ~15 minuti (se timestep 1h) alla potenza ON calcolata.</p>
+</li>
+</ul>
 
 
 

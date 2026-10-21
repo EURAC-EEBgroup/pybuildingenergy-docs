@@ -9,14 +9,30 @@ th, td {
 }
 
 
-/* Change header bar background color */
-.md-header {
-  background-color:#D8DADA;
-  color:rgb(223 27 18) !important;
+/* ArtCraft-inspired visual language: warm paper, ink, restrained coral accent. */
+:root {
+  --artcraft-ink: #171717;
+  --artcraft-paper: #f5f3ef;
+  --artcraft-accent: #e85d3f;
 }
 
+body { background: var(--artcraft-paper); }
+.md-header, .md-tabs { background: var(--artcraft-ink); }
+.md-header__title, .md-nav__title, .md-typeset h1, .md-typeset h2,
+.md-typeset h3, .md-typeset h4 {
+  font-family: "Space Grotesk", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: -.025em;
+}
+.md-typeset h2 { border-top: 1px solid #d8d3ca; padding-top: .8rem; }
+.md-typeset a { color: var(--artcraft-accent); }
+.md-typeset a:hover { color: #a83a28; }
+.md-typeset th { background: var(--artcraft-ink); color: #fff; }
+.md-typeset blockquote, .md-typeset .admonition { border-left-color: var(--artcraft-accent); }
+.md-button { border-radius: 0; }
+.md-button--primary { background: var(--artcraft-accent); border-color: var(--artcraft-accent); }
+
 :root {
-  --md-accent-fg-color: #666B6C;  /* grey */
+  --md-accent-fg-color: #e85d3f;
   --md-accent-fg-color--transparent: rgba(158, 158, 158, 0.1);
 }
 
@@ -24,5 +40,5 @@ th, td {
 .md-nav__link--active,
 .md-nav__link:focus,
 .md-nav__link:hover {
-  color: #DF1B12 !important; /* grey for active links */
+  color: #e85d3f !important;
 }
